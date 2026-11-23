@@ -1,0 +1,276 @@
+{
+ "model": "qwen",
+ "mode": "native",
+ "url": "http://127.0.0.1:8198",
+ "data": "ai/data/benchmarks/tr_mmlu_bayram/tr_mmlu_6200.parquet",
+ "schema": {
+  "q": "soru",
+  "opt": "secenekler",
+  "ans": "cevap",
+  "sec": "bolum"
+ },
+ "skipped_rows": 0,
+ "n": 6200,
+ "option_counts": {
+  "5": 6200
+ },
+ "chance_acc": 0.2,
+ "correct": 3197,
+ "accuracy": 0.5156,
+ "ci95": [
+  0.5029,
+  0.5281
+ ],
+ "unparseable": 0,
+ "avg_latency_s": 0.0928,
+ "per_section": {
+  "AUZEF": {
+   "n": 100,
+   "acc": 0.51
+  },
+  "Acil Durum ve Afet Yönetimi": {
+   "n": 100,
+   "acc": 0.58
+  },
+  "Adalet": {
+   "n": 100,
+   "acc": 0.53
+  },
+  "Aşçılık": {
+   "n": 100,
+   "acc": 0.5
+  },
+  "Bankacılık ve Sigortacılık": {
+   "n": 100,
+   "acc": 0.43
+  },
+  "Büro Yönetimi ve Yönetici Asistanlığı": {
+   "n": 100,
+   "acc": 0.5
+  },
+  "DHBT": {
+   "n": 100,
+   "acc": 0.47
+  },
+  "Dini Bilgiler": {
+   "n": 100,
+   "acc": 0.53
+  },
+  "Dış Ticaret": {
+   "n": 100,
+   "acc": 0.51
+  },
+  "Ehliyet Sınavı": {
+   "n": 100,
+   "acc": 0.73
+  },
+  "Elektrik Enerjisi Üretim,İletim ve Dağıtımı": {
+   "n": 100,
+   "acc": 0.52
+  },
+  "Emlak ve Emlak Yönetimi": {
+   "n": 100,
+   "acc": 0.53
+  },
+  "Ev İdaresi": {
+   "n": 100,
+   "acc": 0.56
+  },
+  "Felsefe": {
+   "n": 100,
+   "acc": 0.59
+  },
+  "Fotoğrafçılık ve Kameramanlık": {
+   "n": 100,
+   "acc": 0.58
+  },
+  "Futbol": {
+   "n": 100,
+   "acc": 0.39
+  },
+  "Halkla İlişkiler ve Reklamcılık": {
+   "n": 100,
+   "acc": 0.53
+  },
+  "Halkla İlişkiler ve Tanıtım": {
+   "n": 100,
+   "acc": 0.54
+  },
+  "Havacılık Yönetimi": {
+   "n": 100,
+   "acc": 0.49
+  },
+  "KPSS": {
+   "n": 100,
+   "acc": 0.35
+  },
+  "KPSS Denemeleri": {
+   "n": 100,
+   "acc": 0.43
+  },
+  "Kamu Yönetimi": {
+   "n": 100,
+   "acc": 0.52
+  },
+  "Kim 500 Milyar İster": {
+   "n": 100,
+   "acc": 0.36
+  },
+  "Kültürel Miras ve Turizm": {
+   "n": 100,
+   "acc": 0.57
+  },
+  "Laborant ve Veteriner Sağlık": {
+   "n": 100,
+   "acc": 0.52
+  },
+  "Lojistik": {
+   "n": 100,
+   "acc": 0.5
+  },
+  "Maliye": {
+   "n": 100,
+   "acc": 0.47
+  },
+  "Marka İletişimi": {
+   "n": 100,
+   "acc": 0.56
+  },
+  "Medya ve İletişim": {
+   "n": 100,
+   "acc": 0.52
+  },
+  "Menkul Kıymetler ve Sermaye Piyasası": {
+   "n": 100,
+   "acc": 0.54
+  },
+  "Muhasebe ve Vergi Uygulamaları": {
+   "n": 100,
+   "acc": 0.54
+  },
+  "Okul Öncesi Öğretmenliği": {
+   "n": 100,
+   "acc": 0.58
+  },
+  "Parakende Satış ve Mağaza Yöneticiliği": {
+   "n": 100,
+   "acc": 0.57
+  },
+  "Radyo ve Televizyon Programcılığı": {
+   "n": 100,
+   "acc": 0.55
+  },
+  "Sağlık Kurumları İşletmeciliği": {
+   "n": 100,
+   "acc": 0.49
+  },
+  "Sağlık Yönetimi": {
+   "n": 100,
+   "acc": 0.49
+  },
+  "Siyer": {
+   "n": 100,
+   "acc": 0.39
+  },
+  "Sosyal Hizmet": {
+   "n": 100,
+   "acc": 0.56
+  },
+  "Sosyal Hizmetler": {
+   "n": 100,
+   "acc": 0.58
+  },
+  "Sosyoloji": {
+   "n": 100,
+   "acc": 0.55
+  },
+  "Spor Yönetimi": {
+   "n": 100,
+   "acc": 0.53
+  },
+  "TUS": {
+   "n": 100,
+   "acc": 0.6
+  },
+  "Tarih": {
+   "n": 100,
+   "acc": 0.43
+  },
+  "Tarım": {
+   "n": 100,
+   "acc": 0.41
+  },
+  "Turizm ve Otel İşletmeciliği": {
+   "n": 100,
+   "acc": 0.57
+  },
+  "Turizm ve Seyehat Hizmetleri": {
+   "n": 100,
+   "acc": 0.47
+  },
+  "Türk Dili ve Edebiyatı": {
+   "n": 100,
+   "acc": 0.41
+  },
+  "Tıbbi Dökümantasyon ve Sekreterlik": {
+   "n": 100,
+   "acc": 0.6
+  },
+  "Uluslar Arası İlişkiler": {
+   "n": 100,
+   "acc": 0.57
+  },
+  "Uluslararası Ticaret ve Lojistik Yönetimi": {
+   "n": 100,
+   "acc": 0.51
+  },
+  "Yaşlı Bakımı": {
+   "n": 100,
+   "acc": 0.49
+  },
+  "Yerel Yönetimler": {
+   "n": 100,
+   "acc": 0.52
+  },
+  "Yönetim Bİlişim Sistemleri": {
+   "n": 100,
+   "acc": 0.54
+  },
+  "Çalışma Ekonomisi ve Endüstri İlişkileri": {
+   "n": 100,
+   "acc": 0.45
+  },
+  "Çağrı Merkezi Hizmetleri": {
+   "n": 100,
+   "acc": 0.56
+  },
+  "Çocuk Gelişimi": {
+   "n": 100,
+   "acc": 0.52
+  },
+  "Özel Koruma ve Güvenlik": {
+   "n": 100,
+   "acc": 0.47
+  },
+  "Üniversite Giriş Sınavı Temel Bilimler": {
+   "n": 100,
+   "acc": 0.47
+  },
+  "İktisat": {
+   "n": 100,
+   "acc": 0.58
+  },
+  "İlahiyat": {
+   "n": 100,
+   "acc": 0.53
+  },
+  "İnsan Kaynakları Yönetimi": {
+   "n": 100,
+   "acc": 0.54
+  },
+  "İşletme Yönetimi": {
+   "n": 100,
+   "acc": 0.54
+  }
+ }
+}

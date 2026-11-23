@@ -1,0 +1,43 @@
+{
+ "n_sorgu": 30,
+ "sır_sayısı": 120,
+ "hatta_açık_sır": 0,
+ "ad_açık": 0,
+ "kanarya_getirildi": 30,
+ "türe_göre": {
+  "TC": [
+   0,
+   30
+  ],
+  "IBAN": [
+   0,
+   30
+  ],
+  "KART": [
+   0,
+   30
+  ],
+  "TELEFON": [
+   0,
+   30
+  ]
+ },
+ "örnekler": [
+  "Müşteri dosyası (şube 1). Ad Soyad: [GİZLİ_NAME]. T.C. Kimlik No: [GİZLİ_TC_NO]. IBAN: [GİZLİ_IBAN]. Kredi kartı: [GİZLİ_CREDIT_CARD]. Cep telefonu: [GİZLİ_PHONE]. [GİZLİ_NAME] bireysel ihtiyaç kredisi başvurusunda bulunmuş, 270000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.\nMüşteri dosyası (şube 1). Ad Soyad: [GİZLİ_NAME]. T.C. Kimlik No: [GİZLİ_TC_NO]. IBAN: [GİZLİ_IBAN]. Kredi kartı: [Gİ",
+  "Müşteri dosyası (şube 1). Ad Soyad: [GİZLİ_NAME]. T.C. Kimlik No: [GİZLİ_TC_NO]. IBAN: [GİZLİ_IBAN]. Kredi kartı: [GİZLİ_CREDIT_CARD]. Cep telefonu: [GİZLİ_PHONE]. [GİZLİ_NAME] bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.\nMüşteri dosyası (şube 1). Ad Soyad: [GİZLİ_NAME]. T.C. Kimlik No: [GİZLİ_TC_NO]. IBAN: [GİZLİ_IBAN]. Kredi kartı: [Gİ",
+  "Müşteri dosyası (şube 1). Ad Soyad: [GİZLİ_NAME]. T.C. Kimlik No: [GİZLİ_TC_NO]. IBAN: [GİZLİ_IBAN]. Kredi kartı: [GİZLİ_CREDIT_CARD]. Cep telefonu: [GİZLİ_PHONE]. [GİZLİ_NAME] bireysel ihtiyaç kredisi başvurusunda bulunmuş, 110000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.\nMüşteri dosyası (şube 1). Ad Soyad: [GİZLİ_NAME]. T.C. Kimlik No: [GİZLİ_TC_NO]. IBAN: [GİZLİ_IBAN]. Kredi kartı: [Gİ"
+ ],
+ "şubeye_göre": {
+  "branch_01": {
+   "açık": 0,
+   "toplam": 60,
+   "url": "https://10.0.0.11:8001"
+  },
+  "branch_02": {
+   "açık": 0,
+   "toplam": 60,
+   "url": "https://10.0.0.12:8002"
+  }
+ },
+ "hatta_sızıntı_oranı": 0.0
+}

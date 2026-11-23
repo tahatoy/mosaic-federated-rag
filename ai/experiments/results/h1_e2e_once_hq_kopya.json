@@ -1,0 +1,1597 @@
+{
+ "n": 100,
+ "dogru": 86,
+ "rota": {
+  "complex": 100
+ },
+ "kaynak_yok": 3,
+ "dogru_ve_sahip_sube_kaynakta": 86,
+ "kaynaklarda_hq_koleksiyonu": 2,
+ "kayitlar": [
+  {
+   "soru": "Ek olarak, Apache Corporation (APA) şu anda yaklaşık kaç milyar dolarlık bir piyasa kapitalizasyonuna sahiptir?",
+   "altin": "10,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### Apache Corporation (APA) Piyasa Kapitalizasyonu Değerlendirmesi\n\nApache Corporation (APA), enerji sektöründe faaliyet gösteren ve uluslararası pazarlarda da aktif olan bir şirket olarak, piyasa kapitalizasyonu açısından dikkat çekici bir konuma sahiptir. Aşağıda, belgelerde yer alan doğrulanmış "
+  },
+  {
+   "soru": "Oracle Corporation'ın 2019'daki çevrimiçi satış geliri, bir önceki yıla göre% 15'lik bir büyüme yaşayan kaç milyar dolardı.Bu konuşmadaki bilgilerin kurgusal olduğunu ve Oracle Corporation'ın gerçek mali durumunu yansıtmadığını lütfen unutmayın?",
+   "altin": "2.3",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Oracle Corporation'ın 2019 Çevrimiçi Satış Geliri ve Değişim Trendi\n\nBelgelerde açıkça belirtildiği üzere, Oracle Corporation (ORCL) ile ilgili bazı konuşmaların kurgusal olduğu ve bu bilgilerin şirketin gerçek mali durumunu yansıtmadığı vurgulanmıştır. Bu bağlamda, 2019 yılında çevrimiçi satış "
+  },
+  {
+   "soru": "Zoetis Inc., öncelikle güneş ve rüzgar enerjisi projelerine odaklanan yenilenebilir enerji girişimlerine yaklaşık kaç milyon dolar yatırım yaptı?",
+   "altin": "25",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "Zoetis Inc., öncelikle güneş ve rüzgar enerjisi projelerine odaklanan yenilenebilir enerji girişimlerine yaklaşık **25 milyon dolar** yatırım yaptı.\n\n### Yatırım Detayları\nYatırımlar, özellikle güneş enerjisi operasyonlarının genişletilmesi ve biyoenerji ile jeotermal çözümler gibi yeni yenilenebili"
+  },
+  {
+   "soru": "Bank of America Corporation'ın (BAC) en son çeyrekteki toplam gelirleri kaç milyar dolardı?",
+   "altin": "22.7",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Bank of America Corporation'ın (BAC) En Son Çeyrekteki Toplam Geliri\n\nBank of America Corporation'ın (BAC) en son çeyrekteki toplam gelirleri **22,7 milyar dolar** olarak belgelenmiştir. Bu gelir, şirketin finansal performansının güçlü bir şekilde yansımasıdır ve özellikle iki ana faktörün katkı"
+  },
+  {
+   "soru": "Lockheed Martin Corporation, geçen mali yılda havacılık savunma teknolojisi ve ileri mühendislik gibi alanlara odaklanan yaklaşık kaç milyar dolarlık sermaye kiralama yatırımı yaptı?",
+   "altin": "1,8",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "Lockheed Martin Corporation (LMT), geçen mali yılda havacılık savunma teknolojisi ve ileri mühendislik gibi alanlara odaklanan yaklaşık **1,8 milyar dolarlık sermaye kiralama yatırımı** gerçekleştirdi. Bu yatırım, mevcut tesislerin operasyonel verimliliğini artırmayı ve inovatif teknolojik çözümler "
+  },
+  {
+   "soru": "Geçen ay General Electric Company (GE) için günlük işlem gören hisselerin ortalama sayısı yaklaşık kaç milyon hisseydi?",
+   "altin": "10",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Geçen Ay General Electric Company (GE) İçin Günlük İşlem Gören Hisse Sayısı\n\nBelgelerde yer alan doğrulanmış verilere göre, **geçen ay** General Electric Company (GE) için günlük işlem gören hisselerin ortalama sayısı **10 milyon hisseydi**. Bu rakam, ticaret hacminin bazı dalgalanmalar gösterdi"
+  },
+  {
+   "soru": "Bununla birlikte, kapsamlı küresel varlığı ile 2020 yılında toplam kaç milyar dolarlık gelirinin önemli bir kısmının uluslararası operasyonlardan geldiğini varsaymak güvenlidir?",
+   "altin": "119.5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### JPMorgan Chase & Co.'nun Uluslararası Faaliyetlerden Elde Ettiği Gelir Değerlendirmesi\n\nBelgelerde, JPMorgan Chase & Co. (JPM) tarafından uluslararası faaliyetlerden elde edilen **tam gelir** açıkça belirtilmemiştir. Ancak, 2020 yılında toplam gelirin önemli bir kısmının uluslararası operasyonla"
+  },
+  {
+   "soru": "Söz konusu ETF’lere ay boyunca toplam kaç milyar dolarlık para girişi gerçekleşti?",
+   "altin": "1,97",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [],
+   "dogru": 0,
+   "yanit": "Belgelerde söz konusu ETF’lere ay boyunca toplam kaç milyar dolarlık para girişi gerçekleştiğine dair özel bir belge bulunmamakta ve doğrudan veriye erişim sağlanamamaktadır. Finansal piyasalarda ETF (Borsa İhaleleri) ile ilgili para girişlerinin takibi, genellikle borsa kurumları tarafından yapılan"
+  },
+  {
+   "soru": "Anheuser-Busch InBev SA/NV (BUD) şu anda yaklaşık kaç milyar dolarlık bir piyasa kapitalizasyonuna sahiptir?",
+   "altin": "116",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Anheuser-Busch InBev SA/NV (BUD) Piyasa Kapitalizasyonu Değerlendirmesi\n\nAnheuser-Busch InBev SA/NV (BUD), dünya çapında en büyük içecek üreticilerinden biridir. Şirketin piyasa kapitalizasyonu, hisse başına fiyat ile hissedar sayısının çarpımına dayanır ve şirketin genel değerini yansıtır. Aşağ"
+  },
+  {
+   "soru": "Verilen bilgilerden, P = kaç TL, i = 12, t = 1 yıl olarak hesaplanır?",
+   "altin": "110.000",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Finansal Hesaplama ve Veri Değerlendirmesi\n\nVerilen bilgiler doğrultusunda, kredi kurumuna yatırılan para miktarı (P), faiz oranı (i) ve süre (t) parametreleri üzerinden basit faiz hesaplaması yapılmıştır. Bu hesaplama, belgede açıkça verilen bilgilere dayanarak gerçekleştirilmiştir.\n\n### Hesapl"
+  },
+  {
+   "soru": "(ADSK), son çeyrekte kaç milyon dolarlık operasyonlardan nakit akışı sağladı?",
+   "altin": "197",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Autodesk Inc. (ADSK) - Son Çeyrekteki Nakit Akışı ve Finansal Performans Değerlendirmesi\n\nAutodesk Inc. (ADSK), son çeyrekte **197 milyon dolar**lık operasyonlardan nakit akışı elde etmiştir. Bu rakam, şirketin finansal performansının güçlü olduğunu ve gelir artışı ile işletme giderlerinin verim"
+  },
+  {
+   "soru": "Ayrıca kaç milyar dolarlık bir piyasa kapitalizasyonuna sahipler ve 12 Aralık 2019'da bir hisse geri alım programı duyurdular?",
+   "altin": "269.44",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### Walt Disney Company (DIS) Hisse Senedi Geri Alım Programı ve Piyasa Kapitalizasyonu Değerlendirmesi\n\nWalt Disney Company (DIS), 2020 yılında hisse senedi geri alım programları açıkladığı belgelenmiştir. Şirket, Aralık 2020'de 6 milyar dolarlık ve Mart 2021'de 15 milyar dolarlık hisse geri alım y"
+  },
+  {
+   "soru": "Özellikle The Vanguard Group, yaklaşık kaç milyon hisse ile Kroger Co.'da önemli bir paya sahiptir?",
+   "altin": "80",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### The Vanguard Group'nın Kroger Co.'da Sahip Olduğu Hisse Sayısı\n\nBelgelerde açıkça belirtildiğine göre, **The Vanguard Group**, Kroger Co. (KR) hisselerinde yaklaşık **80 milyon hisse** sahiptir.\n\n---\n\n### Finansal Verilerin Karşılaştırılması\n\n| Kurum Adı              | Hisse Sayısı (Milyon) |\n|-"
+  },
+  {
+   "soru": "(LUV) şu anda Delta Air Lines (DAL) ve American Airlines Group (AAL) gibi endüstri akranlarından daha yüksek olan kaç milyar dolar değerindedir?",
+   "altin": "31,72",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    2,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Southwest Airlines Co. (LUV) Değerlemesi ve Endüstri Akranlarıyla Karşılaştırma\n\nSouthwest Airlines Co. (LUV), Delta Air Lines (DAL) ve American Airlines Group (AAL) gibi endüstri akranlarından daha yüksek bir değerle değerlendirilmektedir. Bu değerlendirme, pandemi nedeniyle havacılık sektöründ"
+  },
+  {
+   "soru": "Walt Disney Company (DIS) şu anda yaklaşık kaç milyar dolar toplam borcu var?",
+   "altin": "52.9",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Walt Disney Company (DIS) Toplam Borç Durumu Değerlendirmesi\n\nWalt Disney Company (DIS), finansal açıdan dengeli bir yapıyı korumak ve kaldıraç oranlarını yönetmek için stratejik borç yönetimini aktif olarak uygulamaktadır. Bu doğrultuda, şirketin güncel toplam borcu ile ilgili belirli kaynaklar"
+  },
+  {
+   "soru": "(BRK.A BRK.B) için geçen mali yılda nakit akışı üretimi kaç milyar dolarlık toplam işletme nakit akışı ile sağlamdı?",
+   "altin": "45,2",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Berkshire Hathaway Inc. (BRK.A, BRK.B) Geçen Mali Yılı Nakit Akışı Değerlendirmesi\n\nBerkshire Hathaway Inc. (BRK.A, BRK.B), geçen mali yılda toplam **45,2 milyar dolarlık işletme nakit akışı** elde etmiştir. Bu rakam, şirketin güçlü finansal yapısını ve çeşitlendirilmiş yatırımlarını yansıtan ön"
+  },
+  {
+   "soru": "Kroger Co.'nun 435000'den fazla çalışanı var ve yıllık yaklaşık kaç milyar dolar gelir bildirdi?",
+   "altin": "121.2",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    2,
+    1,
+    2,
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### Kroger Co.'nun Çalışan Sayısı ve Yıllık Geliri\n\nKroger Co., ABD'de büyük bir retail devi konumunda bulunur ve çalışan sayısı açısından da önemli boyutlara ulaşmıştır. Şirketin çalışan yapısı, faaliyet alanları ve operasyonel yapıları, onun rekabetçi pozisyonunu ve finansal performansını etkileye"
+  },
+  {
+   "soru": "Bununla birlikte, 2020 mali yılında elde ettikleri toplam gelir, tüm gelir akışlarını kapsayan yaklaşık kaç milyar dolardır?",
+   "altin": "58,2",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    1
+   ],
+   "dogru": 0,
+   "yanit": "### 2020 Mali Yılı Toplam Geliri ve Finansal Performans Değerlendirmesi\n\nDow Inc. (DOW) tarafından FY 2020 mali yılında elde edilen toplam gelir, şirketin o yıl için açıklanan tüm gelir akışlarını kapsayan yaklaşık **39,5 milyar dolar** olarak belgelenmiştir.\n\n### Finansal Verilerin Açıklaması\n\n| Pa"
+  },
+  {
+   "soru": "Pay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin\nBildirim (Faiz İçeren)\n\nPay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin\nBildirim (Faiz İçeren)\nÖzet Bilgi Şirketimizin TRFALFK52424 ısın kodlu kaç TL nominal tutarlı iskontolu bono?",
+   "altin": "100.000.000",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### Pay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin Bildirim (Faiz İçeren) Finansal Değerlendirme\n\n#### 1. **Bildirim Genel Bilgisi**\nBelgede yer alan pay dışı sermaye piyasası aracı işlemleri, özellikle iskontolu bono itfası ile ilgilidir. Bu bildirimler, şirketin finansal yapısını ve borçla"
+  },
+  {
+   "soru": "Intel Corporation (INTC), bu dönemde yaklaşık kaç milyar dolarlık bir artışla son 5 yılda yaklaşık% 10'luk bir yıllık gelir artışına tanık oldu?",
+   "altin": "18,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    1,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Intel Corporation (INTC) Gelir Artışları ve Finansal Performans Değerlendirmesi\n\nIntel Corporation (INTC), son 5 yılda yaklaşık **18,5 milyar dolar**lık bir gelir artışına tanık olmuştur. Bu artış, yıllık yaklaşık **%10'luk** bir gelir büyümesi anlamına gelmektedir. Bu performans, şirketin yarı "
+  },
+  {
+   "soru": "Applied Materials Inc.'in (AMAT) en son mali yıl için net ticari alacaklar kaç milyar dolardı?",
+   "altin": "4,2",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    1,
+    2,
+    1,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Applied Materials Inc.'in (AMAT) En Son Mali Yıldaki Net Ticari Alacakları\n\nBelgelerde yer alan doğrulanmış bilgilere göre, **Applied Materials Inc. (AMAT)**'ın en son mali yıl için **net ticari alacaklar** miktarı **4,2 milyar dolar** olarak belirtilmektedir.\n\n### Net Ticari Alacakların Değişim"
+  },
+  {
+   "soru": "Qualcomm Incorporated (QCOM) için son çeyrekte yapılan iç hisse senedi satışlarının toplam değeri kaç milyon dolardı?",
+   "altin": "5,6",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Qualcomm Incorporated (QCOM) İçin Son Çeyrekte Yapılan İç Hisse Senedi Satışlarının Toplam Değeri\n\nBelgelerde yer alan doğrulanmış verilere göre, **Qualcomm Incorporated (QCOM)** için son çeyrekte yapılan iç hisse senedi satışlarının toplam değeri **5,6 milyon dolar** olarak belirtilmektedir.\n\n-"
+  },
+  {
+   "soru": "Açılışta Dow Jones endeksi yüzde 0,12 azalarak kaç puana geriledi?",
+   "altin": "49.549,07",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Açılışta Dow Jones Endeksi Yüzde 0,12 Azalarak Ne Kadar Puana Geriledi?\n\nBelgelerde açıkça belirtildiği üzere, New York borsası, ABD ile İran arasındaki görüşmelerde ilerleme sağlanamamasına yönelik artan endişelerle haftanın ilk işlem gününe düşüşle başladı. Açılışta **Dow Jones endeksi yüzde 0"
+  },
+  {
+   "soru": "Kraft Heinz Company (KHC), son çeyrekte sermaye harcamalarına yaklaşık kaç milyon dolar harcadı?",
+   "altin": "500",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    2,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Kraft Heinz Company (KHC) - Son Çeyrekteki Sermaye Harcamaları\n\nKraft Heinz Company (KHC), son çeyrekte sermaye harcamalarına yaklaşık **500 milyon dolar** harcadı. Bu yatırım, şirketin genel giderlerinin yaklaşık %10'una denk gelmektedir ve üretim tesisleri, araştırma ve geliştirme, tedarik zin"
+  },
+  {
+   "soru": "Pfizer Inc.'in geçen yıl yaklaşık kaç milyar dolarlık araştırma ve geliştirme yatırımı yaptığı bilgilere dayanarak?",
+   "altin": "9.8",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Pfizer Inc.'in Geçen Yılı Araştırma ve Geliştirme Yatırımı\n\nPfizer Inc., geçen yıl yaklaşık **9,8 milyar dolar** tutarında araştırma ve geliştirme (A&G) yatırımı gerçekleştirmiştir. Bu yatırım, şirketin çeşitli terapötik alanlara odaklanarak hem tıbbi yeniliklerin geliştirilmesine hem de mevcut "
+  },
+  {
+   "soru": "Analog Devices Inc.'in (ADI) toplam borcu yaklaşık kaç milyar dolardır?",
+   "altin": "7,7",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Analog Devices Inc.'in (ADI) Toplam Borcu Hakkında Finansal Değerlendirme\n\nAnalog Devices Inc. (ADI), finansal açıdan güçlü bir yapıya sahiptir ve çeşitli kaynaklardan borçlanma yapısına sahiptir. Bu bağlamda, belgelerde yer alan bilgilere göre ADI'nin toplam borcu farklı dönemlerde değişiklik g"
+  },
+  {
+   "soru": "Mevcut verilere dayanarak Tesla Inc., 2019 mali yılında seyahat ve eğlence giderleri için yaklaşık kaç milyon dolar harcadı?",
+   "altin": "28.3",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Tesla Inc.'nin 2019 Mali Yılında Seyahat ve Eğlence Giderleri\n\nMevcut belgelerde, Tesla Inc. (TSLA) için doğrulanmış bilgilere göre **2019 mali yılında seyahat ve eğlence giderleri kapsamında yaklaşık 28.3 milyon dolar** harcandığı açıkça belirtilmiştir.\n\n#### Detaylı Bilgi ve Değerlendirme\n\n| P"
+  },
+  {
+   "soru": "(WMB), geçtiğimiz yıl toplam kaç milyon hisseyi yeniden satın alan bir hisse senedi geri alım programı gerçekleştirdi?",
+   "altin": "50",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Williams Companies, Inc. (WMB) Hisse Senedi Geri Alım Programı Değerlendirmesi\n\nWilliams Companies, Inc. (WMB), hissedar değerini artırmak ve sermaye yapısını yönetmek amacıyla düzenli olarak hisse senedi geri alım programları gerçekleştirmektedir. Bu tür programlar, şirketin finansal sağlığına "
+  },
+  {
+   "soru": "Mevcut verilere dayanarak Qualcomm Incorporated (QCOM), Intel Corporation (INTC) ve Broadcom Inc.'den (AVGO) daha düşük olan kaç milyar dolarlık bir gelire sahiptir?",
+   "altin": "23,53",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Qualcomm Incorporated (QCOM) Geliri ve Rakip Şirketlerle Karşılaştırma\n\nMevcut belgeler doğrultusunda, Qualcomm Incorporated (QCOM), Intel Corporation (INTC) ve Broadcom Inc. (AVGO) ile karşılaştırıldığında **23,53 milyar dolarlık bir gelire** sahiptir. Bu rakam, sektördeki diğer büyük oyuncular"
+  },
+  {
+   "soru": "Uber, filolarını satın almak için kaç milyar dolarlık borç alacak olsaydı, borçlarını önemli ölçüde artıracak ve net değerlerini azaltacaktı?",
+   "altin": "11",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Finansal Değerlendirme: Uber'in Araç Filosunu Finanse Etmek İçin Alacağı Borç ve Net Değer Etkisi\n\nBelgelerde yer alan bilgilere göre, **Uber**'in 1.5 milyon araba filosunu finanse etmek için **11 milyar dolarlık borç alması**, şirketin net değerini önemli ölçüde düşürecektir. Bu durum, şirketin"
+  },
+  {
+   "soru": "Petrol fiyatlarının varil başına 100 doların üzerinde kalması durumunda vergi kaybının kaç milyar TL’yi aşabileceğini ifade eden Şimşek, buna rağmen bütçe açığını yüzde 3,5 seviyesinde tutmak için çalışacaklarını dile getirdi?",
+   "altin": "600",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Finansal Değerlendirme ve Piyasa Yansımaları\n\nBakan Şimşek'in açıklamaları, Türkiye'nin bütçe politikasında vergi gelirlerinin performansına dair önemli bir bilgi kaynağı sunmaktadır. Bu açıklama, özellikle akaryakıt fiyatlandırması sürecinde oluşan vergi kaybının potansiyelini ve hükümetin bu d"
+  },
+  {
+   "soru": "Brands Inc., son mali yılda sermaye harcamalarına yaklaşık kaç milyon dolar harcadı?",
+   "altin": "743",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "Yum! Brands Inc. (YUM) tarafından son mali yılda yapılan sermaye harcamaları, belgelerde açıkça belirtilen şekilde **yaklaşık 743 milyon dolar** olarak verilmiştir. Bu rakam, şirketin uluslararası marka genişlemesi ve inovasyona odaklı stratejik yatırımlarını yansıtmaktadır.\n\n### Sermaye Harcamaları"
+  },
+  {
+   "soru": "SEC Edgar dosyalamalarına göre FedEx Corporation (FDX), 31 Mayıs 2020 itibarıyla kaç milyar dolarlık bir çalışma sermayesine sahipti?",
+   "altin": "6.4",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### SEC Edgar Dosyalamalarına Göre FedEx Corporation (FDX) Çalışma Sermayesi Tarihi Verileri\n\nSEC Edgar dosyalamalarına göre, FedEx Corporation (FDX), 31 Mayıs 2020 itibarıyla **6.4 milyar dolarlık bir çalışma sermayesine** sahipti. Bu veri, şirketin o tarihteki kısa vadeli borç ve ödeme yükümlülükl"
+  },
+  {
+   "soru": "DuPont de Nemours Inc.'in (DD) en son SEC dosyası itibariyle kurumsal değeri kaç milyar dolardır?",
+   "altin": "102,75",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### DuPont de Nemours Inc.'in (DD) En Son SEC Dosyası İtibariyle Kurumsal Değeri\n\nDuPont de Nemours, Inc. (DD), en son SEC dosyalanmasından itibaren kurumsal değeri açısından dikkat çeken bir pozisyona sahiptir. Bu değer, şirketin genel mali durumunu ve piyasa güvenilirliğini yansıtan kritik bir gös"
+  },
+  {
+   "soru": "2004'te ABD Çevre Koruma Ajansı (EPA) tarafından Temiz Hava Yasası'nı ihlal ettikleri için kaç milyon dolar para cezasına çarptırıldılar?",
+   "altin": "1,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### 2004'te ABD Çevre Koruma Ajansı (EPA) Cezası Hakkında Finansal Değerlendirme\n\nGoldman Sachs Group Inc., 2004 yılında ABD Çevre Koruma Ajansı (EPA) tarafından Temiz Hava Yasası'nı ihlal ettiği gerekçesiyle para cezasına çarptırılmıştır. Bu ihlaller, şirketin çevresel standartları ve düzenlemeleri"
+  },
+  {
+   "soru": "Cisco Systems Inc., geçtiğimiz yıl sermaye harcamalarına yaklaşık kaç milyar dolar harcadı?",
+   "altin": "6,35",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Cisco Systems Inc.'nin Geçtiğimiz Yıldaki Sermaye Harcamaları Değerlendirmesi\n\nCisco Systems Inc., geçtiğimiz yıl sermaye harcamalarına yönelik stratejik yatırımlar gerçekleştirdi. Bu yatırımlar, şirketin teknolojik kapasitesini güçlendirme ve uzun vadeli büyüme hedeflerine ulaşmak amacıyla yapı"
+  },
+  {
+   "soru": "Mevcut verilere ve analizlere dayanarak Goldman Sachs Group Inc., son üç yılda hisse geri alımlarına yaklaşık kaç milyar dolar harcadı?",
+   "altin": "8,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    2,
+    2,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Goldman Sachs Group Inc.'nin Son Üç Yıldaki Hisse Geri Alım Harcamaları\n\nMevcut belgeler ve finansal verilere göre, Goldman Sachs Group Inc. (GS), son üç yılda hisse geri alımlarına toplamda yaklaşık **8,5 milyar dolar** harcadı. Bu harcama, şirketin sermaye yapısını optimize etmek ve hissedar d"
+  },
+  {
+   "soru": "Intel Corporation'ın uzun vadeli yatırımlarının toplam değeri yaklaşık kaç milyar dolardır?",
+   "altin": "53",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Intel Corporation'ın Uzun Vadeli Yatırımlarının Toplam Değeri\n\nIntel Corporation (INTC)’ın uzun vadeli yatırımlarının toplam değeri, doğrulanmış belgelerde açıkça belirtilmiştir. Bu değer, şirketin stratejik büyüme ve teknoloji geliştirme amaçlı yatırımları kapsamında değerlendirilir.\n\n#### Uzun"
+  },
+  {
+   "soru": "Procter & Gamble Company'nin SEC'ine göre, mevcut uzun vadeli borç yükümlülükleri, en son raporlama dönemi itibarıyla kaç milyar dolardır?",
+   "altin": "26,7",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Procter & Gamble Company'nin (PG) Uzun Vadeli Borç Yükümlülükleri\n\nProcter & Gamble Company'nin (PG) SEC dosyalarına göre, mevcut uzun vadeli borç yükümlülükleri, en son raporlama dönemi itibarıyla **26,7 milyar dolar**dır.\n\nBu bilgi doğrudan belgede yer alan verilerle doğrulanmış ve diğer finan"
+  },
+  {
+   "soru": "En son mali yıl (2019-2020) için Oracle Corporation'ın (ORCL) geliri kaç milyar dolardı?",
+   "altin": "39.07",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    1,
+    2,
+    1,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Oracle Corporation (ORCL)’ın En Son Mali Yılındaki Geliri\n\nOracle Corporation'ın en son mali yılı (2019-2020) için belgelerde açıkça yer alan gelir verilerine göre, şirketin 2020 yılında **39.07 milyar dolar** gelir elde etmiştir.\n\n---\n\n### Gelir Artışları ve Trendler\n\nOracle Corporation'ın geli"
+  },
+  {
+   "soru": "Saudi Aramco IPO'nun, şirketin değerlemesinin 1,2 ila kaç trilyon dolar arasında olması nedeniyle küresel endeks fonları üzerinde önemli bir etkiye sahip olması bekleniyor?",
+   "altin": "2.2",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Saudi Aramco IPO'nun Küresel Endeks Fonları Üzerindeki Etkisi ve Değerleme Açısından Finansal Analiz\n\nSaudi Aramco'nun kamu ticareti süreci, şirketin küresel finansal pazarlarda büyük bir etkiye sahip olabileceği yönünde öne sürülmektedir. Bu etki, şirketin değerlemesinin 1,2 ila 2,2 trilyon dol"
+  },
+  {
+   "soru": "Mevcut verilere dayanarak American Express Company (AXP) yaklaşık kaç milyon karta sahiptir?",
+   "altin": "115",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### American Express Company (AXP) Karta Sahip Müşteri Sayısı\n\nMevcut doğrulanmış belgelerde, **American Express Company (AXP)** hakkında yapılan açıklamalardan, şirketin yaklaşık **115 milyon karta sahip** olduğu belirtilmektedir. Bu rakam, şirketin dünya çapında hizmet verdiği kart sayısını ifade "
+  },
+  {
+   "soru": "Özetle Abbott Laboratuvarları şu anda yaklaşık kaç milyar dolarlık bir nakit rezervine sahiptir?",
+   "altin": "10",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Abbott Laboratuvarları'nın Nakit Rezervi ve Kullanım Planı\n\n#### Özet Bilgi  \nAbbott Laboratuvarları (ABT), şu anda yaklaşık **10 milyar dolarlık bir nakit rezervine** sahiptir. Bu nakit rezervi, şirketin stratejik yatırımları ve büyüme fırsatlarını desteklemek amacıyla kullanmayı planlamaktadır"
+  },
+  {
+   "soru": "Johnson & Johnson (JNJ) şu anda yaklaşık kaç milyar dolarlık bir piyasa değerine sahip ve bu da onu sektördeki önde gelen ilaç şirketlerinden biri haline getiriyor?",
+   "altin": "345",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Johnson & Johnson (JNJ) Piyasa Değeri ve Sektördeki Yereği\n\nJohnson & Johnson (JNJ), finansal verilere göre sektörde önde gelen ilaç şirketlerinden biri olarak kabul edilmektedir. Şirketin piyasa değeri, farklı kaynaklara dayanarak belirlenmiş olup, bu değer şirketin finansal gücünü ve pazar kon"
+  },
+  {
+   "soru": "24 Eylül 2022 itibarıyla Apple Inc.'in toplam mevcut varlıkları kaç milyon dolardır?",
+   "altin": "135,405",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    1,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### 24 Eylül 2022 itibarıyla Apple Inc.'in toplam mevcut varlıkları kaç milyon dolardır?\n\nBelgelerde açıkça belirtildiğine göre, **24 Eylül 2022 itibarıyla Apple Inc.'nin toplam mevcut varlıkları 135.405 milyon dolar**dır.\n\n#### Detaylı Bilgi ve Açıklama\n\n| Parametre / Kriter | Değer / Oran | Açıkla"
+  },
+  {
+   "soru": "Borsa İstanbul günü düşüşle tamamladı\nBorsa İstanbul'da BIST 100 endeksi, günü yüzde 2,34 değer kaybederek kaç puandan tamamladı?",
+   "altin": "14.779,93",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "Borsa İstanbul'da BIST 100 endeksi, günü yüzde 2,34 değer kaybederek **14.779,93 puandan** tamamladı.\n\n### Finansal Değerlendirme ve Piyasa Analizi\n\n| Parametre / Kriter | Değer / Oran | Açıklama |\n| :--- | :--- | :--- |\n| Gündelik Kapanış Fiyatı | 14.779,93 | BIST 100 endeksi, günü yüzde 2,34 değer"
+  },
+  {
+   "soru": "Booking Holdings A.Ş., kurumsal sosyal sorumluluk girişimlerine yılda ortalama kaç milyon dolar ayırmaktadır?",
+   "altin": "10",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Booking Holdings A.Ş.'nin Kurumsal Sosyal Sorumluluk Girişimlerine Yatırımı\n\nBooking Holdings A.Ş., kurumsal sosyal sorumluluk girişimlerine **yılda ortalama 10 milyon dolar** ayırmaktadır. Bu yatırımlar, çevresel sürdürülebilirlik, toplum yardım projeleri, afet kaynaklı zararlara karşı destek v"
+  },
+  {
+   "soru": "Satın alınan belgelere dayanarak Coca-Cola Company'nin elinde yaklaşık kaç milyar dolar nakit vardı?",
+   "altin": "8,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Coca-Cola Company'nin (KO) Nakit Durumu ve Finansal Performans Değerlendirmesi\n\nCoca-Cola Company'nin elindeki nakit miktarı, farklı kaynaklardan toplanmış verilere göre **8,5 milyar dolar** civarında belirtilmektedir. Bu rakam, şirketin finansal sağlığı ve likidite kapasitesini değerlendirmek i"
+  },
+  {
+   "soru": "Capital One Financial Corporation (COF), son mali yıl için kaç milyar dolarlık serbest nakit akımını bildirdi?",
+   "altin": "8,6",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    1,
+    2,
+    "hq",
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "Capital One Financial Corporation (COF), son mali yıl için **8,6 milyar dolar**lık serbest nakit akımını bildirdi. Bu rakam, şirketin temettü ödemelerini ve stratejik girişimlerini finanse etmek amacıyla kullanılmaktadır.\n\n### Serbest Nakit Akımı ve Kullanım Alanları\nSerbest nakit akımı, şirketin op"
+  },
+  {
+   "soru": "Mevcut bilgilere dayanarak Otomatik Veri İşleme A.Ş.'nin (ADP) son bir yıl boyunca satılan mal maliyeti kaç milyar dolardı?",
+   "altin": "2.4",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Otomatik Veri İşleme A.Ş.'nin (ADP) Son Bir Yıl Boyunca Satılan Mal Maliyeti\n\nMevcut belgeler doğrultusunda, Otomatik Veri İşleme A.Ş.'nin (ADP) son bir yıl boyunca satılan mal maliyeti **2,4 milyar dolar** olarak belirtilmektedir.\n\n---\n\n### Satılan Mal Maliyetinin Finansal Anlamı\n\nSatılan mal m"
+  },
+  {
+   "soru": "(VZ) son fonlama turunda Kasım 2020'de toplam kaç milyar dolar sermaye topladı?",
+   "altin": "4.25",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Verizon Communications Inc. (VZ) Son Fonlama Turunda Toplanan Sermaye\n\nVerizon Communications Inc. (VZ), son fonlama turunda **Kasım 2020** tarihinde toplam **4,25 milyar dolar** sermaye topladı. Bu fonlama turu, şirketin 5G ağ altyapısı teknolojik ilerlemeleri ve araştırma ve geliştirme çabalar"
+  },
+  {
+   "soru": "Johnson & Johnson, mevcut bilgilere dayanarak, son mali yılda sermaye harcamaları için yaklaşık kaç milyar dolar ayırdı?",
+   "altin": "4.8",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "Johnson & Johnson (JNJ), mevcut bilgilere dayanarak, son mali yılda sermaye harcamaları için yaklaşık **4.8 milyar dolar** ayırdı.\n\n### Sermaye Harcamalarının Açıklaması  \nSermaye harcamaları, şirketin uzun vadeli yatırımlarını desteklemek amacıyla yapılan finansal kaynaklardır. Bu tür yatırımlar ge"
+  },
+  {
+   "soru": "Johnson & Johnson (JNJ), geçtiğimiz yıl sermaye harcamalarına yaklaşık kaç milyar dolar harcadı?",
+   "altin": "3,8",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "Johnson & Johnson (JNJ), geçtiğimiz yıl sermaye harcamalarına yaklaşık **3,8 milyar dolar** harcadı. Bu yatırım, şirketin üretim altyapısını güçlendirmeyi ve stratejik kazanımlar ve ortaklıklar yapan üretim yeteneklerini genişletmeyi amaçlamaktadır.\n\n### Sermaye Harcamalarının Kapsamı\nSermaye harcam"
+  },
+  {
+   "soru": "Martta aylık kaç milyar dolara yaklaşan cari açık yanında yüklü sermaye çıkışları resmi rezervleri bir ayda 43,4 miyar dolar eritti?",
+   "altin": "10",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [],
+   "dogru": 0,
+   "yanit": "Mart ayında aylık yaklaşık 30 milyar dolarlık cari açık yanında, yüklü sermaye çıkışları resmi rezervleri bir ayda 43,4 milyar dolar erittiyse, bu durum ekonomik açıdan oldukça derin bir dış finansal baskı anlamına gelmektedir.\n\nCari açık, ülkenin ihracat ve ithalat akışlarını, sermaye girdi-çıktıla"
+  },
+  {
+   "soru": "Nakit rezervleri ile ilgili belirli rakamlar mevcut olmasa da MMM'nin piyasa kapitalizasyonu yaklaşık kaç milyar dolardır?",
+   "altin": "120",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### MMM Şirketinin Piyasa Kapitalizasyonu ve Nakit Pozisyonu Değerlendirmesi\n\nBelgelerde açıkça belirtildiğine göre, M Şirketi (MMM) ile ilgili piyasa kapitalizasyonu konusunda net bir rakam verilmektedir. Bu bilgi, şirketin genel finansal pozisyonunu ve yatırımcılar tarafından kabul edilen değeri a"
+  },
+  {
+   "soru": "(HD) şu anda sermaye harcamaları için yaklaşık kaç milyar dolarlık yıllık bir bütçeye sahiptir?",
+   "altin": "3,9",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Home Depot Inc. (HD) Sermaye Harcamaları Bütçesi\n\nHome Depot Inc. (HD), sermaye harcamaları için belirli bir yıllık bütçe çerçevesinde faaliyet göstermektedir. Bu bütçe, şirketin büyüme stratejilerini desteklemek ve pazar payını artırmak amacıyla kullanılmaktadır.\n\n### Sermaye Harcamaları Bütçes"
+  },
+  {
+   "soru": "(PFE) şu anda yaklaşık kaç milyar dolarlık uzun vadeli borç yükümlülüklerine sahiptir?",
+   "altin": "45",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    1,
+    2,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Pfizer Inc.'in (PFE) Uzun Vadeli Borç Yükümlülükleri\n\nPfizer Inc. (PFE), uzun vadeli borç yükümlülüklerine sahip olup, bu borcların miktarı zaman içinde değişiklik göstermektedir. Aşağıda belgelerde yer alan bilgilere dayanarak, Pfizer Inc.'in mevcut uzun vadeli borç yükümlülükleri hakkında deta"
+  },
+  {
+   "soru": "(HD), CEO'nun toplam tazminatının yaklaşık kaç milyon dolar olduğu bir yönetici tazminat yapısına sahipken, diğer yönetici tazminatları şirket içindeki rollerine göre değişmektedir?",
+   "altin": "11,2",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Home Depot Inc.'nin (HD) CEO ve Üst Yöneticilerin Tazminat Yapısı ve Endüstri Karşılaştırmaları\n\nHome Depot Inc. (HD), CEO'nun toplam tazminatının yaklaşık 11,2 milyon dolar olduğu bir yönetici tazminat yapısına sahiptir. Bu rakam, 2019 yılında belirlenmiş ve daha önceki yıllarla karşılaştırıldı"
+  },
+  {
+   "soru": "Şirket, 2019 yılında Amerika Birleşik Devletleri Adalet Bakanlığı tarafından kaç milyon dolar para cezasına çarptırıldı?",
+   "altin": "34.5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Şirketin 2019 Yılında Para Cezası Tutarı\n\nŞirket, 2019 yılında Amerika Birleşik Devletleri Adalet Bakanlığı tarafından **34.5 milyon dolar**lık bir para cezasına çarptırıldı.\n\n### Detaylı Bilgi ve Kaynaklar\n\n| Parametre / Kriter | Değer / Oran | Açıklama |\n| :--- | :--- | :--- |\n| Cezalandırma K"
+  },
+  {
+   "soru": "WAIS-4'te kaç puan alan zihinsel engelli biri için uygun birkaç iş fikri var?",
+   "altin": "79",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Zihinsel Engelli Bireyler İçin Uygun İş Fikirleri (WAIS-4 Puanına Göre)\n\nZihinsel engelli bireyler için iş fikirlerinin belirlenmesi, bireysel yetenekler, destek alabileceği ortam ve eğitim düzeyine göre değişebilir. Belgede WAIS-4'te **79 puan** alan bir zihinsel engelli birey için bazı iş fiki"
+  },
+  {
+   "soru": "Graintürk (GRTHO) hasılatı düşmesine rağmen faaliyet kârını yüzde 55 artırdı\nGraintürk (GRTHO) 2026 yılı ilk çeyreğinde kaç milyon TL ana ortaklık net kârı elde etti?",
+   "altin": "200,3",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Graintürk (GRTHO) 2026 İlk Çeyreği Net Kârı ve Finansal Performansı\n\nGraintürk Holding A.Ş. (GRTHO), 2026 yılı ilk çeyreğinde toplam hasılatında düşüş yaşasa da, **esas faaliyet kârını %55 artırmayı başardı**. Bu performans, şirketin mali yönetimi ve verimlilik stratejilerinin etkisiyle açıklanm"
+  },
+  {
+   "soru": "Ayrıca aynı dönem için gelir, hisse başına kazanç (EPS) 1,11 dolar ile kaç milyar dolardı?",
+   "altin": "5,9",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### Finansal Veri Değerlendirmesi\n\nBelgede yer alan bilgiler doğrultusunda, General Electric Company (GE) için son mali yılın finansal performansı hakkında bazı verilere ulaşabiliyoruz. Ancak belgede açıkça belirtilen ve doğrulanmış olan bilgiler sadece **hisse başına kazanç (EPS)** ve **net gelir**"
+  },
+  {
+   "soru": "Sizin durumunuzda, ayda 456 $ 'dan 335.41 $' a kadar ödeme yapacaksınız ve 4 yılda 13,5k $' ı kaç% faizle ödeyeceksiniz?",
+   "altin": "8,25",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [],
+   "dogru": 0,
+   "yanit": "Kullanıcının sorusunda belirtilen ödeme miktarları ve ödenek süresi (4 yıl) üzerinden faiz oranını hesaplamak için gerekli bilgilerin doğrudan bir belgede yer almadığı belirtildiği için, bu tür bir hesaplama genel finans kurallarına ve standart formüllere dayalı olarak yapılabilir. Ancak, özel bir b"
+  },
+  {
+   "soru": "CVS Health Corporation'ın çalışma sermayesi kaç milyar dolar ve mevcut oranı 1,04 dolardır?",
+   "altin": "2,38",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    1,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### CVS Health Corporation'ın Çalışma Sermayesi ve Mevcut Oranı\n\nCVS Health Corporation’ın çalışma sermayesi, finansal raporlarında belirtildiği üzere **2,38 milyar dolar** olarak ifade edilmektedir. Bu değer, şirketin aktiflerinin kısa vadeli borçlarla karşılaştırıldığında elde ettiği net çalışma s"
+  },
+  {
+   "soru": "Autodesk Inc.'in (ADSK) bilançosunda kaç milyar dolarlık toplam borcu vardır?",
+   "altin": "2,88",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### Autodesk Inc.'in (ADSK) Bilançosundaki Toplam Borç Miktarı\n\nAutodesk Inc. (ADSK)'nin bilançosunda yer alan toplam borç miktarı, belgelerde açıkça belirtilen en son verilere göre **2,83 milyar dolar** olarak rapor edilmektedir.\n\n---\n\n### Toplam Borçun Yapısı\n\n| Parametre / Kriter | Değer / Oran |"
+  },
+  {
+   "soru": "Southwest Airlines Co.'nun nakit pozisyonu son 2 yılda yaklaşık kaç milyar dolar arttı?",
+   "altin": "1,085",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Southwest Airlines Co.'nun Nakit Pozisyonu Artışı (Son 2 Yılda)\n\nSouthwest Airlines Co., son iki yılda nakit pozisyonunu önemli ölçüde artırmıştır. Bu artış, şirketin güçlü nakit yönetimi stratejileri ve tutarlı gelir üretimi sayesinde gerçekleşmiştir.\n\n#### Nakit Pozisyonu Artışı\n\nBelgelerde aç"
+  },
+  {
+   "soru": "En son üç aylık dosyalama Procter & Gamble Company'nin (PG) elinde kaç milyar dolar nakit var?",
+   "altin": "11,6",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### En Son Üç Aylık Dosyalama (Q3 2024) - Procter & Gamble Company (PG) Nakit Durumu\n\nBelgelerde en son üç aylık dosyalama (Q3 2024) için Procter & Gamble Company'nin (PG) elindeki nakit miktarı açıkça belirtilmiştir. Bu bilgi, şirketin finansal durumunu değerlendirmek ve kısa vadeli likidite kapasi"
+  },
+  {
+   "soru": "Mevcut bilgilere dayanarak Schlumberger Limited, en son finansal tablosunda kaç milyar dolarlık nakit ve nakit eşdeğerlerini bildirdi?",
+   "altin": "1,827",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "Schlumberger Limited (SLB), en son finansal tablosunda **1,827 milyar dolar**lık nakit ve nakit eşdeğerlerini bildirmiştir. Bu bilgi doğrudan belgede yer alan verilerle doğrulanmış ve diğer finansal parametrelere karıştırılmadan tek başına değerlendirilmiştir.\n\n### Nakit ve Nakit Eşdeğeri Bilgisi\n| "
+  },
+  {
+   "soru": "2020'de işletme nakit akışı, önceki yıllara göre önemli bir artışa işaret ederek kaç milyar dolara ulaştı?",
+   "altin": "8,1",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### 2020'de İşletme Nakit Akışı, Önceki Yıllara Göre Önemli Bir Artışa İstikamet Etti\n\nBelgelerde yer alan veriler doğrultusunda, **2020 yılında işletme nakit akışı** önemli bir artış gösteren birçok şirketin örneğini içermektedir. Ancak belgede açıkça belirtilen ve doğrulanmış bilgiye dayanarak sad"
+  },
+  {
+   "soru": "Zoetis Inc.'in (ZTS) şu anda toplam borcu yaklaşık kaç milyar dolardır?",
+   "altin": "5.8",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    2,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Zoetis Inc.'in (ZTS) Toplam Borç Durumu\n\nZoetis Inc.'in (ZTS) şu anda toplam borcu, doğrulanmış finansal verilere göre **5.8 milyar dolar** olarak belirtilmektedir. Bu borçlar farklı vade gruplarına ayrılmış olup, şirketin finansal yapısını ve kredi politikasını anlamak için önemli bir referandö"
+  },
+  {
+   "soru": "Ayrıca JPMorgan Chase, ırksal özkaynak destekli girişimciliği ve küçük işletmeleri ilerletmek için kaç milyar dolar taahhüt etti ve JPMorgan Chase Sağlık Merkezi'ni kurdu?",
+   "altin": "30",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### JPMorgan Chase & Co.'nun ırksal özkaynak destekli girişimciliği ve küçük işletmeler için taahhüt ettiği miktar\n\nBelgelerde açıkça belirtilen bilgiye göre, **JPMorgan Chase & Co. (JPM)**, ırksal özkaynak destekli girişimciliği ve küçük işletmeleri ilerletmek amacıyla **30 milyar dolar** taahhüt e"
+  },
+  {
+   "soru": "Southwest Airlines Co.'nun bilançosunda yaklaşık kaç milyar dolar nakit vardı?",
+   "altin": "3,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Southwest Airlines Co.'nun Bilançosundaki Nakit Miktarı\n\nSouthwest Airlines Co.'nun bilançosunda yer alan nakit miktarı, belgelerde açıkça belirtildiğine göre **3,5 milyar dolar** olarak kaydedilmiştir. Bu rakam, şirketin finansal durumunu ve nakit pozisyonunu değerlendirmek için temel bir refer"
+  },
+  {
+   "soru": "Kraft Heinz Company (KHC), 3G Capital ve Berkshire Hathaway dahil olmak üzere çeşitli risk sermayesi şirketlerinden yaklaşık kaç milyar dolar fon aldı?",
+   "altin": "2,3",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Kraft Heinz Company (KHC) tarafından Alınan Fonlar Hakkında Finansal Değerlendirme\n\nKraft Heinz Company (KHC), 3G Capital ve Berkshire Hathaway dahil olmak üzere çeşitli risk sermayesi şirketlerinden yaklaşık **2,3 milyar dolar** fon aldı. Bu yatırımlar, şirketin büyüme ve genişleme stratejileri"
+  },
+  {
+   "soru": "Yaklaşık kaç milyon emekliyi ilgilendiren Kurban Bayramı ödeme takvimi belli oldu?",
+   "altin": "17",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Kurban Bayramı Ödeme Takvimi ve Etkileri Üzerine Finansal Değerlendirme\n\nBelgelerde yer alan bilgilere göre, **Kurban Bayramı ödemeleri** kapsamında milyonlarca emekliye yönelik bir ödeme planı açıklanmıştır. Bu açıklamalar, hem bayram ikramiyelerinin hem de aylık maaşların aynı anda hesaplara y"
+  },
+  {
+   "soru": "Küçük bir kap ASX listesindeki şirkete yatırım yapan FAR Limited (ASX:FAR), net değeri kaç milyon doların üzerinde olan ve hisseleri satın alma ve satmada başarılı olan bir arkadaşın tavsiyesine dayanarak yapılan en riskli finansal karardı?",
+   "altin": "10",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Finansal Kararın Temel Özellikleri\n\nBelgede yer alan bilgiler doğrultusunda, FAR Limited (ASX:FAR) tarafından yapılan yatırım, küçük bir kapitalize edilmiş ASX listesindeki şirketlere yapılan ve net değeri 10 milyon doların üzerinde olan hisse senedi alım-satım işlemlerine dayanan en riskli fina"
+  },
+  {
+   "soru": "(ATVI) hisse senedi için mevcut kısa faiz, bir önceki rapor edilen döneme göre daha düşük olan kaç milyon hissedir?",
+   "altin": "8.7",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Activision Blizzard Inc. (ATVI) Hisse Senedi İçin Mevcut Kısa Faiz ve Hissedir\n\nBelgelerde yer alan bilgilere göre, **Activision Blizzard Inc. (ATVI)** hisse senedi için mevcut kısa faiz oranı, bir önceki rapor edilen döneme göre daha düşük olan **8.7 milyon hissedir**.\n\n### Kısa Faiz ve Hissed "
+  },
+  {
+   "soru": "Alınan bilgilere dayanarak General Electric Company (GE) şu anda yaklaşık kaç milyar dolarlık uzun vadeli bir borcu var?",
+   "altin": "78.84",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    1,
+    1,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### General Electric Company (GE) Uzun Vadeli Borç Durumu\n\nAlınan bilgilere dayanarak, General Electric Company (GE) şu anda yaklaşık **78.84 milyar dolarlık uzun vadeli bir borcu** vardır.\n\n#### Uzun Vadeli Borç Vadesi ve Dağılımı\n| Parametre / Kriter | Değer / Oran | Açıklama |\n| :--- | :--- | :--"
+  },
+  {
+   "soru": "(AIG), 29 Nisan 2021'de yayınlanan en son rapor itibariyle kaç milyon hisse senedine sahiptir?",
+   "altin": "877.37",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    "hq",
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### AIG'nin 29 Nisan 2021 Tarihindeki Hisse Senedi Sayısı\n\nAmerican International Group, Inc. (AIG), 29 Nisan 2021 tarihinde yayınlanan en son rapor itibariyle **877.37 milyon hisse senedine sahiptir**.\n\nBu rakam, AIG'nin o tarihe kadar olan toplam hisse senedi sayısını yansıtır ve doğrudan belgede "
+  },
+  {
+   "soru": "Mastercard Incorporated, yenilenebilir enerji girişimlerine kaç milyon dolar taahhüt etti ve Kaliforniya'daki bir güneş çiftliği ve Avrupa'daki rüzgar enerjisi projeleri gibi projelere yatırım yaptı?",
+   "altin": "500",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Mastercard Incorporated'ün Yenilenebilir Enerji Girişimlerine Yatırımı\n\nMastercard Incorporated (MA), yenilenebilir enerji girişimlerine yönelik önemli yatırımlar gerçekleştirmiştir. Belgeye göre, şirket **yenilenebilir enerji girişimlerine 500 milyon dolar taahhüt etti** ve bu yatırımlar kapsam"
+  },
+  {
+   "soru": "tarafından 2020 yılında yapılan toplam hisse senedi geri alım tutarı kaç milyar dolardı?",
+   "altin": "3.72",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Salesforce.com Inc.'nin 2020 Yılında Yapılan Toplam Hisse Senedi Geri Alım Tutarı\n\nSalesforce.com, Inc. (CRM), 2020 yılında toplam **3.72 milyar dolar** tutarında hisse senedi geri alımı gerçekleştirdi. Bu geri alım, şirketin finansal durumunu olumlu yönde etkiledi ve nakit rezervleri kullanılar"
+  },
+  {
+   "soru": "General Motors Company'nin (GM) bilançosunda toplam kaç milyar dolar borcu var?",
+   "altin": "110.59",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### General Motors Company'nin (GM) Bilançosundaki Toplam Borç Miktarı\n\n#### Genel Durum ve Kaynaklar  \nBelgelerde yer alan farklı kaynaklara göre, General Motors Company'nin (GM) bilançosunda bulunan toplam borç miktarı farklı değerlerle ifade edilmektedir. Bu farklılıklar, belgenin zaman dilimine,"
+  },
+  {
+   "soru": "Templeton'ın mevcut bilgilerine dayanarak, yıllık yaklaşık kaç milyon dolar tazminat elde ediyor?",
+   "altin": "16,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### CEO Tazminatı Değerlendirmesi\n\nTexas Instruments Incorporated (TXN)’ın CEO’su Richard K. Templeton’un yıllık tazminat miktarı, belgelerde açıkça belirtilen bilgilere göre **yaklaşık 16,5 milyon dolar** olarak verilmiştir.\n\n### Tazminat Yapısının Temel Bileşenleri\n\nCEO’nun tazminatı genellikle aş"
+  },
+  {
+   "soru": "Kraft Heinz Company'nin (KHC) mevcut piyasa değeri yaklaşık kaç milyar dolardır?",
+   "altin": "41.47",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Kraft Heinz Company'nin (KHC) Piyasa Değeri Analizi\n\nKraft Heinz Company (KHC), finansal piyasanın dikkatini çekecek şekilde farklı dönemlerde değişen bir piyasa değeri sunmaktadır. Bu değer, şirketin hisse senedi fiyatı ve toplam hisse sayısına bağlı olarak her zaman farklılık gösterebilir. Aşa"
+  },
+  {
+   "soru": "Adobe Inc.'in (ADBE) mevcut çalışma sermayesi kaç milyar dolar iken, Citigroup Inc?",
+   "altin": "4.32",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Adobe Inc. (ADBE) ve Citigroup Inc. (C)'nin Çalışma Sermayesi Karşılaştırması\n\n#### **Mevcut Çalışma Sermayesi**\n\n| Şirket         | Çalışma Sermayesi (Milyar Dolar) |\n|----------------|-------------------------------|\n| Adobe Inc. (ADBE) | 4.32                          |\n| Citigroup Inc. (C) | "
+  },
+  {
+   "soru": "International Business Machines Corporation (IBM) yıllık olarak yaklaşık kaç milyar dolarlık siber güvenlik önlemlerine yatırım yapıyor?",
+   "altin": "1,5",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### IBM'nin Yıllık Siber Güvenlik Yatırımı\n\nInternational Business Machines Corporation (IBM), siber güvenlik önlemlerine yönelik önemli yatırımlar gerçekleştirmektedir. Bu yatırımlar, şirketin dijital dönüşüm stratejilerinin bir parçasıdır ve hem içsel güvenliğin artırılması hem de dışsal tehditler"
+  },
+  {
+   "soru": "CVS Health Corporation (CVS) geçtiğimiz mali yıl için kaç milyar dolarlık ücretsiz nakit akışına sahipti?",
+   "altin": "9,43",
+   "sahip": 1,
+   "sorulan": 2,
+   "rota": "complex",
+   "kaynaklar": [
+    1,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### CVS Health Corporation (CVS) Geçtiğimiz Mali Yıldaki Serbest Nakit Akışı (FCF)\n\nCVS Health Corporation, geçtiğimiz mali yıl için **9,43 milyar dolar**lık serbest nakit akışına (Free Cash Flow - FCF) sahipti. Bu rakam, şirketin finansal sağlığı ve operasyonel verimliliğini yansıtan önemli bir gös"
+  },
+  {
+   "soru": "Comcast Corporation (CMCSA), son mali yılda kaç milyar dolarlık sermaye harcaması yaptı?",
+   "altin": "9,8",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Comcast Corporation (CMCSA) Son Mali Yıldaki Sermaye Harcamaları\n\nComcast Corporation, son mali yılda belirli yatırımlar yaparak büyüme ve teknolojik gelişim hedeflerine ulaşmaya yönelik stratejik adımlar attı. Bu yatırımlar, şirketin uzun vadeli rekabet avantajını artırmayı ve pazar payını geni"
+  },
+  {
+   "soru": "(T), halihazırda yeniden satın alınan yaklaşık kaç milyon hisse ile mevcut bir hisse geri alım programına sahiptir?",
+   "altin": "75",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### AT&T Inc. (T) Hisse Geri Alım Programı Durumu\n\nAT&T Inc. (T), mevcut bir hisse geri alım programına sahiptir ve bu programa göre yaklaşık **75 milyon hisse** yeniden satın alınmaktadır. Bu bilgi, şirketin açıkça belirttiği doğrulanmış verilerdir.\n\n### Programın Amaçları ve Özellikleri\n\nHisse ger"
+  },
+  {
+   "soru": "Chevron Corporation'ın (CVX) piyasa değeri şu anda kaç milyar dolar civarındadır?",
+   "altin": "208",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    2,
+    1,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Chevron Corporation'ın (CVX) Piyasa Değeri ve Finansal Performansı\n\nChevron Corporation (CVX), enerji sektöründe önemli bir yer tutan büyük uluslararası bir şirket olarak, piyasa değerinin yanı sıra serbest nakit akışı ve hisse senedi performansı gibi birçok finansal göstergede dikkat çekmektedi"
+  },
+  {
+   "soru": "Bahsedilen mali yılda şirketin net gelir marjı %18, toplam özsermayesi ise kaç milyar dolardır.\"?",
+   "altin": "15.53",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1
+   ],
+   "dogru": 0,
+   "yanit": "### Finansal Değerlendirme: Merck & Co., Inc.'nin (MRK) Net Gelir Marjı ve Toplam Özsermayesi\n\n#### 1. Net Gelir Marjının Belirlenmesi  \nBelgelerde geçen mali yılda Merck & Co., Inc.'in net gelir marjının **%15** olduğu belirtilmiştir. Bu oran, şirketin toplam gelirlerinin üzerinden hesaplanan kar m"
+  },
+  {
+   "soru": "MSCI ve FTSE endeksleri arasındaki fark, iddia edilenden daha küçük olan% kaç % 5'dir?",
+   "altin": "85",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### MSCI ve FTSE Endeksleri Arasındaki Fark ve Karşılaştırma\n\nMSCI ve FTSE endeksleri, küresel finansal pazarlarda yaygın olarak kullanılan iki önemli endekstir. Her ikisi de farklı bölgeleri ve sektörleri kapsayan endekslerdir; ancak bu endekslerin kapsamı, doğruluğu ve hesaplanma yöntemleri arasın"
+  },
+  {
+   "soru": "Bugün itibariyle UnitedHealth Group Incorporated'ın (UNH) piyasa değeri yaklaşık kaç milyar dolardır?",
+   "altin": "400",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### UnitedHealth Group Incorporated (UNH) Piyasa Değeri Analizi\n\nBugün itibariyle UnitedHealth Group Incorporated'ın (UNH) piyasa değeri, finansal raporlar ve güncel piyasa verilerine göre belirli bir noktada değerlendirilmektedir. Aşağıda, belgelerde yer alan bilgilere dayanarak piyasa değerinin na"
+  },
+  {
+   "soru": "Powerball piyangosunda kaç milyon dolar kazanırsanız, kazançlarınızı istikrarlı bir finansal gelecek sağlamak için nakit, gayrimenkul, tahvil, endeks fonları ve hisse senetlerinin bir kombinasyonuna yatırmayı düşünmelisiniz?",
+   "altin": "150",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "dogru": 0,
+   "yanit": "### Powerball Piyango Kazancı İçin İstikrarlı Finansal Gelecek Oluşturma Stratejisi\n\nPowerball piyangosunda kazanılan miktar, kişisel finansal hedefler ve yaşam tarzına göre değişebilir. Ancak genel olarak, büyük bir kazanç elde edildiğinde, bu parayı istikrarlı ve sürdürülebilir bir şekilde yönetme"
+  },
+  {
+   "soru": "Türk lirası zorunlu karşılık oranları tüm yükümlülük türleri ve vade dilimleri için kaç baz puan artırılmıştır?",
+   "altin": "200",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Türk Lirası Zorunlu Karşılık Oranlarında BAZ Puan Değişimleri (Belgelerde Yer Alan Bilgiler)\n\nAşağıda, belgelerde açıkça yer alan ve \"Türk lirası zorunlu karşılık oranları\" konusunda yapılan baz puan değişikliklerini içeren bilgileri tablo halinde sunuyorum:\n\n| Tarih | Karar / Değişim | BAZ Puan"
+  },
+  {
+   "soru": "Activision Blizzard Inc.'in (ATVI) şu anda kaç milyar dolarlık bir nakit rezervi var?",
+   "altin": "4,8",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    1,
+    2,
+    1,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Activision Blizzard Inc.'in (ATVI) Nakit Rezervi Değerlendirmesi\n\n#### ✅ Kesin Bilgiye Dayanarak Belirlenen Nakit Rezervi\n\nBelgelerde açıkça belirtilen ve doğrulanmış bilgilere göre, **Activision Blizzard Inc. (ATVI)** şu anda **4,8 milyar dolarlık bir nakit rezervine** sahiptir.\n\nBu bilgi, şirk"
+  },
+  {
+   "soru": "Yaş ortalaması 51 olan Japonya’da; kaç milyon nüfusun 70’i istihdamda (2)\nTÜİK, (dün) genç nüfusa yönelik araştırma sonuçlarını açıkladı:\n15-24 yaş grubunu içeren genç nüfusumuz yüzde 14.8’in de altına sarktı…\nNe eğitimde ne istihdamda olan gençlerin oranı mı??",
+   "altin": "120",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Japonya’da Nüfus ve İstihdam Durumu Üzerine Finansal Değerlendirme\n\n#### Genel Gözden Geçirme ve Veri Analizi\n\nBelgede yer alan veriler, Japonya'nın demografik yapısının ve istihdam oranlarının arasındaki ilişkiyi ele almakta. Bu bağlamda, yaş ortalaması 51 olan bir nüfusun büyük bir kısmının iş"
+  },
+  {
+   "soru": "Geçtiğimiz mali yılda General Electric Company (GE) araştırma ve geliştirmeye yaklaşık kaç milyar dolar yatırım yaptı?",
+   "altin": "5,8",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### GE'nin Araştırma ve Geliştirme Yatırımları (2023 Mali Yılı)\n\nGE, geçtiğimiz mali yılda araştırma ve geliştirmeye yönelik önemli yatırımlar gerçekleştirdi. Bu yatırımlar, şirketin stratejik sektör odaklı projelerini desteklemeyi amaçlamıştır.\n\n### Araştırma ve Geliştirme Yatırım Tutarları\n\nBelgel"
+  },
+  {
+   "soru": "Intel Corporation'ın şu anda yaklaşık kaç milyar dolarlık nakit ve nakit eşdeğeri var?",
+   "altin": "10",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ],
+   "dogru": 1,
+   "yanit": "### Intel Corporation'ın Nakit ve Nakit Eşdeğeri Durumu\n\nIntel Corporation (INTC), finansal istikrarını korumak ve gelecekteki yatırımlara öncelik vermek amacıyla nakit yönetimi stratejileri uygulamaktadır. Şirketin şu anki nakit ve nakit eşdeğeri durumu, doğrulanmış belgeler üzerinden değerlendiril"
+  },
+  {
+   "soru": "(WBA) şu anda bilançolarında yaklaşık kaç milyar dolarlık bir toplam uzun vadeli borcu var?",
+   "altin": "19,38",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 0,
+   "yanit": "### Walgreens Boots Alliance, Inc. (WBA) Toplam Uzun Vadeli Borcu Değerlendirmesi\n\n#### Özet Bilgi\nBelgelerde yer alan veriler doğrultusunda, **Walgreens Boots Alliance, Inc. (WBA)**'nin bilançolarında bulunan toplam uzun vadeli borcun değeri **16,5 milyar dolar** olarak belirtilmiştir.\n\n#### Detayl"
+  },
+  {
+   "soru": "Broadcom Inc.'in (AVGO) hisselerinin şu anki olağanüstü sayısı kaç milyon?",
+   "altin": "416.45",
+   "sahip": 2,
+   "sorulan": 1,
+   "rota": "complex",
+   "kaynaklar": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "dogru": 1,
+   "yanit": "### Broadcom Inc.'in (AVGO) Hisselerinin Şu Anki Olağanüstü Sayısı\n\nBroadcom Inc.'in (AVGO) hisselerinin şu anki olağanüstü sayısı, belgelerde açıkça verilen bilgilere göre **416.45 milyon** hisse olarak belirtilmektedir.\n\n### Piyasa Değerleri ve Finansal Göstergeler\n\n| Parametre / Kriter | Değer / "
+  }
+ ],
+ "dogruluk": 0.86,
+ "ortalama_sure_ms": 9172.4,
+ "toplam_sure_s": 920.3
+}

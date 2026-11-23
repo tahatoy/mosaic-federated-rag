@@ -1,0 +1,80 @@
+{
+ "n_parca": 300,
+ "kelime": 22841,
+ "tani": {
+  "ornek": "Activision Blizzard, Inc. (ATVI)'nin mevcut nakit rezervi nedir?\n\nActivision Blizzard Inc.'in (ATVI) şu anda 4,8 milyar ",
+  "kok": "activision blizzard , ınc . ( ATVI ) ' nin mevcut nakit rezerv ne ? activision blizzard ınc . ' in ( ATVI ) şu an 4,8 milyar",
+  "morfem": "activision blizzard , ınc . ( ATVI ) ' nin mevcut nakit rezerv i ne dir ? activision blizzard ınc . ' in ( ATVI ) şu an da 4,8 milyar",
+  "hybrid_tokenizer_ZemberekAnalyzer_degisiklik": 0,
+  "hybrid_tokenizer_ornek": [
+   [
+    "Activision"
+   ],
+   [
+    "Blizzard,"
+   ],
+   [
+    "Inc."
+   ],
+   [
+    "(ATVI)'nin"
+   ],
+   [
+    "mevcut"
+   ],
+   [
+    "nakit"
+   ],
+   [
+    "rezervi"
+   ],
+   [
+    "nedir?"
+   ]
+  ]
+ },
+ "tokenizerlar": {
+  "genel_bert": {
+   "toplam_token": 37471,
+   "kelime_basina_token": 1.6405,
+   "parca_basina_token": 124.9,
+   "parca_basina_ms": 0.183,
+   "unk_orani": 0.0
+  },
+  "zemberek_kok+bert": {
+   "toplam_token": 32341,
+   "kelime_basina_token": 1.4159,
+   "parca_basina_token": 107.8,
+   "parca_basina_ms": 201.818,
+   "unk_orani": 0.0
+  },
+  "zemberek_morfem+bert": {
+   "toplam_token": 52099,
+   "kelime_basina_token": 2.2809,
+   "parca_basina_token": 173.66,
+   "parca_basina_ms": 201.791,
+   "unk_orani": 0.0
+  },
+  "turkembed": {
+   "toplam_token": 42236,
+   "kelime_basina_token": 1.8491,
+   "parca_basina_token": 140.79,
+   "parca_basina_ms": 0.223,
+   "unk_orani": 0.0
+  }
+ },
+ "genel_bert_e_gore": {
+  "zemberek_kok+bert": {
+   "token_degisim_orani": -0.1369,
+   "sure_kat": 1102.83
+  },
+  "zemberek_morfem+bert": {
+   "token_degisim_orani": 0.3904,
+   "sure_kat": 1102.68
+  },
+  "turkembed": {
+   "token_degisim_orani": 0.1272,
+   "sure_kat": 1.22
+  }
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "n_train": 24000,
+ "n_test": 3000,
+ "baselines": {
+  "majority": {
+   "acc": 0.3333,
+   "macro_f1": 0.1667
+  },
+  "tfidf_logreg": {
+   "acc": 1.0,
+   "macro_f1": 1.0,
+   "infer_ms_per_query": 0.05,
+   "train_s": 2.0
+  },
+  "e5small_logreg": {
+   "acc": 1.0,
+   "macro_f1": 1.0
+  },
+  "bert_router_deployed": {
+   "acc": 0.943,
+   "macro_f1": 0.943,
+   "infer_ms_per_query_http_batch": 6.353
+  }
+ },
+ "federated": {
+  "client_sizes": {
+   "1": 1560,
+   "2": 1560
+  },
+  "runs": {
+   "central_pooled": [
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    }
+   ],
+   "FedAvg": [
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0,
+     "train_s": 221.8
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0,
+     "train_s": 221.8
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0,
+     "train_s": 219.5
+    }
+   ],
+   "FedProx": [
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0,
+     "train_s": 244.5
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0,
+     "train_s": 245.3
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0,
+     "train_s": 241.9
+    }
+   ],
+   "local_b1": [
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    }
+   ],
+   "local_b2": [
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    },
+    {
+     "acc": 1.0,
+     "macro_f1": 1.0
+    }
+   ]
+  },
+  "summary": {
+   "central_pooled": {
+    "acc": [
+     1.0,
+     0.0
+    ],
+    "macro_f1": [
+     1.0,
+     0.0
+    ]
+   },
+   "FedAvg": {
+    "acc": [
+     1.0,
+     0.0
+    ],
+    "macro_f1": [
+     1.0,
+     0.0
+    ]
+   },
+   "FedProx": {
+    "acc": [
+     1.0,
+     0.0
+    ],
+    "macro_f1": [
+     1.0,
+     0.0
+    ]
+   },
+   "local_b1": {
+    "acc": [
+     1.0,
+     0.0
+    ],
+    "macro_f1": [
+     1.0,
+     0.0
+    ]
+   },
+   "local_b2": {
+    "acc": [
+     1.0,
+     0.0
+    ],
+    "macro_f1": [
+     1.0,
+     0.0
+    ]
+   }
+  }
+ }
+}

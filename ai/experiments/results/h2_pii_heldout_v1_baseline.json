@@ -1,0 +1,183 @@
+{
+ "impl": "backend/ai_engine.py:_filter_pii",
+ "seed": 2026,
+ "n_per_variant": 300,
+ "kategoriler": {
+  "TC": {
+   "etiketli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "tireli": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "ikili_boşluk": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "bitişik": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 0.5
+  },
+  "IBAN": {
+   "TR_boşluklu_iki": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "tireli": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "küçük_bitişik": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "standart": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 0.5
+  },
+  "TELEFON": {
+   "noktalı": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "parantez_bitişik": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "+90_tireli": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "boşluksuz_+90": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "standart": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 0.2
+  },
+  "KART": {
+   "noktalı": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "tireli": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "boşluklu": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 0.3333
+  },
+  "EPOSTA": {
+   "büyük_harfli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "rakamlı": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 1.0
+  },
+  "AD": {
+   "ad_soyad": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "ek_almış": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "büyük_soyad": {
+    "n": 300,
+    "maskelendi": 104,
+    "recall": 0.3467
+   },
+   "soyad_önce": {
+    "n": 300,
+    "maskelendi": 0,
+    "recall": 0.0
+   },
+   "_toplam_recall": 0.5867
+  }
+ },
+ "genel_recall": 0.4703,
+ "negatif_cümleler": {
+  "n": 16,
+  "yanlış_alarm": 5,
+  "oran": 0.3125,
+  "örnekler": [
+   {
+    "cümle": "Merkez Bankası politika faizini 500 baz puan artırdı.",
+    "maskelenen": [
+     "Merkez Bankası"
+    ]
+   },
+   {
+    "cümle": "Borsa İstanbul BIST 100 endeksi 9.875 puandan kapandı.",
+    "maskelenen": [
+     "Borsa İstanbul"
+    ]
+   },
+   {
+    "cümle": "Sermaye Piyasası Kurulu yeni tebliği yayımladı.",
+    "maskelenen": [
+     "Sermaye Piyasası"
+    ]
+   },
+   {
+    "cümle": "Kamuyu Aydınlatma Platformu üzerinden açıklama yapıldı.",
+    "maskelenen": [
+     "Kamuyu Aydınlatma"
+    ]
+   },
+   {
+    "cümle": "Türkiye Cumhuriyet Merkez Bankası rezervleri arttı.",
+    "maskelenen": [
+     "Türkiye Cumhuriyet",
+     "Merkez Bankası"
+    ]
+   }
+  ]
+ },
+ "gerçek_korpus_yanlış_alarm": {
+  "n": 3000,
+  "maskelenen_chunk": 1721,
+  "oran": 0.5737,
+  "kategori": {
+   "NAME": 14415,
+   "EMAIL": 1
+  }
+ }
+}

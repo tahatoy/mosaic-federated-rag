@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-09-14 22:35:00",
+  "total_records": 22192,
+  "estimated_total_tokens": 3845679,
+  "category_distribution": {
+    "bilanco_analiz": 7,
+    "mevzuat_hukuk": 7,
+    "finans_haber_analiz": 12,
+    "bankacilik_urunleri": 1730,
+    "bilanco_kap_analiz": 3468,
+    "mevzuat_duzenleme": 435,
+    "muhakeme_hesaplama": 1763,
+    "piyasa_sirket_analiz": 14770
+  },
+  "source_distribution": {
+    "kap_financial_report": 7,
+    "tcmb_mevzuat": 2,
+    "bddk_mevzuat": 4,
+    "spk_mevzuat": 1,
+    "bloomberght": 4,
+    "anadolu_ajansi_finans": 8,
+    "sube1_konut_kredisi_kilavuzu": 1,
+    "bddk_spk_tcmb_instructions": 1344,
+    "kap_disclosures_and_sentiment": 3468,
+    "tcmb_official_communications": 364,
+    "bddk_banking_law": 71,
+    "turkish_finance_reasoning": 1738,
+    "turkish_finance_reasoning_engine": 25,
+    "turkish_finance_chat_corpus": 14571,
+    "turkiye_finance_qa_corpus": 385,
+    "financial_press_news": 199
+  },
+  "branch_splits": {
+    "branch1_chunks": 7854,
+    "branch2_chunks": 14767,
+    "hq_global_chunks": 22192,
+    "overlap_ratio": "6.0%"
+  },
+  "router_dataset": {
+    "total_records": 30000,
+    "train_records": 24000,
+    "val_records": 3000,
+    "test_records": 3000,
+    "split_ratio": "80/10/10",
+    "seed": 42,
+    "class_distribution": {
+      "chitchat": 10000,
+      "simple": 10000,
+      "complex": 10000
+    }
+  },
+  "benchmark_datasets": {
+    "tr_mmlu": {
+      "test_records": 2000,
+      "dev_records": 500
+    },
+    "bist_sentiment": {
+      "test_records": 1500,
+      "train_records": 1000
+    },
+    "banking_security_eval": {
+      "total_scenarios": 300
+    }
+  },
+  "output_files": {
+    "sft_dataset": "ai/data/processed/finetune_turkish_finance_sft.jsonl",
+    "rag_expanded": "ai/data/processed/rag_corpus_expanded.jsonl",
+    "branch1_corpus": "ai/data/splits/branch1/corpus.jsonl",
+    "branch2_corpus": "ai/data/splits/branch2/corpus.jsonl",
+    "hq_corpus": "ai/data/splits/hq/corpus.jsonl",
+    "router_train": "ai/data/processed/router_train.jsonl",
+    "router_val": "ai/data/processed/router_val.jsonl",
+    "router_test": "ai/data/processed/router_test.jsonl",
+    "dataset_catalog": "ai/data/DATASET_CATALOG.md"
+  }
+}

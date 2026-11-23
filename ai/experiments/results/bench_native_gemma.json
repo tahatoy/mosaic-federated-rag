@@ -1,0 +1,24 @@
+{
+ "model": "gemma",
+ "url": "http://127.0.0.1:8199",
+ "template": "model-native (/v1/chat/completions)",
+ "tr_mmlu": {
+  "total": 500,
+  "correct": 204,
+  "accuracy": 0.408,
+  "unparseable": 0,
+  "avg_latency_s": 0.092
+ },
+ "sentiment_binary": {
+  "total": 500,
+  "labels": {
+   "negatif": 101,
+   "pozitif": 399
+  },
+  "macro_f1": 0.8342,
+  "accuracy": 0.874,
+  "unparseable_counted_wrong": 0,
+  "avg_latency_s": 0.0769,
+  "majority_baseline_acc": 0.798
+ }
+}

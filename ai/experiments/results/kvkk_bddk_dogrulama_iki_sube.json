@@ -1,0 +1,134 @@
+{
+ "kontroller": [
+  {
+   "kontrol": "Anahtarsız sorgu reddedilir",
+   "dayanak": "BDDK BS Yön. kimlik doğrulama; KVKK Rehberi erişim",
+   "gecti": true,
+   "ayrinti": 401
+  },
+  {
+   "kontrol": "Analist anahtarıyla sorgu",
+   "dayanak": "yetki matrisi",
+   "gecti": true,
+   "ayrinti": 200
+  },
+  {
+   "kontrol": "Analist imha yapamaz (en az yetki)",
+   "dayanak": "KVKK Rehberi yetki matrisi",
+   "gecti": true,
+   "ayrinti": 403
+  },
+  {
+   "kontrol": "Geçersiz anahtar reddedilir",
+   "dayanak": "kimlik doğrulama",
+   "gecti": true,
+   "ayrinti": 401
+  },
+  {
+   "kontrol": "branch_01: düz HTTP kabul edilmez",
+   "dayanak": "aktarımda şifreleme",
+   "gecti": true,
+   "ayrinti": "reddedildi (RemoteProtocolError)"
+  },
+  {
+   "kontrol": "branch_01: istemci sertifikasız TLS reddedilir (mTLS)",
+   "dayanak": "BDDK karşılıklı kimlik doğrulama",
+   "gecti": true,
+   "ayrinti": "reddedildi (RemoteProtocolError)"
+  },
+  {
+   "kontrol": "branch_01: mTLS ile erişim ve protokol",
+   "dayanak": "TLS 1.2+",
+   "gecti": true,
+   "ayrinti": "200 TLSv1.3 TLS_AES_256_GCM_SHA384"
+  },
+  {
+   "kontrol": "branch_02: düz HTTP kabul edilmez",
+   "dayanak": "aktarımda şifreleme",
+   "gecti": true,
+   "ayrinti": "reddedildi (RemoteProtocolError)"
+  },
+  {
+   "kontrol": "branch_02: istemci sertifikasız TLS reddedilir (mTLS)",
+   "dayanak": "BDDK karşılıklı kimlik doğrulama",
+   "gecti": true,
+   "ayrinti": "reddedildi (RemoteProtocolError)"
+  },
+  {
+   "kontrol": "branch_02: mTLS ile erişim ve protokol",
+   "dayanak": "TLS 1.2+",
+   "gecti": true,
+   "ayrinti": "200 TLSv1.3 TLS_AES_256_GCM_SHA384"
+  },
+  {
+   "kontrol": "HQ iç servis 8000 LAN'a kapalı",
+   "dayanak": "BDDK ağ güvenliği/segmentasyon",
+   "gecti": true,
+   "ayrinti": "10.0.0.10:8000 kapalı"
+  },
+  {
+   "kontrol": "HQ iç servis 8003 LAN'a kapalı",
+   "dayanak": "BDDK ağ güvenliği/segmentasyon",
+   "gecti": true,
+   "ayrinti": "10.0.0.10:8003 kapalı"
+  },
+  {
+   "kontrol": "HQ iç servis 8098 LAN'a kapalı",
+   "dayanak": "BDDK ağ güvenliği/segmentasyon",
+   "gecti": true,
+   "ayrinti": "10.0.0.10:8098 kapalı"
+  },
+  {
+   "kontrol": "HQ iç servis 8099 LAN'a kapalı",
+   "dayanak": "BDDK ağ güvenliği/segmentasyon",
+   "gecti": true,
+   "ayrinti": "10.0.0.10:8099 kapalı"
+  },
+  {
+   "kontrol": "Şube→HQ hattında açık sayısal sır yok (kaynakta maskeleme)",
+   "dayanak": "KVKK veri minimizasyonu / maskeleme",
+   "gecti": true,
+   "ayrinti": "0/120 sır açık; ad açık 0/30 (yalnızca mTLS+maskelemeli şube)"
+  },
+  {
+   "kontrol": "HQ iz kaydı zinciri doğrulanır",
+   "dayanak": "BDDK iz kayıt mekanizması (bütünlük)",
+   "gecti": true,
+   "ayrinti": "908 kayıt, bozuk=None"
+  },
+  {
+   "kontrol": "İz kaydında kişisel veri yok",
+   "dayanak": "KVKK veri minimizasyonu",
+   "gecti": true,
+   "ayrinti": "0 eşleşme"
+  },
+  {
+   "kontrol": "HQ uygulama loglarında kanarya sırrı yok",
+   "dayanak": "KVKK Rehberi: loglarda kişisel veri",
+   "gecti": true,
+   "ayrinti": "0 eşleşme"
+  },
+  {
+   "kontrol": "İmha talebi kaydı şubeden siler",
+   "dayanak": "KVKK md.7 silme/yok etme",
+   "gecti": true,
+   "ayrinti": "200 {\"branch_01\": {\"silinen\": [\"canary_b1_0\"], \"adet\": 1}, \"branch_02\": {\"silinen\": [], \"adet\": 0}, \"hq\": {\"silinen\": [], \"adet\": 0}, \"hq_damitilmis\": {\"silinen\": [], \"adet\": 0}}"
+  },
+  {
+   "kontrol": "İmha işlemi iz kaydına işlendi ve zincir geçerli",
+   "dayanak": "hesap verebilirlik",
+   "gecti": true,
+   "ayrinti": "914 kayıt"
+  },
+  {
+   "kontrol": "Dış yapay zekâ API çağrısı yok (veri yurt içinde, şirket içinde işlenir)",
+   "dayanak": "BDDK yurt içi birincil sistem / KVKK md.9",
+   "gecti": true,
+   "ayrinti": "yok"
+  }
+ ],
+ "ozet": {
+  "gecen": 21,
+  "toplam": 21
+ }
+}

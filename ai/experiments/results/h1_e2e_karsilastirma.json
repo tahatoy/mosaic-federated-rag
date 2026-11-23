@@ -1,0 +1,13 @@
+{
+ "once": "once_hq_kopya_gpu_bos",
+ "sonra": "sonra_hq_ortak_gpu_bos",
+ "n": 100,
+ "dogruluk_once": 0.86,
+ "dogruluk_sonra": 0.84,
+ "ortalama_sure_ms_once": 8972.3,
+ "ortalama_sure_ms_sonra": 9058.5,
+ "yalniz_once_dogru": 3,
+ "yalniz_sonra_dogru": 1,
+ "mcnemar_p": 0.625,
+ "yorum": "Fark istatistiksel olarak anlamlı değil (p>=0.05): HQ'daki şube kopyaları kaldırıldığında doğruluk korunmuştur."
+}

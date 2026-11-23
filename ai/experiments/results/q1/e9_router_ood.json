@@ -1,0 +1,41 @@
+{
+ "expected": "simple (1)",
+ "sets": {
+  "cloze_question": {
+   "n": 600,
+   "bert_raw": {
+    "complex": 0.9967,
+    "simple": 0.0033
+   },
+   "bert_with_rules": {
+    "complex": 0.9967,
+    "simple": 0.0033
+   },
+   "tfidf_logreg": {
+    "complex": 0.81,
+    "simple": 0.18,
+    "chitchat": 0.01
+   },
+   "bert_mean_confidence": 0.9972,
+   "rule_overrides": 0
+  },
+  "paraphrased": {
+   "n": 419,
+   "bert_raw": {
+    "complex": 0.9976,
+    "simple": 0.0024
+   },
+   "bert_with_rules": {
+    "complex": 0.9976,
+    "simple": 0.0024
+   },
+   "tfidf_logreg": {
+    "complex": 0.5728,
+    "simple": 0.3962,
+    "chitchat": 0.031
+   },
+   "bert_mean_confidence": 0.9986,
+   "rule_overrides": 0
+  }
+ }
+}

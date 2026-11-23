@@ -1,0 +1,3638 @@
+{
+  "n": 200,
+  "accuracy": {
+    "A_no_rag": 0.04,
+    "B_local_only": 0.01,
+    "C_federated": 0.755
+  },
+  "rouge_l": {
+    "A_no_rag": 0.0076,
+    "B_local_only": 0.0057,
+    "C_federated": 0.0887
+  },
+  "tests": {
+    "C_federated_vs_A_no_rag": {
+      "only_first_correct": 143,
+      "only_second_correct": 0,
+      "mcnemar_p": 0.0,
+      "acc_diff": 0.715,
+      "boot95": [
+        0.65,
+        0.775
+      ]
+    },
+    "C_federated_vs_B_local_only": {
+      "only_first_correct": 149,
+      "only_second_correct": 0,
+      "mcnemar_p": 0.0,
+      "acc_diff": 0.745,
+      "boot95": [
+        0.685,
+        0.8
+      ]
+    }
+  },
+  "h1_karar": "DESTEKLENDİ",
+  "kayıtlar": [
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ek olarak, Apache Corporation (APA) şu anda yaklaşık ___ milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.\"",
+      "gold": "10,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "4.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "24,7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8,67",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Oracle Corporation'ın 2019'daki çevrimiçi satış geliri, bir önceki yıla göre% 15'lik bir büyüme yaşayan ___ milyar dolardı.Bu konuşmadaki bilgilerin kurgusal olduğunu ve Oracle Corporation'ın gerçek mali durumunu yansıtmadığını lütfen unutmayın.\"",
+      "gold": "2.3",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "15",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "15",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2.3",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Zoetis Inc., öncelikle güneş ve rüzgar enerjisi projelerine odaklanan yenilenebilir enerji girişimlerine yaklaşık ___ milyon dolar yatırım yaptı.\"",
+      "gold": "25",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "750",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "150",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "25",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bank of America Corporation'ın (BAC) en son çeyrekteki toplam gelirleri ___ milyar dolardı.\"",
+      "gold": "22.7",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "11.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "91.24",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "22.7",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Lockheed Martin Corporation, geçen mali yılda havacılık savunma teknolojisi ve ileri mühendislik gibi alanlara odaklanan yaklaşık ___ milyar dolarlık sermaye kiralama yatırımı yaptı.\"",
+      "gold": "1,8",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.8",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "7.3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Geçen ay General Electric Company (GE) için günlük işlem gören hisselerin ortalama sayısı yaklaşık ___ milyon hisseydi.\"",
+      "gold": "10",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "10",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "60",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bununla birlikte, kapsamlı küresel varlığı ile 2020 yılında toplam ___ milyar dolarlık gelirinin önemli bir kısmının uluslararası operasyonlardan geldiğini varsaymak güvenlidir.\"",
+      "gold": "119.5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "7.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "9",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Söz konusu ETF’lere ay boyunca toplam ___ milyar dolarlık para girişi gerçekleşti.\"",
+      "gold": "1,97",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.8",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "3.2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3.2",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Anheuser-Busch InBev SA/NV (BUD) şu anda yaklaşık ___ milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.\"",
+      "gold": "116",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "85",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "284",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "162",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Verilen bilgilerden, P = ___ TL, i = 12, t = 1 yıl olarak hesaplanır.\"",
+      "gold": "110.000",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "P",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "P",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "110000",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(ADSK), son çeyrekte ___ milyon dolarlık operasyonlardan nakit akışı sağladı.\"",
+      "gold": "197",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "55",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "767",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "767",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ayrıca ___ milyar dolarlık bir piyasa kapitalizasyonuna sahipler ve 12 Aralık 2019'da bir hisse geri alım programı duyurdular.\"",
+      "gold": "269.44",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "10",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "100",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "100",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Özellikle The Vanguard Group, yaklaşık ___ milyon hisse ile Kroger Co.'da önemli bir paya sahiptir.\"",
+      "gold": "80",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "100",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "89",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "89",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(LUV) şu anda Delta Air Lines (DAL) ve American Airlines Group (AAL) gibi endüstri akranlarından daha yüksek olan ___ milyar dolar değerindedir.\"",
+      "gold": "31,72",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.8",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "10,5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "31,72",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Walt Disney Company (DIS) şu anda yaklaşık ___ milyar dolar toplam borcu var.\"",
+      "gold": "52.9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "80",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "51",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "51",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(BRK.A BRK.B) için geçen mali yılda nakit akışı üretimi ___ milyar dolarlık toplam işletme nakit akışı ile sağlamdı.\"",
+      "gold": "45,2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "8.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2.46",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "45,2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Kroger Co.'nun 435000'den fazla çalışanı var ve yıllık yaklaşık ___ milyar dolar gelir bildirdi.\"",
+      "gold": "121.2",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "4.35",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "465000",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "121.2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bununla birlikte, 2020 mali yılında elde ettikleri toplam gelir, tüm gelir akışlarını kapsayan yaklaşık ___ milyar dolardır.\"",
+      "gold": "58,2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "2.1",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "39,5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "39,5",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Pay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin\nBildirim (Faiz İçeren)\n\nPay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin\nBildirim (Faiz İçeren)\nÖzet Bilgi Şirketimizin TRFALFK52424 ısın kodlu ___ TL nominal tutarlı iskontolu bono...\"",
+      "gold": "100.000.000",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "52424",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "52424",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "52424",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Intel Corporation (INTC), bu dönemde yaklaşık ___ milyar dolarlık bir artışla son 5 yılda yaklaşık% 10'luk bir yıllık gelir artışına tanık oldu.\"",
+      "gold": "18,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "11.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "70,8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "18,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Applied Materials Inc.'in (AMAT) en son mali yıl için net ticari alacaklar ___ milyar dolardı.\"",
+      "gold": "4,2",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "13.4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7.7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4,2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Qualcomm Incorporated (QCOM) için son çeyrekte yapılan iç hisse senedi satışlarının toplam değeri ___ milyon dolardı.\"",
+      "gold": "5,6",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "750",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "5,6",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Açılışta Dow Jones endeksi yüzde 0,12 azalarak ___ puana geriledi.\"",
+      "gold": "49.549,07",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "12",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "12",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "49.549,07",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Kraft Heinz Company (KHC), son çeyrekte sermaye harcamalarına yaklaşık ___ milyon dolar harcadı.\"",
+      "gold": "500",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "787",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "X",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "500",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Pfizer Inc.'in geçen yıl yaklaşık ___ milyar dolarlık araştırma ve geliştirme yatırımı yaptığı bilgilere dayanarak.\"",
+      "gold": "9.8",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "26",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "9.8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Analog Devices Inc.'in (ADI) toplam borcu yaklaşık ___ milyar dolardır.\"",
+      "gold": "7,7",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "4.4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "23.6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "7,7",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut verilere dayanarak Tesla Inc., 2019 mali yılında seyahat ve eğlence giderleri için yaklaşık ___ milyon dolar harcadı.\"",
+      "gold": "28.3",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "230",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "770",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "28.3",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(WMB), geçtiğimiz yıl toplam ___ milyon hisseyi yeniden satın alan bir hisse senedi geri alım programı gerçekleştirdi.\"",
+      "gold": "50",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "150",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "Belirtilmemiştir.",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "50",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut verilere dayanarak Qualcomm Incorporated (QCOM), Intel Corporation (INTC) ve Broadcom Inc.'den (AVGO) daha düşük olan ___ milyar dolarlık bir gelire sahiptir.\"",
+      "gold": "23,53",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "9",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "23.55",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "23,53",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Uber, filolarını satın almak için ___ milyar dolarlık borç alacak olsaydı, borçlarını önemli ölçüde artıracak ve net değerlerini azaltacaktı.\"",
+      "gold": "11",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "25",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "5",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Petrol fiyatlarının varil başına 100 doların üzerinde kalması durumunda vergi kaybının ___ milyar TL’yi aşabileceğini ifade eden Şimşek, buna rağmen bütçe açığını yüzde 3,5 seviyesinde tutmak için çalışacaklarını dile getirdi.\"",
+      "gold": "600",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "3,5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "7",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Brands Inc., son mali yılda sermaye harcamalarına yaklaşık ___ milyon dolar harcadı.\"",
+      "gold": "743",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "280",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "743",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"SEC Edgar dosyalamalarına göre FedEx Corporation (FDX), 31 Mayıs 2020 itibarıyla ___ milyar dolarlık bir çalışma sermayesine sahipti.\"",
+      "gold": "6.4",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "16.4",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "3.3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "6.4",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"DuPont de Nemours Inc.'in (DD) en son SEC dosyası itibariyle kurumsal değeri ___ milyar dolardır.\"",
+      "gold": "102,75",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "163.1",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "25,5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "102,75",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"2004'te ABD Çevre Koruma Ajansı (EPA) tarafından Temiz Hava Yasası'nı ihlal ettikleri için ___ milyon dolar para cezasına çarptırıldılar.\"",
+      "gold": "1,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "500",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "325",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "325",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Cisco Systems Inc., geçtiğimiz yıl sermaye harcamalarına yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "6,35",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "12.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0.  75",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "6,35",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut verilere ve analizlere dayanarak Goldman Sachs Group Inc., son üç yılda hisse geri alımlarına yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "8,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "11.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2.3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Intel Corporation'ın uzun vadeli yatırımlarının toplam değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "53",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "110",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7.4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "53",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Procter & Gamble Company'nin SEC'ine göre, mevcut uzun vadeli borç yükümlülükleri, en son raporlama dönemi itibarıyla ___ milyar dolardır.\"",
+      "gold": "26,7",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "25.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "25.6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "26,7",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"En son mali yıl (2019-2020) için Oracle Corporation'ın (ORCL) geliri ___ milyar dolardı.\"",
+      "gold": "39.07",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "49.77",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "49.77",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "39.07",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Saudi Aramco IPO'nun, şirketin değerlemesinin 1,2 ila ___ trilyon dolar arasında olması nedeniyle küresel endeks fonları üzerinde önemli bir etkiye sahip olması bekleniyor.\"",
+      "gold": "2.2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1,2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2.2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut verilere dayanarak American Express Company (AXP) yaklaşık ___ milyon karta sahiptir.\"",
+      "gold": "115",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "145",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "130",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "115",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Özetle Abbott Laboratuvarları şu anda yaklaşık ___ milyar dolarlık bir nakit rezervine sahiptir.\"",
+      "gold": "10",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "12",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "19,6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Johnson & Johnson (JNJ) şu anda yaklaşık ___ milyar dolarlık bir piyasa değerine sahip ve bu da onu sektördeki önde gelen ilaç şirketlerinden biri haline getiriyor.\"",
+      "gold": "345",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "330",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "54,3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "345",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"24 Eylül 2022 itibarıyla Apple Inc.'in toplam mevcut varlıkları ___ milyon dolardır.\"",
+      "gold": "135,405",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "290",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7,136",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "135405",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Borsa İstanbul günü düşüşle tamamladı\nBorsa İstanbul'da BIST 100 endeksi, günü yüzde 2,34 değer kaybederek ___ puandan tamamladı.\"",
+      "gold": "14.779,93",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "2,34",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "9.627,67",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "14.779,93",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Booking Holdings A.Ş., kurumsal sosyal sorumluluk girişimlerine yılda ortalama ___ milyon dolar ayırmaktadır.\"",
+      "gold": "10",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "500",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "400",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Satın alınan belgelere dayanarak Coca-Cola Company'nin elinde yaklaşık ___ milyar dolar nakit vardı.\"",
+      "gold": "8,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "80",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "8,7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8,7",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Capital One Financial Corporation (COF), son mali yıl için ___ milyar dolarlık serbest nakit akımını bildirdi.\"",
+      "gold": "8,6",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "14.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8,6",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut bilgilere dayanarak Otomatik Veri İşleme A.Ş.'nin (ADP) son bir yıl boyunca satılan mal maliyeti ___ milyar dolardı.\"",
+      "gold": "2.4",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.3",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "14,2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2.4",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(VZ) son fonlama turunda Kasım 2020'de toplam ___ milyar dolar sermaye topladı.\"",
+      "gold": "4.25",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "10",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4.25",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Johnson & Johnson, mevcut bilgilere dayanarak, son mali yılda sermaye harcamaları için yaklaşık ___ milyar dolar ayırdı.\"",
+      "gold": "4.8",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "$8.2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "11,9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4,8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Johnson & Johnson (JNJ), geçtiğimiz yıl sermaye harcamalarına yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "3,8",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "20",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7,4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3,8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Martta aylık ___ milyar dolara yaklaşan cari açık yanında yüklü sermaye çıkışları resmi rezervleri bir ayda 43,4 miyar dolar eritti.\"",
+      "gold": "10",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "43,4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "43,4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "43,4",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Nakit rezervleri ile ilgili belirli rakamlar mevcut olmasa da MMM'nin piyasa kapitalizasyonu yaklaşık ___ milyar dolardır.\"",
+      "gold": "120",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "20",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1.7",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(HD) şu anda sermaye harcamaları için yaklaşık ___ milyar dolarlık yıllık bir bütçeye sahiptir.\"",
+      "gold": "3,9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "7",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "0",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(PFE) şu anda yaklaşık ___ milyar dolarlık uzun vadeli borç yükümlülüklerine sahiptir.\"",
+      "gold": "45",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "25",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "20",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "45",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(HD), CEO'nun toplam tazminatının yaklaşık ___ milyon dolar olduğu bir yönetici tazminat yapısına sahipken, diğer yönetici tazminatları şirket içindeki rollerine göre değişmektedir.\"",
+      "gold": "11,2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "19.7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "11.2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Şirket, 2019 yılında Amerika Birleşik Devletleri Adalet Bakanlığı tarafından ___ milyon dolar para cezasına çarptırıldı.\"",
+      "gold": "34.5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "7.2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1.8",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"WAIS-4'te ___ puan alan zihinsel engelli biri için uygun birkaç iş fikri var.\"",
+      "gold": "79",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "40",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "40",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "79",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Graintürk (GRTHO) hasılatı düşmesine rağmen faaliyet kârını yüzde 55 artırdı\nGraintürk (GRTHO) 2026 yılı ilk çeyreğinde ___ milyon TL ana ortaklık net kârı elde etti.\"",
+      "gold": "200,3",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "55",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "200,3",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ayrıca aynı dönem için gelir, hisse başına kazanç (EPS) 1,11 dolar ile ___ milyar dolardı.\"",
+      "gold": "5,9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1,11",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,11",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,11",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Sizin durumunuzda, ayda 456 $ 'dan 335.41 $' a kadar ödeme yapacaksınız ve 4 yılda 13,5k $' ı ___% faizle ödeyeceksiniz.\"",
+      "gold": "8,25",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "7.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7.5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8,25",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"CVS Health Corporation'ın çalışma sermayesi ___ milyar dolar ve mevcut oranı 1,04 dolardır.\"",
+      "gold": "2,38",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.97",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,38",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Autodesk Inc.'in (ADSK) bilançosunda ___ milyar dolarlık toplam borcu vardır.\"",
+      "gold": "2,88",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "17.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "8,23",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,88",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Southwest Airlines Co.'nun nakit pozisyonu son 2 yılda yaklaşık ___ milyar dolar arttı.\"",
+      "gold": "1,085",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.8",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "4.1",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,085",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"En son üç aylık dosyalama Procter & Gamble Company'nin (PG) elinde ___ milyar dolar nakit var.\"",
+      "gold": "11,6",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "16",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "13.9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "11,6",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut bilgilere dayanarak Schlumberger Limited, en son finansal tablosunda ___ milyar dolarlık nakit ve nakit eşdeğerlerini bildirdi.\"",
+      "gold": "1,827",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "16",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "4.1",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,827",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"2020'de işletme nakit akışı, önceki yıllara göre önemli bir artışa işaret ederek ___ milyar dolara ulaştı.\"",
+      "gold": "8,1",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "80",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "80",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8,1",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Zoetis Inc.'in (ZTS) şu anda toplam borcu yaklaşık ___ milyar dolardır.\"",
+      "gold": "5.8",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "6.4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "6.4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "5.8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ayrıca JPMorgan Chase, ırksal özkaynak destekli girişimciliği ve küçük işletmeleri ilerletmek için ___ milyar dolar taahhüt etti ve JPMorgan Chase Sağlık Merkezi'ni kurdu.\"",
+      "gold": "30",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "10",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "10",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "30",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Southwest Airlines Co.'nun bilançosunda yaklaşık ___ milyar dolar nakit vardı.\"",
+      "gold": "3,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "12.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2.2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Kraft Heinz Company (KHC), 3G Capital ve Berkshire Hathaway dahil olmak üzere çeşitli risk sermayesi şirketlerinden yaklaşık ___ milyar dolar fon aldı.\"",
+      "gold": "2,3",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "11.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,3",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Yaklaşık ___ milyon emekliyi ilgilendiren Kurban Bayramı ödeme takvimi belli oldu.\"",
+      "gold": "17",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "500",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "600",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "17",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Küçük bir kap ASX listesindeki şirkete yatırım yapan FAR Limited (ASX:FAR), net değeri ___ milyon doların üzerinde olan ve hisseleri satın alma ve satmada başarılı olan bir arkadaşın tavsiyesine dayanarak yapılan en riskli finansal karardı.\"",
+      "gold": "10",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "75",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "30000",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(ATVI) hisse senedi için mevcut kısa faiz, bir önceki rapor edilen döneme göre daha düşük olan ___ milyon hissedir.\"",
+      "gold": "8.7",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7.5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8.7",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Alınan bilgilere dayanarak General Electric Company (GE) şu anda yaklaşık ___ milyar dolarlık uzun vadeli bir borcu var.\"",
+      "gold": "78.84",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "48",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "48",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "78.84",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(AIG), 29 Nisan 2021'de yayınlanan en son rapor itibariyle ___ milyon hisse senedine sahiptir.\"",
+      "gold": "877.37",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "100",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "3,567",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3,567",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mastercard Incorporated, yenilenebilir enerji girişimlerine ___ milyon dolar taahhüt etti ve Kaliforniya'daki bir güneş çiftliği ve Avrupa'daki rüzgar enerjisi projeleri gibi projelere yatırım yaptı.\"",
+      "gold": "500",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "50",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "50",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "500",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"tarafından 2020 yılında yapılan toplam hisse senedi geri alım tutarı ___ milyar dolardı.\"",
+      "gold": "3.72",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "12",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1.0",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"General Motors Company'nin (GM) bilançosunda toplam ___ milyar dolar borcu var.\"",
+      "gold": "110.59",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "19.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "110",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "110",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Templeton'ın mevcut bilgilerine dayanarak, yıllık yaklaşık ___ milyon dolar tazminat elde ediyor.\"",
+      "gold": "16,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "700",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "180",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "180",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Kraft Heinz Company'nin (KHC) mevcut piyasa değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "41.47",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "34",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "83.5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "41.47",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Adobe Inc.'in (ADBE) mevcut çalışma sermayesi ___ milyar dolar iken, Citigroup Inc.\"",
+      "gold": "4.32",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "11.3",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "74,3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4.32",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"International Business Machines Corporation (IBM) yıllık olarak yaklaşık ___ milyar dolarlık siber güvenlik önlemlerine yatırım yapıyor.\"",
+      "gold": "1,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"CVS Health Corporation (CVS) geçtiğimiz mali yıl için ___ milyar dolarlık ücretsiz nakit akışına sahipti.\"",
+      "gold": "9,43",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "19.4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "19.4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "9,43",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Comcast Corporation (CMCSA), son mali yılda ___ milyar dolarlık sermaye harcaması yaptı.\"",
+      "gold": "9,8",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "11.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "9,8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(T), halihazırda yeniden satın alınan yaklaşık ___ milyon hisse ile mevcut bir hisse geri alım programına sahiptir.\"",
+      "gold": "75",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "500",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "300",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "75",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Chevron Corporation'ın (CVX) piyasa değeri şu anda ___ milyar dolar civarındadır.\"",
+      "gold": "208",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "194.3",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "232",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "208",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bahsedilen mali yılda şirketin net gelir marjı %18, toplam özsermayesi ise ___ milyar dolardır.\"\"",
+      "gold": "15.53",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.8",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,4",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"MSCI ve FTSE endeksleri arasındaki fark, iddia edilenden daha küçük olan% ___ % 5'dir.\"",
+      "gold": "85",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "85",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bugün itibariyle UnitedHealth Group Incorporated'ın (UNH) piyasa değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "400",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "$480",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "38.",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "400",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Powerball piyangosunda ___ milyon dolar kazanırsanız, kazançlarınızı istikrarlı bir finansal gelecek sağlamak için nakit, gayrimenkul, tahvil, endeks fonları ve hisse senetlerinin bir kombinasyonuna yatırmayı düşünmelisiniz.\"",
+      "gold": "150",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "300",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "150",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Türk lirası zorunlu karşılık oranları tüm yükümlülük türleri ve vade dilimleri için ___ baz puan artırılmıştır.\"",
+      "gold": "200",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "250",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "200",
+        "correct": 1
+      },
+      "C_federated": {
+        "answer": "200",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Activision Blizzard Inc.'in (ATVI) şu anda ___ milyar dolarlık bir nakit rezervi var.\"",
+      "gold": "4,8",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "13.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2.05",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4,8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Yaş ortalaması 51 olan Japonya’da; ___ milyon nüfusun 70’i istihdamda (2)\nTÜİK, (dün) genç nüfusa yönelik araştırma sonuçlarını açıkladı:\n15-24 yaş grubunu içeren genç nüfusumuz yüzde 14.8’in de altına sarktı…\nNe eğitimde ne istihdamda olan gençlerin oranı mı?\"",
+      "gold": "120",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "70",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "70",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "120",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Geçtiğimiz mali yılda General Electric Company (GE) araştırma ve geliştirmeye yaklaşık ___ milyar dolar yatırım yaptı.\"",
+      "gold": "5,8",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "28",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "500",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "5,8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Intel Corporation'ın şu anda yaklaşık ___ milyar dolarlık nakit ve nakit eşdeğeri var.\"",
+      "gold": "10",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "120",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(WBA) şu anda bilançolarında yaklaşık ___ milyar dolarlık bir toplam uzun vadeli borcu var.\"",
+      "gold": "19,38",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "48,26",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "19,38",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Broadcom Inc.'in (AVGO) hisselerinin şu anki olağanüstü sayısı ___ milyon.\"",
+      "gold": "416.45",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "28",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.27",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "416.45",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bank of America Corporation (BAC), en son ertelenmiş vergi varlık dengesinin ___ milyar dolar olduğunu bildirdi.\"",
+      "gold": "29.14",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "19.9",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "23",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "29,14",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Hükümet, Univers'tekiler de dahil olmak üzere savunmasız haneler için yaşam maliyetini desteklemek için ___ milyar kaynak sağlayacaktır.\"",
+      "gold": "1,5",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "500",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "500",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"AMP Capital baş ekonomisti Shane Oliver'a göre, RBA, bir mesaj göndermek ve hiper enflasyon riskini ele almak için faiz oranlarında ___ baz puanlık bir artış göz önünde bulundurmalıdır.\"",
+      "gold": "75",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "75",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "75",
+        "correct": 1
+      },
+      "C_federated": {
+        "answer": "75",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"The Home Depot Inc.'in (HD) göze çarpan ortak hisselerinin sayısı yaklaşık ___ milyar hissedir.\"",
+      "gold": "1.17",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "50",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1.  17",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"AT&T A.Ş., son seçim döngüsü boyunca toplam ___ milyon dolarlık siyasi katkı yaptı.\"",
+      "gold": "2.5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "12",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "10 milyon",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10 milyon",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ancak 2020 mali yılı sonu itibarıyla şirketin uzun vadeli borcu yaklaşık ___ milyar dolardı.\"",
+      "gold": "10.9",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "8",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10.9",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ek olarak, şirketin piyasa kapitalizasyonu, son mali yılda% 17'lik bir gelir artışı ile yaklaşık ___ milyar dolardır.\"",
+      "gold": "320",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "17",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "85.97",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "85.97",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Goldman Sachs Group Inc., 2020 mali yılında reklam ve pazarlama için yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "1,17",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "750",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "750",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,17",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bireyin bir PPOR üzerinde son ___ milyon dolarlık bir ipotek var ve şu anda önemli bir stres yaşamıyor.\"",
+      "gold": "1.2",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "50",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "50",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1.2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Verizon Communications Inc.'in kurumsal değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "338",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "68.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "9.4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "338",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Coca-Cola Company (KO), endüstri akranlarının ortalama brüt marjının biraz üzerinde olan% 60 brüt bir marja sahiptir (___%).\"",
+      "gold": "57.25",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "60",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "60",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "57.25",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bu verilerle birlikte, 2026 yılının ilk çeyreğinde Türkiye’ye gelen toplam uluslararası doğrudan yatırım miktarı ___ milyar dolara ulaştı.\"",
+      "gold": "2,6",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "8.7",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Dünkü kapanış itibarıyla Verizon Communications Inc.'in (VZ) piyasa değeri yaklaşık ___ milyar dolardı.\"",
+      "gold": "228",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "57",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "9.4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "228",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ek olarak, Connecticut'ta yaşıyorsanız, yıllık 16.000 $' lık bir meslek ve ___ milyon $' lık bir ömür boyu muafiyeti olan bir devlet hediye vergisi vardır.\"",
+      "gold": "9,1",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "9,1",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"En son finansal yılda Adobe, endüstri ortalamasını ___ milyar dolar aşan faaliyet faaliyetlerinden nakit akışı bildirdi.\"",
+      "gold": "3,2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "13.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "3.35",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3.35",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Rekabet Kurumu’ndan yazıcı ve fotokopi sektörüne milyonluk ceza\nRekabet Kurumu, yazıcı ve fotokopi sistemleri pazarında bayilerin satış fiyatlarına müdahale ederek rekabet kurallarını ihlal ettikleri gerekçesiyle Kyocera ve Geskopikit’e toplam yaklaşık ___ milyon lira idari para cezası verdi.\"",
+      "gold": "18,4",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "10",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "10",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "18,4",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ancak tarihsel eğilime dayanarak, bir önceki yıl harcanan ___ milyar doları potansiyel olarak aşan önemli bir yatırım olması bekleniyor.\"",
+      "gold": "14,9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1.4",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"şu anda bilançolarında yaklaşık ___ milyar dolar uzun vadeli borç taşıyor.\"",
+      "gold": "80.86",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "120",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "120",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "80,86",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Walgreens Boots Alliance Inc.'in (WBA) uzun vadeli borcunun toplam değeri ___ milyar dolardır.\"",
+      "gold": "16,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "17.9",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "16,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ford Motor Company'nin bilançosunda yaklaşık ___ milyar dolar borç var.\"",
+      "gold": "155",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "20",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "155",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Costco Wholesale Corporation'ın (COST) uzun vadeli yatırımlarının mevcut değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "7,2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "40",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7.65",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "7.2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"NVIDIA Corporation'ın (NVDA) şu anda göze çarpan hisse sayısı yaklaşık ___ milyon.\"",
+      "gold": "625",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "22",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "625",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Yeni günde Dolar 45,43 liradan, euro ___ TL seviyelerinden işlem görüyor.\"",
+      "gold": "52,71",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "45.43",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "46,87",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "46,87",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(XLNX), son 5 yılda toplam ___ milyon dolarlık bir borçtan emekli oldu.\"",
+      "gold": "500",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "12",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2.57",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "500",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Booking Holdings Inc.'in en büyük kurumsal hissedarı şu anda yaklaşık ___ milyon hisseye sahiptir.\"",
+      "gold": "4.59",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "837",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "Bilgilerde bu sayı belirtilmemiştir.",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4.59",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Banka analistleri, 8 bin ___ puanlık hedefin 20,5 kat ileriye dönük fiyat/kazanç çarpanına dayandığını bildirdi.\"",
+      "gold": "300",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "8000",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "8000",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8000",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Verilen bilgilerden, P = ___ TL, i = 12, t = 3 ay olarak hesaplanır.\"",
+      "gold": "110.000",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "P = 12",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "P = 12",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "110000",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Adobe Inc., 2020 mali yılında operasyonlardan yaklaşık ___ milyar dolar nakit akışı sağladı.\"",
+      "gold": "4,46",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15.2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "3.35",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4,46",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Este Lauder Companies Inc., geçtiğimiz mali yılda yenilenebilir enerji teknolojilerine ___ milyon dolar yatırım yaptı.\"",
+      "gold": "50",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "150",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "50",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Microsoft Corporation (MSFT) CEO'su Satya Nadella, yıllık yaklaşık ___ milyon dolar maaş alıyor.\"",
+      "gold": "42.9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "196",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "120",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "42.9",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Johnson & Johnson (JNJ), geçtiğimiz yıl kendi hisselerinin yaklaşık ___ milyon hissesini geri satın aldı.\"",
+      "gold": "100",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "13",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "13",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "100",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"AT&T Inc., 2020 mali yılında ___ milyar dolarlık bir serbest nakit akışı oluşturdu.\"",
+      "gold": "29,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "26.9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "29,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"NVIDIA Corporation geçen çeyrekte yaklaşık ___ milyar dolar nakit akışı yarattı.\"",
+      "gold": "2,9",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "19.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "19.6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,9",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Yaklaşık ___ milyar dolarlık piyasa kapitalizasyonuna sahip çok uluslu bir telekomünikasyon holdingidir.\"",
+      "gold": "230",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "50",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "11.12",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "11.12",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"UnitedHealth Group Incorporated (UNH) ___ milyar dolarlık bir mevcut sermaye harcama bütçesine sahiptir.\"",
+      "gold": "4,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "16.4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut en son bilgilere dayanarak General Motors Company (GM) şu anda yaklaşık ___ milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.\"",
+      "gold": "52.5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "447.47",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "387.9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "52.5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(AMAT), 2020 mali yılında araştırma ve geliştirme faaliyetlerine yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "2,79",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "1.8",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,79",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut bilgilere dayanarak NVIDIA Corporation, 2020 mali yılında sermaye harcamalarına yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "1.53",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "2.9",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2.9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,53",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut bilgilere dayanarak Ford Motor Company, en son dosyalamalarından itibaren elinde ___ milyar dolar nakit ve nakit eşdeğeri olduğunu bildirdi.\"",
+      "gold": "10.3",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "46",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "12,6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "12,6",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Ana Pazar, halka açık piyasa değeri ___ milyon TL'nin üzerinde ve 100 M TL'nin altında olan şirketlerin Borsa İstanbul bünyesinde işlem görebileceği pazardır.\"",
+      "gold": "25",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "50",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "80",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "25",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Önümüzdeki dönemde ___ milyon dolar daha kaynağı Türkiye'nin teknoloji girişimlerine yatırım yapacak fonlara yönlendireceklerini aktaran Kacır, girişimlerin alternatif finansman enstrümanlarından yararlanmasını önemsediklerini kaydetti.\"",
+      "gold": "300",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "500",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Abbott Laboratories'in mevcut piyasa değeri ___ milyar dolar civarındadır.\"",
+      "gold": "205",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "380",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "33,62",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "33,62",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut bilgilere dayanarak Dow Inc.'in en son mali yıl için serbest nakit akışı ___ milyar dolardı.\"",
+      "gold": "4,2",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "1.9",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1.9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4,2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bakan Şimşek: Faiz dışı bütçede ___ milyar TL'lik iyileşme sağlandı\nMerkezi yönetim bütçe dengesi verilerini değerlendiren Hazine ve Maliye Bakanı Mehmet Şimşek, yılın ilk dört ayında bütçe performansının hedeflerle uyumlu ilerlediğini açıkladı.\"",
+      "gold": "536",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "4",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "536",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Genel olarak hisse senedi fiyatında yaklaşık ___%'lük bir artış oldu.\"",
+      "gold": "15.43",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "10",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "32,5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "32,5",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Cisco Systems Inc.'in (CSCO) kurumsal değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "196,4",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "49",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "51,9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "51,9",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Adobe Inc., 2020 mali yılı için yaklaşık ___ milyar dolar serbest nakit akışı oluştururken, Citigroup Inc.\"",
+      "gold": "3.35",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "20.3",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "20.3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3.35",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bank of America Corporation (BAC), en son finansal tablosunda ___ milyar dolarlık bir faiz gideri bildirdi.\"",
+      "gold": "10.3",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "6.4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "11.9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10.3",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"IBM veya International Business Machines Corporation'ın piyasa kapitalizasyonu yaklaşık ___ milyar dolardır.\"",
+      "gold": "135",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "100",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "108.6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "135",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Anheuser-Busch InBev SA/NV'nin (BUD) mevcut piyasa değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "162",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "320",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "19.13",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "162",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Caterpillar Inc.'in (CAT) finansal raporlarına göre, son mali yılı boyunca ___ milyon dolar faiz gideri ödediler.\"",
+      "gold": "747",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "275",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "610",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "747",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"A Şirketi'nin borcunu yönetmek veya yeniden yapılandırmak için finansal manevraları gösteren ___ milyon dolarlık borç söndürme maliyetlerinin tanınmasıyla ilişkili kredi riskini azaltmak için birkaç ilgili strateji vardır: 1.\"",
+      "gold": "1.4",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "75",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "75",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1.4",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Nakit ve Nakit Eşdeğerleri ($___ milyon): Kısa vadeli yükümlülükleri ve yatırımları karşılamak için likidite ve esneklik sunan önemli bir miktar.\"",
+      "gold": "23,646",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "350",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "9.61",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "9.61",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Piyasa değeri yaklaşık ___ milyar dolar olan çok uluslu bir sağlık şirketidir.\"",
+      "gold": "221.57",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "50",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "87.34",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "87.34",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Edinilen bilgilere göre Intel Corporation (INTC) yaklaşık ___ milyar hisse senedi yayınladı.\"",
+      "gold": "4.72",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "19",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "77,9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "4.72",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Evet Intel Corporation (INTC), Ekim 2020'de ___ milyar dolara kadar bir hisse geri alım programı duyurdu.\"",
+      "gold": "10",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "10",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "19",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Raytheon Technologies Corporation (RTX), geçen mali yılda sermaye harcamalarına yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "2,1",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "16.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,1",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(ANTM) yaklaşık ___ milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.\"",
+      "gold": "85",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "220",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "9,6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "67",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Apache Corporation, geçtiğimiz yıl sermaye harcamalarına ___ milyar dolar harcadı.\"",
+      "gold": "2,1",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "5.2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "11,6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,1",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bank of America Corporation'ın (BAC) serbest nakit akışı ___ milyar dolardır.\"",
+      "gold": "46,8",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "8.3",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "463.7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "46,8",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"American Express Company (AXP), son finansman turunda yaklaşık ___ milyon dolar topladı.\"",
+      "gold": "600",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "750",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "250",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "600",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Son mali yılda Coca-Cola Company (KO), sermaye harcamalarına yaklaşık ___ milyar dolar harcadı.\"",
+      "gold": "3,4",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "4.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2,6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3,4",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Johnson & Johnson'ın (JNJ) net geliri ___ milyar dolardır ve bu da Pfizer Merck ve Novartis gibi endüstri akranlarına kıyasla rekabetçidir.\"",
+      "gold": "15,1",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "39.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "39.5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "15,1",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Walmart Inc.'in geçtiğimiz yıl mülk tesisi ve ekipmanları için ___ milyar dolar harcadığı mevcut bilgilere dayanarak.\"",
+      "gold": "10.5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "80",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "4,5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10.5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Şirket, ___ milyar dolar beklenen gelirden daha yüksek ve hisse başına 1.47 dolar kazanç bildirdi.\"",
+      "gold": "6.1",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "750",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "750",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "6.1",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bununla birlikte, şirket son çeyrekte ___ milyar dolarlık bir gelirle güçlü bir finansal performans sergiliyor.\"",
+      "gold": "3.42",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "3.04",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3.04",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Amgen Inc., bir önceki yıl yasal masraflar için yaklaşık ___ milyon dolar harcadı.\"",
+      "gold": "876",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "50",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2,75",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "876",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"FedEx Corporation (FDX), önümüzdeki üç yıl içinde ___ milyar dolarlık sermaye harcamalarını taahhüt etti.\"",
+      "gold": "5.9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "8.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "5.9",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Sidney'de ___ milyon dolarlık bir ev satın almanın maliyeti, özellikle medyan hane geliri sadece 260.000 dolar olduğunda gençler için önemli bir zorluktur.\"",
+      "gold": "1,5",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Coca-Cola Company, 2021'in ilk çeyreğinde ___ milyar dolarlık serbest nakit akımı (FCF) yarattı.\"",
+      "gold": "1,9",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "4.7",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "4.7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,9",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"ERGÜN\nnurdogan.arslan@dunya.com\nKüresel pazarlardaki daralma ve maliyetler yüzünden rekabetçilikte zorlanan ve son 3 yılda ihracatta ___ milyar dolarlık kayıp veren Türkiye hazır giyim sektörü, markalaşma için yeni bir hamle başlatıyor.\"",
+      "gold": "4.4",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "7",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Walt Disney Company (DIS) geçtiğimiz yıl ___ milyar dolarlık serbest nakit akışı yarattı.\"",
+      "gold": "8,89",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "8.2",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "1,2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "8,89",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Türk Hava Yolları toplam gelirlerini önceki yıla göre %14 artırarak ___ milyar USD seviyesine ulaştırmıştır.\"",
+      "gold": "20.9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "14",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "14",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "14",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut müzakerelerde Ver.di sendikası, perakende sektöründeki yaklaşık ___ milyon çalışan için tüm maaş skalalarını kapsayacak şekilde 12 aylık bir sözleşme süresi ve yüzde 7 ücret artışı talep ediyor.\"",
+      "gold": "5,2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "3.5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "7",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Raytheon Technologies Corporation (RTX) şu anda bir önceki yıla göre %8,5'lik bir büyümeyi temsil eden ___ milyar dolarlık bir EBITDA'ya sahiptir.\"",
+      "gold": "10,2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "8,5",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "33,7",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "10,2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bristol-Myers Squibb Company (BMY), son bir yıl içinde araştırma ve geliştirme tesislerine (%40) üretim tesislerine (%25) ekipman ve altyapı iyileştirmelerine (%15) tahsislerle yaklaşık ___ milyar dolarlık sermaye harcaması yaptı.\"",
+      "gold": "1.2",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "65",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "80",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "80",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Archer-Daniels-Midland Company (ADM), 2020 yılında operasyonlardan ___ milyar dolar nakit akışı elde etti.\"",
+      "gold": "2,57",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "2.9",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "3.3",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,57",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Bir önceki yıl için Walmart, müşteri deneyimlerini geliştirmek ve büyümeyi artırmak için mağaza tadilatları e-ticaret genişleme tedarik zinciri iyileştirmeleri ve teknoloji yatırımlarına odaklanan yaklaşık ___ milyar dolarlık bir sermaye harcaması bildirdi.\"",
+      "gold": "10,1",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "8.3",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "13.6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "13.6",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Amazon.com Inc.'in (AMZN) hisselerinin mevcut piyasa değeri ___ trilyon dolar.\"",
+      "gold": "1,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "1.95",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "212.38",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "1,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Cisco Systems Inc.'in (CSCO) piyasa değeri yaklaşık ___ milyar dolardır.\"",
+      "gold": "229",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "49.11",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "51,9",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "51,9",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Smart Güneş Teknolojileri ilk çeyrekte ___ milyon TL net dönem karı bildirdi\nSmart Güneş Teknolojileri 2026 yılı ilk çeyrek finansal sonuçlarını açıkladı.\"",
+      "gold": "62",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "0",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "300",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "62",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Apple Inc.'in CEO'su Tim Cook, geçen çeyrekte AAPL hisselerinin 55000 hissesini yaklaşık ___ milyon dolara satın aldı.\"",
+      "gold": "12.5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "55",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "55",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "12.5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Özellikle New York eyaleti tarafından ___ milyon dolarlık bir anlaşmayla sonuçlanan vergisiz sigaraların teslimi ile ilgili bir davayla karşı karşıya kaldılar.\"",
+      "gold": "35",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "100",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "100",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "35",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Hisse ___ TL'ye düştüğünde, opsiyonunuz değerlenir ve kar elde edersiniz.\"",
+      "gold": "80",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "0",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "Belirtilmiyor.",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "Belirtilmiyor.",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(BIIB) ile ilgili olarak, ortalamanın biraz üzerinde olan toplam ___ milyar dolarlık bir borcu vardır.\"",
+      "gold": "7,2",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "80",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "80",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "7,2",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Boeing Şirketi, son mali yılda stok bazlı tazminat için ___ milyon dolar harcadı.\"",
+      "gold": "623",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "380",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "120",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "623",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"General Motors Company'nin (GM) mevcut serbest nakit akışı ___ milyar dolardır.\"",
+      "gold": "2,5",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "1.4",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "5,2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Örneğin, ___ milyon'lik finansman bonosunun satış fiyatı, 1 Kasım 2011'de 4.15 iskonto oranından hesaplanabilir.\"",
+      "gold": "25",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "400",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "25",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Dow Inc., çalışan yardımlarına yılda yaklaşık ___ milyon dolar harcıyor.\"",
+      "gold": "500",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "500",
+        "correct": 1
+      },
+      "B_local_only": {
+        "answer": "280",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "500",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"En son finansal rapora göre FedEx Corporation şu anda yaklaşık ___ milyar dolarlık bir toplam özkaynak değerine sahiptir.\"",
+      "gold": "34",
+      "owner": 1,
+      "asked": 2,
+      "A_no_rag": {
+        "answer": "170",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "76,6",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "34",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(ADI), bilançosunda ___ milyar dolarlık bir nakit bakiyesine sahiptir ve güçlü finansal konumuyla bilinir.\"",
+      "gold": "3,1",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "15",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "Belirtilmemiştir.",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "Belirtilmemiştir.",
+        "correct": 0
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut verilere dayanarak Clorox Company (CLX), geçtiğimiz yıl boyunca sermaye harcamalarına yaklaşık ___ milyon dolar harcadı.\"",
+      "gold": "372",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "475",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "372",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Morgan Stanley'deki (MS) ortalama yönetici tazminatı paketi yılda yaklaşık ___ milyon dolardır.\"",
+      "gold": "15",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "12",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "7.2",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "15",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"American International Group Inc.'in (AIG) geçen mali yıl itibarıyla toplam ___ milyar dolarlık borcu vardı.\"",
+      "gold": "49.5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "187.3",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "38,5",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "49,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Archer-Daniels-Midland Company (ADM) son mali yılda pazarlama faaliyetlerine yaklaşık ___ milyon dolar yatırım yaptı.\"",
+      "gold": "500",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "450",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "197",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "500",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Nike Inc.'in (NKE) aldığı bilgilere dayanarak, bilançosunda şu anda yaklaşık ___ milyar dolar uzun vadeli borç var.\"",
+      "gold": "9,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "27.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0,80",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "9,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"2020 yılında Bank of America Corporation (BAC) CEO'su Brian Moynihan'ın CEO tazminat paketi ___ milyon dolardı.\"",
+      "gold": "24,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "22 milyon",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "Belirtilmemiştir.",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "24,5",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Mevcut bilgilere dayanarak, General Motors Company'nin bilançosunda yaklaşık ___ milyar dolarlık uzun vadeli borcu var.\"",
+      "gold": "97,7",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "180",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "110",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "97,7",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"(AAL) şu anda yaklaşık ___ milyar dolar nakit ve nakit eşdeğerine sahiptir.\"",
+      "gold": "3,9",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "120",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "2,8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "3.9",
+        "correct": 1
+      }
+    },
+    {
+      "q": "Aşağıdaki cümledeki boşluğa gelen sayısal değer nedir? Sadece değeri yaz.\n\"Activision Blizzard Inc., geçtiğimiz yıl yaklaşık ___ milyar dolar hisse senedi geri alımlarına harcadı.\"",
+      "gold": "2,5",
+      "owner": 2,
+      "asked": 1,
+      "A_no_rag": {
+        "answer": "11.6",
+        "correct": 0
+      },
+      "B_local_only": {
+        "answer": "0. 8",
+        "correct": 0
+      },
+      "C_federated": {
+        "answer": "2,5",
+        "correct": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+ "qwen_chatml": {
+  "n": 6200,
+  "acc": 0.5382,
+  "ci95": [
+   0.5255,
+   0.5511
+  ],
+  "unparseable": 1,
+  "latency": 0.1364,
+  "fin_n": 500,
+  "fin_acc": 0.53,
+  "fin_ci95": [
+   0.488,
+   0.574
+  ],
+  "worst3": [
+   [
+    "Kim 500 Milyar İster",
+    {
+     "n": 100,
+     "acc": 0.36
+    }
+   ],
+   [
+    "KPSS",
+    {
+     "n": 100,
+     "acc": 0.37
+    }
+   ],
+   [
+    "Tarih",
+    {
+     "n": 100,
+     "acc": 0.39
+    }
+   ]
+  ],
+  "best3": [
+   [
+    "Çağrı Merkezi Hizmetleri",
+    {
+     "n": 100,
+     "acc": 0.61
+    }
+   ],
+   [
+    "Tıbbi Dökümantasyon ve Sekreterlik",
+    {
+     "n": 100,
+     "acc": 0.62
+    }
+   ],
+   [
+    "Ehliyet Sınavı",
+    {
+     "n": 100,
+     "acc": 0.8
+    }
+   ]
+  ],
+  "pred_dist": {
+   "A": 1248,
+   "B": 973,
+   "C": 2220,
+   "D": 951,
+   "E": 807,
+   "None": 1
+  }
+ },
+ "qwen_native": {
+  "n": 6200,
+  "acc": 0.5156,
+  "ci95": [
+   0.5029,
+   0.5281
+  ],
+  "unparseable": 0,
+  "latency": 0.0928,
+  "fin_n": 500,
+  "fin_acc": 0.512,
+  "fin_ci95": [
+   0.47,
+   0.556
+  ],
+  "worst3": [
+   [
+    "KPSS",
+    {
+     "n": 100,
+     "acc": 0.35
+    }
+   ],
+   [
+    "Kim 500 Milyar İster",
+    {
+     "n": 100,
+     "acc": 0.36
+    }
+   ],
+   [
+    "Futbol",
+    {
+     "n": 100,
+     "acc": 0.39
+    }
+   ]
+  ],
+  "best3": [
+   [
+    "TUS",
+    {
+     "n": 100,
+     "acc": 0.6
+    }
+   ],
+   [
+    "Tıbbi Dökümantasyon ve Sekreterlik",
+    {
+     "n": 100,
+     "acc": 0.6
+    }
+   ],
+   [
+    "Ehliyet Sınavı",
+    {
+     "n": 100,
+     "acc": 0.73
+    }
+   ]
+  ],
+  "pred_dist": {
+   "A": 1247,
+   "B": 742,
+   "C": 2577,
+   "D": 783,
+   "E": 851,
+   "None": 0
+  }
+ },
+ "gemma_chatml": {
+  "n": 6200,
+  "acc": 0.3779,
+  "ci95": [
+   0.365,
+   0.3898
+  ],
+  "unparseable": 5,
+  "latency": 0.1604,
+  "fin_n": 500,
+  "fin_acc": 0.368,
+  "fin_ci95": [
+   0.328,
+   0.41
+  ],
+  "worst3": [
+   [
+    "TUS",
+    {
+     "n": 100,
+     "acc": 0.25
+    }
+   ],
+   [
+    "Bankacılık ve Sigortacılık",
+    {
+     "n": 100,
+     "acc": 0.3
+    }
+   ],
+   [
+    "Medya ve İletişim",
+    {
+     "n": 100,
+     "acc": 0.3
+    }
+   ]
+  ],
+  "best3": [
+   [
+    "Ehliyet Sınavı",
+    {
+     "n": 100,
+     "acc": 0.5
+    }
+   ],
+   [
+    "Tıbbi Dökümantasyon ve Sekreterlik",
+    {
+     "n": 100,
+     "acc": 0.52
+    }
+   ],
+   [
+    "Acil Durum ve Afet Yönetimi",
+    {
+     "n": 100,
+     "acc": 0.53
+    }
+   ]
+  ],
+  "pred_dist": {
+   "A": 890,
+   "B": 665,
+   "C": 3293,
+   "D": 736,
+   "E": 611,
+   "None": 5
+  }
+ },
+ "gemma_native": {
+  "n": 6200,
+  "acc": 0.4182,
+  "ci95": [
+   0.4058,
+   0.4302
+  ],
+  "unparseable": 0,
+  "latency": 0.0812,
+  "fin_n": 500,
+  "fin_acc": 0.392,
+  "fin_ci95": [
+   0.35,
+   0.434
+  ],
+  "worst3": [
+   [
+    "Emlak ve Emlak Yönetimi",
+    {
+     "n": 100,
+     "acc": 0.33
+    }
+   ],
+   [
+    "Özel Koruma ve Güvenlik",
+    {
+     "n": 100,
+     "acc": 0.34
+    }
+   ],
+   [
+    "Büro Yönetimi ve Yönetici Asistanlığı",
+    {
+     "n": 100,
+     "acc": 0.35
+    }
+   ]
+  ],
+  "best3": [
+   [
+    "Acil Durum ve Afet Yönetimi",
+    {
+     "n": 100,
+     "acc": 0.53
+    }
+   ],
+   [
+    "Ehliyet Sınavı",
+    {
+     "n": 100,
+     "acc": 0.58
+    }
+   ],
+   [
+    "Dini Bilgiler",
+    {
+     "n": 100,
+     "acc": 0.59
+    }
+   ]
+  ],
+  "pred_dist": {
+   "A": 1597,
+   "B": 905,
+   "C": 1853,
+   "D": 1009,
+   "E": 836,
+   "None": 0
+  }
+ },
+ "mcnemar_qwen_vs_gemma_chatml": [
+  1556,
+  562,
+  2.5061064976137625e-107
+ ],
+ "mcnemar_qwen_vs_gemma_native": [
+  1315,
+  711,
+  1.5999522208399365e-41
+ ],
+ "mcnemar_qwen_chatml_vs_native": [
+  290,
+  150,
+  2.349584675426201e-11
+ ],
+ "mcnemar_gemma_chatml_vs_native": [
+  519,
+  769,
+  3.4132728393386517e-12
+ ]
+}

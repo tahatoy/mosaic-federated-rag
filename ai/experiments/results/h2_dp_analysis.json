@@ -1,0 +1,27 @@
+{
+  "epsilon": 1.0,
+  "delta": 1e-05,
+  "sensitivity": 1.0,
+  "sigma_per_coordinate": 4.8448,
+  "gaussian_mechanism_klasik_sınır_epsilon<1": "ε=1.0 sınırda; klasik formül ε∈(0,1) için kanıtlanmıştır (Dwork & Roth, Th. A.1).",
+  "ortalama_vektör_yolu": {
+    "boyut": 128,
+    "sinyal_normu_üst_sınır": 1.0,
+    "beklenen_gürültü_normu": 54.81,
+    "sinyal_gürültü_oranı_normlar": 0.0182
+  },
+  "bileşim_temel": {
+    "1_tur_toplam_epsilon": 1.0,
+    "5_tur_toplam_epsilon": 5.0,
+    "10_tur_toplam_epsilon": 10.0,
+    "50_tur_toplam_epsilon": 50.0
+  },
+  "gerçek_ağırlıklar": {
+    "tensör_sayısı": 199,
+    "parametre_sayısı": 117653760,
+    "normu_1den_büyük_tensör": 171,
+    "kırpma_sonrası_gürültülü_ile_orijinal_kosinüs_medyan": 0.00059,
+    "kosinüs_ortalama": 0.00519,
+    "göreli_hata_medyan": 61.57
+  }
+}

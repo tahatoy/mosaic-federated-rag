@@ -1,0 +1,152 @@
+{
+ "impl": "backend/ai_engine.py:_filter_pii",
+ "set": "confirm",
+ "seed": 777,
+ "n_per_variant": 300,
+ "kategoriler": {
+  "TC": {
+   "etiketli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "tireli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "ikili_boşluk": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "bitişik": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 1.0
+  },
+  "IBAN": {
+   "TR_boşluklu_iki": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "tireli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "küçük_bitişik": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "standart": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 1.0
+  },
+  "TELEFON": {
+   "noktalı": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "parantez_bitişik": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "+90_tireli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "boşluksuz_+90": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "standart": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 1.0
+  },
+  "KART": {
+   "noktalı": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "tireli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "boşluklu": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 1.0
+  },
+  "EPOSTA": {
+   "büyük_harfli": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "rakamlı": {
+    "n": 300,
+    "maskelendi": 300,
+    "recall": 1.0
+   },
+   "_toplam_recall": 1.0
+  },
+  "AD": {
+   "ad_soyad": {
+    "n": 300,
+    "maskelendi": 110,
+    "recall": 0.3667
+   },
+   "ek_almış": {
+    "n": 300,
+    "maskelendi": 107,
+    "recall": 0.3567
+   },
+   "büyük_soyad": {
+    "n": 300,
+    "maskelendi": 126,
+    "recall": 0.42
+   },
+   "soyad_önce": {
+    "n": 300,
+    "maskelendi": 122,
+    "recall": 0.4067
+   },
+   "_toplam_recall": 0.3875
+  }
+ },
+ "genel_recall": 0.8886,
+ "negatif_cümleler": {
+  "n": 16,
+  "yanlış_alarm": 0,
+  "oran": 0.0,
+  "örnekler": []
+ },
+ "gerçek_korpus_yanlış_alarm": {
+  "n": 3000,
+  "maskelenen_chunk": 30,
+  "oran": 0.01,
+  "kategori": {
+   "NAME": 46,
+   "EMAIL": 2
+  }
+ }
+}

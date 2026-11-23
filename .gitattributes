@@ -1,0 +1,9 @@
+# Line-ending policy: shell and Python files must keep LF even on Windows
+# checkouts with core.autocrlf=true, otherwise bash on WSL/VMs fails.
+* text=auto
+*.sh text eol=lf
+*.bash text eol=lf
+*.py text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf

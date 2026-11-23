@@ -1,0 +1,79 @@
+# ── Secrets & credentials (never commit) ─────────────────────────────
+.env
+.env.*
+!.env.*.example
+*.pem
+*.key
+*.crt
+*.csr
+*.srl
+*.p12
+*.pfx
+backend/certs/*
+!backend/certs/README.md
+!backend/certs/server_ext.cnf
+config/api_keys.json
+**/.streamlit/secrets.toml
+
+# ── Model weights & caches ───────────────────────────────────────────
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+ai/models/**/
+!ai/models/embeddings/
+!ai/models/quantized/
+!ai/models/router/
+ai/models/embeddings/*/
+ai/models/router/*/
+ai/checkpoints/
+ai/llama.cpp/
+unsloth_compiled_cache/
+**/unsloth_compiled_cache/
+mlruns/
+
+# ── Data (KVKK: branch data never leaves the branch) ─────────────────
+/data/
+ai/data/*
+!ai/data/DATASET_CATALOG.md
+chroma_db/
+chromadb/
+*.chroma
+*.jsonl
+*.parquet
+*.arrow
+ai/experiments/results/q1/e6_zemberek_cache.json
+
+# ── Runtime artefacts ────────────────────────────────────────────────
+logs/
+jobs/
+backups/
+flower_logs/
+fl_checkpoints/
+*.log
+
+# ── Python / Node / tooling ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+node_modules/
+frontend/dist/
+build/
+dist/
+
+# ── Personal documents ───────────────────────────────────────────────
+*.docx
+*.pdf
+*.zip
+
+# ── OS / editors ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,24 @@
+{
+ "hq_koleksiyonu": "ai/data/chromadb/hq_ortak",
+ "hq_parca": 429,
+ "hq_yalniz_sube1_kopyasi": 0,
+ "hq_yalniz_sube2_kopyasi": 0,
+ "hq_ortak_parca": 429,
+ "hq_diger": 0,
+ "sube1_yalniz_toplam": 7425,
+ "sube2_yalniz_toplam": 14338,
+ "ortak_toplam": 429,
+ "hq_subeye_ozgu_toplam": 0,
+ "hq_gunluk_taramasi": {
+  "denenen_parca": 600,
+  "dosya_basina_eslesme": {
+   "logs/orch.log": 0,
+   "logs/audit/.audit_key": 0,
+   "logs/audit/.last_hash": 0,
+   "logs/audit/.lock": 0,
+   "logs/audit/audit-20261015.jsonl": 0,
+   "logs/audit/audit-20261020.jsonl": 0,
+   "logs/audit/audit-20261111.jsonl": 0
+  }
+ }
+}

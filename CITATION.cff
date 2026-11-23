@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "MOSAIC: A Privacy-Preserving Federated Retrieval-Augmented Generation Architecture for Turkish Banking"
+authors:
+  - family-names: Toy
+    given-names: Mehmet Taha
+    affiliation: Isparta University of Applied Sciences
+  - family-names: Süzen
+    given-names: Ahmet Ali
+    affiliation: Isparta University of Applied Sciences
+license: MIT
+repository-code: "https://github.com/tahatoy/mosaic-federated-rag"
+year: 2026

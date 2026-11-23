@@ -1,0 +1,281 @@
+{
+  "TC_kimlik_no": {
+    "variants": {
+      "bitişik_11": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "3lü_boşluklu": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "noktalı": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      }
+    },
+    "overall_recall": 1.0,
+    "n": 600
+  },
+  "IBAN": {
+    "variants": {
+      "bitişik": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "4lü_boşluklu": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "küçük_harf": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      }
+    },
+    "overall_recall": 1.0,
+    "n": 600
+  },
+  "telefon": {
+    "variants": {
+      "0_5xx_xxx_xx_xx": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "bitişik_05xxxxxxxxx": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "tireli": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "uluslararası_+90": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "parantezli": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      }
+    },
+    "overall_recall": 1.0,
+    "n": 1000
+  },
+  "kredi_kartı": {
+    "variants": {
+      "bitişik_16": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "4lü_boşluklu": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "4lü_tireli": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      }
+    },
+    "overall_recall": 1.0,
+    "n": 600
+  },
+  "e_posta": {
+    "variants": {
+      "standart": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "alt_çizgili": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      }
+    },
+    "overall_recall": 1.0,
+    "n": 400
+  },
+  "ad_soyad": {
+    "variants": {
+      "ad_soyad_baş_harf_büyük": {
+        "n": 200,
+        "masked": 187,
+        "partial_leak": 0,
+        "recall": 0.935
+      },
+      "üç_parçalı_ad": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "hepsi_büyük_harf": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      },
+      "hepsi_küçük_harf": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      },
+      "soyad_ad_sırası_virgüllü": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      },
+      "unvanlı_tek_isim": {
+        "n": 200,
+        "masked": 187,
+        "partial_leak": 0,
+        "recall": 0.935
+      }
+    },
+    "overall_recall": 0.4783,
+    "n": 1200
+  },
+  "gerçek_metinde_yanlış_pozitif": {
+    "örnek_sayısı": 3000,
+    "en_az_bir_maskelenen_chunk": 34,
+    "oran": 0.0113,
+    "kategori_sayıları": {
+      "NAME": 41,
+      "EMAIL": 1
+    },
+    "örnekler": [
+      {
+        "kategori": "NAME",
+        "maskelenen": "Fatih Karahan"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Area"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Ece Ticaret"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Panos"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Kadir İnanır"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Mehmet Ali Yalçındağ"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Doruk Finansman"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Gökhan Saygı"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Fatih Karahan"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Levent Çakıroğlu"
+      },
+      {
+        "kategori": "EMAIL",
+        "maskelenen": "yatırımcı.relations@verizon.com"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Yaşar Güler"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Ömer Bolat"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Mustafa Yıldırım"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Ahmet Yılmaz"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Yusuf Seğmen"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Ömer Seğmen"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Eren Hesap Dönemine"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Murat Çetinkaya"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Oğuzhan Özbaş"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Ahmet Yıldız"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Erdem Başçı"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Emir Varlık Yönetimi"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Emir Varlı"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Asya Avrupa"
+      }
+    ]
+  }
+}

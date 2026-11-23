@@ -1,0 +1,3007 @@
+{
+ "n": 600,
+ "kabul": 125,
+ "red": 475,
+ "kayitlar": [
+  {
+   "i": 0,
+   "reference": "Ek olarak, Apache Corporation (APA) şu anda yaklaşık 10,5 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 1,
+   "reference": "Oracle Corporation'ın 2019'daki çevrimiçi satış geliri, bir önceki yıla göre% 15'lik bir büyüme yaşayan 2.3 milyar dolardı.Bu konuşmadaki bilgilerin kurgusal olduğunu ve Oracle Corporation'ın gerçek mali durumunu yansıtmadığını lütfen unutmayın.",
+   "natural": null
+  },
+  {
+   "i": 2,
+   "reference": "Zoetis Inc., öncelikle güneş ve rüzgar enerjisi projelerine odaklanan yenilenebilir enerji girişimlerine yaklaşık 25 milyon dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 3,
+   "reference": "Bank of America Corporation'ın (BAC) en son çeyrekteki toplam gelirleri 22.7 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 4,
+   "reference": "Lockheed Martin Corporation, geçen mali yılda havacılık savunma teknolojisi ve ileri mühendislik gibi alanlara odaklanan yaklaşık 1,8 milyar dolarlık sermaye kiralama yatırımı yaptı.",
+   "natural": null
+  },
+  {
+   "i": 5,
+   "reference": "Geçen ay General Electric Company (GE) için günlük işlem gören hisselerin ortalama sayısı yaklaşık 10 milyon hisseydi.",
+   "natural": null
+  },
+  {
+   "i": 6,
+   "reference": "Bununla birlikte, kapsamlı küresel varlığı ile 2020 yılında toplam 119.5 milyar dolarlık gelirinin önemli bir kısmının uluslararası operasyonlardan geldiğini varsaymak güvenlidir.",
+   "natural": null
+  },
+  {
+   "i": 7,
+   "reference": "Söz konusu ETF’lere ay boyunca toplam 1,97 milyar dolarlık para girişi gerçekleşti.",
+   "natural": null
+  },
+  {
+   "i": 8,
+   "reference": "Anheuser-Busch InBev SA/NV (BUD) şu anda yaklaşık 116 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 9,
+   "reference": "Verilen bilgilerden, P = 110.000 TL, i = 12, t = 1 yıl olarak hesaplanır.",
+   "natural": null
+  },
+  {
+   "i": 10,
+   "reference": "(ADSK), son çeyrekte 197 milyon dolarlık operasyonlardan nakit akışı sağladı.",
+   "natural": null
+  },
+  {
+   "i": 11,
+   "reference": "Ayrıca 269.44 milyar dolarlık bir piyasa kapitalizasyonuna sahipler ve 12 Aralık 2019'da bir hisse geri alım programı duyurdular.",
+   "natural": null
+  },
+  {
+   "i": 12,
+   "reference": "Özellikle The Vanguard Group, yaklaşık 80 milyon hisse ile Kroger Co.'da önemli bir paya sahiptir.",
+   "natural": "The Vanguard Group, Kroger Co.'da yaklaşık kaç milyon hisse ile pay sahiptir?"
+  },
+  {
+   "i": 13,
+   "reference": "(LUV) şu anda Delta Air Lines (DAL) ve American Airlines Group (AAL) gibi endüstri akranlarından daha yüksek olan 31,72 milyar dolar değerindedir.",
+   "natural": null
+  },
+  {
+   "i": 14,
+   "reference": "Walt Disney Company (DIS) şu anda yaklaşık 52.9 milyar dolar toplam borcu var.",
+   "natural": null
+  },
+  {
+   "i": 15,
+   "reference": "(BRK.A BRK.B) için geçen mali yılda nakit akışı üretimi 45,2 milyar dolarlık toplam işletme nakit akışı ile sağlamdı.",
+   "natural": "Geçen mali yılda (BRK.A BRK.B) için nakit akışı üretimi ne kadar oldu?"
+  },
+  {
+   "i": 16,
+   "reference": "Kroger Co.'nun 435000'den fazla çalışanı var ve yıllık yaklaşık 121.2 milyar dolar gelir bildirdi.",
+   "natural": "Kroger Co.'nun yıllık yaklaşık kaç milyar dolar gelir bildirdi?"
+  },
+  {
+   "i": 17,
+   "reference": "Bununla birlikte, 2020 mali yılında elde ettikleri toplam gelir, tüm gelir akışlarını kapsayan yaklaşık 58,2 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 18,
+   "reference": "Pay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin\nBildirim (Faiz İçeren)\n\nPay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin\nBildirim (Faiz İçeren)\nÖzet Bilgi Şirketimizin TRFALFK52424 ısın kodlu 100.000.000 TL nominal tutarlı iskontolu bono...",
+   "natural": null
+  },
+  {
+   "i": 19,
+   "reference": "Intel Corporation (INTC), bu dönemde yaklaşık 18,5 milyar dolarlık bir artışla son 5 yılda yaklaşık% 10'luk bir yıllık gelir artışına tanık oldu.",
+   "natural": "Intel Corporation (INTC), son 5 yılda yıllık gelir artışında yaklaşık ne kadar artış kaydetti?"
+  },
+  {
+   "i": 20,
+   "reference": "Applied Materials Inc.'in (AMAT) en son mali yıl için net ticari alacaklar 4,2 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 21,
+   "reference": "Qualcomm Incorporated (QCOM) için son çeyrekte yapılan iç hisse senedi satışlarının toplam değeri 5,6 milyon dolardı.",
+   "natural": null
+  },
+  {
+   "i": 22,
+   "reference": "Açılışta Dow Jones endeksi yüzde 0,12 azalarak 49.549,07 puana geriledi.",
+   "natural": null
+  },
+  {
+   "i": 23,
+   "reference": "Kraft Heinz Company (KHC), son çeyrekte sermaye harcamalarına yaklaşık 500 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 24,
+   "reference": "Pfizer Inc.'in geçen yıl yaklaşık 9.8 milyar dolarlık araştırma ve geliştirme yatırımı yaptığı bilgilere dayanarak.",
+   "natural": null
+  },
+  {
+   "i": 25,
+   "reference": "Analog Devices Inc.'in (ADI) toplam borcu yaklaşık 7,7 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 26,
+   "reference": "Mevcut verilere dayanarak Tesla Inc., 2019 mali yılında seyahat ve eğlence giderleri için yaklaşık 28.3 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 27,
+   "reference": "(WMB), geçtiğimiz yıl toplam 50 milyon hisseyi yeniden satın alan bir hisse senedi geri alım programı gerçekleştirdi.",
+   "natural": "(WMB), geçtiğimiz yıl toplam kaç milyon hisseyi yeniden satın aldı?"
+  },
+  {
+   "i": 28,
+   "reference": "Mevcut verilere dayanarak Qualcomm Incorporated (QCOM), Intel Corporation (INTC) ve Broadcom Inc.'den (AVGO) daha düşük olan 23,53 milyar dolarlık bir gelire sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 29,
+   "reference": "Uber, filolarını satın almak için 11 milyar dolarlık borç alacak olsaydı, borçlarını önemli ölçüde artıracak ve net değerlerini azaltacaktı.",
+   "natural": null
+  },
+  {
+   "i": 30,
+   "reference": "Petrol fiyatlarının varil başına 100 doların üzerinde kalması durumunda vergi kaybının 600 milyar TL’yi aşabileceğini ifade eden Şimşek, buna rağmen bütçe açığını yüzde 3,5 seviyesinde tutmak için çalışacaklarını dile getirdi.",
+   "natural": null
+  },
+  {
+   "i": 31,
+   "reference": "Brands Inc., son mali yılda sermaye harcamalarına yaklaşık 743 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 32,
+   "reference": "SEC Edgar dosyalamalarına göre FedEx Corporation (FDX), 31 Mayıs 2020 itibarıyla 6.4 milyar dolarlık bir çalışma sermayesine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 33,
+   "reference": "DuPont de Nemours Inc.'in (DD) en son SEC dosyası itibariyle kurumsal değeri 102,75 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 34,
+   "reference": "2004'te ABD Çevre Koruma Ajansı (EPA) tarafından Temiz Hava Yasası'nı ihlal ettikleri için 1,5 milyon dolar para cezasına çarptırıldılar.",
+   "natural": null
+  },
+  {
+   "i": 35,
+   "reference": "Cisco Systems Inc., geçtiğimiz yıl sermaye harcamalarına yaklaşık 6,35 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 36,
+   "reference": "Mevcut verilere ve analizlere dayanarak Goldman Sachs Group Inc., son üç yılda hisse geri alımlarına yaklaşık 8,5 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 37,
+   "reference": "Intel Corporation'ın uzun vadeli yatırımlarının toplam değeri yaklaşık 53 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 38,
+   "reference": "Procter & Gamble Company'nin SEC'ine göre, mevcut uzun vadeli borç yükümlülükleri, en son raporlama dönemi itibarıyla 26,7 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 39,
+   "reference": "En son mali yıl (2019-2020) için Oracle Corporation'ın (ORCL) geliri 39.07 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 40,
+   "reference": "Saudi Aramco IPO'nun, şirketin değerlemesinin 1,2 ila 2.2 trilyon dolar arasında olması nedeniyle küresel endeks fonları üzerinde önemli bir etkiye sahip olması bekleniyor.",
+   "natural": null
+  },
+  {
+   "i": 41,
+   "reference": "Mevcut verilere dayanarak American Express Company (AXP) yaklaşık 115 milyon karta sahiptir.",
+   "natural": "American Express Company (AXP) yaklaşık kaç milyon karta sahiptir?"
+  },
+  {
+   "i": 42,
+   "reference": "Özetle Abbott Laboratuvarları şu anda yaklaşık 10 milyar dolarlık bir nakit rezervine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 43,
+   "reference": "Johnson & Johnson (JNJ) şu anda yaklaşık 345 milyar dolarlık bir piyasa değerine sahip ve bu da onu sektördeki önde gelen ilaç şirketlerinden biri haline getiriyor.",
+   "natural": null
+  },
+  {
+   "i": 44,
+   "reference": "24 Eylül 2022 itibarıyla Apple Inc.'in toplam mevcut varlıkları 135,405 milyon dolardır.",
+   "natural": null
+  },
+  {
+   "i": 45,
+   "reference": "Borsa İstanbul günü düşüşle tamamladı\nBorsa İstanbul'da BIST 100 endeksi, günü yüzde 2,34 değer kaybederek 14.779,93 puandan tamamladı.",
+   "natural": null
+  },
+  {
+   "i": 46,
+   "reference": "Booking Holdings A.Ş., kurumsal sosyal sorumluluk girişimlerine yılda ortalama 10 milyon dolar ayırmaktadır.",
+   "natural": null
+  },
+  {
+   "i": 47,
+   "reference": "Satın alınan belgelere dayanarak Coca-Cola Company'nin elinde yaklaşık 8,5 milyar dolar nakit vardı.",
+   "natural": null
+  },
+  {
+   "i": 48,
+   "reference": "Capital One Financial Corporation (COF), son mali yıl için 8,6 milyar dolarlık serbest nakit akımını bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 49,
+   "reference": "Mevcut bilgilere dayanarak Otomatik Veri İşleme A.Ş.'nin (ADP) son bir yıl boyunca satılan mal maliyeti 2.4 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 50,
+   "reference": "(VZ) son fonlama turunda Kasım 2020'de toplam 4.25 milyar dolar sermaye topladı.",
+   "natural": null
+  },
+  {
+   "i": 51,
+   "reference": "Johnson & Johnson, mevcut bilgilere dayanarak, son mali yılda sermaye harcamaları için yaklaşık 4.8 milyar dolar ayırdı.",
+   "natural": null
+  },
+  {
+   "i": 52,
+   "reference": "Johnson & Johnson (JNJ), geçtiğimiz yıl sermaye harcamalarına yaklaşık 3,8 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 53,
+   "reference": "Martta aylık 10 milyar dolara yaklaşan cari açık yanında yüklü sermaye çıkışları resmi rezervleri bir ayda 43,4 miyar dolar eritti.",
+   "natural": null
+  },
+  {
+   "i": 54,
+   "reference": "Nakit rezervleri ile ilgili belirli rakamlar mevcut olmasa da MMM'nin piyasa kapitalizasyonu yaklaşık 120 milyar dolardır.",
+   "natural": "MMM'nin piyasa kapitalizasyonu yaklaşık kaç milyar dolarıdır?"
+  },
+  {
+   "i": 55,
+   "reference": "(HD) şu anda sermaye harcamaları için yaklaşık 3,9 milyar dolarlık yıllık bir bütçeye sahiptir.",
+   "natural": "HD'nin sermaye harcamaları için yıllık bütçesi kaç milyar dolarlık bir miktardır?"
+  },
+  {
+   "i": 56,
+   "reference": "(PFE) şu anda yaklaşık 45 milyar dolarlık uzun vadeli borç yükümlülüklerine sahiptir.",
+   "natural": "(PFE) şu anda yaklaşık kaç milyar dolarlık uzun vadeli borç yükümlülülüklerine sahiptir?"
+  },
+  {
+   "i": 57,
+   "reference": "(HD), CEO'nun toplam tazminatının yaklaşık 11,2 milyon dolar olduğu bir yönetici tazminat yapısına sahipken, diğer yönetici tazminatları şirket içindeki rollerine göre değişmektedir.",
+   "natural": "HD'nin CEO'nun toplam tazminatı yaklaşık ne kadar olmaktadır?"
+  },
+  {
+   "i": 58,
+   "reference": "Şirket, 2019 yılında Amerika Birleşik Devletleri Adalet Bakanlığı tarafından 34.5 milyon dolar para cezasına çarptırıldı.",
+   "natural": null
+  },
+  {
+   "i": 59,
+   "reference": "WAIS-4'te 79 puan alan zihinsel engelli biri için uygun birkaç iş fikri var.",
+   "natural": null
+  },
+  {
+   "i": 60,
+   "reference": "Graintürk (GRTHO) hasılatı düşmesine rağmen faaliyet kârını yüzde 55 artırdı\nGraintürk (GRTHO) 2026 yılı ilk çeyreğinde 200,3 milyon TL ana ortaklık net kârı elde etti.",
+   "natural": null
+  },
+  {
+   "i": 61,
+   "reference": "Ayrıca aynı dönem için gelir, hisse başına kazanç (EPS) 1,11 dolar ile 5,9 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 62,
+   "reference": "Sizin durumunuzda, ayda 456 $ 'dan 335.41 $' a kadar ödeme yapacaksınız ve 4 yılda 13,5k $' ı 8,25% faizle ödeyeceksiniz.",
+   "natural": null
+  },
+  {
+   "i": 63,
+   "reference": "CVS Health Corporation'ın çalışma sermayesi 2,38 milyar dolar ve mevcut oranı 1,04 dolardır.",
+   "natural": null
+  },
+  {
+   "i": 64,
+   "reference": "Autodesk Inc.'in (ADSK) bilançosunda 2,88 milyar dolarlık toplam borcu vardır.",
+   "natural": "Autodesk Inc.'in (ADSK) bilançosunda kaç milyar dolarlık toplam borcu vardır?"
+  },
+  {
+   "i": 65,
+   "reference": "Southwest Airlines Co.'nun nakit pozisyonu son 2 yılda yaklaşık 1,085 milyar dolar arttı.",
+   "natural": null
+  },
+  {
+   "i": 66,
+   "reference": "En son üç aylık dosyalama Procter & Gamble Company'nin (PG) elinde 11,6 milyar dolar nakit var.",
+   "natural": "Procter & Gamble Company'nin elindeki nakit miktarı ne kadar?"
+  },
+  {
+   "i": 67,
+   "reference": "Mevcut bilgilere dayanarak Schlumberger Limited, en son finansal tablosunda 1,827 milyar dolarlık nakit ve nakit eşdeğerlerini bildirdi.",
+   "natural": "Schlumberger Limited'nin en son finansal tablosunda kaç milyar dolarlık nakit ve nakit eşdeğerleri bildirdi?"
+  },
+  {
+   "i": 68,
+   "reference": "2020'de işletme nakit akışı, önceki yıllara göre önemli bir artışa işaret ederek 8,1 milyar dolara ulaştı.",
+   "natural": null
+  },
+  {
+   "i": 69,
+   "reference": "Zoetis Inc.'in (ZTS) şu anda toplam borcu yaklaşık 5.8 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 70,
+   "reference": "Ayrıca JPMorgan Chase, ırksal özkaynak destekli girişimciliği ve küçük işletmeleri ilerletmek için 30 milyar dolar taahhüt etti ve JPMorgan Chase Sağlık Merkezi'ni kurdu.",
+   "natural": null
+  },
+  {
+   "i": 71,
+   "reference": "Southwest Airlines Co.'nun bilançosunda yaklaşık 3,5 milyar dolar nakit vardı.",
+   "natural": null
+  },
+  {
+   "i": 72,
+   "reference": "Kraft Heinz Company (KHC), 3G Capital ve Berkshire Hathaway dahil olmak üzere çeşitli risk sermayesi şirketlerinden yaklaşık 2,3 milyar dolar fon aldı.",
+   "natural": null
+  },
+  {
+   "i": 73,
+   "reference": "Yaklaşık 17 milyon emekliyi ilgilendiren Kurban Bayramı ödeme takvimi belli oldu.",
+   "natural": "Kurban Bayramı ödeme takvimi kaç milyon emekliyi ilgilendirmektedir?"
+  },
+  {
+   "i": 74,
+   "reference": "Küçük bir kap ASX listesindeki şirkete yatırım yapan FAR Limited (ASX:FAR), net değeri 10 milyon doların üzerinde olan ve hisseleri satın alma ve satmada başarılı olan bir arkadaşın tavsiyesine dayanarak yapılan en riskli finansal karardı.",
+   "natural": "FAR Limited, en riskli finansal kararını hangi miktarda yatırım yaparak atmıştır?"
+  },
+  {
+   "i": 75,
+   "reference": "(ATVI) hisse senedi için mevcut kısa faiz, bir önceki rapor edilen döneme göre daha düşük olan 8.7 milyon hissedir.",
+   "natural": null
+  },
+  {
+   "i": 76,
+   "reference": "Alınan bilgilere dayanarak General Electric Company (GE) şu anda yaklaşık 78.84 milyar dolarlık uzun vadeli bir borcu var.",
+   "natural": null
+  },
+  {
+   "i": 77,
+   "reference": "(AIG), 29 Nisan 2021'de yayınlanan en son rapor itibariyle 877.37 milyon hisse senedine sahiptir.",
+   "natural": "(AIG), 29 Nisan 2021 tarihli en son raporuna göre kaç milyon hisse senedine sahiptir?"
+  },
+  {
+   "i": 78,
+   "reference": "Mastercard Incorporated, yenilenebilir enerji girişimlerine 500 milyon dolar taahhüt etti ve Kaliforniya'daki bir güneş çiftliği ve Avrupa'daki rüzgar enerjisi projeleri gibi projelere yatırım yaptı.",
+   "natural": "Mastercard Incorporated, yenilenebilir enerji girişimlerine kaç milyon dolar taahhüt etti?"
+  },
+  {
+   "i": 79,
+   "reference": "tarafından 2020 yılında yapılan toplam hisse senedi geri alım tutarı 3.72 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 80,
+   "reference": "General Motors Company'nin (GM) bilançosunda toplam 110.59 milyar dolar borcu var.",
+   "natural": null
+  },
+  {
+   "i": 81,
+   "reference": "Templeton'ın mevcut bilgilerine dayanarak, yıllık yaklaşık 16,5 milyon dolar tazminat elde ediyor.",
+   "natural": null
+  },
+  {
+   "i": 82,
+   "reference": "Kraft Heinz Company'nin (KHC) mevcut piyasa değeri yaklaşık 41.47 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 83,
+   "reference": "Adobe Inc.'in (ADBE) mevcut çalışma sermayesi 4.32 milyar dolar iken, Citigroup Inc.",
+   "natural": "Adobe Inc.'in mevcut çalışma sermayesi ne kadar milyar dolar?"
+  },
+  {
+   "i": 84,
+   "reference": "International Business Machines Corporation (IBM) yıllık olarak yaklaşık 1,5 milyar dolarlık siber güvenlik önlemlerine yatırım yapıyor.",
+   "natural": null
+  },
+  {
+   "i": 85,
+   "reference": "CVS Health Corporation (CVS) geçtiğimiz mali yıl için 9,43 milyar dolarlık ücretsiz nakit akışına sahipti.",
+   "natural": null
+  },
+  {
+   "i": 86,
+   "reference": "Comcast Corporation (CMCSA), son mali yılda 9,8 milyar dolarlık sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 87,
+   "reference": "(T), halihazırda yeniden satın alınan yaklaşık 75 milyon hisse ile mevcut bir hisse geri alım programına sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 88,
+   "reference": "Chevron Corporation'ın (CVX) piyasa değeri şu anda 208 milyar dolar civarındadır.",
+   "natural": null
+  },
+  {
+   "i": 89,
+   "reference": "Bahsedilen mali yılda şirketin net gelir marjı %18, toplam özsermayesi ise 15.53 milyar dolardır.\"",
+   "natural": "Bahsedilen mali yılda şirketin toplam özsermayesi kaç milyar dolarıdır?"
+  },
+  {
+   "i": 90,
+   "reference": "MSCI ve FTSE endeksleri arasındaki fark, iddia edilenden daha küçük olan% 85 % 5'dir.",
+   "natural": null
+  },
+  {
+   "i": 91,
+   "reference": "Bugün itibariyle UnitedHealth Group Incorporated'ın (UNH) piyasa değeri yaklaşık 400 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 92,
+   "reference": "Powerball piyangosunda 150 milyon dolar kazanırsanız, kazançlarınızı istikrarlı bir finansal gelecek sağlamak için nakit, gayrimenkul, tahvil, endeks fonları ve hisse senetlerinin bir kombinasyonuna yatırmayı düşünmelisiniz.",
+   "natural": null
+  },
+  {
+   "i": 93,
+   "reference": "Türk lirası zorunlu karşılık oranları tüm yükümlülük türleri ve vade dilimleri için 200 baz puan artırılmıştır.",
+   "natural": null
+  },
+  {
+   "i": 94,
+   "reference": "Activision Blizzard Inc.'in (ATVI) şu anda 4,8 milyar dolarlık bir nakit rezervi var.",
+   "natural": null
+  },
+  {
+   "i": 95,
+   "reference": "Yaş ortalaması 51 olan Japonya’da; 120 milyon nüfusun 70’i istihdamda (2)\nTÜİK, (dün) genç nüfusa yönelik araştırma sonuçlarını açıkladı:\n15-24 yaş grubunu içeren genç nüfusumuz yüzde 14.8’in de altına sarktı…\nNe eğitimde ne istihdamda olan gençlerin oranı mı?",
+   "natural": "Japonya'da istihdamda olan nüfusun sayısı kaç milyon?"
+  },
+  {
+   "i": 96,
+   "reference": "Geçtiğimiz mali yılda General Electric Company (GE) araştırma ve geliştirmeye yaklaşık 5,8 milyar dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 97,
+   "reference": "Intel Corporation'ın şu anda yaklaşık 10 milyar dolarlık nakit ve nakit eşdeğeri var.",
+   "natural": null
+  },
+  {
+   "i": 98,
+   "reference": "(WBA) şu anda bilançolarında yaklaşık 19,38 milyar dolarlık bir toplam uzun vadeli borcu var.",
+   "natural": null
+  },
+  {
+   "i": 99,
+   "reference": "Broadcom Inc.'in (AVGO) hisselerinin şu anki olağanüstü sayısı 416.45 milyon.",
+   "natural": null
+  },
+  {
+   "i": 100,
+   "reference": "Bank of America Corporation (BAC), en son ertelenmiş vergi varlık dengesinin 29.14 milyar dolar olduğunu bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 101,
+   "reference": "Hükümet, Univers'tekiler de dahil olmak üzere savunmasız haneler için yaşam maliyetini desteklemek için 1,5 milyar kaynak sağlayacaktır.",
+   "natural": null
+  },
+  {
+   "i": 102,
+   "reference": "AMP Capital baş ekonomisti Shane Oliver'a göre, RBA, bir mesaj göndermek ve hiper enflasyon riskini ele almak için faiz oranlarında 75 baz puanlık bir artış göz önünde bulundurmalıdır.",
+   "natural": null
+  },
+  {
+   "i": 103,
+   "reference": "The Home Depot Inc.'in (HD) göze çarpan ortak hisselerinin sayısı yaklaşık 1.17 milyar hissedir.",
+   "natural": null
+  },
+  {
+   "i": 104,
+   "reference": "AT&T A.Ş., son seçim döngüsü boyunca toplam 2.5 milyon dolarlık siyasi katkı yaptı.",
+   "natural": null
+  },
+  {
+   "i": 105,
+   "reference": "Ancak 2020 mali yılı sonu itibarıyla şirketin uzun vadeli borcu yaklaşık 10.9 milyar dolardı.",
+   "natural": "2020 mali yılı sonunda şirketin uzun vadeli borcu yaklaşık kaç milyar dolar idi?"
+  },
+  {
+   "i": 106,
+   "reference": "Ek olarak, şirketin piyasa kapitalizasyonu, son mali yılda% 17'lik bir gelir artışı ile yaklaşık 320 milyar dolardır.",
+   "natural": "Şirketin son mali yılda %17'lik gelir artışıyla yaklaşık kaç milyar dolarlık bir piyasa kapitalizasyonu vardır?"
+  },
+  {
+   "i": 107,
+   "reference": "Goldman Sachs Group Inc., 2020 mali yılında reklam ve pazarlama için yaklaşık 1,17 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 108,
+   "reference": "Bireyin bir PPOR üzerinde son 1.2 milyon dolarlık bir ipotek var ve şu anda önemli bir stres yaşamıyor.",
+   "natural": "Bireyin bir PPOR üzerinde şu anda önemli bir stres yaşamakta olan kaç milyon dolarlık bir ipotek var?"
+  },
+  {
+   "i": 109,
+   "reference": "Verizon Communications Inc.'in kurumsal değeri yaklaşık 338 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 110,
+   "reference": "Coca-Cola Company (KO), endüstri akranlarının ortalama brüt marjının biraz üzerinde olan% 60 brüt bir marja sahiptir (57.25%).",
+   "natural": null
+  },
+  {
+   "i": 111,
+   "reference": "Bu verilerle birlikte, 2026 yılının ilk çeyreğinde Türkiye’ye gelen toplam uluslararası doğrudan yatırım miktarı 2,6 milyar dolara ulaştı.",
+   "natural": null
+  },
+  {
+   "i": 112,
+   "reference": "Dünkü kapanış itibarıyla Verizon Communications Inc.'in (VZ) piyasa değeri yaklaşık 228 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 113,
+   "reference": "Ek olarak, Connecticut'ta yaşıyorsanız, yıllık 16.000 $' lık bir meslek ve 9,1 milyon $' lık bir ömür boyu muafiyeti olan bir devlet hediye vergisi vardır.",
+   "natural": null
+  },
+  {
+   "i": 114,
+   "reference": "En son finansal yılda Adobe, endüstri ortalamasını 3,2 milyar dolar aşan faaliyet faaliyetlerinden nakit akışı bildirdi.",
+   "natural": "Adobe'nin en son finansal yılda endüstri ortalamasını aşan faaliyetlerden elde ettiği nakit akışı ne kadar oldu?"
+  },
+  {
+   "i": 115,
+   "reference": "Rekabet Kurumu’ndan yazıcı ve fotokopi sektörüne milyonluk ceza\nRekabet Kurumu, yazıcı ve fotokopi sistemleri pazarında bayilerin satış fiyatlarına müdahale ederek rekabet kurallarını ihlal ettikleri gerekçesiyle Kyocera ve Geskopikit’e toplam yaklaşık 18,4 milyon lira idari para cezası verdi.",
+   "natural": null
+  },
+  {
+   "i": 116,
+   "reference": "Ancak tarihsel eğilime dayanarak, bir önceki yıl harcanan 14,9 milyar doları potansiyel olarak aşan önemli bir yatırım olması bekleniyor.",
+   "natural": "Geçen yıl harcanan kaç milyar dolar bekleniyor?"
+  },
+  {
+   "i": 117,
+   "reference": "şu anda bilançolarında yaklaşık 80.86 milyar dolar uzun vadeli borç taşıyor.",
+   "natural": null
+  },
+  {
+   "i": 118,
+   "reference": "Walgreens Boots Alliance Inc.'in (WBA) uzun vadeli borcunun toplam değeri 16,5 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 119,
+   "reference": "Ford Motor Company'nin bilançosunda yaklaşık 155 milyar dolar borç var.",
+   "natural": null
+  },
+  {
+   "i": 120,
+   "reference": "Costco Wholesale Corporation'ın (COST) uzun vadeli yatırımlarının mevcut değeri yaklaşık 7,2 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 121,
+   "reference": "NVIDIA Corporation'ın (NVDA) şu anda göze çarpan hisse sayısı yaklaşık 625 milyon.",
+   "natural": null
+  },
+  {
+   "i": 122,
+   "reference": "Yeni günde Dolar 45,43 liradan, euro 52,71 TL seviyelerinden işlem görüyor.",
+   "natural": "Yeni günde Euro kaç liradan işlem görüyor?"
+  },
+  {
+   "i": 123,
+   "reference": "(XLNX), son 5 yılda toplam 500 milyon dolarlık bir borçtan emekli oldu.",
+   "natural": "(XLNX), son 5 yılda toplam kaç milyon dolarlık bir borç ödemiştir?"
+  },
+  {
+   "i": 124,
+   "reference": "Booking Holdings Inc.'in en büyük kurumsal hissedarı şu anda yaklaşık 4.59 milyon hisseye sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 125,
+   "reference": "Banka analistleri, 8 bin 300 puanlık hedefin 20,5 kat ileriye dönük fiyat/kazanç çarpanına dayandığını bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 126,
+   "reference": "Verilen bilgilerden, P = 110.000 TL, i = 12, t = 3 ay olarak hesaplanır.",
+   "natural": null
+  },
+  {
+   "i": 127,
+   "reference": "Adobe Inc., 2020 mali yılında operasyonlardan yaklaşık 4,46 milyar dolar nakit akışı sağladı.",
+   "natural": null
+  },
+  {
+   "i": 128,
+   "reference": "Este Lauder Companies Inc., geçtiğimiz mali yılda yenilenebilir enerji teknolojilerine 50 milyon dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 129,
+   "reference": "Microsoft Corporation (MSFT) CEO'su Satya Nadella, yıllık yaklaşık 42.9 milyon dolar maaş alıyor.",
+   "natural": null
+  },
+  {
+   "i": 130,
+   "reference": "Johnson & Johnson (JNJ), geçtiğimiz yıl kendi hisselerinin yaklaşık 100 milyon hissesini geri satın aldı.",
+   "natural": null
+  },
+  {
+   "i": 131,
+   "reference": "AT&T Inc., 2020 mali yılında 29,5 milyar dolarlık bir serbest nakit akışı oluşturdu.",
+   "natural": null
+  },
+  {
+   "i": 132,
+   "reference": "NVIDIA Corporation geçen çeyrekte yaklaşık 2,9 milyar dolar nakit akışı yarattı.",
+   "natural": "NVIDIA Corporation geçen çeyrekte yaklaşık kaç milyar dolar nakit akışı yarattı?"
+  },
+  {
+   "i": 133,
+   "reference": "Yaklaşık 230 milyar dolarlık piyasa kapitalizasyonuna sahip çok uluslu bir telekomünikasyon holdingidir.",
+   "natural": "Veriye göre, şirketin piyasa kapitalizasyonu kaç milyar dolar civarındadır?"
+  },
+  {
+   "i": 134,
+   "reference": "UnitedHealth Group Incorporated (UNH) 4,5 milyar dolarlık bir mevcut sermaye harcama bütçesine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 135,
+   "reference": "Mevcut en son bilgilere dayanarak General Motors Company (GM) şu anda yaklaşık 52.5 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 136,
+   "reference": "(AMAT), 2020 mali yılında araştırma ve geliştirme faaliyetlerine yaklaşık 2,79 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 137,
+   "reference": "Mevcut bilgilere dayanarak NVIDIA Corporation, 2020 mali yılında sermaye harcamalarına yaklaşık 1.53 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 138,
+   "reference": "Mevcut bilgilere dayanarak Ford Motor Company, en son dosyalamalarından itibaren elinde 10.3 milyar dolar nakit ve nakit eşdeğeri olduğunu bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 139,
+   "reference": "Ana Pazar, halka açık piyasa değeri 25 milyon TL'nin üzerinde ve 100 M TL'nin altında olan şirketlerin Borsa İstanbul bünyesinde işlem görebileceği pazardır.",
+   "natural": null
+  },
+  {
+   "i": 140,
+   "reference": "Önümüzdeki dönemde 300 milyon dolar daha kaynağı Türkiye'nin teknoloji girişimlerine yatırım yapacak fonlara yönlendireceklerini aktaran Kacır, girişimlerin alternatif finansman enstrümanlarından yararlanmasını önemsediklerini kaydetti.",
+   "natural": null
+  },
+  {
+   "i": 141,
+   "reference": "Abbott Laboratories'in mevcut piyasa değeri 205 milyar dolar civarındadır.",
+   "natural": null
+  },
+  {
+   "i": 142,
+   "reference": "Mevcut bilgilere dayanarak Dow Inc.'in en son mali yıl için serbest nakit akışı 4,2 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 143,
+   "reference": "Bakan Şimşek: Faiz dışı bütçede 536 milyar TL'lik iyileşme sağlandı\nMerkezi yönetim bütçe dengesi verilerini değerlendiren Hazine ve Maliye Bakanı Mehmet Şimşek, yılın ilk dört ayında bütçe performansının hedeflerle uyumlu ilerlediğini açıkladı.",
+   "natural": "Faiz dışı bütçede kaç milyar TL'lik iyileşme sağlandı?"
+  },
+  {
+   "i": 144,
+   "reference": "Genel olarak hisse senedi fiyatında yaklaşık 15.43%'lük bir artış oldu.",
+   "natural": null
+  },
+  {
+   "i": 145,
+   "reference": "Cisco Systems Inc.'in (CSCO) kurumsal değeri yaklaşık 196,4 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 146,
+   "reference": "Adobe Inc., 2020 mali yılı için yaklaşık 3.35 milyar dolar serbest nakit akışı oluştururken, Citigroup Inc.",
+   "natural": null
+  },
+  {
+   "i": 147,
+   "reference": "Bank of America Corporation (BAC), en son finansal tablosunda 10.3 milyar dolarlık bir faiz gideri bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 148,
+   "reference": "IBM veya International Business Machines Corporation'ın piyasa kapitalizasyonu yaklaşık 135 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 149,
+   "reference": "Anheuser-Busch InBev SA/NV'nin (BUD) mevcut piyasa değeri yaklaşık 162 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 150,
+   "reference": "Caterpillar Inc.'in (CAT) finansal raporlarına göre, son mali yılı boyunca 747 milyon dolar faiz gideri ödediler.",
+   "natural": "Caterpillar Inc.'in son mali yılı boyunca kaç milyon dolar faiz gideri ödemişti?"
+  },
+  {
+   "i": 151,
+   "reference": "A Şirketi'nin borcunu yönetmek veya yeniden yapılandırmak için finansal manevraları gösteren 1.4 milyon dolarlık borç söndürme maliyetlerinin tanınmasıyla ilişkili kredi riskini azaltmak için birkaç ilgili strateji vardır: 1.",
+   "natural": null
+  },
+  {
+   "i": 152,
+   "reference": "Nakit ve Nakit Eşdeğerleri ($23,646 milyon): Kısa vadeli yükümlülükleri ve yatırımları karşılamak için likidite ve esneklik sunan önemli bir miktar.",
+   "natural": "Nakit ve Nakit Eşdeğerleri (___ milyon) ne kadar?"
+  },
+  {
+   "i": 153,
+   "reference": "Piyasa değeri yaklaşık 221.57 milyar dolar olan çok uluslu bir sağlık şirketidir.",
+   "natural": null
+  },
+  {
+   "i": 154,
+   "reference": "Edinilen bilgilere göre Intel Corporation (INTC) yaklaşık 4.72 milyar hisse senedi yayınladı.",
+   "natural": "Intel Corporation (INTC) yaklaşık kaç milyar hisse senedi yayınladı?"
+  },
+  {
+   "i": 155,
+   "reference": "Evet Intel Corporation (INTC), Ekim 2020'de 10 milyar dolara kadar bir hisse geri alım programı duyurdu.",
+   "natural": null
+  },
+  {
+   "i": 156,
+   "reference": "Raytheon Technologies Corporation (RTX), geçen mali yılda sermaye harcamalarına yaklaşık 2,1 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 157,
+   "reference": "(ANTM) yaklaşık 85 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": "ANTM'nin piyasa kapitalizasyonu yaklaşık ne kadar dolar değerinde?"
+  },
+  {
+   "i": 158,
+   "reference": "Apache Corporation, geçtiğimiz yıl sermaye harcamalarına 2,1 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 159,
+   "reference": "Bank of America Corporation'ın (BAC) serbest nakit akışı 46,8 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 160,
+   "reference": "American Express Company (AXP), son finansman turunda yaklaşık 600 milyon dolar topladı.",
+   "natural": null
+  },
+  {
+   "i": 161,
+   "reference": "Son mali yılda Coca-Cola Company (KO), sermaye harcamalarına yaklaşık 3,4 milyar dolar harcadı.",
+   "natural": "Coca-Cola Company (KO) son mali yılda yaklaşık kaç milyar dolar sermaye harcaması yaptı?"
+  },
+  {
+   "i": 162,
+   "reference": "Johnson & Johnson'ın (JNJ) net geliri 15,1 milyar dolardır ve bu da Pfizer Merck ve Novartis gibi endüstri akranlarına kıyasla rekabetçidir.",
+   "natural": null
+  },
+  {
+   "i": 163,
+   "reference": "Walmart Inc.'in geçtiğimiz yıl mülk tesisi ve ekipmanları için 10.5 milyar dolar harcadığı mevcut bilgilere dayanarak.",
+   "natural": null
+  },
+  {
+   "i": 164,
+   "reference": "Şirket, 6.1 milyar dolar beklenen gelirden daha yüksek ve hisse başına 1.47 dolar kazanç bildirdi.",
+   "natural": "Şirket, kaç milyar dolar gelir bildirdi?"
+  },
+  {
+   "i": 165,
+   "reference": "Bununla birlikte, şirket son çeyrekte 3.42 milyar dolarlık bir gelirle güçlü bir finansal performans sergiliyor.",
+   "natural": "Şirket son çeyrekte kaç milyar dolarlık bir gelir elde etti?"
+  },
+  {
+   "i": 166,
+   "reference": "Amgen Inc., bir önceki yıl yasal masraflar için yaklaşık 876 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 167,
+   "reference": "FedEx Corporation (FDX), önümüzdeki üç yıl içinde 5.9 milyar dolarlık sermaye harcamalarını taahhüt etti.",
+   "natural": null
+  },
+  {
+   "i": 168,
+   "reference": "Sidney'de 1,5 milyon dolarlık bir ev satın almanın maliyeti, özellikle medyan hane geliri sadece 260.000 dolar olduğunda gençler için önemli bir zorluktur.",
+   "natural": null
+  },
+  {
+   "i": 169,
+   "reference": "Coca-Cola Company, 2021'in ilk çeyreğinde 1,9 milyar dolarlık serbest nakit akımı (FCF) yarattı.",
+   "natural": null
+  },
+  {
+   "i": 170,
+   "reference": "ERGÜN\nnurdogan.arslan@dunya.com\nKüresel pazarlardaki daralma ve maliyetler yüzünden rekabetçilikte zorlanan ve son 3 yılda ihracatta 4.4 milyar dolarlık kayıp veren Türkiye hazır giyim sektörü, markalaşma için yeni bir hamle başlatıyor.",
+   "natural": "Türkiye hazır giyim sektörü, son 3 yılda ihracatta kaç milyar dolarlık kayıp vermiştir?"
+  },
+  {
+   "i": 171,
+   "reference": "Walt Disney Company (DIS) geçtiğimiz yıl 8,89 milyar dolarlık serbest nakit akışı yarattı.",
+   "natural": null
+  },
+  {
+   "i": 172,
+   "reference": "Türk Hava Yolları toplam gelirlerini önceki yıla göre %14 artırarak 20.9 milyar USD seviyesine ulaştırmıştır.",
+   "natural": "Türk Hava Yolları'nın toplam gelirleri önceki yıla göre %14 artarak ne kadar USD'ye ulaştı?"
+  },
+  {
+   "i": 173,
+   "reference": "Mevcut müzakerelerde Ver.di sendikası, perakende sektöründeki yaklaşık 5,2 milyon çalışan için tüm maaş skalalarını kapsayacak şekilde 12 aylık bir sözleşme süresi ve yüzde 7 ücret artışı talep ediyor.",
+   "natural": null
+  },
+  {
+   "i": 174,
+   "reference": "Raytheon Technologies Corporation (RTX) şu anda bir önceki yıla göre %8,5'lik bir büyümeyi temsil eden 10,2 milyar dolarlık bir EBITDA'ya sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 175,
+   "reference": "Bristol-Myers Squibb Company (BMY), son bir yıl içinde araştırma ve geliştirme tesislerine (%40) üretim tesislerine (%25) ekipman ve altyapı iyileştirmelerine (%15) tahsislerle yaklaşık 1.2 milyar dolarlık sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 176,
+   "reference": "Archer-Daniels-Midland Company (ADM), 2020 yılında operasyonlardan 2,57 milyar dolar nakit akışı elde etti.",
+   "natural": null
+  },
+  {
+   "i": 177,
+   "reference": "Bir önceki yıl için Walmart, müşteri deneyimlerini geliştirmek ve büyümeyi artırmak için mağaza tadilatları e-ticaret genişleme tedarik zinciri iyileştirmeleri ve teknoloji yatırımlarına odaklanan yaklaşık 10,1 milyar dolarlık bir sermaye harcaması bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 178,
+   "reference": "Amazon.com Inc.'in (AMZN) hisselerinin mevcut piyasa değeri 1,5 trilyon dolar.",
+   "natural": "Amazon.com Inc.'in hisselerinin mevcut piyasa değeri ne kadar trilyon dolar?"
+  },
+  {
+   "i": 179,
+   "reference": "Cisco Systems Inc.'in (CSCO) piyasa değeri yaklaşık 229 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 180,
+   "reference": "Smart Güneş Teknolojileri ilk çeyrekte 62 milyon TL net dönem karı bildirdi\nSmart Güneş Teknolojileri 2026 yılı ilk çeyrek finansal sonuçlarını açıkladı.",
+   "natural": "Smart Güneş Teknolojileri 2026 yılının ilk çeyrekte ne kadar net dönem kar elde etti?"
+  },
+  {
+   "i": 181,
+   "reference": "Apple Inc.'in CEO'su Tim Cook, geçen çeyrekte AAPL hisselerinin 55000 hissesini yaklaşık 12.5 milyon dolara satın aldı.",
+   "natural": null
+  },
+  {
+   "i": 182,
+   "reference": "Özellikle New York eyaleti tarafından 35 milyon dolarlık bir anlaşmayla sonuçlanan vergisiz sigaraların teslimi ile ilgili bir davayla karşı karşıya kaldılar.",
+   "natural": null
+  },
+  {
+   "i": 183,
+   "reference": "Hisse 80 TL'ye düştüğünde, opsiyonunuz değerlenir ve kar elde edersiniz.",
+   "natural": null
+  },
+  {
+   "i": 184,
+   "reference": "(BIIB) ile ilgili olarak, ortalamanın biraz üzerinde olan toplam 7,2 milyar dolarlık bir borcu vardır.",
+   "natural": "(BIIB) ile ilgili olarak, toplam kaç milyar dolarlık bir borcu vardır?"
+  },
+  {
+   "i": 185,
+   "reference": "Boeing Şirketi, son mali yılda stok bazlı tazminat için 623 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 186,
+   "reference": "General Motors Company'nin (GM) mevcut serbest nakit akışı 2,5 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 187,
+   "reference": "Örneğin, 25 milyon'lik finansman bonosunun satış fiyatı, 1 Kasım 2011'de 4.15 iskonto oranından hesaplanabilir.",
+   "natural": null
+  },
+  {
+   "i": 188,
+   "reference": "Dow Inc., çalışan yardımlarına yılda yaklaşık 500 milyon dolar harcıyor.",
+   "natural": null
+  },
+  {
+   "i": 189,
+   "reference": "En son finansal rapora göre FedEx Corporation şu anda yaklaşık 34 milyar dolarlık bir toplam özkaynak değerine sahiptir.",
+   "natural": "FedEx Corporation'ın en son finansal raporuna göre toplam özkaynak değeri ne kadardır?"
+  },
+  {
+   "i": 190,
+   "reference": "(ADI), bilançosunda 3,1 milyar dolarlık bir nakit bakiyesine sahiptir ve güçlü finansal konumuyla bilinir.",
+   "natural": "(ADI)'nin bilançosunda kaç milyar dolarlık nakit bakiyesi vardır?"
+  },
+  {
+   "i": 191,
+   "reference": "Mevcut verilere dayanarak Clorox Company (CLX), geçtiğimiz yıl boyunca sermaye harcamalarına yaklaşık 372 milyon dolar harcadı.",
+   "natural": "Geçtiğimiz yıl boyunca Clorox Company (CLX) yaklaşık kaç milyon dolar sermaye harcamalarına ödedi?"
+  },
+  {
+   "i": 192,
+   "reference": "Morgan Stanley'deki (MS) ortalama yönetici tazminatı paketi yılda yaklaşık 15 milyon dolardır.",
+   "natural": null
+  },
+  {
+   "i": 193,
+   "reference": "American International Group Inc.'in (AIG) geçen mali yıl itibarıyla toplam 49.5 milyar dolarlık borcu vardı.",
+   "natural": null
+  },
+  {
+   "i": 194,
+   "reference": "Archer-Daniels-Midland Company (ADM) son mali yılda pazarlama faaliyetlerine yaklaşık 500 milyon dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 195,
+   "reference": "Nike Inc.'in (NKE) aldığı bilgilere dayanarak, bilançosunda şu anda yaklaşık 9,5 milyar dolar uzun vadeli borç var.",
+   "natural": "Nike Inc.'in (NKE) bilançosunda şu anda yaklaşık kaç milyar dolar uzun vadeli borç bulunuyor?"
+  },
+  {
+   "i": 196,
+   "reference": "2020 yılında Bank of America Corporation (BAC) CEO'su Brian Moynihan'ın CEO tazminat paketi 24,5 milyon dolardı.",
+   "natural": null
+  },
+  {
+   "i": 197,
+   "reference": "Mevcut bilgilere dayanarak, General Motors Company'nin bilançosunda yaklaşık 97,7 milyar dolarlık uzun vadeli borcu var.",
+   "natural": null
+  },
+  {
+   "i": 198,
+   "reference": "(AAL) şu anda yaklaşık 3,9 milyar dolar nakit ve nakit eşdeğerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 199,
+   "reference": "Activision Blizzard Inc., geçtiğimiz yıl yaklaşık 2,5 milyar dolar hisse senedi geri alımlarına harcadı.",
+   "natural": null
+  },
+  {
+   "i": 200,
+   "reference": "son zamanlarda havacılık endüstrisinde stratejik bir ortaklık ilan etti ve yaklaşık 146 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 201,
+   "reference": "(AMD) tarafından oluşturulan serbest nakit akımı (FCF) 1.6 milyar dolar olarak gerçekleşti.",
+   "natural": null
+  },
+  {
+   "i": 202,
+   "reference": "Honeywell International Inc.'in (HON) belirlenen tarihteki piyasa değeri 124,5 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 203,
+   "reference": "General Electric Company (GE), geçen yıl çalışan eğitim ve geliştirme girişimlerine yaklaşık 500 milyon dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 204,
+   "reference": "Coca-Cola Company, mali yıl için yaklaşık 8,1 milyar dolar serbest nakit akışı üretti.",
+   "natural": null
+  },
+  {
+   "i": 205,
+   "reference": "Visa Inc.'in piyasa değeri yaklaşık 500 milyar dolardır ve şirket geçen yıl yaklaşık %12'lik bir gelir artışı göstermiştir.",
+   "natural": null
+  },
+  {
+   "i": 206,
+   "reference": "General Motors Company'nin en son toplam uzun vadeli borç ve borç bakiyesi 91.6 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 207,
+   "reference": "Tesla Inc.'in en son çeyrek itibarıyla SEC dosyasına göre şirketin elinde yaklaşık 8.6 milyar dolar nakit ve nakit eşdeğeri vardı.",
+   "natural": null
+  },
+  {
+   "i": 208,
+   "reference": "(BKNG) son zamanlarda yaklaşık 1,5 milyar dolarlık hisse geri alımlarını tamamladı.",
+   "natural": null
+  },
+  {
+   "i": 209,
+   "reference": "Abbott Laboratories'in son üç mali yıldaki temettü ödeme oranı sırasıyla yaklaşık% 50.53% 59.75 ve% 56.98 idi.",
+   "natural": null
+  },
+  {
+   "i": 210,
+   "reference": "Federal Rezerv dosyasına göre Williams Companies Inc., bir önceki mali yılda ABD dışında yaklaşık 1.2 milyar dolar gelir elde etti.",
+   "natural": null
+  },
+  {
+   "i": 211,
+   "reference": "Analog Devices Inc.'in (ADI) mevcut piyasa değeri yaklaşık 55 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 212,
+   "reference": "Tesla Inc.'in geçtiğimiz yıl sürdürülebilirlik girişimlerine yaklaşık 500 milyon dolar yatırım yaptığı mevcut bilgilere dayanarak.",
+   "natural": "Tesla Inc.'in geçen yıl sürdürülebilirlik proje girişimlerine yaklaşık kaç milyon dolar yatırım yaptığı mevcut kaynaklara göre?"
+  },
+  {
+   "i": 213,
+   "reference": "General Motors Company (GM) geçen mali yılda toplam 7,5 milyar dolarlık sermaye harcamasına sahipti.",
+   "natural": null
+  },
+  {
+   "i": 214,
+   "reference": "Pfizer Inc., mevcut mali yıl için 3,85 milyar dolarlık sermaye harcamalarını bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 215,
+   "reference": "Birleşmiş Milletler Gıda ve Tarım Örgütü (FAO) verilerine göre, küresel gıda fiyat endeksi nisanda aylık bazda yüzde 1,6 artarak 130,7 puana çıktı ve yükselişini üçüncü aya taşıdı.",
+   "natural": null
+  },
+  {
+   "i": 216,
+   "reference": "(GS), son çeyrek için 3,2 milyar dolarlık serbest nakit akışı bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 217,
+   "reference": "Johnson & Johnson'ın (JNJ) maddi olmayan varlıklarının mevcut değeri yaklaşık 54,3 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 218,
+   "reference": "Kilosunu 80 TL'den Yaprakbank'a satıyorlar\nTürkiye’nin önemli üzüm üretim merkezlerinden Alaşehir’de mayıs ayıyla birlikte asma yaprağı hasadı başladı.",
+   "natural": "Kilosunu kaç TL'den Yaprakbank'a satıyorlar?"
+  },
+  {
+   "i": 219,
+   "reference": "(CRM) son mali yılda yasal ücretler için yaklaşık 45 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 220,
+   "reference": "Ayrıca Visa Inc.'in toplam 23 milyar dolarlık geliri vardır ve gelişmiş dolandırıcılık tespiti için Visa Advanced Authorization (VAA) AI'yı tanıttı.",
+   "natural": "Visa Inc.'in toplam kaç milyar dolarlık geliri vardır?"
+  },
+  {
+   "i": 221,
+   "reference": "Net gelir ayrıca 2018 mali yılında 750 milyon dolara ulaşan büyümeyi gösterdi.",
+   "natural": "2018 mali yılında şirketin net geliri ne kadar milyon dolar oldu?"
+  },
+  {
+   "i": 222,
+   "reference": "Abbott Laboratuvarları (ABT) geçen yıl yöneticiler için hisse bazlı tazminat için 218 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 223,
+   "reference": "Raytheon Technologies Corporation'ın (RTX) en son finansal rapordaki çalışma sermayesi 11.5 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 224,
+   "reference": "(AMD), son mali yılda yaklaşık 1,57 milyar dolarlık bir araştırma ve geliştirme bütçesine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 225,
+   "reference": "İhracat ve döviz kazandırıcı hizmetler için 60 milyar TL'ye kadar Türk lirası rediscount kredilerinin genişletileceği, 31 Mart 2020 tarihinde yayımlanan basın bülteninde duyurulmuştur.",
+   "natural": null
+  },
+  {
+   "i": 226,
+   "reference": "UnitedHealth Group Incorporated (UNH), bilançosunda yaklaşık 18.9 milyar dolar nakit ve nakit eşdeğerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 227,
+   "reference": "General Motors Company (GM) yıllık yaklaşık 1.2 milyar dolar sigorta harcıyor.",
+   "natural": null
+  },
+  {
+   "i": 228,
+   "reference": "FedEx Corporation (FDX), son mali çeyrek için önceki çeyreğe göre %9,4'lük bir düşüşü yansıtan 20,6 milyar dolarlık bir gelir bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 229,
+   "reference": "Target Corporation, son mali yılında inovasyon ve müşteri odaklı stratejilere olan bağlılıklarını göstererek araştırma ve geliştirmeye yaklaşık 1,61 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 230,
+   "reference": "Walt Disney Company (DIS), geçtiğimiz yıl toplam 13,33 milyar dolar borç teklifi topladı.",
+   "natural": null
+  },
+  {
+   "i": 231,
+   "reference": "Avustralya hükümetinin 31 yıllık tahvillerde 15 milyar dolarlık satışı, yatırımcıların faiz oranlarının uzun süre düşük kalacağına inandığını göstermektedir.",
+   "natural": null
+  },
+  {
+   "i": 232,
+   "reference": "(PFE), geçtiğimiz mali yılda reklam ve pazarlamaya yaklaşık 1.2 milyar dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 233,
+   "reference": "Negevtech Ltd tarafından patent ihlali iddiasıyla dava ediliyor ve aynı zamanda patent ihlali için VLSI Technology LLC'ye 2,18 milyar dolarlık zarar veren bir karara itiraz ediyor.",
+   "natural": null
+  },
+  {
+   "i": 234,
+   "reference": "Geçen yıl Procter & Gamble Company'nin CEO'su, UNICEF Kızılhaç ve İnsanlık için Habitat gibi kuruluşlara tahsis edilen hayırsever nedenlere toplam 2,5 milyon dolar bağışladı.",
+   "natural": null
+  },
+  {
+   "i": 235,
+   "reference": "Yeni bir arabaya 40-50% indirim yapmak, faiz açısından önemli para tasarrufu sağlayabilir ve esasen araba için daha az ödeme yapabilir.",
+   "natural": "Yeni bir arabaya yapılan indirim oranı ne kadar olabilir?"
+  },
+  {
+   "i": 236,
+   "reference": "Mevcut en son finansal bilgilere göre Chevron Corporation'ın serbest nakit akışı 7,2 milyar dolar.",
+   "natural": "Chevron Corporation'ın en son finansal bilgilerde serbest nakit akışı kaç milyar dolar?"
+  },
+  {
+   "i": 237,
+   "reference": "Kraft Heinz Company, teknoloji altyapısı araştırma ve geliştirme ve sürdürülebilirlik girişimlerini geliştiren üretim tesislerinin yükseltilmesi gibi alanlara odaklanan yıllık sermaye harcamalarına yaklaşık 1,5 milyar dolar ayırıyor.",
+   "natural": null
+  },
+  {
+   "i": 238,
+   "reference": "Intel Corporation (INTC), geçen yıl yaklaşık 13,4 milyar dolar sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 239,
+   "reference": "AT&T Inc., son çeyrekte sermaye harcamalarına 5,6 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 240,
+   "reference": "(CSCO), 2019 mali yılında toplam gelirin 51,9 milyar dolara ulaşmasıyla yıllar boyunca tutarlı bir gelir artışı gösterdi.",
+   "natural": null
+  },
+  {
+   "i": 241,
+   "reference": "Fon şu anda küçük olmasına rağmen, 18 milyon avroluk düşük bir hacme sahip bir Vanguard fonu olarak statüsü, gelecekte önemli bir büyüme yaşayacağını göstermektedir.",
+   "natural": null
+  },
+  {
+   "i": 242,
+   "reference": "Bank of America Corporation, son mali yılda 17.8 milyar dolarlık bir faiz gideri gerçekleştirdi.",
+   "natural": null
+  },
+  {
+   "i": 243,
+   "reference": "Özetle Bank of America Corporation, 2020 mali yılında yaklaşık 29,2 milyar dolarlık bir serbest nakit akışına sahipti.",
+   "natural": null
+  },
+  {
+   "i": 244,
+   "reference": "M Company (MMM) her yıl araştırma ve geliştirme için yaklaşık 2,5 milyar dolar harcıyor.",
+   "natural": null
+  },
+  {
+   "i": 245,
+   "reference": "Visa Inc., 2020 yılında altyapı yükseltmelerine ve teknolojik gelişime yapılan yatırımları içeren sermaye harcamaları için yaklaşık 2,5 milyar dolar tahsis etti.",
+   "natural": null
+  },
+  {
+   "i": 246,
+   "reference": "Exxon Mobil Corporation (XOM) için bildirilen en son serbest nakit akımı (FCF) 4.45 milyar dolardır.",
+   "natural": "Exxon Mobil Corporation (XOM) için en son bildirilen serbest nakit akımı (FCF) ne kadar milyar dolar olarak belirtilmiştir?"
+  },
+  {
+   "i": 247,
+   "reference": "(MRK) bir önceki mali yıl için 12.5 milyar dolarlık işlemlerden nakit akışı bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 248,
+   "reference": "M Company'nin (MMM) hisselerinin olağanüstü hisse sayısı 588.2 milyondur.",
+   "natural": null
+  },
+  {
+   "i": 249,
+   "reference": "Verizon Communications Inc.'in yıllık raporuna göre, şirket dava ve yasal ücretler için yıllık yaklaşık 1.1 milyar dolar harcıyor.",
+   "natural": null
+  },
+  {
+   "i": 250,
+   "reference": "Paket 31,9 milyar dolar değerindedir ve piyasalara para enjekte etmek ve kredi maliyetini azaltmak için tasarlanmıştır.",
+   "natural": "Paket kaç milyar dolar değerindedir?"
+  },
+  {
+   "i": 251,
+   "reference": "Medyan ev fiyatının 1,5 milyon doların üzerinde ve faiz oranlarının% 1'de olduğu bu senaryoda, bireyler ve aileler için aylık ipotek ödemelerini karşılamak bir yana, bir peşinat için yeterli para tasarrufu yapmak zor olabilir.",
+   "natural": null
+  },
+  {
+   "i": 252,
+   "reference": "Uzun vadeli borç, 1-3 yıl arasında 10 milyar dolar olgunlaşma ile farklı vade tarihlerine ayrılmıştır.",
+   "natural": null
+  },
+  {
+   "i": 253,
+   "reference": "Engle Progeny davası ile ilgili 100 milyon dolarlık yerleşim gibi şirkete karşı birçok sınıf davası yerleşimi olmuştur.",
+   "natural": null
+  },
+  {
+   "i": 254,
+   "reference": "Baker Hughes Company (BKR), 2020 mali yılı mali tablolarında bildirildiği gibi yıllık operasyonlardan yaklaşık 2,5 milyar dolar elde etti.",
+   "natural": null
+  },
+  {
+   "i": 255,
+   "reference": "(PEP), geçtiğimiz çeyrekte hisse geri alımlarına 2.5 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 256,
+   "reference": "Örneğin, bugün 10 TL ile aldığınız bir ekmeği, yüksek enflasyonla gelecekte daha fazla para ödeyerek almak zorunda kalabilirsiniz.",
+   "natural": null
+  },
+  {
+   "i": 257,
+   "reference": "Yeni günde Dolar 45,29 liradan, euro 53,47 TL seviyelerinden işlem görüyor.",
+   "natural": "Yeni günde Euro kaç liradan işlem görüyor?"
+  },
+  {
+   "i": 258,
+   "reference": "Geçtiğimiz aydaki ortalama işlem hacmi günde yaklaşık 1,5 milyon hisse oldu.",
+   "natural": null
+  },
+  {
+   "i": 259,
+   "reference": "Walmart Inc., sermaye tahsis stratejisinin bir parçası olarak son mali yılda hisse geri alımlarına 10 milyar dolar ayırdı.",
+   "natural": null
+  },
+  {
+   "i": 260,
+   "reference": "JPMorgan Chase & Co.'nun şu anda bilançosunda 39.6 milyar dolar iyi niyet var.",
+   "natural": null
+  },
+  {
+   "i": 261,
+   "reference": "Qualcomm Incorporated'ın en son çeyrek için net geliri 845 milyon dolardı ve bu da bir yıl önce aynı çeyreğe kıyasla% 22'lik bir düşüşü temsil ediyordu.",
+   "natural": null
+  },
+  {
+   "i": 262,
+   "reference": "Haziran 2021'e kadar mevcut olan verilere dayanarak FedEx Corporation (FDX) yaklaşık 18.6 milyar dolarlık toplam borç yüküne sahipti.",
+   "natural": null
+  },
+  {
+   "i": 263,
+   "reference": "2020 yılında JPMorgan Chase & Co., sektördeki lider oyuncu konumunu sağlamlaştıran yaklaşık 119.5 milyar dolarlık net gelir bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 264,
+   "reference": "Este Lauder Companies Inc.'in (EL) mevcut piyasa değeri yaklaşık 83 milyar dolardır.",
+   "natural": "Este Lauder Companies Inc.'in mevcut piyasa değeri yaklaşık kaç milyar dolarıdır?"
+  },
+  {
+   "i": 265,
+   "reference": "(WBA), hisse başına ortalama 45.67 $ fiyatla hisselerinin 44.8 milyon hissesini yeniden satın aldı.",
+   "natural": null
+  },
+  {
+   "i": 266,
+   "reference": "Teklif, ev alıcılarına yardımcı olmak ve misafirperverlik sektöründe 2,4 milyon işi korumak için tasarlanmıştır.",
+   "natural": "Teklif, misafirperverlik sektöründe kaç milyon işi korumak için tasarlanmıştır?"
+  },
+  {
+   "i": 267,
+   "reference": "Apache Corporation geçen yıl araştırma ve geliştirmeye yaklaşık 450 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 268,
+   "reference": "Apache Corporation, son çeyrekte araştırma ve geliştirmeye 75 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 269,
+   "reference": "Compared to previous versions, the signatures on the 50 TL banknotes of version IV have been rearranged to include Governor Murat Uysal’s and Deputy Governor Murat Çetinkaya’s signatures.",
+   "natural": "Hangi miktarlık banknotlarda imzaların yerleri değiştirilmiştir?"
+  },
+  {
+   "i": 270,
+   "reference": "Fransa Cumhurbaşkanı Macron, Fransa'nın yapacağı 23 milyar euro tutarındaki yatırımı açıklamak için Kenya'da katıldığı konferansta dinleyicileri azarlayarak sessiz olmalarını istedi.",
+   "natural": null
+  },
+  {
+   "i": 271,
+   "reference": "Teklif: 15 Ocak 2019.2 tarihinde hisse başına 40 $ 'da 10 milyon hisse.",
+   "natural": "15 Ocak 2019 tarihinde hisse başına 40 $ 'da kaç milyon hisse teklif edilmiştir?"
+  },
+  {
+   "i": 272,
+   "reference": "Walt Disney Company'nin (DIS) en son SEC dosyasında 3,8 milyar dolarlık amortisman ve amortisman giderleri bildirildi.",
+   "natural": null
+  },
+  {
+   "i": 273,
+   "reference": "Texas Instruments Incorporated (TXN), son mali yılda 1,23 milyar dolar sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 274,
+   "reference": "Lowe's Companies Inc.'in ödenmemiş borcunun maliyeti yaklaşık 22,9 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 275,
+   "reference": "Buna göre, Amerikalıların toplam hane halkı borcu yılın ilk çeyreğinde bir önceki çeyreğe kıyasla yüzde 0,1 artarak 18,8 trilyon dolara ulaştı.",
+   "natural": null
+  },
+  {
+   "i": 276,
+   "reference": "General Motors Company (GM) şu anda yaklaşık 61 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 277,
+   "reference": "CVS Health Corporation, yasal ücretlere yaklaşık 249 milyon dolar harcıyor.",
+   "natural": "CVS Health Corporation, yasal ücretlere kaç milyon dolar harcıyor?"
+  },
+  {
+   "i": 278,
+   "reference": "(HEKTS) sermayesinde sahip olduğu ve borsada işlem görmeyen statüdeki 843 milyon TL nominal değerli payların satışına karar verdi.",
+   "natural": null
+  },
+  {
+   "i": 279,
+   "reference": "(AIG), en son mali raporunda 2.5 milyar dolarlık bir serbest nakit akışı bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 280,
+   "reference": "M Company'nin (MMM) son mali yıl için yaptığı toplam dolar harcamaları 3,2 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 281,
+   "reference": "American Express Company (AXP), bir önceki mali yıl için 6,76 milyar dolarlık net bir gelir bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 282,
+   "reference": "Microsoft Corporation (MSFT), en son SEC dosyalamalarına göre mevcut mali yılda 13,9 milyar dolarlık bir sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 283,
+   "reference": "American Express Company (AXP), geçen mali yılda toplam 2.3 milyar dolarlık sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 284,
+   "reference": "(AAL) şu anda uzun vadeli borç kısa vadeli borç ve kira yükümlülüklerinden oluşan yaklaşık 38,5 milyar dolarlık bir toplam borcu var.",
+   "natural": null
+  },
+  {
+   "i": 285,
+   "reference": "Ancak 2020 mali yılı sonundan itibaren yaklaşık 42,2 milyon hisse senedi opsiyonu vardı.",
+   "natural": null
+  },
+  {
+   "i": 286,
+   "reference": "Toplam Faiz Yükü: 55.640.65 TL\n\nYasal Vergi ve Kesintiler: Tüketici ihtiyaç ve taşıt kredilerinde faiz üzerinden %15 KKDF ve %15 BSMV yasal fon kesintisi uygulanır.",
+   "natural": "Toplam faiz yükü ne kadar olmaktadır?"
+  },
+  {
+   "i": 287,
+   "reference": "Archer-Daniels-Midland Company (ADM) yaklaşık 31.12 milyar dolarlık bir piyasa değerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 288,
+   "reference": "10 bin dolar 7.8% Sallie Mae kredisinin sonuncusunu ödemek için grafik tasarımını serbestleştirmeye başladı.",
+   "natural": null
+  },
+  {
+   "i": 289,
+   "reference": "Hayır (No)\nBildirim İçeriği\nAçıklamalar\nŞirketimizin 07.12.2021 tarih ve 2021/24 sayılı kararı ile kayıtlı sermaye tavanının 50.000.000 TL'den 120.00...",
+   "natural": null
+  },
+  {
+   "i": 290,
+   "reference": "UnitedHealth Group Incorporated (UNH), son mali yıl için 15.7 milyar dolarlık serbest nakit akımı (FCF) bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 291,
+   "reference": "Berkshire Hathaway Inc.'in yaklaşık 137 milyar dolar nakit ve eşdeğeri var.",
+   "natural": null
+  },
+  {
+   "i": 292,
+   "reference": "Anheuser-Busch InBev SA/NV (BUD), öncelikle tedarik zinciri altyapı pazarlama girişimleri araştırma ve geliştirme ve sürdürülebilirlik uygulamalarını geliştiren üretim kapasitesini modernize eden tesislerin geliştirilmesine yönelik 3,5 milyar dolarlık sermaye harcamalarını bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 293,
+   "reference": "Mevcut bilgilere göre McDonald's Corporation'ın mevcut serbest nakit akışı 5.9 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 294,
+   "reference": "(AMZN) mali yıl için 35,03 milyar dolar nakit akışları ile faaliyetlerinden önemli nakit akışları üretmektedir [YEAR].",
+   "natural": "AMZN'nin mali yıl için faaliyetlerinden ürettiği önemli nakit akışları kaç milyar dolar olmaktadır [YEAR]?"
+  },
+  {
+   "i": 295,
+   "reference": "Şirket, yaklaşık 96,5 milyar dolarlık bir piyasa kapitalizasyonu ile güçlü bir finansal konuma sahiptir.",
+   "natural": "Şirketin piyasa kapitalizasyonu yaklaşık ne kadar doları geçmektedir?"
+  },
+  {
+   "i": 296,
+   "reference": "Merkez bankası altın satışları 16 milyar dolarlık hacimle rekor kırdı\nMerkez bankası altın satışları mart ayında 102 ton ile 21.",
+   "natural": "Merkez bankası altın satışları hangi milyar dolarlık hacimle rekor kırdı?"
+  },
+  {
+   "i": 297,
+   "reference": "Lowe's Companies Inc.'in FY 2020 için serbest nakit akışı 4.3 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 298,
+   "reference": "FedEx Corporation'ın (FDX) en son çeyrek sonu (30 Eylül 2021) itibarıyla toplam piyasa kapitalizasyonu yaklaşık 76.6 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 299,
+   "reference": "AbbVie Inc.'in kısa vadeli borç seviyesi şu anda en son finansal tablolarda bildirildiği gibi 1.2 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 300,
+   "reference": "PepsiCo Inc., geçtiğimiz yıl araştırma ve geliştirme için yaklaşık 832 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 301,
+   "reference": "Evet Walt Disney Company (DIS)'in EBITDA'sı, geçtiğimiz çeyrekte 3,5 milyar dolara ulaşan olumlu bir eğilim gösterdi.",
+   "natural": null
+  },
+  {
+   "i": 302,
+   "reference": "International Business Machines Corporation (IBM) şu anda bilançosunda toplam 63,5 milyar dolarlık bir borcu var.",
+   "natural": null
+  },
+  {
+   "i": 303,
+   "reference": "(ADI) geçtiğimiz yıl satın almalar için toplam 1,5 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 304,
+   "reference": "Hayır (No)\nKonuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi -\nBildirim İçeriği\nAçıklamalar\nARDYZ.E %612,04188 İç Kaynaklardan Bedelsiz, bölünme sonrası teorik fiyat: 8,005 TL (Teorik fiyat, fiyat adımına yuvarlanmamıştır)...",
+   "natural": null
+  },
+  {
+   "i": 305,
+   "reference": "(WMB) için verilen siparişlerin mevcut backlog'u yaklaşık 2,3 milyar dolardır.",
+   "natural": "(WMB) için verilen siparişlerin mevcut geri kalanı yaklaşık kaç milyar dolarlık bir değer taşımaktadır?"
+  },
+  {
+   "i": 306,
+   "reference": "Baker Hughes Company (BKR) şu anda toplam 12,3 milyar dolarlık bir borcu var.",
+   "natural": null
+  },
+  {
+   "i": 307,
+   "reference": "Mevcut bilgilere göre Boeing Company (BA) şu anda bilançosunda 15 milyar dolarlık iyi niyet payına sahip.",
+   "natural": null
+  },
+  {
+   "i": 308,
+   "reference": "Exxon Mobil Corporation (XOM) tarafından 2020'de ödenen toplam temettü miktarı 14,7 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 309,
+   "reference": "O şirketin borsada işlem gören tüm hisselerinin toplam değeri 10 milyar TL ediyor.",
+   "natural": null
+  },
+  {
+   "i": 310,
+   "reference": "Böylece şirketin son 5 yıldaki kombine yatırımları 16,5 milyar dolara ulaştı.",
+   "natural": null
+  },
+  {
+   "i": 311,
+   "reference": "Coca-Cola Company'nin (KO) en son çeyrekteki operasyonlardan nakit akışı 3.4 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 312,
+   "reference": "Mevcut verilere dayanarak Anheuser-Busch InBev SA/NV (BUD) son mali yılda 1,69 milyar dolarlık bir reklam harcamasına sahipti.",
+   "natural": null
+  },
+  {
+   "i": 313,
+   "reference": "Walgreens Boots Alliance Inc.'in (WBA) uzun vadeli varlıklarının mevcut değeri 48,26 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 314,
+   "reference": "Qualcomm Incorporated, 2020 mali yılında yıllık 6,7 milyar dolar serbest nakit akışı üretti.",
+   "natural": null
+  },
+  {
+   "i": 315,
+   "reference": "En son finansman turu, risk sermayesi firması XYZ Capital'in kayda değer katılımı ile 500 milyon dolar kazandı.",
+   "natural": "En son finansman turunda risk sermayesi firması XYZ Capital hangi miktarda katıldı?"
+  },
+  {
+   "i": 316,
+   "reference": "2025 yılında Belçikalı şirketler Türkiye’ye tam 6,5 milyar euro değerinde ihracat gerçekleştirdi.",
+   "natural": null
+  },
+  {
+   "i": 317,
+   "reference": "Mevcut bilgilere dayanarak Walgreens Boots Alliance Inc., geçen yıl nakit temettülere yaklaşık 1.32 milyar dolar harcadı.",
+   "natural": "Geçen yıl Walgreens Boots Alliance Inc. kaç milyar dolar nakit temettüye harcadı?"
+  },
+  {
+   "i": 318,
+   "reference": "(AAL), toplam varlıklarının önemli bir bölümünü oluşturan bilançosunda 9.3 milyar dolarlık iyi niyet payına sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 319,
+   "reference": "2022 sonundaki toplam hissedar özkaynakları, Hissedarlar Özkaynaklarının Konsolide İfadelerine göre 50.672 milyon dolardı.",
+   "natural": null
+  },
+  {
+   "i": 320,
+   "reference": "Son mali yılda şirket, iç kaynaklardan gelen yaklaşık %67 ile toplam 35,3 milyar dolarlık bir gelir bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 321,
+   "reference": "Geçtiğimiz yıl boyunca borçlarını yaklaşık 1,5 milyar dolar azalttılar.",
+   "natural": "Geçtiğimiz yıl boyunca borçlarını yaklaşık kaç milyar dolar azalttılar?"
+  },
+  {
+   "i": 322,
+   "reference": "Ford Motor Company'nin (F) mevcut hisse sayısı yaklaşık 3,98 milyardır.",
+   "natural": "Ford Motor Company'nin mevcut hisse sayısının yaklaşık kaç milyar olduğu nedir?"
+  },
+  {
+   "i": 323,
+   "reference": "(CSCO) yaklaşık 208 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 324,
+   "reference": "American Airlines Group Inc., bilançosunda yaklaşık 4,2 milyar dolar sermaye kiralama yükümlülüğüne sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 325,
+   "reference": "Mevcut bilgilere dayanarak Nike Inc., en son raporlama döneminden itibaren bilançosunda toplam 9,93 milyar dolar borcu vardı.",
+   "natural": null
+  },
+  {
+   "i": 326,
+   "reference": "Walgreens Boots Alliance Inc.'in (WBA) mevcut sermaye harcama bütçesi, şirketin 2019 mali yılında sermaye harcamaları için 2,1 milyar dolar tahsis ettiğini kamuoyuna açıklamazken.",
+   "natural": null
+  },
+  {
+   "i": 327,
+   "reference": "Caterpillar Inc.'in elinde yaklaşık 8,3 milyar dolar nakit ve nakit eşdeğeri var.",
+   "natural": null
+  },
+  {
+   "i": 328,
+   "reference": "The Home Depot Inc.'in (HD) kurumsal değeri yaklaşık 315 milyar dolardır.",
+   "natural": "The Home Depot Inc.'nin (HD) kurumsal değeri yaklaşık kaç milyar dolarıdır?"
+  },
+  {
+   "i": 329,
+   "reference": "Bank of America Corporation (BAC) için şu andaki ödenmemiş hisse sayısı yaklaşık 9,74 milyardır.",
+   "natural": null
+  },
+  {
+   "i": 330,
+   "reference": "Johnson & Johnson, bir önceki mali yılda yaklaşık 16,3 milyar dolarlık serbest nakit akışı oluşturdu.",
+   "natural": null
+  },
+  {
+   "i": 331,
+   "reference": "AT&T Inc.'in geliri, son mali yılda 181.2 milyar dolarlık bir gelirle endüstri akranlarınınkinden daha yüksektir.",
+   "natural": "AT&T Inc.'in son mali yıla ait geliri ne kadar oldu?"
+  },
+  {
+   "i": 332,
+   "reference": "(DD) çalışan yardımları ve tazminatı için yılda yaklaşık 2,6 milyar dolar harcıyor.",
+   "natural": null
+  },
+  {
+   "i": 333,
+   "reference": "Broadcom Inc., pazarlanabilir menkul kıymetlere ek olarak 5,2 milyar dolarlık bir nakit konuma sahiptir.",
+   "natural": "Broadcom Inc.'nin pazarlanabilir menkul kıymetleri dışında kaç milyar dolar nakit sermayesi vardır?"
+  },
+  {
+   "i": 334,
+   "reference": "Şirket, COVID-19 pandemisinin yarattığı zorluklara rağmen 2020'de 600 milyon dolarlık aynı bütçeyi korudu.",
+   "natural": null
+  },
+  {
+   "i": 335,
+   "reference": "GM, yaklaşık 6,7 milyar dolarlık net gelire sahip karlı bir şirket olarak kabul edilir.",
+   "natural": "GM'nin net geliri yaklaşık ne kadar olmaktadır?"
+  },
+  {
+   "i": 336,
+   "reference": "American Express Company'nin bilançosundaki varlıkların toplam değeri yaklaşık 210 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 337,
+   "reference": "Bank of America Corporation'ın (BAC) piyasa kapitalizasyonu yaklaşık 279 milyar dolardır.",
+   "natural": "Bank of America Corporation'ın piyasa kapitalizasyonu yaklaşık kaç milyar dolarıdır?"
+  },
+  {
+   "i": 338,
+   "reference": "Morgan Stanley (MS), bilançosunda 68,3 milyar dolarlık kazanç elde etmişti.",
+   "natural": "Morgan Stanley (MS) bilançosunda kaç milyar dolarlık kazanç elde etmişti?"
+  },
+  {
+   "i": 339,
+   "reference": "Microsoft Corporation (MSFT), geçtiğimiz yıl sermaye harcamalarına 16,8 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 340,
+   "reference": "Booking Holdings Inc.'in son iki yıldaki toplam sermaye harcaması 1.2 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 341,
+   "reference": "Uzun vadeli borç, 2019'da 1,2 milyar dolara ulaşan bir sonraki yılda azalmaya devam etti.",
+   "natural": "Uzun vadeli borç, 2019'da hangi milyar dolara ulaşmış?"
+  },
+  {
+   "i": 342,
+   "reference": "Texas Instruments Incorporated'ın (TXN) kurumsal değeri yaklaşık 128 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 343,
+   "reference": "Broadcom Inc.'in (AVGO) kredi varsayılan takas oranı şu anda 90 baz puandır.",
+   "natural": null
+  },
+  {
+   "i": 344,
+   "reference": "AT&T A.Ş.'nin (T) hisse senedine olan kısa faiz oranı, yaklaşık 85 milyon hissenin kısaltılmasıyla % 2.35'tir.",
+   "natural": null
+  },
+  {
+   "i": 345,
+   "reference": "Baker Hughes Company'nin en son mali yıl için elde ettiği gelir 22,9 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 346,
+   "reference": "Bank of America Corporation, yılda yaklaşık 500 milyon dolar çalışan eğitim ve geliştirme programlarına yatırım yapmaktadır.",
+   "natural": null
+  },
+  {
+   "i": 347,
+   "reference": "NVIDIA Corporation (NVDA), geçtiğimiz mali yılda sermaye harcamalarına yaklaşık 1,33 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 348,
+   "reference": "(CAT) kısa bir süre önce hisse başına 250 $ 'da 10 milyon ek hisse yayınladı.",
+   "natural": null
+  },
+  {
+   "i": 349,
+   "reference": "Comcast Corporation (CMCSA) şu anda bilançolarında 16,7 milyar dolar nakit para var.",
+   "natural": null
+  },
+  {
+   "i": 350,
+   "reference": "Avustralya hükümeti, tarihteki en büyük üçüncü tahvil satışı olan %1,94'te 15 milyar dolarlık 31 yıllık tahvil sattı.",
+   "natural": null
+  },
+  {
+   "i": 351,
+   "reference": "Mevcut bilgilere dayanarak Texas Instruments Incorporated (TXN) son mali yıl için 7.43 milyar dolarlık bir EBITDA bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 352,
+   "reference": "Coca-Cola Company, [Tarih] itibariyle bilançosunda yaklaşık 8,6 milyar dolar nakit paraya sahiptir.",
+   "natural": "Coca-Cola Company'nin [Tarih] itibariyle bilançosunda yaklaşık kaç milyar dolar nakit paraya sahiptir?"
+  },
+  {
+   "i": 353,
+   "reference": "Procter & Gamble Company (PG), geçen yıl 1.2 milyar dolarlık bir faiz giderine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 354,
+   "reference": "Goldman Sachs Group Inc., son çeyrek için 10,1 milyar dolar nakit akışı sağladı.",
+   "natural": null
+  },
+  {
+   "i": 355,
+   "reference": "Walgreens Boots Alliance Inc.'in (WBA) hisselerine olan mevcut kısa ilgi, yatırımcılar arasında ılımlı bir olumsuz duygu seviyesini gösteren 13,3 milyon hissedir.",
+   "natural": null
+  },
+  {
+   "i": 356,
+   "reference": "Kraft Heinz Company (KHC) en son finansal tablodan itibaren toplam 30.95 milyar dolarlık bir borcu vardı.",
+   "natural": null
+  },
+  {
+   "i": 357,
+   "reference": "(BKNG) geçtiğimiz mali yılda hayırseverlik ve hayırseverlik için toplam 10 milyon dolar ayırdı.",
+   "natural": "(BKNG) geçtiğimiz mali yılda hayırseverlik için toplam kaç milyon dolar ayırdı?"
+  },
+  {
+   "i": 358,
+   "reference": "Procter & Gamble Company'nin piyasa değeri yaklaşık 344.81 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 359,
+   "reference": "Apple'ın yıllık olarak 200 milyondan fazla iPhone sevk ettiği, bunun yanı sıra milyonlarca iPad ve Mac bilgisayar sattığı biliniyor.",
+   "natural": "Apple'ın yıllık olarak kaç milyondan fazla iPhone sevkiyor?"
+  },
+  {
+   "i": 360,
+   "reference": "Pfizer, A+ kredi notuna sahiptir ve 2017 yılından bu yana toplam borcunu 12 milyar dolar azaltan borç seviyelerini aktif olarak yönetmiştir.",
+   "natural": null
+  },
+  {
+   "i": 361,
+   "reference": "(MO), hisse başına ortalama 45.67 $ fiyatla 50 milyon hisseyi geri satın aldı.",
+   "natural": null
+  },
+  {
+   "i": 362,
+   "reference": "Ayrıca IBM'in son bildirilen çeyrekteki net geliri 1.33 milyar dolardı.",
+   "natural": "IBM'nin son bildirilen çeyrekteki net geliri ne kadar oldu?"
+  },
+  {
+   "i": 363,
+   "reference": "Brands Inc.'in (YUM) son çeyrekteki kurumsal değeri 35.32 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 364,
+   "reference": "Uluslararası İş Makineleri Şirketi'nin (IBM) geçen mali yılda reklam ve pazarlama için yaklaşık 1.3 milyar dolar harcadığı bilgilere dayanarak.",
+   "natural": null
+  },
+  {
+   "i": 365,
+   "reference": "Wells Fargo & Company (WFC) yaklaşık 234 milyar dolarlık bir işletme değerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 366,
+   "reference": "McDonald's Corporation (MCD), geçtiğimiz yıl hisse geri alımlarına yaklaşık 5,5 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 367,
+   "reference": "Mevcut bilgilere dayanarak Cisco Systems Inc., finansal faaliyetlerinin bir parçası olarak geçen yıl hisse geri alımlarına yaklaşık 10 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 368,
+   "reference": "Procter & Gamble Company'nin (PG) hisse senedi için günlük ortalama işlem hacmi yaklaşık 5.6 milyon hissedir.",
+   "natural": null
+  },
+  {
+   "i": 369,
+   "reference": "2020 yılında Visa Inc., banka kartı piyasasında rekabet karşıtı uygulamalarla ilgili olarak ABD Adalet Bakanlığı'na 1.8 milyar dolarlık bir ödeme yapmayı kabul etti.",
+   "natural": null
+  },
+  {
+   "i": 370,
+   "reference": "Home Depot Inc.'in (HD) maddi olmayan varlıklarının mevcut değeri, yukarıda belirtildiği gibi arıza ile 4.6 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 371,
+   "reference": "Capital One Financial Corporation'ın son mali yıldaki toplam hissedar sermayesi 47,3 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 372,
+   "reference": "2016 yılından 2019 yılına kadar şirketin geliri, yılda ortalama %11 artarak 15.07 milyar dolara ulaştı.",
+   "natural": null
+  },
+  {
+   "i": 373,
+   "reference": "Goldman Sachs Group Inc.'in (GS) geçen mali yılda yaptığı sermaye harcamaları 3,4 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 374,
+   "reference": "(DD) için yapılan operasyonlardan elde edilen nakit akışı 1,2 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 375,
+   "reference": "Eli Lilly ve Company'nin varlık satışından en son kaybı, hayvan sağlığı varlıklarının elden çıkarılmasından kaynaklanan yaklaşık 1,6 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 376,
+   "reference": "Broadcom Inc., geçen mali yılda sermaye harcamalarına yaklaşık 3,2 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 377,
+   "reference": "Bu tablolarda, $100'lik bir sermayenin 10% faizle, hem basit hem de bileşik faiz yöntemine göre hesaplanmış gelecek değerleri karşılaştırılmaktadır.",
+   "natural": null
+  },
+  {
+   "i": 378,
+   "reference": "Madencilik Platformu ve Türkiye Madenciler Derneği (TMD), son dönemde kamuoyunda dile getirilen eleştirilere ilişkin, sektörün geçen yıl devlet hakkı kapsamında kamu hazinesine 32 milyar liranın üzerinde ödeme yaptığını bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 379,
+   "reference": "AT&T Inc.'in en son SEC dosyalama tutarlarında bildirilen cari borçları $169.6 milyardır.",
+   "natural": null
+  },
+  {
+   "i": 380,
+   "reference": "(ADP) geçtiğimiz çeyrekte 589 milyon dolarlık serbest nakit akımı (FCF) sağladı.",
+   "natural": null
+  },
+  {
+   "i": 381,
+   "reference": "Dijital aktif müşteri sayısı 13 milyonu aşmış, bireysel ihtiyaç ve konut kredisi tahsisatlarının %82'si dijital kanallar üzerinden uçtan uca tamamlanmıştır.",
+   "natural": "Dijital aktif müşteri sayısı kaç milyonu aşmış?"
+  },
+  {
+   "i": 382,
+   "reference": "Lowe's Companies Inc., en son çeyrekte toplam uzun vadeli 23,9 milyar dolarlık bir borç aldı.",
+   "natural": null
+  },
+  {
+   "i": 383,
+   "reference": "(XLNX), 26 Eylül 2020'de sona eren en son mali çeyrek için bilançosunda 765 milyon dolarlık ticaret alacakları bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 384,
+   "reference": "(AMGN) için temettü ödeme oranı, hisse başına 6,40 dolarlık temettü ödemelerini, 2020 mali yılı için 8,2 milyar dolarlık kazancına bölerek hesaplanabilir.",
+   "natural": "2020 mali yılı için toplam kazancı kaç milyar dolar olur?"
+  },
+  {
+   "i": 385,
+   "reference": "Bu 8 davadan yaklaşık 8,5 milyon dolar toplam yerleşim tutarı ile çözümlenmiştir.",
+   "natural": null
+  },
+  {
+   "i": 386,
+   "reference": "UnitedHealth Group Incorporated'ın cari hisse senedi fiyatı hisse başına 400.22 dolar ve piyasa değeri 391.58 milyar dolar.",
+   "natural": "UnitedHealth Group Incorporated'ın piyasa değeri kaç milyar dolar?"
+  },
+  {
+   "i": 387,
+   "reference": "AT&T Inc., son çeyreğinde 6,8 milyar dolarlık serbest nakit akışı sağladı.",
+   "natural": null
+  },
+  {
+   "i": 388,
+   "reference": "General Electric Company (GE) şu anda son finansal raporlarında belirtildiği gibi yaklaşık 15 milyar dolarlık bir nakit pozisyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 389,
+   "reference": "Şirket'in 24 Eylül 2022 tarihi itibarıyla türev varlıklarının ve yükümlülüklerinin toplam adil değeri 13,255 milyon dolardır.",
+   "natural": null
+  },
+  {
+   "i": 390,
+   "reference": "(XLNX), hisse başına 152.46 $ ve yaklaşık 40.79 milyar $ piyasa kapitalizasyonu ile 63.89 $ 'lık bir fiyat-kazanç oranına sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 391,
+   "reference": "(AAPL) şu anda Eylül 2021 itibarıyla yaklaşık 121 milyar dolarlık olağanüstü uzun vadeli borcu var.",
+   "natural": null
+  },
+  {
+   "i": 392,
+   "reference": "Merkez Bankası, bankalara 'Topladığınız her 100 TL'nin daha büyük bir kısmını bana verip kasanızda tutun.' dedi.",
+   "natural": null
+  },
+  {
+   "i": 393,
+   "reference": "Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,17 düşüşle 14.381,24 puandan başladı.",
+   "natural": null
+  },
+  {
+   "i": 394,
+   "reference": "(ADSK) şu anda yaklaşık 53,8 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 395,
+   "reference": "(AMZN) şu anda yaklaşık 31.9 milyar ABD Doları tutarında ücretsiz bir nakit akışına sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 396,
+   "reference": "Turfanda sarıkız fasulyesi üreticiyi sevindirdi: Dalında 100 TL\nTürkiye’nin önemli yaş sebze ve meyve üretim merkezlerinden Mersin’de açıkta yetiştirilen sarıkız fasulyesinde ilk hasat başladı.",
+   "natural": null
+  },
+  {
+   "i": 397,
+   "reference": "(DD), çalışan eğitimi ve gelişimine yılda yaklaşık 25 milyon dolar harcıyor.",
+   "natural": null
+  },
+  {
+   "i": 398,
+   "reference": "Mevcut bilgilere dayanarak American Express Company (AXP) yaklaşık 70 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 399,
+   "reference": "Intel Corporation'ın (INTC) bilançosundaki kısa vadeli borç 1.25 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 400,
+   "reference": "Mevcut bilgilere dayanarak ConocoPhillips (COP) 31 Aralık 2020 itibarıyla 4,7 milyar dolar nakit ve nakit eşdeğerine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 401,
+   "reference": "KOBİ’lere yeni finansman desteği\nTürkiye Emlak Katılım Bankası ile İslam Kalkınma Bankası Özel Sektörü Destekleme Kuruluşu arasında 30 milyon dolarlık finansman anlaşması imzalandı.",
+   "natural": null
+  },
+  {
+   "i": 402,
+   "reference": "Bu davaların birkaçı, bir telif hakkı ihlali davasında 177 milyon dolar tutarındaki en büyük yerleşim ile önemli finansal yerleşimlere yol açmıştır.",
+   "natural": null
+  },
+  {
+   "i": 403,
+   "reference": "Mevcut piyasa değeri 62 milyar dolar civarındadır ve hisse başına en son kazanç 1.23 dolardır.",
+   "natural": "Mevcut piyasa değeri ne kadar civarındadır?"
+  },
+  {
+   "i": 404,
+   "reference": "PepsiCo Inc., son mali yılda toplam 4.5 milyar dolarlık sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 405,
+   "reference": "Mevcut verilere göre, Pfizer Inc.'in hisselerinin yaklaşık 5.6 milyar olağanüstü hissesi var.",
+   "natural": "Pfizer Inc.'in hisselerinin yaklaşık kaç milyar olağanüstü hissesi vardır?"
+  },
+  {
+   "i": 406,
+   "reference": "Maliyet azaltma önlemlerinin uygulanmasına rağmen, havayolu, COVID-19 pandemisinin endüstri üzerindeki şiddetli etkisi nedeniyle önceki yıllara göre önemli ölçüde daha yüksek olan 8,9 milyar dolarlık bir net zarara uğradı.",
+   "natural": null
+  },
+  {
+   "i": 407,
+   "reference": "Advanced Micro Devices Inc.'in (AMD) geçtiğimiz yıl sermaye harcamalarına yaklaşık 1.3 milyar dolar harcadığı mevcut verilere dayanarak.",
+   "natural": "Geçtiğimiz yıl sermaye harcamalarına yaklaşık kaç milyar dolar harcamış?"
+  },
+  {
+   "i": 408,
+   "reference": "Hayır (No)\nKonuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi -\nBildirim İçeriği\nAçıklamalar\nECILC.E Pay Başına Brüt Temettü: 0,073 TL Teorik Fiyat: 4.487 (Teorik fiyat, fiyat adımına yuvarlanmamıştır)\nECZYT.E ...",
+   "natural": null
+  },
+  {
+   "i": 409,
+   "reference": "Analog Devices Inc., en son SEC dosyalamalarında 1,2 milyar dolarlık kısa vadeli borç bildirdi.",
+   "natural": "Analog Devices Inc.'nin en son SEC dosyalamalarında kaç milyar dolarlık kısa vadeli borcu bildirdi?"
+  },
+  {
+   "i": 410,
+   "reference": "Mali Araştırmalar Enstitüsü verilerine dayanarak, haftalık vergi sonrası geliriniz, nüfusun yaklaşık %89'undan veya yaklaşık 57.3 milyon kişiden daha yüksektir.",
+   "natural": null
+  },
+  {
+   "i": 411,
+   "reference": "Coca-Cola Company (KO) şu anda yaklaşık 245 milyar dolarlık bir piyasa değerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 412,
+   "reference": "Eylül 2021'deki bilgi güncellememden itibaren Wells Fargo & Company (WFC) yaklaşık 4.13 milyar hisse senedine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 413,
+   "reference": "Arka plan kontrol şirketi, 100 puan kimlik, mevcut işveren sözleşmesi ve üniversite öğrenci numarası da dahil olmak üzere kapsamlı bir belge seti talep ediyor.",
+   "natural": "Arka plan kontrol şirketi, hangi puan kimlik bilgisi talep ediyor?"
+  },
+  {
+   "i": 414,
+   "reference": "Mevcut bilgilere dayanarak General Motors Company (GM) şu anda yaklaşık 110 milyar dolar toplam borcuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 415,
+   "reference": "Johnson & Johnson yaklaşık 394.61 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": "Johnson & Johnson'nin piyasa kapitalizasyonu yaklaşık ne kadardır?"
+  },
+  {
+   "i": 416,
+   "reference": "şu anda yaklaşık 13,65 milyar $ 'lık uzun vadeli borç taşıyor ve finansman amacıyla farklı şartlar ve miktarlarla çeşitli tahviller yayınladı.",
+   "natural": "Şu anda yaklaşık kaç milyar dolarlık uzun vadeli borç taşıyor?"
+  },
+  {
+   "i": 417,
+   "reference": "(GS), mevcut mali yıl için bir önceki yıla göre biraz daha düşük olan 2,7 milyar dolarlık sermaye harcaması bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 418,
+   "reference": "Procter & Gamble Company (PG) şu anda yaklaşık 10 milyar dolarlık nakit ve nakit eşdeğerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 419,
+   "reference": "Anheuser-Busch InBev SA/NV (BUD) bilançosunun uzun vadeli borç tutarı yaklaşık 103.03 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 420,
+   "reference": "(WMT) yaklaşık 25-26% marjı ile rakiplerine kıyasla güçlü bir brüt kar marjına sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 421,
+   "reference": "Evet Williams Companies Inc., son zamanlarda sermaye harcamaları ve genel kurumsal amaçlar için 2050 yılına kadar 500 milyon dolar üst düzey not yayınladı.",
+   "natural": null
+  },
+  {
+   "i": 422,
+   "reference": "Abbott Laboratuvarları, son üç yılda borç ve özkaynak finansmanı yoluyla toplam 10 milyar dolar topladı.",
+   "natural": null
+  },
+  {
+   "i": 423,
+   "reference": "(LOW) Sherwin-Williams Company (SHW) ve Fastenal Company'den (FAST) önemli ölçüde daha yüksek olan 312.37 milyar dolarlık bir değere sahip endüstri akranları arasında en büyük pazar kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 424,
+   "reference": "Johnson & Johnson'ın geçen yıl Ar-Ge için 11,4 milyar dolar harcadığı mevcut bilgilere dayanarak.",
+   "natural": null
+  },
+  {
+   "i": 425,
+   "reference": "Booking Holdings Inc.'in web sitesi aylık olarak yaklaşık 500 milyon benzersiz ziyaretçi almaktadır.",
+   "natural": null
+  },
+  {
+   "i": 426,
+   "reference": "Mevcut CEO Robert Swan, 2019 mali yılında yaklaşık 66.9 milyon dolarlık bir toplam tazminata sahipti.",
+   "natural": null
+  },
+  {
+   "i": 427,
+   "reference": "Hisse senedi fiyatları volatilite yaşadı ve mevcut borç seviyesi yaklaşık 32 milyar dolar seviyesinde.",
+   "natural": "Mevcut borç seviyesi yaklaşık kaç milyar dolar seviyesinde?"
+  },
+  {
+   "i": 428,
+   "reference": "Bank of America Corporation'ın (BAC) geçen yıl yaptığı araştırma ve geliştirme harcamaları yaklaşık 10 milyon dolar olarak gerçekleşti.",
+   "natural": null
+  },
+  {
+   "i": 429,
+   "reference": "(AVGO) şu anda bilançosunda yaklaşık 46,5 milyar dolarlık uzun vadeli borcu var.",
+   "natural": "AVGO'nun bilançosunda bulunan uzun vadeli borcun miktarı nedir?"
+  },
+  {
+   "i": 430,
+   "reference": "Mevcut bilgilere dayanarak Southwest Airlines Co., en son mali yılda sermaye harcamalarına yaklaşık 2.6 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 431,
+   "reference": "Walmart Inc., son çeyrekte hisse bazlı tazminat için yaklaşık 788 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 432,
+   "reference": "AT&T Inc., son mali çeyrekte yaklaşık 4.5 milyar dolar serbest nakit akışı sağladı.",
+   "natural": "AT&T Inc.'nin son mali çeyrekte yaklaşık kaç milyar dolar serbest nakit akışı vardı?"
+  },
+  {
+   "i": 433,
+   "reference": "Exxon Mobil Corporation tarafından bağış toplama turları yoluyla toplanan tam toplam tutara sahip olmasam da, şirketin 2017 yılında 12 milyar dolarlık bir borç satışı da dahil olmak üzere birçok önemli bağış toplama faaliyetini başarıyla yürüttüğü açıktır.",
+   "natural": "Exxon Mobil Corporation'ın 2017 yılında gerçekleştirdiği önemli bağış toplama faaliyetlerinden biri olan borç satışı kaç milyar dolarlık olmuştur?"
+  },
+  {
+   "i": 434,
+   "reference": "Autodesk Inc., geçtiğimiz yıl hisse geri alımlarına yaklaşık 500 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 435,
+   "reference": "Chase, 2016 ve 2019 yılları arasında 200 milyar doların üzerinde yatırım yaparak tüm ABD bankaları arasında fosil yakıtların en büyük fonudur.",
+   "natural": null
+  },
+  {
+   "i": 436,
+   "reference": "American Express Company (AXP), geçtiğimiz mali yılda 2,56 milyar dolar sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 437,
+   "reference": "Garanti BBVA konsolide finansal tablolarına göre aktif büyüklüğü 2.4 trilyon TL'ye ulaşmıştır.",
+   "natural": null
+  },
+  {
+   "i": 438,
+   "reference": "American Express Company (AXP), yakın zamanda 120 milyon hissenin geri alınmasına izin veren bir hisse geri alım programı başlattı.",
+   "natural": null
+  },
+  {
+   "i": 439,
+   "reference": "Intel Corporation (INTC), geçen yıl hisse senedi geri alımlarına yaklaşık 10 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 440,
+   "reference": "(GOOGL), 30 Haziran 2021 itibariyle bilançosunda 117.2 milyar dolarlık nakit ve nakit eşdeğeri bakiyesine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 441,
+   "reference": "Lowe's Companies Inc., son çeyrekte 3.04 milyar dolarlık net bir gelir bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 442,
+   "reference": "Walt Disney Company şu anda 51 milyar dolar civarında toplam borcu var.",
+   "natural": "Walt Disney Company'nin şu anki toplam borcu kaç milyar dolar civarında?"
+  },
+  {
+   "i": 443,
+   "reference": "The Kraft Heinz Company'nin (KHC) mevcut piyasa değeri yaklaşık 42,7 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 444,
+   "reference": "Yanıt, 2019'daki 25 milyar dolarlık zarar ve kumarın sosyal maliyetleri de dahil olmak üzere Avustralya'daki kumarın finansal ve sosyal etkilerini tartışabilir.",
+   "natural": null
+  },
+  {
+   "i": 445,
+   "reference": "Baker Hughes Company (BKR) yılda yaklaşık 1,46 milyar dolar serbest nakit akışı üretti.",
+   "natural": null
+  },
+  {
+   "i": 446,
+   "reference": "Walmart Inc.'in bilançosundaki borç seviyesi yaklaşık 75,4 milyar dolardır.",
+   "natural": "Walmart Inc.'nin bilançosunda bulunan borç tutarı kaç milyar dolar civarındadır?"
+  },
+  {
+   "i": 447,
+   "reference": "Starbucks Corporation'ın (SBUX) piyasa değeri yaklaşık 133.5 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 448,
+   "reference": "Ancak, OP'nin faiz oranı, ödemelerini zamanında yapmasına rağmen hala 3.5 puan arttı.",
+   "natural": null
+  },
+  {
+   "i": 449,
+   "reference": "Starbucks Corporation (SBUX) şu anda uzun vadeli borçlarda yaklaşık 14,6 milyar dolar tutar.",
+   "natural": null
+  },
+  {
+   "i": 450,
+   "reference": "Walgreens Boots Alliance Inc.'in (WBA) toplam borç değeri 71,03 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 451,
+   "reference": "Ek olarak NVIDIA, 2020 mali yılında net gelir olarak 10,92 milyar $' lık net gelir ve yüzde 62,6'lık bir brüt marj bildirdi.",
+   "natural": "NVIDIA'nın 2020 mali yılında net geliri kaç milyar dolar oldu?"
+  },
+  {
+   "i": 452,
+   "reference": "(EL) şu anda yaklaşık 96,75 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 453,
+   "reference": "Mevcut bilgilere dayanarak Bank of America Corporation (BAC), portföyünde 129,9 milyar dolar değerinde pazarlanabilir menkul kıymetlerin toplam değerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 454,
+   "reference": "Recep ERÇİN\nMerkezi yönetim bütçesi nisanda 338,7 milyar lira açık verdi.",
+   "natural": "Merkezi yönetim bütçesi nisanda kaç milyar lira açık verdi?"
+  },
+  {
+   "i": 455,
+   "reference": "General Motors Company (GM), bir önceki mali yıl için 6,7 milyar dolarlık net bir gelir bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 456,
+   "reference": "En son finansal raporlama itibariyle AT&T, toplam uzun vadeli borçta yaklaşık 166,3 milyar dolara sahipti.",
+   "natural": "AT&T'nin en son finansal raporlamaya göre toplam uzun vadeli borcu kaç milyar doları geçiyor?"
+  },
+  {
+   "i": 457,
+   "reference": "(AMZN) geçtiğimiz yıl 243 milyon dolarlık önemli yeniden yapılanma ücretlerine maruz kaldı.",
+   "natural": null
+  },
+  {
+   "i": 458,
+   "reference": "(AAL), geçtiğimiz yıl yaklaşık 3,4 milyar dolar sermaye harcaması yaptı.",
+   "natural": "(AAL), geçtiğimiz yıl yaklaşık kaç milyar dolar sermaye harcaması yaptı?"
+  },
+  {
+   "i": 459,
+   "reference": "Özellikle son zamanlarda ABD Adalet Bakanlığı ile çevrimiçi eczanelerden yasadışı reçeteli ilaçların gönderilmesiyle ilgili 35.3 milyon dolarlık bir dava açtı.",
+   "natural": null
+  },
+  {
+   "i": 460,
+   "reference": "yenilenebilir enerji girişimlerine yaklaşık 1.2 milyar dolar yatırım yaptı.",
+   "natural": "Yenilenebilir enerji girişimlerine ne kadar yatırım yapıldı?"
+  },
+  {
+   "i": 461,
+   "reference": "ConocoPhillips (COP) şu anda bir önceki yıla göre artan toplam 26,7 milyar dolarlık bir borcu var.",
+   "natural": null
+  },
+  {
+   "i": 462,
+   "reference": "Dow Inc.'in (DOW) mevcut kısa ilgi seviyesi yaklaşık 10 milyon hissedir.",
+   "natural": "Dow Inc.'in mevcut kısa ilgi seviyesi yaklaşık kaç milyon hissedir?"
+  },
+  {
+   "i": 463,
+   "reference": "ConocoPhillips (COP), son mali yılda araştırma ve geliştirme (Ar-Ge) için 1,2 milyar dolar ayırdı.",
+   "natural": null
+  },
+  {
+   "i": 464,
+   "reference": "Pfizer Inc.'in (PFE) mevcut hisse geri alım yetkisi 10 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 465,
+   "reference": "Baker Hughes Company'nin (BKR) geçen yıl toplam hissedar hissesi 8,35 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 466,
+   "reference": "Capital One Financial Corporation (COF), sermaye yönetimi stratejisinin bir parçası olarak geçtiğimiz yıl toplam 15 milyon hisse senedini yeniden satın aldı.",
+   "natural": null
+  },
+  {
+   "i": 467,
+   "reference": "Uber, havayolları veya araç kiralama acenteleri gibi araç paylaşım hizmetleri için otomobilleri sağlayacak olsaydı, filoyu satın almak için 11 milyar dolar kredi almak muhtemelen değerleme ve maliyeleri üzerinde önemli bir olumsuz etkiye sahip olacaktı.",
+   "natural": null
+  },
+  {
+   "i": 468,
+   "reference": "Ancak, '37% kuralı' olarak bilinen bir strateji, günün ilk %37'lik bölümünde hisse senedi fiyatını gözlemleyerek ve bu süre zarfında kaydedilen en düşük fiyatı (Gözlem Düşüğü) belirleyerek bir yaklaşım sunar.",
+   "natural": null
+  },
+  {
+   "i": 469,
+   "reference": "Konu: Pay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin Bildirim (Faiz İçeren)\nÖzet: TRSARCL22117 ISIN kodlu 500.000.000 TL tahvil 5.",
+   "natural": null
+  },
+  {
+   "i": 470,
+   "reference": "Lowe's Companies Inc., geçen mali yılda çalışan eğitimi ve gelişimi için yaklaşık 120 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 471,
+   "reference": "PepsiCo Inc., son mali yılda 2.5 milyar dolar değerinde bir hisse geri alım programı başlattı.",
+   "natural": null
+  },
+  {
+   "i": 472,
+   "reference": "(AMGN), 31 Aralık 2020 itibarıyla bilançosunda 11,4 milyar dolarlık bir nakit bakiyesine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 473,
+   "reference": "şu anda bilançosunda yaklaşık 15.4 milyar dolar nakit ve nakit eşdeğeri tutuyor.",
+   "natural": null
+  },
+  {
+   "i": 474,
+   "reference": "En son çeyrekte AMD, geçen yılın aynı dönemine göre yaklaşık% 93'lük önemli bir artışı temsil eden 3.44 milyar dolarlık kazanç bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 475,
+   "reference": "Müzik grubu Oasis üyeleri Noel ve Liam Gallagher da 375 milyon sterlinlik ortak varlıklarıyla bu yıl listeye ilk kez dahil oldu.",
+   "natural": null
+  },
+  {
+   "i": 476,
+   "reference": "Evet Oracle Corporation (ORCL) yakın zamanda 20 milyar dolarlık bir hisse senedi geri alım programı açıkladı.",
+   "natural": null
+  },
+  {
+   "i": 477,
+   "reference": "Verizon Communications Inc.'in (VZ) mevcut kısa faizi yaklaşık 47.5 milyon hissedir.",
+   "natural": "Verizon Communications Inc.'in mevcut kısa faizi yaklaşık kaç milyon hissedir?"
+  },
+  {
+   "i": 478,
+   "reference": "Johnson & Johnson (JNJ) şu anda yaklaşık 390 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 479,
+   "reference": "Petrol devi Saudi Aramco beklentileri aştı\nSaudi Aramco, Hürmüz Boğazı'ndaki gerilim ve küresel enerji sevkiyatındaki aksamalara rağmen ilk çeyrekte net kârını yüzde 25 artırarak 32,5 milyar dolara çıkardı.",
+   "natural": null
+  },
+  {
+   "i": 480,
+   "reference": "Toplam 32,4 milyar dolarlık borcu olan iyi yönetilen borç profili, finansal istikrarını sergiliyor.",
+   "natural": "Toplam kaç milyar dolarlık borcu vardır?"
+  },
+  {
+   "i": 481,
+   "reference": "General Electric Company (GE), 31 Aralık 2020 itibarıyla bilançosunda yaklaşık 102,6 milyar dolar iyi niyet bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 482,
+   "reference": "Vergi hazırlayıcısı muhtemelen size yüksek faiz oranıyla bir kredi satmaya çalışıyor (35.9% APR) ve sadece reklamın yarattığı bir korkuyu tatmin etmek için geri dönüşünüzün büyük bir kısmından vazgeçiyorsunuz.",
+   "natural": null
+  },
+  {
+   "i": 483,
+   "reference": "ayrıca 2.2 trilyon doların üzerinde bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": "Hangi şirketin piyasa kapitalizasyonu yaklaşık olarak kaç trilyon doları aşmaktadır?"
+  },
+  {
+   "i": 484,
+   "reference": "(ADSK) en son çeyrek itibariyle 1,89 milyar dolarlık nakit ve nakit eşdeğeri bakiyesine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 485,
+   "reference": "American Express Company ve Discover Financial Services, sırasıyla% 36.98% 27.15 ve% 39.74 ROE değerlerine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 486,
+   "reference": "Türk lirası zorunlu karşılık oranları tüm vade dilimleri için 50 baz puan düşürülmüştür.",
+   "natural": null
+  },
+  {
+   "i": 487,
+   "reference": "Mevcut bilgilere dayanarak Altria Group Inc., son mali yılda araştırma ve geliştirme için yaklaşık 123 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 488,
+   "reference": "Capital One Financial Corporation'ın uzun vadeli yatırımlarının toplam değeri 48,6 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 489,
+   "reference": "CVS Health Corporation (CVS), Walgreens Boots Alliance Rite Aid Corporation ve AmerisourceBergen Corporation gibi endüstri akranlarından önemli ölçüde daha yüksek olan yaklaşık 105 milyar dolarlık bir piyasa değerine sahiptir.",
+   "natural": "CVS Health Corporation'ın piyasa değerinin yaklaşık kaç milyar dolar olduğunu söyleyebilir misiniz?"
+  },
+  {
+   "i": 490,
+   "reference": "(AMZN) şu anda operasyonlardan yaklaşık 22.9 milyar dolar nakit akışı sağlıyor.",
+   "natural": "(AMZN) şu anda operasyonlardan yaklaşık kaç milyar dolar nakit akışı sağlıyor?"
+  },
+  {
+   "i": 491,
+   "reference": "Avustralya hükümeti geçtiğimiz günlerde faiz oranı %1.94 olan 15 milyar dolarlık 31 yıllık tahvil sattı.",
+   "natural": null
+  },
+  {
+   "i": 492,
+   "reference": "Hedef, en son Kasım 2020'de yetkilendirilmiş 15 milyar dolarlık bir program olmakla geçmişte hisse geri alım programlarını açıkladı.",
+   "natural": null
+  },
+  {
+   "i": 493,
+   "reference": "(PM), her yıl reklam ve pazarlama için yaklaşık 6,9 milyar dolar harcıyor.",
+   "natural": null
+  },
+  {
+   "i": 494,
+   "reference": "İhaleye katılmak isteyen yatırımcıların 170 milyon 20 bin TL teminat yatırması gerekecek.",
+   "natural": null
+  },
+  {
+   "i": 495,
+   "reference": "Delta'nın satışları $120 milyon ve vergiden sonraki kârı $9.156.000'dir.",
+   "natural": "Delta'nın satışları kaç milyon dolar ve vergiden sonraki kârı ne kadardır?"
+  },
+  {
+   "i": 496,
+   "reference": "(GS), son mali yılda yasal ücretler için yaklaşık 500 milyon dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 497,
+   "reference": "Biogen Inc., geçtiğimiz mali yılda hisse geri alımlarına yaklaşık 2,1 milyar dolar harcadı.",
+   "natural": null
+  },
+  {
+   "i": 498,
+   "reference": "Amazon.com Inc.'in son mali yılda araştırma ve geliştirme için yaklaşık 35.9 milyar dolar harcadığı mevcut bilgilere dayanarak.",
+   "natural": null
+  },
+  {
+   "i": 499,
+   "reference": "Bu, bir önceki çeyreğe kıyasla 11 milyar dolarlık bir artışı temsil ediyor.",
+   "natural": "Bu çeyreğe göre kaç milyar dolarlık bir artış gerçekleşti?"
+  },
+  {
+   "i": 500,
+   "reference": "Home Depot Inc.'in (HD) Federal Rezerv dosyalamalarında bildirilen mevcut çalışma sermayesi 5,2 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 501,
+   "reference": "Her coğrafi segmentten elde edilen gelirin tam bir dökümü Walmart Inc.'in uluslararası operasyonlarıyla mevcut olmamakla birlikte, 2020 mali yılı için yaklaşık 120 milyar dolar net satış elde etti.",
+   "natural": null
+  },
+  {
+   "i": 502,
+   "reference": "Ayrıca BMY'nin toplam borcu, MRK ve PFE arasında mutlak borç rakamları açısından 35.2 milyar dolar olarak durmaktadır.",
+   "natural": null
+  },
+  {
+   "i": 503,
+   "reference": "ConocoPhillips (COP) için mevcut serbest nakit akışı seviyesi 4,3 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 504,
+   "reference": "McDonald's Corporation'ın (MCD) geçtiğimiz mali yıl için serbest nakit akışı 7.57 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 505,
+   "reference": "Anthem Inc.'in 31 Aralık 2020 tarihi itibarıyla bilançosunda 2,1 milyar dolar nakit ve nakit eşdeğeri var.\"",
+   "natural": null
+  },
+  {
+   "i": 506,
+   "reference": "Procter & Gamble Company'nin (PG) çalışma sermayesi şu anda 17,99 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 507,
+   "reference": "Hisse başına 45.67 dolarlık mevcut hisse fiyatıyla yaklaşık 8.8 milyar hisseye sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 508,
+   "reference": "Exxon Mobil Corporation'ın son mali yılı için EBITDA'sı 40.61 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 509,
+   "reference": "Mali sıkıntıların derinleşmesiyle birlikte Air Antilles’in toplam borcunun 69 milyon doları aştığı ifade edildi.",
+   "natural": null
+  },
+  {
+   "i": 510,
+   "reference": "M Company (MMM), geçtiğimiz yıl toplam 500 milyon dolarlık sermaye harcaması yaptı.",
+   "natural": null
+  },
+  {
+   "i": 511,
+   "reference": "Raytheon Technologies Corporation (RTX) şu anda yaklaşık 798 milyon hisseye sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 512,
+   "reference": "En son mali yıl Boeing Company (BA) olarak mevcut bilgilere dayanarak, bilançosunda 20,1 milyar dolar iyi niyet var.",
+   "natural": null
+  },
+  {
+   "i": 513,
+   "reference": "American Express Company (AXP) şu anda öncelikle müşteri ilişkileri marka değeri ve ticari isimler gibi maddi olmayan varlıklardan oluşan bilançolarında 8,1 milyar dolar değerinde iyi niyet var.",
+   "natural": null
+  },
+  {
+   "i": 514,
+   "reference": "Avustralyalılar pandemi sırasında 200 milyar doların üzerinde tasarruf sağladılar ve bu parayı kilitlenmeler kaldırıldıktan sonra harcamaları bekleniyor, bu da ekonomiyi ve ASX'i artıracak.",
+   "natural": "Avustralyalılar pandemi sırasında kaç milyar doların üzerinde tasarruf sağladılar?"
+  },
+  {
+   "i": 515,
+   "reference": "Berkshire Hathaway Inc.'in geçen mali yılda net geliri 81,42 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 516,
+   "reference": "Bank of America Corporation'ın (BAC) mevcut piyasa değeri yaklaşık 372 milyar dolardır.",
+   "natural": "Bank of America Corporation'ın mevcut piyasa değeri yaklaşık kaç milyar dolarıdır?"
+  },
+  {
+   "i": 517,
+   "reference": "Yabancı para mevduat/katılım fonları için zorunlu karşılık oranları tüm vade dilimlerinde 200 baz puan artırılmıştır.",
+   "natural": null
+  },
+  {
+   "i": 518,
+   "reference": "Lowe's Companies Inc.'in (LOW) geçen mali yıl itibarıyla toplam 21,2 milyar dolarlık borcu vardı.",
+   "natural": null
+  },
+  {
+   "i": 519,
+   "reference": "Yaklaşık% 15 net kar marjı ile 7326 milyon dolarlık net kar elde ettiler.",
+   "natural": null
+  },
+  {
+   "i": 520,
+   "reference": "Abbott Laboratories (ABT) için son mali yılda net kar 7,95 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 521,
+   "reference": "Lockheed Martin Corporation'ın bilançodaki maddi olmayan varlıklarının değeri 14.2 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 522,
+   "reference": "Tablo 3.2, 10% faizle, bileşik faiz yöntemine göre hesaplanmış gelecek değerleri göstermektedir.",
+   "natural": "Tablo 3.2, hangi faiz oranı kullanılarak gelecek değerler hesaplanmıştır?"
+  },
+  {
+   "i": 523,
+   "reference": "UnitedHealth Group Incorporated'ın (UNH) olağanüstü hisse sayısı yaklaşık 950 milyon hissedir.",
+   "natural": null
+  },
+  {
+   "i": 524,
+   "reference": "Broadcom Inc.'in gelecek mali yıl için planlanan sermaye harcamalarının 1,5 milyar dolar olduğu tahmin edilmektedir.",
+   "natural": null
+  },
+  {
+   "i": 525,
+   "reference": "Abbott Laboratories'in şu anda bilançosunda toplam 34.5 milyar dolarlık bir borcu var.",
+   "natural": null
+  },
+  {
+   "i": 526,
+   "reference": "Akbank konsolide net karı ilgili dönemde 53.4 milyar TL olarak kaydedilmiştir.",
+   "natural": "Akbank'ın konsolide net karı ilgili dönemde kaç milyar TL olarak kaydedilmiştir?"
+  },
+  {
+   "i": 527,
+   "reference": "M Company (MMM), son üç yılda toplam 100 milyon dolarlık özel finansman turu topladı.",
+   "natural": null
+  },
+  {
+   "i": 528,
+   "reference": "Bu limit bankanızın belirlediği politikaya göre değişir, genellikle 1.000-5.000 TL arasındadır.",
+   "natural": null
+  },
+  {
+   "i": 529,
+   "reference": "(AIG) geçtiğimiz yıl boyunca yaklaşık 4,2 milyar dolarlık özkaynak finansmanı topladı.",
+   "natural": "(AIG) geçtiğimiz yıl boyunca yaklaşık kaç milyar dolarlık özkaynak finansmanı topladı?"
+  },
+  {
+   "i": 530,
+   "reference": "Özbekistan-Türkiye dış ticaret hacmi, yılın bu döneminde 653 milyon 400 bin dolar olarak hesaplandı.",
+   "natural": null
+  },
+  {
+   "i": 531,
+   "reference": "Piyasada yaklaşık olarak 138.5 milyar dolarlık terapötik portföyünü genişletmektedir.",
+   "natural": "Piyasada yaklaşık olarak kaç milyar dolarlık terapötik portföyünü genişletmektedir?"
+  },
+  {
+   "i": 532,
+   "reference": "Apache Corporation (APA) şu anda 8,67 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 533,
+   "reference": "General Motors Company (GM), geçtiğimiz yıl boyunca ESG girişimlerine toplam 1,5 milyar dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 534,
+   "reference": "Kraft Heinz Company'nin 2020 mali yılı için serbest nakit akışı 2.52 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 535,
+   "reference": "Borsa güne yükselişle başladı\nBorsa İstanbul'da BIST 100 endeksi, güne yüzde 0,45 artışla 14.846,74 puandan başladı.",
+   "natural": null
+  },
+  {
+   "i": 536,
+   "reference": "General Electric Company'nin (GE) depolama ve dağıtım tesislerinin toplam kare görüntüleri yaklaşık 50 milyon metrekaredir.",
+   "natural": null
+  },
+  {
+   "i": 537,
+   "reference": "(AMGN), bilançosunda tahakkuk eden masraflar ve diğer yükümlülüklerde 6,7 milyar dolara sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 538,
+   "reference": "Nike Inc.'in (NKE) CEO'sunun 2020'deki toplam tazminatı 50.1 milyon dolardı.",
+   "natural": null
+  },
+  {
+   "i": 539,
+   "reference": "Mevcut bilgilere dayanarak Activision Blizzard Inc., geçen yıl 1,46 milyar dolarlık serbest nakit akımı (FCF) yarattı.",
+   "natural": "Geçen yıl Activision Blizzard Inc. kaç milyar dolarlık serbest nakit akımı yarattı?"
+  },
+  {
+   "i": 540,
+   "reference": "Apple Inc.'in en son mali yıl için SG&A harcamaları 18.75 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 541,
+   "reference": "Costco Wholesale Corporation (COST), geçen yılın aynı dönemine göre %16'lık bir artışı temsil eden Q2 2021 için 1.22 milyar dolarlık bir kar bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 542,
+   "reference": "Aracı kurum tarafından yayımlanan raporda, şirket payları için 12 aylık hedef fiyat 18,77 TL olarak belirlendi.",
+   "natural": null
+  },
+  {
+   "i": 543,
+   "reference": "Broadcom Inc.'in (AVGO) şu anda yaklaşık 45 milyar dolarlık uzun vadeli borcu var.",
+   "natural": null
+  },
+  {
+   "i": 544,
+   "reference": "Son mali yılda Otomatik Veri İşleme A.Ş.'nin (ADP) toplam geliri 14,2 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 545,
+   "reference": "(AAPL), geçtiğimiz yıl toplam 17,2 milyar dolarlık sermaye harcaması yaptı.",
+   "natural": "Geçtiğimiz yıl toplam kaç milyar dolarlık sermaye harcaması yapıldı?"
+  },
+  {
+   "i": 546,
+   "reference": "(CRM) tarafından sürdürülebilir ve etik girişimlere yapılan yatırımın mevcut seviyesi yaklaşık 100 milyon dolardır.",
+   "natural": null
+  },
+  {
+   "i": 547,
+   "reference": "Goldman Sachs Group Inc.'in (GS) hisse senetlerine olan mevcut kısa ilgi seviyesi yaklaşık 4,2 milyon hissedir.",
+   "natural": null
+  },
+  {
+   "i": 548,
+   "reference": "Brands Inc.'in (YUM) uzun vadeli yatırımlarının mevcut değeri 1,5 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 549,
+   "reference": "Vektör veritabanı Bank of America Corporation'ın (BAC) bilgilerine dayanarak, şu anda yaklaşık 463.7 milyar dolar nakit ve nakit eşdeğerine sahip.",
+   "natural": null
+  },
+  {
+   "i": 550,
+   "reference": "Kraft Heinz Company (KHC) şu anda yaklaşık 34.76 milyar dolar toplam borcuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 551,
+   "reference": "(VZ) mevcut verilere göre bilançosunda 7,5 milyar dolar nakit ve nakit eşdeğeri bakiyesi olduğunu bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 552,
+   "reference": "Archer-Daniels-Midland Company (ADM) şu anda hisse başına 58.24 $ işlem gören hisseleri ile 31,5 milyar $ piyasa değerine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 553,
+   "reference": "Bank of America Corporation'ın (BAC) mevcut borç seviyesi yaklaşık 466 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 554,
+   "reference": "Activision Blizzard Inc.'in (ATVI) son kazancı, geçen yılın aynı dönemine kıyasla %38'lik bir artış gösteren toplam 2.38 milyar dolarlık bir gelire işaret ediyor.",
+   "natural": null
+  },
+  {
+   "i": 555,
+   "reference": "Altria Group Inc., çalışan sağlığı yararlarına yılda yaklaşık 450 milyon dolar yatırım yapmaktadır.",
+   "natural": null
+  },
+  {
+   "i": 556,
+   "reference": "Konu: Pay Dışında Sermaye Piyasası Aracı İşlemlerine İlişkin Bildirim (Faiz İçeren)\nÖzet: TRSAYGZ82118 ISIN kodlu 80.000.000 TL tutarındaki tahvilin 4.kupon ödemesi ve 5.",
+   "natural": null
+  },
+  {
+   "i": 557,
+   "reference": "Toplam Faiz Yükü: 1.237.964.19 TL\n\nYasal Vergi ve Kesintiler: Konut kredileri BSMV (%5) ve KKDF (%15) yasal kesintilerinden muaftır.",
+   "natural": "Toplam faiz yükü ne kadarıdır?"
+  },
+  {
+   "i": 558,
+   "reference": "Wells Fargo & Company (WFC) şu anda 210.3 milyar dolar nakit paraya sahip ve bilançolarındaki bankalardan kaynaklanıyor.",
+   "natural": null
+  },
+  {
+   "i": 559,
+   "reference": "Bristol-Myers Squibb Company, geçtiğimiz yıl Ar-Ge'ye yaklaşık 5,6 milyar dolar yatırım yaptı.",
+   "natural": null
+  },
+  {
+   "i": 560,
+   "reference": "Bank of America Corporation'ın (BAC) toplam hissedar sermayesi 265.9 milyar dolardır.",
+   "natural": null
+  },
+  {
+   "i": 561,
+   "reference": "(AMGN), son mali yıl için 8,45 milyar dolarlık operasyonlardan nakit akışı bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 562,
+   "reference": "Disneyland Paris özellikle yaklaşık 2,9 milyar dolarlık bir gelir elde etti.",
+   "natural": null
+  },
+  {
+   "i": 563,
+   "reference": "Coca-Cola Company'nin (KO) son çeyrekteki net geliri 2,6 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 564,
+   "reference": "Capital One Financial Corporation (COF) şu anda yaklaşık 47,7 milyar dolar toplam borcuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 565,
+   "reference": "2010 yılında şirket 1,6 milyon tercih edilen hisse senedi çıkarmıştır ve bu hisselerin bir kısmı 2015 yılında şirketin sermaye yapısı optimizasyonu stratejisinin bir parçası olarak geri alınmıştır.\"",
+   "natural": "2010 yılında şirket kaç milyon hisse senedi çıkarmıştır?"
+  },
+  {
+   "i": 566,
+   "reference": "Tüketici fiyatları Aralık ayında %2,93 artmış ve yıllık enflasyon %2,79 puan artarak %64,8'e yükselmiştir.",
+   "natural": "Yılın enflasyonu ne kadar artmıştır?"
+  },
+  {
+   "i": 567,
+   "reference": "Şirket, en son çeyrekte sağlıklı bir nakit pozisyonu gösteren 2,1 milyar dolarlık olumlu bir nakit akışı bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 568,
+   "reference": "IMF Başkanı Kristalina Georgieva'nın Bahar Toplantıları sırasında \"en az 12 ülkeden 20 ila 50 milyar tutarında finansman talebi görülebileceğini\" belirttiğini anımsatan Kozack, buna yönelik görüşmelerin de sürdüğünü anlattı.",
+   "natural": null
+  },
+  {
+   "i": 569,
+   "reference": "En son yıllık dosyalamada Home Depot, karşılaştırılabilir mağaza satışlarında% 5,8'lik bir toplam satış geliri bildirdi 2.5 milyar müşteri işlemi, ortalama% 65'lik bir brüt marj ve% 45,2'lik bir ROIC.",
+   "natural": "Home Depot'ın yıllık dosyalamada toplam satış geliri kaç milyar müşteri işlemi olarak bildirdi?"
+  },
+  {
+   "i": 570,
+   "reference": "IBM'in geçen mali yılda pazarlama ve reklamcılık için yaklaşık 1.3 milyar dolar harcadığı vektör veritabanından elde edilen mevcut verilere göre.",
+   "natural": null
+  },
+  {
+   "i": 571,
+   "reference": "Philip Morris International Inc.'in (PM) en son mali çeyreğindeki toplam hissedar sermayesi, bir önceki mali çeyreğe göre yaklaşık% 2.3'lük bir artışı temsil eden 33.45 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 572,
+   "reference": "(GS) geçtiğimiz günlerde yılda %4 faiz oranı ile 500 milyon dolarlık dönüştürülebilir borç yayınladı.",
+   "natural": null
+  },
+  {
+   "i": 573,
+   "reference": "(WMT), 48,09 milyar dolarlık uzun vadeli bir borcu ve 0.83 dolarlık bir borç-eşitlik oranına sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 574,
+   "reference": "Dow Inc.'in son mali yıldaki sermaye harcamaları, bitki genişletme araştırma ve geliştirme satın almalarına ayrılan harcamaların çoğunluğuyla altyapı iyileştirmeleri ve teknoloji yatırımları ile 2,1 milyar dolar oldu.",
+   "natural": null
+  },
+  {
+   "i": 575,
+   "reference": "(BKNG) hisse senetlerinin ödenmemiş hisseleri yaklaşık 48 milyon hissedir.",
+   "natural": "BKNG hisse senetlerinin ödenmemiş hisseleri kaç milyon hissedir?"
+  },
+  {
+   "i": 576,
+   "reference": "National Semiconductor Corporation'ın satın alınması yaklaşık 6,5 milyar dolar değerindeydi ve Texas Instruments'ın analog iş ve ürün portföyünü genişletmeyi amaçlıyordu.",
+   "natural": null
+  },
+  {
+   "i": 577,
+   "reference": "(AMGN) yaklaşık 141 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 578,
+   "reference": "(GOOGL) son çeyreğin sonundan itibaren yaklaşık 121 milyar dolarlık bir nakit pozisyonuna sahipti.",
+   "natural": null
+  },
+  {
+   "i": 579,
+   "reference": "(AAPL) şu anda 1.25'lik bir beta ve yaklaşık 2.1 trilyon dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": "AAPL'nin piyasa kapitalizasyonu yaklaşık kaç trilyon dolardır?"
+  },
+  {
+   "i": 580,
+   "reference": "Activision Blizzard Inc.'in (ATVI) piyasa değeri yaklaşık 70 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 581,
+   "reference": "Verizon Communications Inc.'in son mali yılda finansman faaliyetlerinde kullanılan net nakit tutarı 5,2 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 582,
+   "reference": "Bununla birlikte, Intel Corporation'ın yaklaşık 4.29 milyar ödenmemiş hissesi var ve serbest float, içeriden gelenler ve kısıtlı hisseler tarafından tutulan hisseleri hariç tutuyor.",
+   "natural": "Intel Corporation'ın yaklaşık kaç milyar ödenmemiş hissesi vardır?"
+  },
+  {
+   "i": 583,
+   "reference": "Intel son zamanlarda 20 milyar dolarlık bir hisse yeniden satın alma programı açıkladı ve düzenleyici gereksinimler ve şirketin genel finansal sağlığı tarafından dayatılan belirli sınırlamalar ve kısıtlamalar dahilinde faaliyet gösteriyor.",
+   "natural": null
+  },
+  {
+   "i": 584,
+   "reference": "Antalya Cumhuriyet Başsavcılığında alınan ifadesinde de kendisine yöneltilen sorulara samimiyetle cevap verdiğini belirten Böcek, \"Adaylık sürecinde 15-20 milyon dolar olarak bahsedilen parayı vermedim.",
+   "natural": null
+  },
+  {
+   "i": 585,
+   "reference": "Ancak şirket, son mali yıl için çeşitli alanlardaki yatırımlarını yansıtan 1,25 milyar dolarlık sermaye harcaması bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 586,
+   "reference": "Mevcut bilgilere dayanarak Alphabet Inc., 2020'de 38.27 milyar dolarlık bir serbest nakit akışı bildirdi.",
+   "natural": null
+  },
+  {
+   "i": 587,
+   "reference": "Ancak, son çeyrekte 22,32 milyar dolarlık gelir ve ilaç tıbbi cihazları ve tüketim malları segmentlerinde büyüme ile güçlü bir finansal performans bildirdiler.",
+   "natural": "Son çeyrekte kaç milyar dolarlık gelir bildirdiler?"
+  },
+  {
+   "i": 588,
+   "reference": "Son çeyrekte Verizon Communications Inc.'in (VZ) faiz ve vergilerden önceki kazanç 9.4 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 589,
+   "reference": "Ford Motor Company'nin piyasa değeri yaklaşık 44 milyar dolardır ve geçen yıl büyüme yaşamıştır.",
+   "natural": null
+  },
+  {
+   "i": 590,
+   "reference": "Southwest Airlines Co.'nun en son SEC Edgar dosyasında bildirilen işlemlerden gelen nakit akışı 4.1 milyar dolardı.",
+   "natural": null
+  },
+  {
+   "i": 591,
+   "reference": "Yabancı para mevduatları için zorunlu karşılık oranları tüm vadelerde 200 baz puan artırılmıştır.",
+   "natural": null
+  },
+  {
+   "i": 592,
+   "reference": "Avrupa'nın işlem hacmi bakımından en büyük hisse senedi borsalarından biridir ve günlük ortalama 7.2 milyar Euro civarında işlem hacmine sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 593,
+   "reference": "Archer-Daniels-Midland Company'nin en son 10-K dosyalama şirketine göre toplam faiz gideri 328 milyon dolar olarak bildirildi.",
+   "natural": null
+  },
+  {
+   "i": 594,
+   "reference": "(AMAT) şu anda yaklaşık 140 milyar dolarlık bir piyasa kapitalizasyonuna sahiptir.",
+   "natural": null
+  },
+  {
+   "i": 595,
+   "reference": "Borsa İstanbul'da BIST 100 endeksi, günü yüzde 1,79 değer kazanarak 14.405,25 puandan tamamladı.",
+   "natural": null
+  },
+  {
+   "i": 596,
+   "reference": "Verizon Communications Inc.'in (VZ) mevcut kısa ilgi düzeyinin yaklaşık 57 milyon hisse olduğunu gösteren bilgilere dayanarak.",
+   "natural": null
+  },
+  {
+   "i": 597,
+   "reference": "(MO), en son bildirilen finansal tablodan itibaren bilançosunda 3,8 milyar dolarlık bir nakit bakiyesine sahipti.",
+   "natural": null
+  },
+  {
+   "i": 598,
+   "reference": "Lowe's Companies Inc.'in operasyonlardan elde ettiği mevcut nakit akışı 5,2 milyar dolar.",
+   "natural": null
+  },
+  {
+   "i": 599,
+   "reference": "Mevcut bilgilere dayanarak General Motors Company (GM), geçtiğimiz yıl çeşitli varlık ve altyapı yatırımlarını temsil eden yaklaşık 7,5 milyar dolarlık sermaye harcaması bildirdi.",
+   "natural": null
+  }
+ ]
+}

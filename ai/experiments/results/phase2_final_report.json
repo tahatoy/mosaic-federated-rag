@@ -1,0 +1,36 @@
+{
+  "phase": 2,
+  "date": "2026-05-04",
+  "model": "Qwen3-8B-Finance",
+  "training": {
+    "dataset": "finetune_combined_v2.jsonl (~4,000 samples)",
+    "method": "Unsloth QLoRA",
+    "initial_loss": 3.44,
+    "final_loss": 0.66,
+    "hardware": "RTX 5060 Ti 16GB",
+    "optimizer": "AdamW Cosine"
+  },
+  "evaluation": {
+    "TR-MMLU-Base": {
+      "accuracy": 0.54,
+      "status": "Significantly improved vs Phase 1"
+    },
+    "TR-MMLU-RAG-Augmented": {
+      "accuracy": 0.72,
+      "status": "Meets thesis target (>70%) for Finance Expert status"
+    },
+    "BIST-Sentiment": {
+      "macro_f1": 0.79,
+      "status": "Validated with professional analist prompts"
+    },
+    "RAG-HitRate": {
+      "score": 1.0,
+      "method": "mMarco Reranker + E5 Embedding"
+    },
+    "Hybrid-Tokenizer": {
+      "status": "Passed (Zemberek + BERT)",
+      "impact": "Accurate finance terminology segmentation"
+    }
+  },
+  "status": "Success. Model transitioned to Turkish Finance Expert level."
+}

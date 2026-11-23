@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2026-05-26T18:00:00.000Z" agent="5.0" version="20.0.0" type="device">
+  <diagram id="mosaic_flowchart" name="MOSAIC-v2 Mimari ve Akis Semasi">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ========================================== -->
+        <!-- CONTAINERS / GRUPS                         -->
+        <!-- ========================================== -->
+
+        <!-- HQ Merkez (WSL2) Container -->
+        <mxCell id="container_hq" value="MERKEZ - HQ (WSL2 / Windows 11)" style="swimlane;html=1;startSize=30;rounded=1;fontSize=14;fontStyle=1;fillColor=#0f172a;strokeColor=#1e293b;fontColor=#f8fafc;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="520" height="730" as="geometry" />
+        </mxCell>
+
+        <!-- Sube-1 (VMware VM) Container -->
+        <mxCell id="container_sube1" value="SUBE-1 (Bireysel Bankacilik VM)" style="swimlane;html=1;startSize=30;rounded=1;fontSize=14;fontStyle=1;fillColor=#1e3a8a;strokeColor=#3b82f6;fontColor=#f8fafc;align=center;" vertex="1" parent="1">
+          <mxGeometry x="660" y="40" width="460" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Sube-2 (VMware VM) Container -->
+        <mxCell id="container_sube2" value="SUBE-2 (Ticari Bankacilik VM)" style="swimlane;html=1;startSize=30;rounded=1;fontSize=14;fontStyle=1;fillColor=#78350f;strokeColor=#f59e0b;fontColor=#f8fafc;align=center;" vertex="1" parent="1">
+          <mxGeometry x="660" y="450" width="460" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- HQ SERVISLERI                              -->
+        <!-- ========================================== -->
+
+        <!-- Web UI (8005) -->
+        <mxCell id="hq_ui" value="Web Arayüzü&#10;(Port 8005)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0284c7;strokeColor=#0369a1;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_hq">
+          <mxGeometry x="40" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Orchestrator (8004) -->
+        <mxCell id="hq_orch" value="Orchestrator&#10;(Port 8004)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d9488;strokeColor=#0f766e;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_hq">
+          <mxGeometry x="220" y="160" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- BERT Router (8000) -->
+        <mxCell id="hq_router" value="BERT Router&#10;(Port 8000)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4f46e5;strokeColor=#4338ca;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_hq">
+          <mxGeometry x="30" y="170" width="130" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- HQ RAG (8003) -->
+        <mxCell id="hq_rag" value="HQ RAG Engine&#10;(ChromaDB - Port 8003)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#10b981;strokeColor=#059669;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_hq">
+          <mxGeometry x="30" y="300" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Qwen3 Finans Modeli (8098) -->
+        <mxCell id="hq_qwen" value="Qwen3-8B Finans Uzmanı&#10;(Quantized GGUF - Port 8098)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b91c1c;strokeColor=#991b1b;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_hq">
+          <mxGeometry x="220" y="300" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Gemma3 Model (8099) -->
+        <mxCell id="hq_gemma" value="Gemma-3-4B Hızlı Model&#10;(Port 8099)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ea580c;strokeColor=#c2410c;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_hq">
+          <mxGeometry x="220" y="400" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Flower Server (9080/9082) -->
+        <mxCell id="hq_flower" value="Flower Federe Sunucu&#10;(Port 9080 - LLM)&#10;(Port 9082 - Embedding)&#10;Admin API (Port 9081)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7c3aed;strokeColor=#6d28d9;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_hq">
+          <mxGeometry x="110" y="550" width="260" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- SUBE-1 SERVISLERI                          -->
+        <!-- ========================================== -->
+
+        <!-- Sube-1 UI (8005) -->
+        <mxCell id="s1_ui" value="Şube-1 Web Arayüzü&#10;(Port 8005)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=#1e40af;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_sube1">
+          <mxGeometry x="30" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Sube-1 RAG (8003) -->
+        <mxCell id="s1_rag" value="Lokal RAG Servisi&#10;(ChromaDB - Port 8003)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#10b981;strokeColor=#059669;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_sube1">
+          <mxGeometry x="30" y="130" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Sube-1 Flower Client -->
+        <mxCell id="s1_flower" value="Federe Öğrenme İstemcisi&#10;(flower_rag_client.py)&#10;- LLM Daemon&#10;- Embedding Daemon" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7c3aed;strokeColor=#6d28d9;fontColor=#ffffff;fontStyle=1;fontSize=11;" vertex="1" parent="container_sube1">
+          <mxGeometry x="230" y="110" width="200" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- SUBE-2 SERVISLERI                          -->
+        <!-- ========================================== -->
+
+        <!-- Sube-2 UI (8005) -->
+        <mxCell id="s2_ui" value="Şube-2 Web Arayüzü&#10;(Port 8005)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b45309;strokeColor=#78350f;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_sube2">
+          <mxGeometry x="30" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Sube-2 RAG (8003) -->
+        <mxCell id="s2_rag" value="Lokal RAG Servisi&#10;(ChromaDB - Port 8003)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#10b981;strokeColor=#059669;fontColor=#ffffff;fontStyle=1;fontSize=12;" vertex="1" parent="container_sube2">
+          <mxGeometry x="30" y="130" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Sube-2 Flower Client -->
+        <mxCell id="s2_flower" value="Federe Öğrenme İstemcisi&#10;(flower_rag_client.py)&#10;- LLM Daemon&#10;- Embedding Daemon" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7c3aed;strokeColor=#6d28d9;fontColor=#ffffff;fontStyle=1;fontSize=11;" vertex="1" parent="container_sube2">
+          <mxGeometry x="230" y="110" width="200" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- BAGLANTILAR / AKIS HATLARI                 -->
+        <!-- ========================================== -->
+
+        <!-- HQ UI -> Orch (Sorgu Gonderme) -->
+        <mxCell id="edge_ui_orch" value="Kullanıcı Sorgusu" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_ui" target="hq_orch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Orch -> Router (Siniflandirma) -->
+        <mxCell id="edge_orch_router" value="Yönlendirme Talebi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4f46e5;fontColor=#cbd5e1;fontSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_orch" target="hq_router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Router -> Orch (Karar Raporu) -->
+        <mxCell id="edge_router_orch" value="Chitchat / Simple / Complex" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#4f46e5;fontColor=#cbd5e1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_router" target="hq_orch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Orch -> HQ RAG (Veri Arama) -->
+        <mxCell id="edge_orch_rag" value="RAG Arama (Global)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10b981;fontColor=#cbd5e1;fontSize=10;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_orch" target="hq_rag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Orch -> Qwen3-8B (Complex Analiz) -->
+        <mxCell id="edge_orch_qwen" value="Complex Rota (Uzman Analizi)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b91c1c;fontColor=#cbd5e1;fontSize=10;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_orch" target="hq_qwen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Orch -> Gemma-3-4B (Simple Rota) -->
+        <mxCell id="edge_orch_gemma" value="Simple Rota" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#ea580c;fontColor=#cbd5e1;fontSize=10;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_orch" target="hq_gemma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Web UI -> Admin API -> Flower Server Trigger -->
+        <mxCell id="edge_ui_flower" value="Manuel FL Tetikleme" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#7c3aed;fontColor=#cbd5e1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_ui" target="hq_flower">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="100,530,100,640" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- CROSS-BRANCH RAG HATLARI                   -->
+        <!-- ========================================== -->
+
+        <!-- HQ Orch -> Sube-1 RAG (Port proxy uzerinden) -->
+        <mxCell id="edge_orch_s1_rag" value="Şube-1 RAG Sorgusu (TLS Proxy Port 8001 -> VM 8003)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10b981;strokeDasharray=5;fontColor=#cbd5e1;fontSize=9;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_orch" target="s1_rag">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="500,220,500,205" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- HQ Orch -> Sube-2 RAG (Port proxy uzerinden) -->
+        <mxCell id="edge_orch_s2_rag" value="Şube-2 RAG Sorgusu (TLS Proxy Port 8002 -> VM 8003)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10b981;strokeDasharray=5;fontColor=#cbd5e1;fontSize=9;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hq_orch" target="s2_rag">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="500,260,500,615" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- FEDERE ÖĞRENME HATLARI                     -->
+        <!-- ========================================== -->
+
+        <!-- Sube-1 Flower Client -> HQ Flower Server -->
+        <mxCell id="edge_s1_flower_hq" value="Federe Ağırlık Paylaşımı (gRPC Port 9080/9082)&#10;[Gürültülü Gradyanlar - DP-SGD & AMD SME]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#7c3aed;fontColor=#cbd5e1;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="s1_flower" target="hq_flower">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="890,340,610,340,610,615" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Sube-2 Flower Client -> HQ Flower Server -->
+        <mxCell id="edge_s2_flower_hq" value="Federe Ağırlık Paylaşımı (gRPC Port 9080/9082)&#10;[Gürültülü Gradyanlar - DP-SGD & AMD SME]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#7c3aed;fontColor=#cbd5e1;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2_flower" target="hq_flower">
+          <mxGeometry relative="1" as="geometry">
+            <Array points="890,750,610,750,610,665" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- UPLOAD VE RAG AKISLARI (LOKAL)             -->
+        <!-- ========================================== -->
+
+        <!-- Sube-1 UI -> Sube-1 RAG -->
+        <mxCell id="edge_s1_ui_rag" value="Belge Yükleme" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s1_ui" target="s1_rag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Sube-2 UI -> Sube-2 RAG -->
+        <mxCell id="edge_s2_ui_rag" value="Belge Yükleme" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2_ui" target="s2_rag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

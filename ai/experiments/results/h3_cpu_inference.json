@@ -1,0 +1,17 @@
+{
+  "model": "GEMMA3_FINANCE_V1.Q4_K_M.gguf",
+  "model_file_bytes": 2489893728,
+  "model_file_gib": 2.32,
+  "threads": 2,
+  "ram_total_gib": 3.8,
+  "cpu": "AMD Ryzen 5 7500F 6-Core Processor",
+  "backend": "CPU (AVX512, llama.cpp b8557, -ngl 0)",
+  "environment": "2 vCPU / 3.8 GiB RAM Linux VM on the author's workstation (not the VMware branch VMs)",
+  "peak_rss_gib": 3.51,
+  "prompt_processing_tok_s": 37.43,
+  "pp_std": 0.5,
+  "generation_tok_s": 13.92,
+  "tg_std": 0.24,
+  "reps": 2,
+  "h3_esik_50_tok_s_karsilandi": false
+}

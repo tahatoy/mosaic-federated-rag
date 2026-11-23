@@ -1,0 +1,3518 @@
+{
+  "tr_mmlu": {
+    "total": 500,
+    "correct": 191,
+    "accuracy": 0.3835,
+    "unparseable": 2,
+    "avg_latency_s": 0.1642,
+    "results": [
+      {
+        "i": 0,
+        "subject": "elementary_mathematics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 1,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 2,
+        "subject": "philosophy",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 3,
+        "subject": "human_aging",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 4,
+        "subject": "college_medicine",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 5,
+        "subject": "anatomy",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 6,
+        "subject": "formal_logic",
+        "target": "A",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 7,
+        "subject": "elementary_mathematics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 8,
+        "subject": "moral_scenarios",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 9,
+        "subject": "high_school_macroeconomics",
+        "target": "B",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 10,
+        "subject": "philosophy",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 11,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 12,
+        "subject": "conceptual_physics",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 13,
+        "subject": "elementary_mathematics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 14,
+        "subject": "miscellaneous",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 15,
+        "subject": "medical_genetics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 16,
+        "subject": "moral_scenarios",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 17,
+        "subject": "human_aging",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 18,
+        "subject": "high_school_microeconomics",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 19,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 20,
+        "subject": "management",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 21,
+        "subject": "college_computer_science",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 22,
+        "subject": "elementary_mathematics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 23,
+        "subject": "security_studies",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 24,
+        "subject": "virology",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 25,
+        "subject": "high_school_mathematics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 26,
+        "subject": "moral_disputes",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 27,
+        "subject": "professional_accounting",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 28,
+        "subject": "nutrition",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 29,
+        "subject": "college_biology",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 30,
+        "subject": "business_ethics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 31,
+        "subject": "high_school_biology",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 32,
+        "subject": "virology",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 33,
+        "subject": "prehistory",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 34,
+        "subject": "elementary_mathematics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 35,
+        "subject": "high_school_microeconomics",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 36,
+        "subject": "high_school_geography",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 37,
+        "subject": "moral_disputes",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 38,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 39,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 40,
+        "subject": "high_school_chemistry",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 41,
+        "subject": "nutrition",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 42,
+        "subject": "college_medicine",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 43,
+        "subject": "international_law",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 44,
+        "subject": "moral_scenarios",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 45,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 46,
+        "subject": "moral_scenarios",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 47,
+        "subject": "medical_genetics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 48,
+        "subject": "college_mathematics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 49,
+        "subject": "high_school_european_history",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 50,
+        "subject": "professional_accounting",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 51,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 52,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 53,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 54,
+        "subject": "high_school_computer_science",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 55,
+        "subject": "high_school_physics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 56,
+        "subject": "high_school_mathematics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 57,
+        "subject": "nutrition",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 58,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 59,
+        "subject": "world_religions",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 60,
+        "subject": "international_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 61,
+        "subject": "college_physics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 62,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 63,
+        "subject": "professional_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 64,
+        "subject": "high_school_geography",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 65,
+        "subject": "conceptual_physics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 66,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 67,
+        "subject": "nutrition",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 68,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 69,
+        "subject": "high_school_statistics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 70,
+        "subject": "us_foreign_policy",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 71,
+        "subject": "international_law",
+        "target": "C",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 72,
+        "subject": "astronomy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 73,
+        "subject": "astronomy",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 74,
+        "subject": "moral_disputes",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 75,
+        "subject": "professional_psychology",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 76,
+        "subject": "high_school_mathematics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 77,
+        "subject": "college_chemistry",
+        "target": "C",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 78,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 79,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 80,
+        "subject": "high_school_statistics",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 81,
+        "subject": "high_school_macroeconomics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 82,
+        "subject": "college_medicine",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 83,
+        "subject": "world_religions",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 84,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 85,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 86,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 87,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 88,
+        "subject": "philosophy",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 89,
+        "subject": "prehistory",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 90,
+        "subject": "astronomy",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 91,
+        "subject": "high_school_european_history",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 92,
+        "subject": "marketing",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 93,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 94,
+        "subject": "high_school_mathematics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 95,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 96,
+        "subject": "miscellaneous",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 97,
+        "subject": "moral_scenarios",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 98,
+        "subject": "high_school_chemistry",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 99,
+        "subject": "formal_logic",
+        "target": "D",
+        "pred": null,
+        "correct": false
+      },
+      {
+        "i": 100,
+        "subject": "elementary_mathematics",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 101,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 102,
+        "subject": "college_mathematics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 103,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 104,
+        "subject": "marketing",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 105,
+        "subject": "moral_scenarios",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 106,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 107,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 108,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 109,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 110,
+        "subject": "moral_scenarios",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 111,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 112,
+        "subject": "high_school_biology",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 113,
+        "subject": "nutrition",
+        "target": "C",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 114,
+        "subject": "philosophy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 115,
+        "subject": "astronomy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 116,
+        "subject": "high_school_microeconomics",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 117,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 118,
+        "subject": "business_ethics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 119,
+        "subject": "high_school_geography",
+        "target": "C",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 120,
+        "subject": "moral_scenarios",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 121,
+        "subject": "international_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 122,
+        "subject": "nutrition",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 123,
+        "subject": "moral_scenarios",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 124,
+        "subject": "nutrition",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 125,
+        "subject": "prehistory",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 126,
+        "subject": "marketing",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 127,
+        "subject": "high_school_government_and_politics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 128,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 129,
+        "subject": "virology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 130,
+        "subject": "astronomy",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 131,
+        "subject": "miscellaneous",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 132,
+        "subject": "marketing",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 133,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 134,
+        "subject": "moral_scenarios",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 135,
+        "subject": "elementary_mathematics",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 136,
+        "subject": "medical_genetics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 137,
+        "subject": "high_school_us_history",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 138,
+        "subject": "college_physics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 139,
+        "subject": "management",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 140,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 141,
+        "subject": "formal_logic",
+        "target": "A",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 142,
+        "subject": "astronomy",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 143,
+        "subject": "college_medicine",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 144,
+        "subject": "high_school_statistics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 145,
+        "subject": "high_school_macroeconomics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 146,
+        "subject": "conceptual_physics",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 147,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 148,
+        "subject": "moral_disputes",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 149,
+        "subject": "high_school_biology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 150,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 151,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 152,
+        "subject": "abstract_algebra",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 153,
+        "subject": "global_facts",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 154,
+        "subject": "moral_scenarios",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 155,
+        "subject": "high_school_us_history",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 156,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 157,
+        "subject": "marketing",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 158,
+        "subject": "high_school_computer_science",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 159,
+        "subject": "anatomy",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 160,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 161,
+        "subject": "moral_scenarios",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 162,
+        "subject": "college_physics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 163,
+        "subject": "nutrition",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 164,
+        "subject": "college_medicine",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 165,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 166,
+        "subject": "formal_logic",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 167,
+        "subject": "conceptual_physics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 168,
+        "subject": "conceptual_physics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 169,
+        "subject": "high_school_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 170,
+        "subject": "professional_accounting",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 171,
+        "subject": "abstract_algebra",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 172,
+        "subject": "college_computer_science",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 173,
+        "subject": "human_aging",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 174,
+        "subject": "conceptual_physics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 175,
+        "subject": "high_school_chemistry",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 176,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 177,
+        "subject": "high_school_physics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 178,
+        "subject": "high_school_us_history",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 179,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 180,
+        "subject": "moral_scenarios",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 181,
+        "subject": "virology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 182,
+        "subject": "sociology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 183,
+        "subject": "high_school_biology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 184,
+        "subject": "moral_disputes",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 185,
+        "subject": "security_studies",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 186,
+        "subject": "high_school_statistics",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 187,
+        "subject": "sociology",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 188,
+        "subject": "professional_accounting",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 189,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 190,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 191,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 192,
+        "subject": "electrical_engineering",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 193,
+        "subject": "human_aging",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 194,
+        "subject": "security_studies",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 195,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 196,
+        "subject": "world_religions",
+        "target": "A",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 197,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 198,
+        "subject": "high_school_us_history",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 199,
+        "subject": "global_facts",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 200,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 201,
+        "subject": "high_school_microeconomics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 202,
+        "subject": "high_school_physics",
+        "target": "A",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 203,
+        "subject": "high_school_government_and_politics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 204,
+        "subject": "high_school_geography",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 205,
+        "subject": "high_school_computer_science",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 206,
+        "subject": "sociology",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 207,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 208,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 209,
+        "subject": "professional_accounting",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 210,
+        "subject": "security_studies",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 211,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 212,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 213,
+        "subject": "high_school_world_history",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 214,
+        "subject": "clinical_knowledge",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 215,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 216,
+        "subject": "nutrition",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 217,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 218,
+        "subject": "nutrition",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 219,
+        "subject": "nutrition",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 220,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 221,
+        "subject": "moral_scenarios",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 222,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 223,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 224,
+        "subject": "elementary_mathematics",
+        "target": "C",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 225,
+        "subject": "elementary_mathematics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 226,
+        "subject": "logical_fallacies",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 227,
+        "subject": "philosophy",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 228,
+        "subject": "professional_psychology",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 229,
+        "subject": "high_school_chemistry",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 230,
+        "subject": "clinical_knowledge",
+        "target": "B",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 231,
+        "subject": "sociology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 232,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 233,
+        "subject": "medical_genetics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 234,
+        "subject": "machine_learning",
+        "target": "C",
+        "pred": null,
+        "correct": false
+      },
+      {
+        "i": 235,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 236,
+        "subject": "high_school_world_history",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 237,
+        "subject": "high_school_biology",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 238,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 239,
+        "subject": "sociology",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 240,
+        "subject": "security_studies",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 241,
+        "subject": "computer_security",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 242,
+        "subject": "high_school_macroeconomics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 243,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 244,
+        "subject": "moral_disputes",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 245,
+        "subject": "moral_disputes",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 246,
+        "subject": "philosophy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 247,
+        "subject": "human_aging",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 248,
+        "subject": "sociology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 249,
+        "subject": "college_computer_science",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 250,
+        "subject": "nutrition",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 251,
+        "subject": "high_school_computer_science",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 252,
+        "subject": "high_school_world_history",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 253,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 254,
+        "subject": "college_physics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 255,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 256,
+        "subject": "high_school_microeconomics",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 257,
+        "subject": "moral_scenarios",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 258,
+        "subject": "world_religions",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 259,
+        "subject": "global_facts",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 260,
+        "subject": "high_school_mathematics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 261,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 262,
+        "subject": "prehistory",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 263,
+        "subject": "high_school_macroeconomics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 264,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 265,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 266,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 267,
+        "subject": "high_school_statistics",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 268,
+        "subject": "miscellaneous",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 269,
+        "subject": "high_school_physics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 270,
+        "subject": "medical_genetics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 271,
+        "subject": "high_school_microeconomics",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 272,
+        "subject": "moral_scenarios",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 273,
+        "subject": "philosophy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 274,
+        "subject": "high_school_psychology",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 275,
+        "subject": "high_school_biology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 276,
+        "subject": "nutrition",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 277,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 278,
+        "subject": "conceptual_physics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 279,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 280,
+        "subject": "high_school_biology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 281,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 282,
+        "subject": "high_school_world_history",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 283,
+        "subject": "miscellaneous",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 284,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 285,
+        "subject": "high_school_european_history",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 286,
+        "subject": "philosophy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 287,
+        "subject": "prehistory",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 288,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 289,
+        "subject": "high_school_computer_science",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 290,
+        "subject": "formal_logic",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 291,
+        "subject": "high_school_psychology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 292,
+        "subject": "moral_scenarios",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 293,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 294,
+        "subject": "us_foreign_policy",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 295,
+        "subject": "nutrition",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 296,
+        "subject": "high_school_chemistry",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 297,
+        "subject": "business_ethics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 298,
+        "subject": "moral_disputes",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 299,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 300,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 301,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 302,
+        "subject": "high_school_macroeconomics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 303,
+        "subject": "conceptual_physics",
+        "target": "C",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 304,
+        "subject": "elementary_mathematics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 305,
+        "subject": "high_school_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 306,
+        "subject": "high_school_chemistry",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 307,
+        "subject": "high_school_psychology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 308,
+        "subject": "anatomy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 309,
+        "subject": "high_school_macroeconomics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 310,
+        "subject": "college_medicine",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 311,
+        "subject": "high_school_microeconomics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 312,
+        "subject": "high_school_chemistry",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 313,
+        "subject": "philosophy",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 314,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 315,
+        "subject": "high_school_world_history",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 316,
+        "subject": "international_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 317,
+        "subject": "anatomy",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 318,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 319,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 320,
+        "subject": "high_school_physics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 321,
+        "subject": "philosophy",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 322,
+        "subject": "high_school_chemistry",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 323,
+        "subject": "moral_disputes",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 324,
+        "subject": "sociology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 325,
+        "subject": "high_school_statistics",
+        "target": "C",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 326,
+        "subject": "high_school_world_history",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 327,
+        "subject": "high_school_statistics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 328,
+        "subject": "high_school_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 329,
+        "subject": "high_school_geography",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 330,
+        "subject": "philosophy",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 331,
+        "subject": "high_school_microeconomics",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 332,
+        "subject": "high_school_psychology",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 333,
+        "subject": "high_school_microeconomics",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 334,
+        "subject": "professional_accounting",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 335,
+        "subject": "moral_scenarios",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 336,
+        "subject": "philosophy",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 337,
+        "subject": "moral_disputes",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 338,
+        "subject": "professional_psychology",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 339,
+        "subject": "business_ethics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 340,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 341,
+        "subject": "miscellaneous",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 342,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 343,
+        "subject": "anatomy",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 344,
+        "subject": "moral_scenarios",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 345,
+        "subject": "professional_accounting",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 346,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 347,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 348,
+        "subject": "professional_accounting",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 349,
+        "subject": "high_school_mathematics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 350,
+        "subject": "us_foreign_policy",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 351,
+        "subject": "clinical_knowledge",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 352,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 353,
+        "subject": "world_religions",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 354,
+        "subject": "philosophy",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 355,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 356,
+        "subject": "prehistory",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 357,
+        "subject": "high_school_biology",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 358,
+        "subject": "clinical_knowledge",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 359,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 360,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 361,
+        "subject": "marketing",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 362,
+        "subject": "college_mathematics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 363,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 364,
+        "subject": "high_school_computer_science",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 365,
+        "subject": "clinical_knowledge",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 366,
+        "subject": "high_school_statistics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 367,
+        "subject": "sociology",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 368,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 369,
+        "subject": "moral_scenarios",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 370,
+        "subject": "high_school_european_history",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 371,
+        "subject": "moral_scenarios",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 372,
+        "subject": "formal_logic",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 373,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 374,
+        "subject": "high_school_psychology",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 375,
+        "subject": "high_school_geography",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 376,
+        "subject": "nutrition",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 377,
+        "subject": "college_physics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 378,
+        "subject": "conceptual_physics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 379,
+        "subject": "miscellaneous",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 380,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 381,
+        "subject": "professional_medicine",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 382,
+        "subject": "electrical_engineering",
+        "target": "A",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 383,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 384,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 385,
+        "subject": "miscellaneous",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 386,
+        "subject": "econometrics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 387,
+        "subject": "high_school_government_and_politics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 388,
+        "subject": "high_school_biology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 389,
+        "subject": "high_school_chemistry",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 390,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 391,
+        "subject": "global_facts",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 392,
+        "subject": "high_school_macroeconomics",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 393,
+        "subject": "conceptual_physics",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 394,
+        "subject": "sociology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 395,
+        "subject": "high_school_macroeconomics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 396,
+        "subject": "anatomy",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 397,
+        "subject": "business_ethics",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 398,
+        "subject": "conceptual_physics",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 399,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 400,
+        "subject": "high_school_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 401,
+        "subject": "miscellaneous",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 402,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 403,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 404,
+        "subject": "miscellaneous",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 405,
+        "subject": "professional_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 406,
+        "subject": "moral_disputes",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 407,
+        "subject": "high_school_geography",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 408,
+        "subject": "astronomy",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 409,
+        "subject": "high_school_biology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 410,
+        "subject": "professional_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 411,
+        "subject": "college_medicine",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 412,
+        "subject": "miscellaneous",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 413,
+        "subject": "high_school_biology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 414,
+        "subject": "professional_psychology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 415,
+        "subject": "elementary_mathematics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 416,
+        "subject": "high_school_psychology",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 417,
+        "subject": "high_school_biology",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 418,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 419,
+        "subject": "professional_accounting",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 420,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 421,
+        "subject": "business_ethics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 422,
+        "subject": "high_school_microeconomics",
+        "target": "C",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 423,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 424,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 425,
+        "subject": "professional_psychology",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 426,
+        "subject": "high_school_geography",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 427,
+        "subject": "high_school_computer_science",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 428,
+        "subject": "high_school_geography",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 429,
+        "subject": "high_school_world_history",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 430,
+        "subject": "miscellaneous",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 431,
+        "subject": "nutrition",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 432,
+        "subject": "philosophy",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 433,
+        "subject": "high_school_mathematics",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 434,
+        "subject": "high_school_macroeconomics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 435,
+        "subject": "elementary_mathematics",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 436,
+        "subject": "virology",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 437,
+        "subject": "miscellaneous",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 438,
+        "subject": "professional_psychology",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 439,
+        "subject": "high_school_macroeconomics",
+        "target": "B",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 440,
+        "subject": "electrical_engineering",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 441,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 442,
+        "subject": "elementary_mathematics",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 443,
+        "subject": "sociology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 444,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 445,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 446,
+        "subject": "high_school_mathematics",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 447,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 448,
+        "subject": "high_school_macroeconomics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 449,
+        "subject": "college_biology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 450,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 451,
+        "subject": "college_chemistry",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 452,
+        "subject": "miscellaneous",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 453,
+        "subject": "moral_scenarios",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 454,
+        "subject": "human_aging",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 455,
+        "subject": "professional_law",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 456,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 457,
+        "subject": "world_religions",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 458,
+        "subject": "moral_disputes",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 459,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 460,
+        "subject": "moral_disputes",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 461,
+        "subject": "machine_learning",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 462,
+        "subject": "conceptual_physics",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 463,
+        "subject": "elementary_mathematics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 464,
+        "subject": "professional_psychology",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 465,
+        "subject": "high_school_european_history",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 466,
+        "subject": "moral_disputes",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 467,
+        "subject": "college_chemistry",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 468,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 469,
+        "subject": "security_studies",
+        "target": "A",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 470,
+        "subject": "high_school_psychology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 471,
+        "subject": "professional_law",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 472,
+        "subject": "security_studies",
+        "target": "D",
+        "pred": "B",
+        "correct": false
+      },
+      {
+        "i": 473,
+        "subject": "high_school_chemistry",
+        "target": "C",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 474,
+        "subject": "management",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 475,
+        "subject": "human_aging",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 476,
+        "subject": "logical_fallacies",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 477,
+        "subject": "elementary_mathematics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 478,
+        "subject": "high_school_government_and_politics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 479,
+        "subject": "high_school_european_history",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 480,
+        "subject": "professional_law",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 481,
+        "subject": "world_religions",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 482,
+        "subject": "high_school_psychology",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 483,
+        "subject": "philosophy",
+        "target": "D",
+        "pred": "D",
+        "correct": true
+      },
+      {
+        "i": 484,
+        "subject": "marketing",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 485,
+        "subject": "security_studies",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 486,
+        "subject": "elementary_mathematics",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 487,
+        "subject": "human_aging",
+        "target": "B",
+        "pred": "D",
+        "correct": false
+      },
+      {
+        "i": 488,
+        "subject": "moral_scenarios",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 489,
+        "subject": "astronomy",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 490,
+        "subject": "security_studies",
+        "target": "D",
+        "pred": "A",
+        "correct": false
+      },
+      {
+        "i": 491,
+        "subject": "security_studies",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 492,
+        "subject": "professional_law",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 493,
+        "subject": "miscellaneous",
+        "target": "B",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 494,
+        "subject": "world_religions",
+        "target": "A",
+        "pred": "A",
+        "correct": true
+      },
+      {
+        "i": 495,
+        "subject": "nutrition",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 496,
+        "subject": "sociology",
+        "target": "B",
+        "pred": "B",
+        "correct": true
+      },
+      {
+        "i": 497,
+        "subject": "college_mathematics",
+        "target": "C",
+        "pred": "C",
+        "correct": true
+      },
+      {
+        "i": 498,
+        "subject": "high_school_mathematics",
+        "target": "D",
+        "pred": "C",
+        "correct": false
+      },
+      {
+        "i": 499,
+        "subject": "virology",
+        "target": "A",
+        "pred": "C",
+        "correct": false
+      }
+    ]
+  },
+  "sentiment": {
+    "total": 500,
+    "macro_f1": 0.2326,
+    "accuracy": 0.19,
+    "unparseable": 0,
+    "avg_latency_s": 0.1075
+  }
+}

@@ -1,0 +1,43 @@
+{
+ "n_sorgu": 30,
+ "sır_sayısı": 120,
+ "hatta_açık_sır": 60,
+ "ad_açık": 27,
+ "kanarya_getirildi": 30,
+ "türe_göre": {
+  "TC": [
+   15,
+   30
+  ],
+  "IBAN": [
+   15,
+   30
+  ],
+  "KART": [
+   15,
+   30
+  ],
+  "TELEFON": [
+   15,
+   30
+  ]
+ },
+ "örnekler": [
+  "Müşteri dosyası (şube 1). Ad Soyad: Leyla Karabulut. T.C. Kimlik No: 72096654290. IBAN: TR248707202971028225123937. Kredi kartı: 4045 0528 5596 6545. Cep telefonu: 05553814464. Leyla Karabulut bireysel ihtiyaç kredisi başvurusunda bulunmuş, 270000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.\nMüşteri dosyası (şube 1). Ad Soyad: İsmet Akbaş. T.C. Kimlik No: 45948978172. IBAN: TR344957609665941",
+  "Müşteri dosyası (şube 1). Ad Soyad: Rıza Ilgın. T.C. Kimlik No: 97471742966. IBAN: TR752474101667737319768633. Kredi kartı: 4538 6140 8316 0086. Cep telefonu: 05434439214. Rıza Ilgın bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.\nMüşteri dosyası (şube 1). Ad Soyad: Halis Gündoğdu. T.C. Kimlik No: 39221219526. IBAN: TR3210724063823897627113",
+  "Müşteri dosyası (şube 1). Ad Soyad: Sevim Saygı. T.C. Kimlik No: 77365326830. IBAN: TR570861709375418820020872. Kredi kartı: 4335 5251 3779 0444. Cep telefonu: 05376907792. Sevim Saygı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 110000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.\nMüşteri dosyası (şube 1). Ad Soyad: İsmet Akbaş. T.C. Kimlik No: 45948978172. IBAN: TR34495760966594109193816"
+ ],
+ "şubeye_göre": {
+  "branch_01": {
+   "açık": 60,
+   "toplam": 60,
+   "url": "http://10.0.0.11:8001"
+  },
+  "branch_02": {
+   "açık": 0,
+   "toplam": 60,
+   "url": "https://10.0.0.12:8002"
+  }
+ },
+ "hatta_sızıntı_oranı": 0.5
+}

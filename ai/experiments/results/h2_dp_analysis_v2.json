@@ -1,0 +1,24 @@
+{
+  "mekanizma": "w~ = w_g + clip(w_k - w_g, C) + N(0,(sigma*C)^2 I); global L2 kirpma (dp.py)",
+  "epsilon": 1.0,
+  "delta": 1e-05,
+  "C": 1.0,
+  "sigma": 4.8448,
+  "seed": 42,
+  "tensor_sayisi": 199,
+  "parametre_sayisi": 117653760,
+  "agirlik_global_L2_normu": 871.94,
+  "beklenen_gurultu_global_L2_normu": 52550.79,
+  "kirpilmis_guncelleme_normu_ust_sinir": 1.0,
+  "global_kosinus_w_vs_gurultulu": 0.01664,
+  "tensor_kosinus_medyan": 0.01952,
+  "tensor_kosinus_ortalama": 0.04471,
+  "tensor_goreli_hata_medyan": 61.56,
+  "bilesim_temel_toplam_epsilon": {
+    "1_tur": 1.0,
+    "5_tur": 5.0,
+    "10_tur": 10.0,
+    "50_tur": 50.0
+  },
+  "not": "Kirpilmis guncellemenin global normu <= C; gurultu normunun yaninda ihmal edilebilir."
+}

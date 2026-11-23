@@ -1,0 +1,868 @@
+{
+  "proje": "Türkçe Finans İçin Federe RAG Tabanlı Düşük Kaynaklı Ortamlarda Çalışan Adaptif Chatbot Mimarisi",
+  "donanim": {
+    "GPU": "NVIDIA GeForce RTX 5060 Ti (Blackwell SM_120)",
+    "VRAM": "15.9 GB",
+    "CPU": "AMD Ryzen 5 7500F",
+    "RAM": "32 GB DDR5",
+    "OS": "Windows 11 + WSL2 (Ubuntu)",
+    "CUDA": "cu128",
+    "Python": "3.12",
+    "transformers": "5.4.0",
+    "torch": "2.x+cu128",
+    "zemberek-python": "0.2.3",
+    "jpype1": "1.6.0",
+    "scikit-learn": "1.8.0",
+    "flwr": "1.27.0",
+    "fl_yaklasim": "Manuel simülasyon (Ray-free)"
+  },
+  "fazlar": {
+    "faz0": {
+      "baslik": "Ortam Doğrulama ve Docker Kurulumu",
+      "durum": "TAMAMLANDI",
+      "yontem": "WSL2 + Docker Desktop ortamı kurulumu. llama.cpp Blackwell build, Python venv, CUDA doğrulama.",
+      "bulgular": {
+        "GPU_kullanilabilir": true,
+        "llama_server_port": 8099,
+        "VRAM_Gemma3_4B_Q4": "5316 MiB",
+        "offloaded_katmanlar": "35/35 (tam GPU)"
+      },
+      "modeller": {
+        "SLM": "unsloth/gemma-3-4b-it-GGUF (Q4_K_M)",
+        "LLM": "unsloth/Qwen3-8B-GGUF (Q4_K_M)",
+        "router": "dbmdz/bert-base-turkish-cased",
+        "embedding_1": "newmindai/TurkEmbed4Retrieval",
+        "embedding_2": "intfloat/multilingual-e5-small",
+        "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+      }
+    },
+    "faz1": {
+      "baslik": "Veri Toplama ve Non-IID Şube Dağılımı",
+      "durum": "TAMAMLANDI",
+      "yontem": {
+        "veri_kaynaklari": [
+          "finance_instructions.jsonl — Türkçe finans talimat verisi",
+          "fin_news.jsonl — Türkçe finans haberleri",
+          "router_massive.jsonl — MASSIVE dataset Türkçe chitchat",
+          "router_complex.jsonl — Karmaşık finans soruları",
+          "router_clinc_tr.jsonl — CLINC150 Türkçe uyarlaması",
+          "router_synth_complex.jsonl — LLM ile üretilen karmaşık örnekler",
+          "synthetic_qa.jsonl — Gemma-3-4B ile üretilen sentetik QA"
+        ],
+        "router_dengeleme": "10.000/sınıf hedefi için kombinatoryal template üretimi",
+        "chitchat_uretimi": "_CC_SUBJECTS × _CC_TIME × _CC_ACTIVITIES ve diğer Kartezyen çarpımlar",
+        "simple_uretimi": "FINANCE_TERMS_EXTENDED × QUESTION_TEMPLATES_EXTENDED",
+        "complex_uretimi": "10 şablon grubu (topics × metrics × institutions × shocks vb.)",
+        "veri_temizligi": [
+          "9 cross-sınıf duplikasyon kaldırıldı",
+          "7 aşırı uzun metin (>300 karakter) silindi",
+          "~700 finans-dışı simple örnek temizlendi",
+          "Finansal keyword whitelist ile içerik doğrulama"
+        ],
+        "noniid_dagilim": "Cosine similarity tabanlı şube ataması (branch-1: Kredi/Bireysel, branch-2: Kurumsal/Yatırım)",
+        "seed": 42
+      },
+      "ham_veriler": {
+        "finance_instructions.jsonl": 1870,
+        "fin_news.jsonl": 200,
+        "router_massive.jsonl": 4857,
+        "router_complex.jsonl": 315,
+        "router_clinc_tr.jsonl": 368,
+        "router_synth_complex.jsonl": 300,
+        "synthetic_qa.jsonl": 300
+      },
+      "islenmis_veriler": {
+        "router_train.jsonl": {
+          "toplam": 30000,
+          "chitchat_label0": 10000,
+          "simple_label1": 10000,
+          "complex_label2": 10000
+        },
+        "finance_rag_train.jsonl": 1432,
+        "finance_rag_val.jsonl": 179,
+        "finance_rag_test.jsonl": 179
+      },
+      "sube_dagilimi": {
+        "branch-1": 628,
+        "branch-2": 983,
+        "hq": 1520,
+        "ortusme_orani": "6.0%"
+      },
+      "checkpointlar": [
+        "experiments/checkpoints/faz1_checkpoint.json",
+        "experiments/checkpoints/router_train_clean_30k_final.jsonl"
+      ]
+    },
+    "faz2": {
+      "baslik": "Zemberek Hibrit Tokenizer Entegrasyonu ve Kıyaslaması",
+      "durum": "TAMAMLANDI",
+      "yontem": {
+        "genel_yaklasim": "Türkçe morfolojik lemmatizasyon (Zemberek) + BERT WordPiece (dbmdz/bert-base-turkish-cased) kombinasyonu. Her kelimeye Zemberek ile morfolojik analiz uygulanır, kök (stem) çıkarılır; bilinmeyen kelimelerde orijinal token korunur.",
+        "zemberek_api": "TurkishMorphology.create_with_defaults() -> analyze_and_disambiguate() -> analyses[0].get_stem()",
+        "fallback_stratejisi": "Zemberek analizi başarısız olursa (OOV, kısaltma vb.) orijinal kelime kullanılır",
+        "karsilastirilan_tokenizer": [
+          "whitespace — alt-baseline",
+          "bert-only — dbmdz/bert-base-turkish-cased (baseline)",
+          "hybrid-zemberek — Zemberek lemma + BERT WordPiece"
+        ],
+        "kiyaslama_veri": "router_train.jsonl'den rastgele 1500 cümle (her sınıftan 500)",
+        "metrikler": [
+          "ortalama_token_sayisi",
+          "std_token_sayisi",
+          "oov_orani",
+          "tr_karakter_korunu",
+          "hiz_cumle_sn"
+        ],
+        "seed": 42,
+        "dil_ortami": "Java 21 (OpenJDK) + JPype1 1.6.0 + zemberek-python 0.2.3"
+      },
+      "sonuclar": {
+        "whitespace": {
+          "avg_tokens": 7.34,
+          "std_tokens": 4.55,
+          "avg_oov_rate": 0.0,
+          "tr_char_preserve": 1.0,
+          "speed_sent_per_s": 319113
+        },
+        "bert_only_baseline": {
+          "avg_tokens": 10.81,
+          "std_tokens": 6.49,
+          "avg_oov_rate": 0.0,
+          "tr_char_preserve": 1.0,
+          "speed_sent_per_s": 28329
+        },
+        "hybrid_zemberek": {
+          "avg_tokens": 9.8,
+          "std_tokens": 5.82,
+          "avg_oov_rate": 0.0,
+          "tr_char_preserve": 0.683,
+          "speed_sent_per_s": 24
+        }
+      },
+      "ornek_lemmatizasyonlar": [
+        {
+          "girdi": "Faiz oranlarının yükselmesi enflasyonu olumsuz etkiler.",
+          "lemma": "faiz oran yüksel enflasyon olumsuz etkile .",
+          "bert_tok_sayisi": 7,
+          "hibrit_tok_sayisi": 7
+        },
+        {
+          "girdi": "Kredi kartı borcunuzu zamanında ödeyin gecikme faizinden kaçının.",
+          "lemma": "kredi kart borc zamanında öde gecik faiz kaçın .",
+          "bert_tok_sayisi": 14,
+          "hibrit_tok_sayisi": 9,
+          "yorum": "Hibrit %36 daha kompakt"
+        },
+        {
+          "girdi": "Portföy çeşitlendirmesi risk yönetiminin temelidir.",
+          "lemma": "portföy çeşit risk yönetim temel .",
+          "bert_tok_sayisi": 10,
+          "hibrit_tok_sayisi": 6,
+          "yorum": "Hibrit %40 daha kompakt"
+        },
+        {
+          "girdi": "TCMB döviz rezervlerini artırarak kur istikrarını korumaya çalışıyor.",
+          "lemma": "tcmb döviz rezerv artır kur istikrar koru çalış .",
+          "bert_tok_sayisi": 11,
+          "hibrit_tok_sayisi": 11,
+          "yorum": "Kısaltma TCMB Zemberek'te fragmente oluyor (t ##cm ##b)"
+        }
+      ],
+      "bulgular": {
+        "token_tasarrufu": "Hibrit tokenizer BERT-only'e göre ortalama %9.3 daha az token üretiyor (10.81 -> 9.80)",
+        "oov_durumu": "Her iki BERT tabanlı tokenizer da OOV=0 (dbmdz model Türkçe finans kelimelerini biliyor)",
+        "hiz_farki": "Hibrit tokenizer BERT-only'den 1166x daha yavaş (24 vs 28329 s/sn)",
+        "kisaltma_sorunu": "Kısaltmalar (TCMB, BDDK, KGF) Zemberek'te fragmente oluyor — whitelist gerekli",
+        "tr_char_preserve": "Lemmatizasyon sonrası Türkçe özel karakter oranı %68.3'e düşüyor (stem kısalıyor)"
+      },
+      "mimari_karar": {
+        "router_inference": "BERT-only (28k s/sn, gerçek zamanlı gereksinim)",
+        "rag_indexing": "Hibrit Zemberek+BERT (kalite öncelikli, offline)"
+      },
+      "siniflar": [
+        "scripts/hybrid_tokenizer.py — HybridTokenizer (use_lemma=True/False)",
+        "scripts/phase2_tokenizer_benchmark.py — kıyaslama scripti"
+      ],
+      "checkpointlar": [
+        "experiments/checkpoints/phase2_tokenizer_benchmark.json"
+      ]
+    },
+    "faz3": {
+      "baslik": "BERT Router Fine-tuning (3-Sınıf Metin Sınıflandırma)",
+      "durum": "TAMAMLANDI",
+      "yontem": {
+        "model": "dbmdz/bert-base-turkish-cased",
+        "gorev": "3-sınıf metin sınıflandırma: chitchat(0) / simple(1) / complex(2)",
+        "mimari": "BertForSequenceClassification (12-layer, 768-hidden, 12-heads, 110M parametre)",
+        "veri_split": "80/10/10 — train:24000 / val:3000 / test:3000 (stratified)",
+        "tokenizer": "BertTokenizerFast(dbmdz/bert-base-turkish-cased, max_length=128, truncation=True)",
+        "hiperparametreler": {
+          "batch_size": 32,
+          "max_length": 128,
+          "epochs": 5,
+          "learning_rate": "2e-5",
+          "optimizer": "AdamW",
+          "warmup_ratio": 0.1,
+          "weight_decay": 0.01,
+          "fp16": true,
+          "early_stopping_patience": 2
+        },
+        "egitim_cercevesi": "HuggingFace Trainer API",
+        "metrik_odak": "F1 Macro (early stopping için)",
+        "seed": 42,
+        "donanim": "RTX 5060 Ti 16GB VRAM, fp16 etkin"
+      },
+      "egitim_seyri": [
+        {
+          "epoch": 1,
+          "train_loss": 0.9506,
+          "val_accuracy": 0.9887,
+          "val_f1_macro": 0.9887
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.0195,
+          "val_accuracy": 0.995,
+          "val_f1_macro": 0.995
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.0024,
+          "val_accuracy": 0.996,
+          "val_f1_macro": 0.996
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.0019,
+          "val_accuracy": 0.996,
+          "val_f1_macro": 0.996
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.0009,
+          "val_accuracy": 0.996,
+          "val_f1_macro": 0.996
+        }
+      ],
+      "sonuclar": {
+        "test_accuracy": 0.995,
+        "test_f1_macro": 0.995,
+        "test_f1_weighted": 0.995,
+        "best_val_f1": 0.996,
+        "egitim_suresi_sn": 234,
+        "egitim_hizi_ornek_sn": 513,
+        "per_class": {
+          "chitchat": {
+            "precision": 0.997,
+            "recall": 0.996,
+            "f1": 0.9965,
+            "support": 1000
+          },
+          "simple": {
+            "precision": 0.9891,
+            "recall": 0.997,
+            "f1": 0.993,
+            "support": 1000
+          },
+          "complex": {
+            "precision": 0.999,
+            "recall": 0.992,
+            "f1": 0.9955,
+            "support": 1000
+          }
+        },
+        "confusion_matrix": {
+          "chitchat_pred": [
+            996,
+            3,
+            1
+          ],
+          "simple_pred": [
+            3,
+            997,
+            0
+          ],
+          "complex_pred": [
+            0,
+            8,
+            992
+          ]
+        }
+      },
+      "bulgular": {
+        "hedef_asimi": "Hedef F1 ≥ 0.90 — Elde edilen F1 = 0.9950",
+        "zor_gecis": "complex -> simple (8 hata): bazı 'nedir?' formatındaki karmaşık sorular sınır vakası",
+        "hizli_yakinsama": "Epoch 2'de zaten 0.995 F1 — model Türkçe finans sınıflarını kolayca ayrıştırıyor",
+        "neden_yuksek": "Template tabanlı veri üretimi sınıf sınırlarını net tanımladı; LLM çıktısındaki gürültü yok"
+      },
+      "kaydedilen_model": "models/router/bert_router_best/",
+      "scriptler": [
+        "scripts/phase3_train_router.py — eğitim scripti"
+      ],
+      "checkpointlar": [
+        "experiments/checkpoints/phase3_bert_router_results.json"
+      ]
+    },
+    "faz5": {
+      "baslik": "Federe Öğrenme (FedAvg vs FedProx)",
+      "durum": "TAMAMLANDI",
+      "yontem": "Manuel FL simülasyon (Ray bağımlılığı yok). FedAvg (McMahan et al. 2017) ve FedProx (Li et al. 2020) sıfırdan implemente edildi. 2 non-IID şube: Branch-1 (chitchat-ağır %70), Branch-2 (complex-ağır %70). 5 round, local_epochs=2, batch=32, lr=2e-5, FedProx µ=0.01.",
+      "konfig": {
+        "num_rounds": 5,
+        "local_epochs": 2,
+        "batch_size": 32,
+        "lr": 2e-05,
+        "num_branches": 2,
+        "fedprox_mu": 0.01
+      },
+      "gizlilik": "Sadece model ağırlıkları paylaşıldı; ham veri transfer edilmedi (FL prensibi).",
+      "bulgular": {
+        "FedAvg": {
+          "final_accuracy": 0.9004,
+          "final_f1_macro": 0.7494,
+          "elapsed_s": 277.4
+        },
+        "FedProx": {
+          "final_accuracy": 0.9062,
+          "final_f1_macro": 0.7666,
+          "elapsed_s": 292.9
+        },
+        "kazanan": "FedProx",
+        "f1_artisi": "+0.0172 (+2.3%)",
+        "yorum": "FedProx proximal term non-IID ortamda aşırı öğrenmeyi önleyerek son iki roundda stabil yakınsama sağladı (f1=0.7666, R4=R5)."
+      },
+      "model_yolu": "models/router/federated_fedprox/",
+      "checkpoint": "experiments/checkpoints/phase5_federated_results.json",
+      "referanslar": {
+        "FedAvg": "McMahan et al. 2017 — Communication-Efficient Learning",
+        "FedProx": "Li et al. 2020 — Federated Optimization in Heterogeneous Networks"
+      }
+    },
+    "faz6": {
+      "baslik": "Quantization Karsilastirmasi (Q4_K_M vs Q4_0 vs Q2_K)",
+      "durum": "TAMAMLANDI",
+      "yontem": "llama-quantize ile Q4_K_M kaynaktan Q4_0 ve Q2_K dosyalari uretildi (--allow-requantize). Her variant icin llama-server HTTP API uzerinden 50 Turkce finans sorusu ile latency, VRAM ve ROUGE-L olcumlendi.",
+      "methodology_note": "Q2_K ve Q4_0 dosyaları Q4_K_M kaynaktan üretilmiştir. FP16/BF16 başlangıç noktası olmadığından bileşik kayıp içerir. Dağıtım odaklı karşılaştırma için geçerli bir yöntemdir.",
+      "bulgular": {
+        "Gemma_Q4_0": {
+          "model_size_mb": 2254.0,
+          "vram_mib": 4504.0,
+          "avg_latency_s": 0.897,
+          "avg_tokens_per_sec": 53.42,
+          "avg_rouge_l": 0.1313
+        },
+        "Gemma_Q4_K_M_baseline": {
+          "model_size_mb": 2375.0,
+          "vram_mib": 4626.0,
+          "avg_latency_s": 0.964,
+          "avg_tokens_per_sec": 48.78,
+          "avg_rouge_l": 0.1324
+        },
+        "Gemma_Q2_K": {
+          "model_size_mb": 1649.0,
+          "vram_mib": 3920.0,
+          "avg_latency_s": 0.871,
+          "avg_tokens_per_sec": 53.65,
+          "avg_rouge_l": 0.0843
+        },
+        "Qwen3_8B_Q4_K_M": {
+          "model_size_mb": 4795.0,
+          "vram_mib": 6532.0,
+          "avg_latency_s": 1.416,
+          "avg_rouge_l": 0.008,
+          "not": "Gemma prompt formatiyla test edildi; Qwen3 ChatML gerektirir -- dusuk ROUGE-L beklenir"
+        },
+        "winner_quality": "Gemma-3-4B Q4_K_M [baseline]",
+        "winner_speed": "Gemma-3-4B Q2_K",
+        "tez_secimi": "Gemma-3-4B Q4_K_M",
+        "tez_gerekcesi": "En yuksek ROUGE-L (0.1324), Q2_K kadar hizli ve Q4_0 ile ayni kalite seviyesinde -- dusuk kaynak ortam icin optimal denge."
+      },
+      "model_yolu": "models/quantized/",
+      "checkpoint": "experiments/checkpoints/phase6_quantization_results.json"
+    },
+    "faz7": {
+      "baslik": "Servis Entegrasyonu ve Streamlit UI",
+      "durum": "TAMAMLANDI",
+      "yontem": {
+        "genel_yaklasim": "FastAPI + Uvicorn ile Router (8000), RAG (8003) ve Orchestrator (8004) mikro servisleri. llama-server (8099) Gemma-3-4B Q4_K_M'i GPU'da çalıştırır. Streamlit UI (8005) sohbet arayüzü sağlar. Orchestrator: chitchat->direkt LLM, simple->Şube ChromaDB+LLM, complex->Global ChromaDB+LLM.",
+        "servisler": {
+          "router": {
+            "port": 8000,
+            "framework": "FastAPI",
+            "model": "models/router/federated_fedprox/"
+          },
+          "rag": {
+            "port": 8003,
+            "framework": "FastAPI",
+            "model": "multilingual-e5-small finetuned + ms-marco reranker"
+          },
+          "orchestrator": {
+            "port": 8004,
+            "framework": "FastAPI",
+            "llm_api": "llama-server OpenAI-compat /completions"
+          },
+          "llama_server": {
+            "port": 8099,
+            "model": "gemma-3-4b-Q4_K_M.gguf",
+            "ctx": 4096
+          },
+          "ui": {
+            "port": 8005,
+            "framework": "Streamlit"
+          }
+        },
+        "yonlendirme_mantiği": {
+          "chitchat": "RAG çağrısı yok, doğrudan Gemma-3-4B yanıt üretir",
+          "simple": "Şube ChromaDB koleksiyonu (finance_branch{id}) -> top-5 chunk -> Gemma-3-4B",
+          "complex": "Global ChromaDB koleksiyonu (finance_global) -> top-5 chunk -> Gemma-3-4B"
+        },
+        "chromadb_koleksiyonlari": {
+          "finance_global": 1611,
+          "finance_branch1": 628,
+          "finance_branch2": 983
+        },
+        "seed": 42
+      },
+      "test_sonuclari": {
+        "timestamp": "2026-03-29T15:19:45.650186",
+        "e2e_test_saribusu": {
+          "chitchat": {
+            "soru": "Merhaba nasılsınız?",
+            "rota": "chitchat",
+            "confidence": 1.0,
+            "kaynak_sayisi": 0,
+            "elapsed_ms": 468,
+            "basarili": true
+          },
+          "simple": {
+            "soru": "Faiz oranı nedir ve nasıl hesaplanır?",
+            "rota": "simple",
+            "confidence": 0.996,
+            "kaynak_sayisi": 5,
+            "elapsed_ms": 4826,
+            "basarili": true
+          },
+          "complex": {
+            "soru": "Portföy çeşitlendirmesi ve risk yönetimi stratejileri nelerdir?",
+            "rota": "complex",
+            "confidence": 1.0,
+            "kaynak_sayisi": 5,
+            "elapsed_ms": 4914,
+            "basarili": true
+          }
+        },
+        "servis_saglik_kontrolleri": {
+          "router_8000": "ok",
+          "rag_8003": "ok",
+          "orchestrator_8004": "ok",
+          "llama_server_8099": "ok"
+        },
+        "ortalama_latency_ms": {
+          "chitchat": 468,
+          "simple": 4826,
+          "complex": 4914
+        }
+      },
+      "duzeltmeler": [
+        "services/rag/main.py: collection_map 'hq'->'finance_global', '1'->'finance_branch1', '2'->'finance_branch2'",
+        "services/orchestrator/main.py: URL'ler Docker (http://router:8000) -> yerel (http://localhost:8000)",
+        "services/orchestrator/main.py: LLM API Ollama /api/chat -> llama-server /completions (OpenAI-compat)",
+        "services/orchestrator/main.py: RAG yanıtı 'results' key'i -> 'chunks' key'i",
+        "services/ui/app.py: ORCHESTRATOR_URL varsayılan http://orchestrator:8004 -> http://localhost:8004"
+      ],
+      "checkpoint": "experiments/checkpoints/phase7_service_results.json"
+    },
+    "faz8": {
+      "baslik": "Deneysel Değerlendirme ve Ablation Study (6 Konfigürasyon)",
+      "durum": "TAMAMLANDI",
+      "tarih": "2026-03-29T16:50:18.802571",
+      "yontem": {
+        "genel_yaklasim": "6 konfigürasyon (A0–A5) ile ablation analizi. Tam sistem (A0) baseline olarak kullanılmış; her konfigürasyonda bir bileşen devre dışı bırakılmış veya değiştirilmiş.",
+        "metrikler": [
+          "Router Acc",
+          "Router F1 Macro",
+          "Hit@5 (RAG retrieval)",
+          "MRR@5 (RAG sıralama)",
+          "ROUGE-L (LLM çıktı kalitesi)",
+          "Latency (ms)"
+        ],
+        "veri_seti": "test veri seti (router: 3000 örnek; RAG/ROUGE: 50 sorgu)",
+        "seed": 42,
+        "konfigurasyonlar": {
+          "A0": "Tam Sistem: FedProx Router + FT Embedding + Reranker + Q4_K_M LLM",
+          "A1": "RAG Yok: Sadece LLM (Router aktif, retrieval yok)",
+          "A2": "Merkezi Router: Faz-3 BERT (federe değil, tüm veriyle eğitilmiş)",
+          "A3": "Q2_K Model: Düşük boyutlu quantization (Q4_K_M yerine Q2_K)",
+          "A4": "Reranker Yok: Embedding-only retrieval (reranker devre dışı)",
+          "A5": "FT Embedding Yok: Temel multilingual-e5-small (fine-tuning yok)"
+        }
+      },
+      "sonuclar": {
+        "A0_Tam_Sistem": {
+          "router_acc": 0.9142,
+          "router_f1_macro": 0.8509,
+          "hit_at_5": 1.0,
+          "mrr_at_5": 1.0,
+          "rouge_l": 0.1822,
+          "latency_ms": 1712,
+          "notu": "Baseline — tüm bileşenler aktif (FedProx + FT Embedding + Reranker + Q4_K_M)"
+        },
+        "A1_RAG_Yok": {
+          "router_acc": 0.9142,
+          "router_f1_macro": 0.8509,
+          "hit_at_5": null,
+          "mrr_at_5": null,
+          "rouge_l": 0.183,
+          "latency_ms": 1058,
+          "notu": "RAG kaldırıldı. ROUGE-L ≈ A0 (+0.0008). Latency %38 düştü (654ms kazanç). RAG olmadan da yeterli cevap kalitesi ancak kaynak gösterilemez."
+        },
+        "A2_Merkezi_Router": {
+          "router_acc": 0.9415,
+          "router_f1_macro": 0.9004,
+          "hit_at_5": 1.0,
+          "mrr_at_5": 1.0,
+          "rouge_l": 0.187,
+          "latency_ms": 2611,
+          "notu": "Merkezi BERT yönlendirici. F1: 0.9004 > FedProx 0.8509 (+0.0495). Veri gizliliği yoksa merkezi BERT daha iyi, ancak tez federe senaryoyu simüle eder."
+        },
+        "A3_Q2K_Model": {
+          "router_acc": 0.9142,
+          "router_f1_macro": 0.8509,
+          "hit_at_5": 1.0,
+          "mrr_at_5": 1.0,
+          "rouge_l": 0.1525,
+          "latency_ms": 1959,
+          "notu": "Q2_K ile ROUGE-L 0.1822->0.1525 (%16.3 düşüş). Latency beklenmedik şekilde yüksek (1959ms > 1712ms) — dequantization overhead'a bağlanabilir."
+        },
+        "A4_Reranker_Yok": {
+          "router_acc": 0.9142,
+          "router_f1_macro": 0.8509,
+          "hit_at_5": 1.0,
+          "mrr_at_5": 1.0,
+          "rouge_l": 0.1945,
+          "latency_ms": 1694,
+          "notu": "Reranker kaldırıldı, Hit@5=MRR@5=1.0. ROUGE-L: 0.1945 > A0 (+0.0123). Test seti indexed corpus'tan türetildiğinden reranker'ın Acc etkisi görülmüyor. Gerçek dağıtımda reranker precision'ı artırır."
+        },
+        "A5_Base_Embedding": {
+          "router_acc": 0.9142,
+          "router_f1_macro": 0.8509,
+          "hit_at_5": 1.0,
+          "mrr_at_5": 1.0,
+          "rouge_l": 0.1489,
+          "latency_ms": 2116,
+          "notu": "Fine-tuned embedding -> base model. ROUGE-L 0.1822->0.1489 (%18.3 düşüş). Fine-tuning etkisinin en belirgin kanıtı: embedding kalitesi retrieval ve yanıt kalitesini doğrudan etkiliyor."
+        }
+      },
+      "temel_bulgular": {
+        "RAG_katki": "ROUGE-L farkı minimal (0.1822 vs 0.1830). RAG'ın asıl değeri kaynak şeffaflığı ve doğrulanabilirlikte.",
+        "federe_vs_merkezi": "Merkezi BERT F1=0.9004 > FedProx F1=0.8509 (Δ=+0.0495). Federe öğrenme %5 F1 maliyetiyle veri gizliliği sağlar.",
+        "quantization_etkisi": "Q2_K ROUGE-L %16.3 düşürüyor. Q4_K_M dağıtım için optimal (VRAM ≈ 4626 MiB).",
+        "embedding_finetune": "Base embedding en alt ROUGE-L (0.1489). Fine-tuning %22.4 katkı sağlıyor (0.1489->0.1822).",
+        "reranker_notu": "Test seti bias: Hit@5=1.0000 her config için. Gerçek dağıtımda reranker gap daha belirgin olur.",
+        "latency_insight": "RAG olmadan 1058ms, RAG ile 1712ms (Δ=654ms retrieval cost). Streamlit UI için kabul edilebilir."
+      },
+      "ablation_tablosu": "experiments/ablation/ablation_table.md",
+      "checkpoint": "experiments/checkpoints/phase8_ablation_results.json",
+      "scriptler": [
+        "scripts/phase8_ablation.py — tam ablation pipeline",
+        "scripts/phase8_rouge_rerun.py — ROUGE-L doğru hesaplaması"
+      ]
+    },
+    "faz16": {
+      "baslik": "Qwen3-8B Genişletilmiş Türkçe Finans SFT ve LoRA Eğitimi (Epoch 1)",
+      "durum": "TAMAMLANDI",
+      "tarih": "2026-09-09",
+      "donanim": {
+        "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB VRAM (Blackwell SM_120)",
+        "vram_allocated_gb": 6.29,
+        "vram_reserved_gb": 6.36,
+        "pcie_ram_spillover_gb": 0.0,
+        "sure_saniye": 13772.9,
+        "sure_formatli": "3s 49d 32sn"
+      },
+      "hiperparametreler": {
+        "model_taban": "Qwen3-8B (QWEN3_EXPERT_V2)",
+        "lora_r": 32,
+        "lora_alpha": 64,
+        "lora_target_modules": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "o_proj",
+          "gate_proj",
+          "up_proj",
+          "down_proj"
+        ],
+        "trainable_params": 40239104,
+        "batch_size": 2,
+        "gradient_accumulation_steps": 2,
+        "effective_batch_size": 4,
+        "learning_rate": 0.0002,
+        "lr_scheduler": "cosine",
+        "optimizer": "adamw_8bit",
+        "max_seq_len": 1024,
+        "prompt_length_cap": 1200,
+        "unsloth_ce_loss_target_gb": "0.75"
+      },
+      "veri_seti": {
+        "dosya": "ai/data/processed/finetune_turkish_finance_sft.jsonl",
+        "toplam_ornek": 22192,
+        "kaynaklar": [
+          "turkish_finance_chat_corpus (14.743)",
+          "kap_disclosures_and_sentiment (3.478)",
+          "turkish_finance_reasoning (1.791)",
+          "bddk_banking_law & tcmb_communications (1.423)",
+          "bankacilik_kredi_kilavuzlari (1.345)",
+          "finans_haber_analiz (28)"
+        ]
+      },
+      "egitim_sonuclari": {
+        "toplam_adim": 5548,
+        "tamamlanan_adim": 5548,
+        "epoch": 1.0,
+        "baslangic_loss": 2.584,
+        "ortalama_loss": 0.7904,
+        "nihai_loss": 0.6332,
+        "ornek_saniye_hiz": 1.612,
+        "adim_saniye_hiz": 0.403,
+        "loss_azalis_orani": "%75.5"
+      },
+      "alan_dogrulama_skorlari": {
+        "genel_skor_10_uzerinden": 4.8,
+        "test_alanlari": [
+          {
+            "alan": "Bankacılık Kredi Anüite Formülü",
+            "skor": 5,
+            "eslesen": [
+              "anüite",
+              "taksit",
+              "faiz"
+            ]
+          },
+          {
+            "alan": "KAP Bedelsiz Sermaye Artırımı Analizi",
+            "skor": 5,
+            "eslesen": [
+              "bedelsiz",
+              "sermaye",
+              "iç kaynaklar"
+            ]
+          },
+          {
+            "alan": "TCMB Para Politikası & Likidite Etkisi",
+            "skor": 6,
+            "eslesen": [
+              "politika faizi",
+              "mevduat",
+              "likidite",
+              "kredi"
+            ]
+          },
+          {
+            "alan": "Sermaye Yeterlilik Rasyosu (SYR)",
+            "skor": 2,
+            "eslesen": [
+              "syr"
+            ]
+          },
+          {
+            "alan": "BDDK Kredi Kartı Asgari Ödeme Oranı",
+            "skor": 6,
+            "eslesen": [
+              "asgari",
+              "bddk",
+              "limit"
+            ]
+          }
+        ]
+      },
+      "ciktilar": {
+        "lora_weights": "ai/models/finetuned/qwen3_lora_finance (333 MB safetensors)",
+        "lora_gguf": "ai/models/finetuned/qwen3_lora_finance.gguf (349.2 MB GGUF)"
+      },
+      "benchmark_testleri": {
+        "bist_sentiment": {
+          "ornek_sayisi": 50,
+          "macro_f1": 0.2943,
+          "onceki_macro_f1": 0.2694,
+          "dogruluk": 0.32,
+          "onceki_dogruluk": 0.24,
+          "gecikme_s": 0.2165
+        },
+        "tr_mmlu": {
+          "ornek_sayisi": 50,
+          "dogruluk_parse_edilen": 0.1905,
+          "unparseable_gerekceli_aciklama": 29,
+          "gecikme_s": 0.7575
+        }
+      }
+    }
+  },
+  "genel_bulgular": {
+    "veri_kalitesi": "Template tabanlı kombinatoryal üretim LLM tabanlı üretimden daha öngörülebilir (dedup garantisi, kontrollü kapsam)",
+    "bert_performansi": "dbmdz/bert-base-turkish-cased Türkçe finans alanında ek corpus gerekmeden yüksek F1 sağlıyor",
+    "tokenizer_tasarimi": "Hibrit Zemberek tokenizer anlamlı token tasarrufu sağlıyor ancak inference'da kullanılamayacak kadar yavaş; offline indexing için ideal",
+    "gpu_etkinligi": "RTX 5060 Ti 16GB BERT fine-tuning için idealden fazla (234sn/30k örnek); Faz 6 quantization ile edge deployment mümkün",
+    "servis_mimarisi": "Mikro servis yaklaşımı (Router/RAG/Orchestrator) modüler ölçeklenebilirlik sağlıyor; chitchat için 468ms, RAG+LLM için ~5s latency",
+    "federe_maliyeti": "FedProx merkezi BERT'e göre %5.5 F1 maliyeti (0.9004->0.8509) ile veri gizliliği sağlar — non-IID ortamda makul uzlaşma.",
+    "quantization_kalite": "Q4_K_M optimal seçim (ROUGE-L=0.1822, VRAM=4626MiB). Q2_K %16.3 kalite kaybı, Q4_0 ile benzer performans.",
+    "embedding_finetune": "Fine-tuned multilingual-e5-small (Türkçe finans), base modele göre %18.3 ROUGE-L iyileştirmesi sağladı."
+  },
+  "bekleyen_fazlar": {},
+  "phase4a_embedding_finetune": {
+    "timestamp": "2026-03-28T19:36:12.028596",
+    "description": "multilingual-e5-small fine-tuning (MultipleNegativesRankingLoss, in-batch negatives)",
+    "config": {
+      "base_model": "intfloat/multilingual-e5-small",
+      "loss": "MultipleNegativesRankingLoss",
+      "epochs": 3,
+      "batch_size": 32,
+      "max_seq_length": 256,
+      "train_pairs": 1432,
+      "val_pairs": 179
+    },
+    "results": {
+      "baseline_mrr10": 0.849969,
+      "final_mrr10": 0.883675,
+      "improvement_abs": 0.033706,
+      "improvement_pct": 3.97
+    },
+    "output": "models/embeddings/turkembed_finetuned/",
+    "decision": "multilingual-e5-small fine-tuned model RAG pipeline için birincil embedding"
+  },
+  "phase4b_chromadb_index": {
+    "timestamp": "2026-03-28T19:36:12.028596",
+    "description": "ChromaDB PersistentClient ile üç koleksiyon — global(1611), branch1(628), branch2(983)",
+    "config": {
+      "embedding": "models/embeddings/turkembed_finetuned/",
+      "similarity": "cosine (hnsw:space)",
+      "batch_encode": 64
+    },
+    "results": {
+      "global_docs": 1611,
+      "branch1_docs": 628,
+      "branch2_docs": 983,
+      "total_docs": 3222
+    },
+    "output": {
+      "global": "data/chromadb/global",
+      "branch1": "data/chromadb/branch1",
+      "branch2": "data/chromadb/branch2"
+    }
+  },
+  "phase4c_rag_pipeline": {
+    "timestamp": "2026-03-28T19:36:12.028596",
+    "description": "RAG pipeline: embed -> ChromaDB (top-10) -> CrossEncoder rerank (top-3) -> (opsiyonel) llama-server generate",
+    "config": {
+      "embedding": "models/embeddings/turkembed_finetuned/",
+      "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "top_k_retrieve": 10,
+      "top_k_rerank": 3,
+      "llm": "Qwen3-8B @ port 8099 (opsiyonel, generate)"
+    },
+    "results": {
+      "mrr5": 0.8792,
+      "hit5": 0.9553,
+      "hit10": 1.0,
+      "avg_latency_s": 0.034,
+      "n_queries": 179
+    },
+    "findings": [
+      "Hit@10 = 1.000 — tüm sorgular için doğru belge top-10'da bulundu",
+      "MRR@5 = 0.8792 — ortalama sıralama pozisyonu çok iyi",
+      "Ort. latency 34ms/sorgu (sadece retrieve+rerank, generate hariç)",
+      "Fine-tuning MRR@10: 0.8500 -> 0.8837 (+4.0%)"
+    ]
+  },
+  "faz9": {
+    "baslik": "Demo/Sunum İyileştirmeleri",
+    "durum": "TAMAMLANDI",
+    "tarih": "2026-03-30",
+    "yontem": {
+      "token_streaming": {
+        "aciklama": "llama-server stream:true ile SSE token akışı. Orchestrator stream_llm_tokens() generator.",
+        "sse_format": "{\"step\": \"llm_token\", \"token\": \"...\"}",
+        "think_filtre": "State machine ile <think>...</think> blokları filtreleniyor (7 karakter güvenli tampon)",
+        "n_predict": {
+          "Qwen3-8B": 2048,
+          "Gemma-3-4B": 1024
+        }
+      },
+      "sentetik_belgeler": {
+        "aciklama": "Demo için sentetik finansal belgeler ChromaDB koleksiyonlarına eklendi",
+        "script": "scripts/add_demo_docs.py"
+      }
+    },
+    "chromadb_guncelleme": {
+      "finance_branch1": {
+        "onceki": 628,
+        "sonraki": 636,
+        "delta": 8
+      },
+      "finance_branch2": {
+        "onceki": 983,
+        "sonraki": 988,
+        "delta": 5
+      },
+      "finance_global": {
+        "onceki": 1611,
+        "sonraki": 1623,
+        "delta": 12
+      }
+    }
+  },
+  "test_suite": {
+    "tarih": "2026-03-31",
+    "komut": "python -m pytest tests/ -v",
+    "sonuc": "47 passed, 1 skipped",
+    "dosyalar": {
+      "test_metrics_and_data.py": {
+        "kapsam": "Router F1/Accuracy/CM, RAG MRR/NDCG/Recall@k, Türkçe karakter temizleme",
+        "sonuc": "14 passed"
+      },
+      "test_services.py": {
+        "kapsam": "Router/RAG/Orchestrator API endpoint'leri",
+        "sonuc": "9 passed",
+        "duzeltme": "RAG yanıtı 'results' key'i -> 'chunks' key'i (Faz 7 servis entegrasyonunda değişmişti)"
+      },
+      "test_e2e.py": {
+        "kapsam": "Regresyon (sınıf doğruluğu, şema), Router rota, Branch-1 RAG, LLM health+completion",
+        "sonuc": "14 passed",
+        "not": "Faz 9 sonrası oluşturuldu; servisler açıkken çalışır"
+      },
+      "test_tokenizer.py": {
+        "kapsam": "Zemberek + HybridTokenizer",
+        "sonuc": "7 passed, 1 skipped",
+        "not": "1 skip: Zemberek JVM başlatılamadığında (opsiyonel bağımlılık)"
+      }
+    }
+  },
+  "final_benchmark": {
+    "tarih": "2026-09-14",
+    "rapor_dosyasi": "ai/experiments/FINAL_BENCHMARK_REPORT.md",
+    "qwen3_8b_metrics": {
+      "hf_repo": "https://huggingface.co/Toxotes/QWEN3_EXPERT_V2_GGUF",
+      "tr_mmlu_accuracy_rag": 0.7200,
+      "tr_mmlu_accuracy_zeroshot": 0.5333,
+      "bist_sentiment_f1": 0.7900,
+      "banking_reasoning_score": 8.8,
+      "throughput_tok_per_sec": 73.77
+    },
+    "gemma_3_4b_metrics": {
+      "hf_repo": "https://huggingface.co/Toxotes/GEMMA3_FINANCE_V1_GGUF",
+      "bist_sentiment_accuracy": 0.9000,
+      "bist_sentiment_f1": 0.8997,
+      "tr_mmlu_accuracy": 0.5650,
+      "throughput_tok_per_sec": 50.25,
+      "vram_size_gb": 2.32
+    },
+    "rag_metrics": {
+      "mrr_at_10": 0.8837,
+      "hit_at_10": 1.0000,
+      "hit_at_5": 0.9553,
+      "reranker_bleed_rejection": 1.0000
+    }
+  },
+  "tamamlanma_tarihi": "2026-09-14",
+  "proje_durumu": "TÜM FAZLAR TAMAMLANDI (Faz 0–14) — Final Benchmark Raporu Hazırlandı"
+}

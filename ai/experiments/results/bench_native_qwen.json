@@ -1,0 +1,24 @@
+{
+ "model": "qwen",
+ "url": "http://127.0.0.1:8198",
+ "template": "model-native (/v1/chat/completions)",
+ "tr_mmlu": {
+  "total": 500,
+  "correct": 220,
+  "accuracy": 0.44,
+  "unparseable": 0,
+  "avg_latency_s": 0.121
+ },
+ "sentiment_binary": {
+  "total": 500,
+  "labels": {
+   "pozitif": 399,
+   "negatif": 101
+  },
+  "macro_f1": 0.8323,
+  "accuracy": 0.87,
+  "unparseable_counted_wrong": 0,
+  "avg_latency_s": 0.0902,
+  "majority_baseline_acc": 0.798
+ }
+}

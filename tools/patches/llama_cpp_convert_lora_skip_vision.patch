@@ -1,0 +1,13 @@
+diff --git a/convert_lora_to_gguf.py b/convert_lora_to_gguf.py
+index ee98d0cf9..a98172067 100755
+--- a/convert_lora_to_gguf.py
++++ b/convert_lora_to_gguf.py
+@@ -451,6 +451,8 @@ if __name__ == '__main__':
+                             tensor_map[base_name] = PartialLoraTensor(B=tensor)
+ 
+                 for name, tensor in tensor_map.items():
++                    if "vision" in name:
++                        continue
+                     assert tensor.A is not None
+                     assert tensor.B is not None
+                     yield (name, cast(torch.Tensor, LoraTorchTensor(tensor.A, tensor.B)))

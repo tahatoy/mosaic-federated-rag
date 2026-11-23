@@ -1,0 +1,5 @@
+{
+"qwen": {"gguf": "QWEN3_EXPERT_V2.Q4_K_M.gguf", "dosya_GiB": 4.68, "vram_temel_MiB": 1713, "vram_yuklu_MiB": 7196, "vram_model_MiB": 5483, "servis_uretim_tok_s": 77.98, "servis_uretilen_token": 128, "llama_bench_tg64_tok_s": 74.26, "baglam": 4096, "esik_6GB_karsilandi": true}
+,
+"gemma": {"gguf": "GEMMA3_FINANCE_V1.Q4_K_M.gguf", "dosya_GiB": 2.32, "vram_temel_MiB": 1713, "vram_yuklu_MiB": 5000, "vram_model_MiB": 3287, "servis_uretim_tok_s": 112.45, "servis_uretilen_token": 128, "llama_bench_tg64_tok_s": 115.85, "baglam": 4096, "esik_6GB_karsilandi": true}
+}

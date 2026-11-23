@@ -1,0 +1,26 @@
+# ============================================================
+# MOSAIC-v2 — Branch VM (Şube Sanal Makine) Bağımlılıkları
+# Düşük kaynaklı ortamlar (10 GB RAM, 2 vCPU) için optimize edilmiştir.
+# ============================================================
+
+# Web & API Servisleri
+fastapi>=0.110.0
+uvicorn>=0.28.0
+httpx>=0.27.0
+python-dotenv>=1.0.1
+pydantic>=2.6.0
+loguru>=0.7.2
+python-multipart>=0.0.9
+
+# RAG & Vektör Veritabanı
+chromadb>=0.4.24
+sentence-transformers>=2.5.0
+torch>=2.2.0
+numpy>=1.24.0
+
+# Doküman Ayrıştırma (PDF)
+pymupdf>=1.23.0
+
+# Federatif Öğrenme (Flower Client)
+flwr>=1.8.0
+diffprivlib>=0.6.0

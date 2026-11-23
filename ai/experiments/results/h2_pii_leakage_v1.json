@@ -1,0 +1,282 @@
+{
+  "TC_kimlik_no": {
+    "variants": {
+      "bitişik_11": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "3lü_boşluklu": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      },
+      "noktalı": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      }
+    },
+    "overall_recall": 0.3333,
+    "n": 600
+  },
+  "IBAN": {
+    "variants": {
+      "bitişik": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "4lü_boşluklu": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "küçük_harf": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      }
+    },
+    "overall_recall": 0.6667,
+    "n": 600
+  },
+  "telefon": {
+    "variants": {
+      "0_5xx_xxx_xx_xx": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "bitişik_05xxxxxxxxx": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "tireli": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      },
+      "uluslararası_+90": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "parantezli": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      }
+    },
+    "overall_recall": 0.6,
+    "n": 1000
+  },
+  "kredi_kartı": {
+    "variants": {
+      "bitişik_16": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "4lü_boşluklu": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "4lü_tireli": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      }
+    },
+    "overall_recall": 0.6667,
+    "n": 600
+  },
+  "e_posta": {
+    "variants": {
+      "standart": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "alt_çizgili": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      }
+    },
+    "overall_recall": 1.0,
+    "n": 400
+  },
+  "ad_soyad": {
+    "variants": {
+      "ad_soyad_baş_harf_büyük": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "üç_parçalı_ad": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      },
+      "hepsi_büyük_harf": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      },
+      "hepsi_küçük_harf": {
+        "n": 200,
+        "masked": 0,
+        "partial_leak": 0,
+        "recall": 0.0
+      },
+      "soyad_ad_sırası_virgüllü": {
+        "n": 200,
+        "masked": 63,
+        "partial_leak": 0,
+        "recall": 0.315
+      },
+      "unvanlı_tek_isim": {
+        "n": 200,
+        "masked": 200,
+        "partial_leak": 0,
+        "recall": 1.0
+      }
+    },
+    "overall_recall": 0.5525,
+    "n": 1200
+  },
+  "gerçek_metinde_yanlış_pozitif": {
+    "örnek_sayısı": 3000,
+    "en_az_bir_maskelenen_chunk": 1717,
+    "oran": 0.5723,
+    "kategori_sayıları": {
+      "NAME": 14245,
+      "EMAIL": 1,
+      "CREDIT_CARD": 1
+    },
+    "örnekler": [
+      {
+        "kategori": "NAME",
+        "maskelenen": "Kamuyu Aydınlatma"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Pay Dışında"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Sermaye Piyasası"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Aracı İşlemlerine"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "İlişkin Bildirim"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Akdeniz Faktoring"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Bildirim Detayı"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Özet Bilgi"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Yapılan Açıklama"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Hayır Yapılan"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Açıklama Düze"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Bildirimi Finansal"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Risk Değerlendirmesi"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Bildirim Kategorisi"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Maddi Duran"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Varlık Alım"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Piyasa Algısı"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Duygu Skoru"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Beklenen Hisse"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Fiyat Oynaklığı"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "İlişkili Taraf"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Kur Riski"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Finansal Özet"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Müdürü Erdal"
+      },
+      {
+        "kategori": "NAME",
+        "maskelenen": "Enerji Şirketleri"
+      }
+    ]
+  }
+}

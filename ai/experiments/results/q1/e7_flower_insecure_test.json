@@ -1,0 +1,19 @@
+{
+ "strategy": "fedavg",
+ "rounds": 1,
+ "tls": true,
+ "eval": [
+  {
+   "round": 0,
+   "t": 0.0,
+   "cloze_mrr@10": 0.8745,
+   "cloze_hit@10": 0.9367,
+   "natural_mrr@10": 0.7816,
+   "natural_hit@10": 0.926
+  }
+ ],
+ "fit": [],
+ "t_round_end": [],
+ "lora_params": 147456,
+ "bytes_per_update": 589824
+}

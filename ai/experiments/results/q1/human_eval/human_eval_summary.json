@@ -1,0 +1,183 @@
+{
+ "n": 100,
+ "seed": 2026,
+ "rates": {
+  "judge_correct": [
+   0.82,
+   [
+    0.74,
+    0.89
+   ]
+  ],
+  "judge_faithful": [
+   0.8,
+   [
+    0.72,
+    0.88
+   ]
+  ],
+  "em": [
+   0.85,
+   [
+    0.78,
+    0.92
+   ]
+  ],
+  "rater1_correct": [
+   0.83,
+   [
+    0.75,
+    0.9
+   ]
+  ],
+  "rater1_faithful": [
+   0.93,
+   [
+    0.88,
+    0.98
+   ]
+  ],
+  "rater2_correct": [
+   0.85,
+   [
+    0.78,
+    0.92
+   ]
+  ],
+  "rater2_faithful": [
+   0.9,
+   [
+    0.84,
+    0.95
+   ]
+  ]
+ },
+ "inter_rater": {
+  "correct": {
+   "agree": 96,
+   "kappa": 0.851,
+   "kappa_ci95": [
+    0.687,
+    0.968
+   ],
+   "mcnemar": {
+    "only_first": 1,
+    "only_second": 3,
+    "p": 0.625
+   }
+  },
+  "faithful": {
+   "agree": 97,
+   "kappa": 0.808,
+   "kappa_ci95": [
+    0.525,
+    1.0
+   ],
+   "mcnemar": {
+    "only_first": 3,
+    "only_second": 0,
+    "p": 0.25
+   }
+  }
+ },
+ "rater1_vs_judge": {
+  "correct": {
+   "agree": 95,
+   "kappa": 0.827,
+   "kappa_ci95": [
+    0.65,
+    0.962
+   ],
+   "mcnemar": {
+    "only_first": 3,
+    "only_second": 2,
+    "p": 1.0
+   }
+  },
+  "faithful": {
+   "agree": 87,
+   "kappa": 0.463,
+   "kappa_ci95": [
+    0.22,
+    0.684
+   ],
+   "mcnemar": {
+    "only_first": 13,
+    "only_second": 0,
+    "p": 0.00024
+   }
+  }
+ },
+ "rater1_vs_em": {
+  "agree": 96,
+  "kappa": 0.851,
+  "kappa_ci95": [
+   0.69,
+   0.968
+  ],
+  "mcnemar": {
+   "only_first": 1,
+   "only_second": 3,
+   "p": 0.625
+  }
+ },
+ "rater2_vs_judge": {
+  "correct": {
+   "agree": 95,
+   "kappa": 0.819,
+   "kappa_ci95": [
+    0.638,
+    0.96
+   ],
+   "mcnemar": {
+    "only_first": 4,
+    "only_second": 1,
+    "p": 0.375
+   }
+  },
+  "faithful": {
+   "agree": 88,
+   "kappa": 0.538,
+   "kappa_ci95": [
+    0.294,
+    0.748
+   ],
+   "mcnemar": {
+    "only_first": 11,
+    "only_second": 1,
+    "p": 0.00635
+   }
+  }
+ },
+ "rater2_vs_em": {
+  "agree": 96,
+  "kappa": 0.843,
+  "kappa_ci95": [
+   0.668,
+   0.965
+  ],
+  "mcnemar": {
+   "only_first": 2,
+   "only_second": 2,
+   "p": 1.0
+  }
+ },
+ "judge_vs_em": {
+  "agree": 93,
+  "kappa": 0.746,
+  "kappa_ci95": [
+   0.548,
+   0.905
+  ],
+  "mcnemar": {
+   "only_first": 2,
+   "only_second": 5,
+   "p": 0.45312
+  }
+ },
+ "faithful_consensus": {
+  "n": 97,
+  "accepted_by_both_rejected_by_judge": 11,
+  "rejected_by_both_accepted_by_judge": 0
+ }
+}
