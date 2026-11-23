@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 
-R = "/mnt/user-data/uploads/mosaic-v2/ai/experiments/results/q1/"
+R = os.environ.get("MOSAIC_RESULTS", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "ai", "experiments", "results", "q1", ""))
 OUT = os.path.dirname(os.path.abspath(__file__))
 BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
 GRAY, GRAY_D = "#a9a8a3", "#6b6a66"
@@ -59,16 +59,16 @@ T = {
         file="Model file", vram="GPU memory", em="EM (%)", nt="not\ntested",
         h1a="Templated questions (n = 500)", h1b="Paraphrased questions (n = 352)", h1c="Live end-to-end (n = 200, paraphrased)",
         emci="Exact match (%, 95% CI)",
-        A="No retrieval", B="Asking branch only", C1="MOSAIC, first configuration", D1="Central index, TurkEmbed",
+        A="No retrieval", B="Asking branch only", C1="MOSAIC, initial model", D1="Central index, initial model", C3="MOSAIC, MOSAIC-Embed", D3="Central index, MOSAIC-Embed",
         C2="MOSAIC, re-indexed (base e5-small)", D2="Central index, base e5-small",
-        L0="Qwen3-8B without retrieval", L1="MOSAIC, first configuration", L2="MOSAIC, re-indexed (run 1)", L3="MOSAIC, re-indexed (run 2)",
+        L0="Qwen3-8B without retrieval", L1="MOSAIC, initial model", L4="MOSAIC, MOSAIC-Embed", L2="MOSAIC, re-indexed (run 1)", L3="MOSAIC, re-indexed (run 2)",
         g_base="Baselines", g_fed="MOSAIC (federated)", g_cen="Central index (upper bound)",
         eps="ε over three rounds (δ = 10⁻⁵, log scale)", util="MRR@10 (mean ± SD, 3 seeds)",
         cdp="Central DP (noise added once at HQ)", ldp="Local DP (noise added by each client)",
         nodp="No DP", base="Base e5-small (untrained)",
         zt="Templated questions (n = 600)", zp="Paraphrased questions (n = 419)",
         raw="Raw text", root="Root reduction", morph="Morpheme segmentation", zmrr="MRR@10 (95% CI)",
-        tek="TurkEmbed (fine-tuned)",
+        tek="Initial fine-tuned e5-small", rrf="BM25 + initial fine-tuned (RRF)", tekce="Initial fine-tuned + CE",
     ),
     "tr": dict(
         acc="Doğruluk (%)", tmpl="Kalıp test kümesi (n = 3.000)", ood="Kalıp dışı sorular (beklenen sınıf: basit)",
@@ -83,16 +83,16 @@ T = {
         file="Model dosyası", vram="Grafik bellek", em="EM (%)", nt="sınanmadı",
         h1a="Kalıp sorular (n = 500)", h1b="Yeniden ifade edilmiş sorular (n = 352)", h1c="Canlı uçtan uca (n = 200, yeniden ifade)",
         emci="Tam eşleşme (%, %95 GA)",
-        A="Bilgi getirme yok", B="Yalnız soran şube", C1="MOSAIC, ilk yapılandırma", D1="Merkezi dizin, TurkEmbed",
+        A="Bilgi getirme yok", B="Yalnız soran şube", C1="MOSAIC, ilk model", D1="Merkezi dizin, ilk model", C3="MOSAIC, MOSAIC-Embed", D3="Merkezi dizin, MOSAIC-Embed",
         C2="MOSAIC, yeniden indekslenmiş (taban e5-small)", D2="Merkezi dizin, taban e5-small",
-        L0="Bilgi getirmesiz Qwen3-8B", L1="MOSAIC, ilk yapılandırma", L2="MOSAIC, yeniden indekslenmiş (1. koşu)", L3="MOSAIC, yeniden indekslenmiş (2. koşu)",
+        L0="Bilgi getirmesiz Qwen3-8B", L1="MOSAIC, ilk model", L4="MOSAIC, MOSAIC-Embed", L2="MOSAIC, yeniden indekslenmiş (1. koşu)", L3="MOSAIC, yeniden indekslenmiş (2. koşu)",
         g_base="Temel koşullar", g_fed="MOSAIC (federe)", g_cen="Merkezi dizin (üst sınır)",
         eps="Üç turda ε (δ = 10⁻⁵, logaritmik ölçek)", util="MRR@10 (ortalama ± SS, 3 tohum)",
         cdp="Merkezi DP (gürültü HQ'da bir kez)", ldp="Yerel DP (gürültü her istemcide)",
         nodp="DP yok", base="Taban e5-small (eğitimsiz)",
         zt="Kalıp sorular (n = 600)", zp="Yeniden ifade edilmiş sorular (n = 419)",
         raw="Ham metin", root="Kök indirgeme", morph="Morfem bölütleme", zmrr="MRR@10 (%95 GA)",
-        tek="TurkEmbed (ince ayarlı)",
+        tek="İlk ince ayarlı e5-small", rrf="BM25 + ilk ince ayarlı (RRF)", tekce="İlk ince ayarlı + CE",
     ),
 }
 
@@ -134,12 +134,15 @@ def fig_router(lang):
 
 # ---------------------------------------------------------------- Figure 5: retrieval benchmark
 def fig_retrieval(lang):
-    t = T[lang]; e1 = J("e1_retrieval.json")["methods"]
-    names = {"bm25": "BM25", "e5-small": "e5-small", "e5-base": "e5-base", "e5-large": "e5-large", "bge-m3": "BGE-M3 (dense)",
-             "turkembed-ft": t["tek"], "turkembed4retrieval": "TurkEmbed4Retrieval", "hybrid-rrf": "BM25 + TurkEmbed (RRF)",
-             "bm25+ce": "BM25 + CE", "e5-small+ce": "e5-small + CE", "turkembed-ft+ce": "TurkEmbed + CE", "hybrid-rrf+ce": "RRF + CE"}
+    t = T[lang]; e1 = dict(J("e1_retrieval.json")["methods"])
+    e12 = J("e12_eval_turkembed_v3.json")["methods"]
+    e1["mosaic-embed"], e1["mosaic-embed+ce"] = e12["turkembed-v3"], e12["turkembed-v3+ce"]
+    names = {"bm25": "BM25", "e5-small": "e5-small", "bge-m3": "BGE-M3 (dense)" if lang == "en" else "BGE-M3 (yoğun)",
+             "turkembed-ft": t["tek"], "turkembed4retrieval": "TurkEmbed4Retrieval",
+             "e5-small+ce": "e5-small + CE", "turkembed-ft+ce": t["tekce"],
+             "mosaic-embed": "MOSAIC-Embed", "mosaic-embed+ce": "MOSAIC-Embed + CE"}
     keys = sorted(names, key=lambda k: e1[k]["natural"]["federated"]["mrr@10"][0])
-    fig, ax = plt.subplots(figsize=(W, 3.3))
+    fig, ax = plt.subplots(figsize=(W, 2.9))
     for i, k in enumerate(keys):
         for q, c, mk, off in (("cloze", BLUE, "o", 0.14), ("natural", ORANGE, "s", -0.14)):
             m, (lo, hi) = e1[k][q]["federated"]["mrr@10"]
@@ -190,19 +193,18 @@ def fig_quant(lang):
 # ---------------------------------------------------------------- Figure 7: cross-branch EM (H1)
 def fig_h1(lang):
     t = T[lang]
-    E = J("e2_generation.json")["sonuclar"]; V = J("e2_generation_v2.json")["sonuclar"]
-    # live: first configuration (e5_e2e_judge.json), re-indexed run 1 (job log q1_13), run 2 (e5_e2e_judge_v2.json)
-    live1 = J("e5_e2e_judge.json")["summary"]; live2 = J("e5_e2e_judge_v2.json")["summary"]
-    run1 = (0.845, (0.795, 0.89))
+    E = J("e2_generation.json")["sonuclar"]          # hardened configuration, initial model
+    M = J("e2_generation_me.json")["sonuclar"]       # final configuration, MOSAIC-Embed (live services)
+    V = J("e2_generation_v2.json")["sonuclar"]       # arm A (no retrieval) of the same 500/352 questions
+    live1 = J("e5_e2e_judge.json")["summary"]; live3 = J("e5_e2e_judge_v3.json")["summary"]
     panels = [
-        (t["h1a"], [(t["A"], E["cloze"]["A"]["em"], GRAY, ""), (t["B"], E["cloze"]["B"]["em"], GRAY, ""),
+        (t["h1a"], [(t["A"], V["cloze"]["A"]["em"], GRAY, ""), (t["B"], E["cloze"]["B"]["em"], GRAY, ""),
                     (t["C1"], E["cloze"]["C"]["em"], BLUE, ""), (t["D1"], E["cloze"]["D"]["em"], ORANGE, "////"),
-                    (t["C2"], V["cloze"]["C"]["em"], BLUE, ""), (t["D2"], V["cloze"]["D_e5"]["em"], ORANGE, "////")]),
-        (t["h1b"], [(t["A"], E["natural"]["A"]["em"], GRAY, ""), (t["C1"], E["natural"]["C"]["em"], BLUE, ""),
-                    (t["D1"], E["natural"]["D"]["em"], ORANGE, "////"), (t["C2"], V["natural"]["C"]["em"], BLUE, ""),
-                    (t["D2"], V["natural"]["D_e5"]["em"], ORANGE, "////")]),
-        (t["h1c"], [(t["L0"], live2["norag_em"], GRAY, ""), (t["L1"], live1["em"], BLUE, ""),
-                    (t["L2"], [run1[0], list(run1[1])], BLUE, ""), (t["L3"], live2["em"], BLUE, "")]),
+                    (t["C3"], M["cloze"]["C"]["em"], BLUE, ""), (t["D3"], M["cloze"]["D_me"]["em"], ORANGE, "////")]),
+        (t["h1b"], [(t["A"], V["natural"]["A"]["em"], GRAY, ""), (t["C1"], E["natural"]["C"]["em"], BLUE, ""),
+                    (t["D1"], E["natural"]["D"]["em"], ORANGE, "////"), (t["C3"], M["natural"]["C"]["em"], BLUE, ""),
+                    (t["D3"], M["natural"]["D_me"]["em"], ORANGE, "////")]),
+        (t["h1c"], [(t["L0"], live3["norag_em"], GRAY, ""), (t["L1"], live1["em"], BLUE, ""), (t["L4"], live3["em"], BLUE, "")]),
     ]
     heights = [len(p[1]) for p in panels]
     fig, axs = plt.subplots(3, 1, figsize=(W, 4.6), sharex=True, gridspec_kw=dict(height_ratios=heights, hspace=0.55))

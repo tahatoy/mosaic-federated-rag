@@ -1,0 +1,79 @@
+{
+ "base_model": "intfloat/multilingual-e5-small",
+ "n_queries": 3647,
+ "n_train": 3284,
+ "n_dev": 363,
+ "dev_chunks": 358,
+ "no_hard_negative": 104,
+ "epochs": 3,
+ "lr": 2e-05,
+ "batch": 64,
+ "max_seq_length": 256,
+ "selected_epoch": 3,
+ "dev_mrr10": {
+  "base": {
+   "natural": [
+    0.7571,
+    [
+     0.7144,
+     0.7959
+    ]
+   ],
+   "cloze": [
+    0.8125,
+    [
+     0.5625,
+     1.0
+    ]
+   ]
+  },
+  "epoch1": {
+   "natural": [
+    0.7706,
+    [
+     0.7295,
+     0.8084
+    ]
+   ],
+   "cloze": [
+    0.7795,
+    [
+     0.4514,
+     1.0
+    ]
+   ]
+  },
+  "epoch2": {
+   "natural": [
+    0.7966,
+    [
+     0.757,
+     0.8328
+    ]
+   ],
+   "cloze": [
+    0.7889,
+    [
+     0.4889,
+     1.0
+    ]
+   ]
+  },
+  "epoch3": {
+   "natural": [
+    0.8037,
+    [
+     0.7647,
+     0.8389
+    ]
+   ],
+   "cloze": [
+    0.8264,
+    [
+     0.5903,
+     1.0
+    ]
+   ]
+  }
+ }
+}

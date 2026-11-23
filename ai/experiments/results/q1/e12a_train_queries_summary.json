@@ -1,0 +1,10 @@
+{
+ "n_docs": 22192,
+ "excluded_test_overlap": 1974,
+ "eligible": 19183,
+ "sampled": 6000,
+ "natural_ok": 3529,
+ "natural_rejected": 2471,
+ "cloze": 118,
+ "minutes": 27.1
+}

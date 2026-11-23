@@ -23,11 +23,8 @@ for f in ca.crt "branch$B.crt" "branch$B.key" "branch${B}_client.crt" "branch${B
   [ -f "$C/$f" ] || { echo "HATA: $C/$f bulunamadı (sertifikalar git ile gelir; branchN_client.key genel merkezden scp ile kopyalanır)"; exit 1; }
 done
 
-# Şube parçaları yerel TurkEmbed (ince ayarlı e5-small) ile vektörleştirilir (Tez Bölüm 3.2.3);
-# model depoda tutulmaz, genel merkezden kopyalanır: ai/models/embeddings/turkembed_finetuned
-[ -f ai/models/embeddings/turkembed_finetuned/model.safetensors ] || {
-  echo "HATA: ai/models/embeddings/turkembed_finetuned bulunamadı. Genel merkezden kopyalayın:"
-  echo "  scp -r ai/models/embeddings/turkembed_finetuned mosaic2@<VM_IP>:~/Mosaic/ai/models/embeddings/"; exit 1; }
+# Şube parçaları taban multilingual-e5-small ile vektörleştirilir (EMBEDDING_MODEL_KEY=e5small_base);
+# ilk ince ayarlı model (turkembed_finetuned) geri çekildi ve artık gerekmiyor.
 
 echo "[1/3] Eski şube süreçleri durduruluyor..."
 pkill -f "backend_api[.]py --service rag --port $PORT" 2>/dev/null

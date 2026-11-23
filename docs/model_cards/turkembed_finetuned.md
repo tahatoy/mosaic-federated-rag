@@ -158,6 +158,10 @@ model-index:
       name: Cosine Map@100
 ---
 
+> **Superseded.** This first fine-tuned model was trained on instruction–response pairs and retrieves source passages
+> worse than its base model on cross-branch questions. It is kept only to reproduce the first-configuration results.
+> Use [Toxotes/mosaic-embed](https://huggingface.co/Toxotes/mosaic-embed) (`docs/model_cards/mosaic_embed.md`) instead.
+
 # MOSAIC — Türkçe Finans Embedding Modeli (multilingual-e5-small fine-tuned)
 
 > **MOSAIC** tez projesinin Faz 4 çıktısı. `intfloat/multilingual-e5-small` baz modeli, 1.432 Türkçe finans QA çiftiyle fine-tune edilmiştir.

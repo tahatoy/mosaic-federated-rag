@@ -1,0 +1,11 @@
+{
+ "offset": 6000,
+ "n_docs": 22192,
+ "excluded_test_overlap": 1974,
+ "eligible": 19183,
+ "sampled": 6000,
+ "natural_ok": 3584,
+ "natural_rejected": 2416,
+ "cloze": 129,
+ "minutes": 26.8
+}

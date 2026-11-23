@@ -69,7 +69,7 @@ class ClientConfig:
     BRANCH_ID: str          = os.getenv("BRANCH_ID", "branch_01")
     CERT_DIR: Path          = Path(os.getenv("CERT_DIR", "backend/certs"))
     CHROMA_PATH: Path       = Path(os.getenv("CHROMA_PATH", os.getenv("CHROMADB_PATH", "ai/data/chromadb")))
-    EMBEDDING_MODEL: str    = os.getenv("EMBEDDING_MODEL", "ai/models/embeddings/turkembed_finetuned")
+    EMBEDDING_MODEL: str    = os.getenv("EMBEDDING_MODEL", "intfloat/multilingual-e5-small")
     DATA_DIR: Path          = Path(os.getenv("DATA_DIR", "ai/data"))
     MAX_RAM_MB: int         = int(os.getenv("MAX_RAM_MB", "8192"))
     FL_SERVER_ADDRESS: str  = os.getenv("FL_SERVER_ADDRESS", "")
@@ -107,7 +107,7 @@ class BranchRAGEngine:
         # trust_remote_code=True ekleyerek Alibaba-NLP model yükleme hatasını çözüyoruz
         # Model yolu yerelde yoksa HuggingFace fallback yap
         model_path = config.EMBEDDING_MODEL
-        if not os.path.exists(model_path):
+        if model_path.startswith("ai/") and not os.path.exists(model_path):
             logger.warning(f"[WARNING] Belirtilen embedding modeli yerelde bulunamadı ({model_path}). HuggingFace fallback: 'intfloat/multilingual-e5-small' yükleniyor.")
             model_path = "intfloat/multilingual-e5-small"
 

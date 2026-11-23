@@ -19,6 +19,7 @@ Kollar
   D        merkezi: iki şube korpusu tek dizinde (TurkEmbed, tam arama) + aynı yeniden sıralama
   D_noce   D, yeniden sıralama yok (ilk 3 yoğun aday)
   D_e5     D, ince ayarsız multilingual-e5-small gömmesi
+  D_me     D, MOSAIC-Embed gömmesi (ai/models/embeddings/turkembed_v3)
   C_base_q4km / C_base_q2k : C bağlamı, ince ayarsız Gemma-3-4B'nin Q4_K_M ve Q2_K sürümleri (kuantizasyon etkisi)
 Çıktı: ai/experiments/results/q1/e2_generation.json
 """
@@ -87,7 +88,12 @@ def main():
     dev = "cuda" if torch.cuda.is_available() else "cpu"
     ce = CrossEncoder("cross-encoder/mmarco-mMiniLMv2-L12-H384-v1", device=dev)
     embs = {}
-    for nm, path in (("turkembed", str(ROOT / "ai/models/embeddings/turkembed_finetuned")), ("e5", "intfloat/multilingual-e5-small")):
+    want = set(a.arms.split(",")) | set(a.natural_arms.split(","))
+    for nm, path, need in (("turkembed", str(ROOT / "ai/models/embeddings/turkembed_finetuned"), bool(want & {"D", "D_noce"})),
+                           ("e5", "intfloat/multilingual-e5-small", "D_e5" in want),
+                           ("mosaic", str(ROOT / "ai/models/embeddings/turkembed_v3"), "D_me" in want)):
+        if not need:
+            continue
         m = SentenceTransformer(path, device=dev); m.max_seq_length = 512
         embs[nm] = (m, m.encode(["passage: " + d for d in docs], batch_size=128, normalize_embeddings=True, convert_to_tensor=True, show_progress_bar=False))
 
@@ -133,12 +139,15 @@ def main():
                     ctx["B"] = rr(sq, remote(mt, b_url[q["asked_branch"]], sq), a.k)
                 fed = remote(mt, b_url[1], sq) + remote(mt, b_url[2], sq) + remote(plain, hq_url, sq)
                 ctx["C"] = rr(sq, fed, a.k)
-                cen = central("turkembed", sq) if any(x.startswith("D") for x in arms) else []
-                ctx["D"] = rr(sq, cen, a.k)
+                cen = central("turkembed", sq) if ("D" in arms or "D_noce" in arms) else []
+                if "D" in arms:
+                    ctx["D"] = rr(sq, cen, a.k)
                 if "D_noce" in arms:
                     ctx["D_noce"] = [c["text"] for c in cen[:a.k]]
                 if "D_e5" in arms:
                     ctx["D_e5"] = rr(sq, central("e5", sq), a.k)
+                if "D_me" in arms:
+                    ctx["D_me"] = rr(sq, central("mosaic", sq), a.k)
                 for nm in extra:
                     if nm in arms:
                         ctx[nm] = ctx["C"]
@@ -158,7 +167,7 @@ def main():
                     print(sname, i, {k: round(np.mean([r["em"] for r in v]), 3) for k, v in rec.items()}, flush=True)
             out["sonuclar"][sname] = {arm: {m: mean_ci([r[m] for r in v]) for m in ("em", "ctx_hit", "grounded", "unsupported")} for arm, v in rec.items()}
             t = {}
-            for x, y in [("C", "A"), ("C", "B"), ("C", "D"), ("C", "D_e5"), ("D", "D_noce"), ("D", "D_e5"), ("C", "C_base_q4km"), ("C_base_q4km", "C_base_q2k")]:
+            for x, y in [("C", "A"), ("C", "B"), ("C", "D"), ("C", "D_e5"), ("C", "D_me"), ("D_me", "D_e5"), ("D", "D_noce"), ("D", "D_e5"), ("C", "C_base_q4km"), ("C_base_q4km", "C_base_q2k")]:
                 if x in rec and y in rec:
                     ex, ey = [r["em"] for r in rec[x]], [r["em"] for r in rec[y]]
                     b = sum(p and not r for p, r in zip(ex, ey)); c = sum(r and not p for p, r in zip(ex, ey))

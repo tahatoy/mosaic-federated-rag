@@ -55,8 +55,9 @@ Main components:
 - **Query router.** A BERTurk classifier assigns each query to one of three classes (everyday, simple, complex). It
   is exported to ONNX INT8 (25.6 ms per query on CPU) and combined with keyword and confidence rules that escalate
   uncertain queries to the larger model.
-- **Retrieval.** Each branch embeds its documents with `intfloat/multilingual-e5-small` and searches them with HNSW
-  (ef = 200). Headquarters merges the candidates from all branches and re-ranks them with a cross-encoder.
+- **Retrieval.** Each branch embeds its documents with MOSAIC-Embed, a `intfloat/multilingual-e5-small` model
+  fine-tuned on query-to-passage pairs, and searches them with HNSW (ef = 200). Headquarters merges the candidates from
+  all branches and re-ranks them with a cross-encoder.
   Headquarters stores only the chunks that all branches share.
 - **Privacy safeguards.** Personal data are masked inside the branch service before any text leaves the branch
   (Turkish ID, IBAN, card and phone numbers with checksum validation, and person names). Services communicate over
@@ -71,9 +72,10 @@ Results of the final configuration reported in the article:
 
 | Measurement | Result |
 |-------------|--------|
-| Exact match on 500 cross-branch questions, no retrieval vs. federated retrieval | 3.0% vs. 86.2% (centralized index: 87.2%, p = 0.18) |
-| Live system, 200 paraphrased questions: exact match / judged correct / judged faithful | 84.5% / 80.0% / 78.0% |
-| Human evaluation of 100 answers, two raters: inter-rater agreement on correctness | Cohen's kappa = 0.85 |
+| Exact match on 500 cross-branch questions, no retrieval vs. federated retrieval | 3.0% vs. 89.2% (centralized index: 89.6%, p = 0.69) |
+| Same questions, MOSAIC-Embed vs. the base e5-small model in the live federated system | 89.2% vs. 86.2% (p = 0.0015) |
+| Live system, 200 paraphrased questions: exact match / judged correct / judged faithful | 84.5% / 81.0% / 79.0% |
+| Human evaluation of 100 answers (intermediate base-e5 run), two raters: inter-rater agreement on correctness | Cohen's kappa = 0.85 |
 | Agreement between the LLM judge and the human raters on correctness | Cohen's kappa = 0.83 and 0.82 |
 | Answers leaking synthetic customer secrets (canary test, 180 requests) | 110/180 before, 0/180 with source-side masking and mTLS |
 | Regulation-derived technical controls (KVKK, BDDK) | 21 of 21 passed |
@@ -140,13 +142,16 @@ Model weights are not stored in this repository. The published models are:
 |-------|----------|
 | Qwen3-8B financial expert, GGUF (Q4_K_M) | [Toxotes/QWEN3_EXPERT_V2_GGUF](https://huggingface.co/Toxotes/QWEN3_EXPERT_V2_GGUF) |
 | Gemma-3-4B finance, GGUF (Q4_K_M) | [Toxotes/GEMMA3_FINANCE_V1_GGUF](https://huggingface.co/Toxotes/GEMMA3_FINANCE_V1_GGUF) |
-| BERT query router | [Toxotes/mosaic-bert-router](https://huggingface.co/Toxotes/mosaic-bert-router) |
-| TurkEmbed, fine-tuned multilingual-e5-small | [Toxotes/mosaic-turkembed-finetuned](https://huggingface.co/Toxotes/mosaic-turkembed-finetuned) |
+| BERT query router | [Toxotes/fin-bert-tr-router](https://huggingface.co/Toxotes/fin-bert-tr-router) |
+| MOSAIC-Embed, retrieval embedding model (final configuration) | [Toxotes/mosaic-embed](https://huggingface.co/Toxotes/mosaic-embed) |
+| Initial fine-tuned embedding model (first configuration, superseded) | [Toxotes/mosaic-turkembed-finetuned](https://huggingface.co/Toxotes/mosaic-turkembed-finetuned) |
 
 Expected local paths are `ai/models/finetuned/*.gguf`, `ai/models/router/bert_router_best` and
-`ai/models/embeddings/turkembed_finetuned`. The final configuration retrieves with the base
-`intfloat/multilingual-e5-small` model, because the fine-tuned embedding model generalized worse to cross-branch
-questions. Model cards are in `docs/model_cards/`.
+`ai/models/embeddings/turkembed_v3` for MOSAIC-Embed
+(`huggingface-cli download Toxotes/mosaic-embed --local-dir ai/models/embeddings/turkembed_v3`). The services select
+the embedding model with `EMBEDDING_MODEL_KEY` (`mosaic_embed` or `e5small_base`). The initial fine-tuned model was
+trained on instruction-response pairs and generalized worse than its base model to cross-branch questions; it is kept
+only to reproduce the first-configuration results. Model cards are in `docs/model_cards/`.
 
 ## Configuration
 
@@ -190,7 +195,7 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | Experiment | Driver | Script | Output |
 |------------|--------|--------|--------|
 | Paraphrased question sets | `q1_01c_paraphrase_v2.sh` | `e0_paraphrase_questions.py` | `e0_paraphrases.json` |
-| Retrieval benchmark (BM25, e5, BGE-M3, TurkEmbed, RRF, re-ranking) | `q1_02_retrieval.sh` | `e1_retrieval_baselines.py` | `e1_retrieval.json` |
+| Retrieval benchmark (BM25, e5, BGE-M3, TurkEmbed4Retrieval, initial fine-tuned model, RRF, re-ranking) | `q1_02_retrieval.sh` | `e1_retrieval_baselines.py` | `e1_retrieval.json` |
 | Cross-branch generation (H1) and component ablation | `q1_07a_gen_main.sh`, `q1_07b_gen_quant.sh` | `e2_crossbranch_generation.py` | `e2_generation*.json` |
 | Federated embedding training and differential privacy | `q1_05_fl_embedding.sh` | `e3_fl_embedding_dp.py` | `e3_fl_embedding.json` |
 | Router baselines and repeated FedAvg / FedProx | `q1_06_router.sh` | `e4_router_baselines_fl.py` | `e4_router.json` |
@@ -199,9 +204,13 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | Flower between the branch machines | `q1_10_flower.sh` | `e7_flower_server.py`, `e7_flower_client.py` | `e7_flower_*.json` |
 | Diagnosis of the federated-central gap | `q1_09_gapdiag.sh` | `e8_fed_gap_diag.py` | `e8_fed_gap*.json` |
 | Router on out-of-template questions | `q1_11_router_ood.sh` | `e9_router_ood.py` | `e9_router_ood.json` |
-| Re-indexing the branches with the base e5-small model | `q1_12_reindex.sh` | `reindex_e5base.py` | none |
-| Re-evaluation after re-indexing (exact match, judge, canary) | `q1_13_eval_v2.sh`, `q1_14_eval_v2b.sh` | E2, E5, E8, `h2_canary.py` | `*_v2.json` |
+| Intermediate configuration: re-indexing with the base e5-small model | `q1_12_reindex.sh` | `reindex_e5base.py` | none |
+| Re-evaluation of the intermediate configuration (exact match, judge, canary) | `q1_13_eval_v2.sh`, `q1_14_eval_v2b.sh` | E2, E5, E8, `h2_canary.py` | `*_v2.json` |
 | TR-MMLU, two models and two prompt conditions | `q1_15_tr_mmlu.sh` | `e10_tr_mmlu.py`, `e10_summary.py` | `e10_tr_mmlu_*.json` |
+| MOSAIC-Embed: training queries, training, retrieval evaluation | `q1_16_mosaic_embed_train.sh` | `e12a_gen_train_queries.py`, `e12b_train_turkembed_v2.py`, `e12c_eval_turkembed_v2.py` | `e12*.json` |
+| MOSAIC-Embed: offline generation check with simulated federated retrieval | `q1_17_mosaic_embed_e13.sh` | `e13_embed_generation.py` | `e13_embed_generation.json` |
+| Final configuration: re-indexing with MOSAIC-Embed | `q1_18_reindex_mosaic_embed.sh` | `reindex_e5base.py --model` | none |
+| Final configuration: exact match, live test with judge, canary, paired comparisons | `q1_19_eval_mosaic_embed.sh` | E2, E5, `h2_canary.py`, `e14_mosaic_embed_summary.py` | `*_me.json`, `*_v3.json`, `e14_*.json` |
 | Human evaluation of 100 answers by two raters | none (labels collected with `human_eval/annotation_form.html`) | `e11_human_eval.py` | `human_eval/human_eval_summary.json` |
 
 The original hypothesis experiments are driven by `scripts/experiments/run_all_experiments.sh` and write their

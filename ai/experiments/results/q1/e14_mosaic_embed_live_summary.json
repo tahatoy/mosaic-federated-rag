@@ -1,0 +1,200 @@
+{
+ "source": "e2_generation_me.json (live MOSAIC-Embed services) vs e2_generation_v2.json (live base e5 services, arm A no retrieval)",
+ "tests": {
+  "cloze_C_me_vs_A": {
+   "only_first": 431,
+   "only_second": 0,
+   "mcnemar_p": 3.606632272572553e-130,
+   "diff_ci": [
+    0.862,
+    [
+     0.832,
+     0.89
+    ]
+   ]
+  },
+  "cloze_C_me_vs_C_e5": {
+   "only_first": 18,
+   "only_second": 3,
+   "mcnemar_p": 0.0014896392822265625,
+   "diff_ci": [
+    0.03,
+    [
+     0.012,
+     0.05
+    ]
+   ]
+  },
+  "cloze_C_me_vs_D_me": {
+   "only_first": 2,
+   "only_second": 4,
+   "mcnemar_p": 0.6875,
+   "diff_ci": [
+    -0.004,
+    [
+     -0.014,
+     0.006
+    ]
+   ]
+  },
+  "natural_C_me_vs_A": {
+   "only_first": 267,
+   "only_second": 2,
+   "mcnemar_p": 7.657009210127194e-77,
+   "diff_ci": [
+    0.7528,
+    [
+     0.7074,
+     0.7983
+    ]
+   ]
+  },
+  "natural_C_me_vs_C_e5": {
+   "only_first": 7,
+   "only_second": 7,
+   "mcnemar_p": 1.0,
+   "diff_ci": [
+    0.0,
+    [
+     -0.0199,
+     0.0199
+    ]
+   ]
+  },
+  "natural_C_me_vs_D_me": {
+   "only_first": 4,
+   "only_second": 3,
+   "mcnemar_p": 1.0,
+   "diff_ci": [
+    0.0028,
+    [
+     -0.0114,
+     0.017
+    ]
+   ]
+  },
+  "live_vs_norag": {
+   "only_first": 159,
+   "only_second": 1,
+   "mcnemar_p": 2.2032134058231987e-46,
+   "diff_ci": [
+    0.79,
+    [
+     0.73,
+     0.845
+    ]
+   ]
+  },
+  "live_me_vs_live_e5_run2": {
+   "only_first": 9,
+   "only_second": 10,
+   "mcnemar_p": 1.0,
+   "diff_ci": [
+    -0.005,
+    [
+     -0.045,
+     0.035
+    ]
+   ]
+  },
+  "live_me_vs_live_first": {
+   "only_first": 21,
+   "only_second": 6,
+   "mcnemar_p": 0.005924612283706665,
+   "diff_ci": [
+    0.075,
+    [
+     0.025,
+     0.13
+    ]
+   ]
+  }
+ },
+ "arms": {
+  "cloze": {
+   "A_v2": [
+    0.03,
+    [
+     0.016,
+     0.046
+    ]
+   ],
+   "C_e5": [
+    0.862,
+    [
+     0.832,
+     0.89
+    ]
+   ],
+   "C_me": [
+    0.892,
+    [
+     0.866,
+     0.918
+    ]
+   ],
+   "D_me": [
+    0.896,
+    [
+     0.87,
+     0.922
+    ]
+   ]
+  },
+  "natural": {
+   "A_v2": [
+    0.0284,
+    [
+     0.0114,
+     0.0483
+    ]
+   ],
+   "C_e5": [
+    0.7812,
+    [
+     0.7358,
+     0.8239
+    ]
+   ],
+   "C_me": [
+    0.7812,
+    [
+     0.7358,
+     0.8239
+    ]
+   ],
+   "D_me": [
+    0.7784,
+    [
+     0.733,
+     0.821
+    ]
+   ]
+  }
+ },
+ "live": {
+  "n": 200,
+  "em": [
+   0.845,
+   [
+    0.795,
+    0.89
+   ]
+  ],
+  "norag_em": [
+   0.055,
+   [
+    0.025,
+    0.09
+   ]
+  ],
+  "mean_latency_ms": 9594.183299999997,
+  "routes": {
+   "complex": 200
+  }
+ },
+ "canary": {
+  "wire": 0,
+  "e2e": 0
+ }
+}

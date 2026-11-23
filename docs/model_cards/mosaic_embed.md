@@ -1,0 +1,109 @@
+---
+language:
+- tr
+license: mit
+library_name: sentence-transformers
+base_model: intfloat/multilingual-e5-small
+pipeline_tag: sentence-similarity
+tags:
+- sentence-transformers
+- feature-extraction
+- sentence-similarity
+- retrieval
+- turkish
+- finance
+- banking
+- rag
+- federated-rag
+---
+
+# MOSAIC-Embed
+
+MOSAIC-Embed is a Turkish financial-domain retrieval embedding model. It is
+[intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small) fine-tuned on query-to-passage
+pairs built from Turkish banking and finance documents. It is the retriever developed for
+[MOSAIC](https://github.com/tahatoy/mosaic-federated-rag), a privacy-preserving federated retrieval-augmented
+generation (RAG) architecture for Turkish banking branches.
+
+This model supersedes
+[Toxotes/mosaic-turkembed-finetuned](https://huggingface.co/Toxotes/mosaic-turkembed-finetuned). That earlier model was
+trained on instruction-response pairs and retrieved source passages worse than its base model; this version is trained
+on query-to-source-passage pairs and outperforms the base model on the MOSAIC cross-branch retrieval benchmark.
+
+## Usage
+
+The model follows the e5 convention: prefix queries with `query: ` and passages with `passage: `.
+
+```python
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("Toxotes/mosaic-embed")
+queries = ["query: Bankanın konut kredisi aylık faiz oranı ne kadar?"]
+passages = ["passage: Banka, konut kredilerinde uyguladığı aylık faiz oranını düşürdüğünü açıkladı."]
+q = model.encode(queries, normalize_embeddings=True)
+p = model.encode(passages, normalize_embeddings=True)
+print(q @ p.T)
+```
+
+## Training
+
+| Setting | Value |
+|---------|-------|
+| Base model | intfloat/multilingual-e5-small (384 dimensions) |
+| Training pairs | 6,629 query-passage pairs from 6,482 chunks; 731 queries from 720 further chunks held out for model selection |
+| Queries | natural questions written by Qwen3-8B for each chunk, plus cloze queries built from sentences that contain a single figure |
+| Negatives | in-batch negatives and one mined hard negative per query (rank 3-30 under the base model, near-duplicates of the positive removed) |
+| Loss | MultipleNegativesRankingLoss, no duplicate passages within a batch |
+| Hyperparameters | batch size 64, learning rate 2e-5, maximum sequence length 256, mixed precision |
+| Epochs | 6 trained, epoch 4 selected on the held-out development queries |
+
+Passages are 600-character chunks with a 120-character overlap from Turkish financial texts (company disclosures,
+regulatory and central bank documents, banking question-answer material). Every chunk that contains the source sentence
+of any evaluation question was removed before training, so the evaluation questions never share a passage with the
+training data. The generated questions were filtered: they must end with a question mark and must not copy a word
+sequence of six or more words from the passage.
+
+## Evaluation
+
+MOSAIC cross-branch retrieval benchmark: 22,192 passages from two bank branches; 600 cloze questions about a figure in a
+passage held by the other branch, and 419 paraphrased versions of these questions. MRR@10 in the federated setting, in
+which each branch returns its top 10 passages and headquarters merges them. 95% confidence intervals from a paired
+bootstrap against the base model.
+
+| Model | Cloze questions | Paraphrased questions |
+|-------|-----------------|-----------------------|
+| multilingual-e5-small (base) | 0.887 | 0.796 |
+| mosaic-turkembed-finetuned (previous release) | 0.829 | 0.730 |
+| **MOSAIC-Embed (this model)** | **0.931** | **0.803** |
+| multilingual-e5-small + cross-encoder re-ranking | 0.838 | 0.844 |
+| **MOSAIC-Embed + cross-encoder re-ranking** | **0.868** | **0.848** |
+
+Difference from the base model: +0.044 MRR@10 on cloze questions (95% CI [0.027, 0.061]) and +0.007 on paraphrased
+questions (95% CI [-0.015, 0.028]). Hit@10 on cloze questions rises from 0.950 to 0.983. The re-ranker is
+`cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` applied to the top 20 candidates.
+
+End-to-end accuracy in the deployed MOSAIC system (two branch machines and headquarters; each branch returns its top 10
+passages, headquarters re-ranks them with the cross-encoder and passes the top 3 to Gemma-3-4B): exact match on 500
+cloze questions answered only by another branch rose from 86.2% with the base model to 89.2% with MOSAIC-Embed
+(18 vs. 3 discordant questions, McNemar p = 0.0015), 0.4 points below a central index with the same model (p = 0.69).
+On 352 paraphrased questions accuracy was unchanged (78.1% with both models), and in a live test with 200 paraphrased
+questions answered by Qwen3-8B exact match was 84.5% (85.0% with the base model; p = 1.00).
+
+## Limitations
+
+- The gain is clear for questions that ask for a specific figure or statement in a passage; on freely paraphrased
+  questions the model is on par with the base model.
+- Training queries were generated by a language model without manual checking.
+- The model was trained and evaluated on one institution's document collection; performance on other Turkish financial
+  corpora was not measured.
+
+## Citation
+
+```bibtex
+@software{toy_mosaic_2026,
+  author = {Toy, Mehmet Taha and S{\"u}zen, Ahmet Ali},
+  title  = {{MOSAIC}: A Privacy-Preserving Federated Retrieval-Augmented Generation Architecture for Turkish Banking},
+  year   = {2026},
+  url    = {https://github.com/tahatoy/mosaic-federated-rag}
+}
+```

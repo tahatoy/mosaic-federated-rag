@@ -150,6 +150,24 @@ def _normalize_turkish_chars(text: str) -> str:
         text = text.replace(broken, fixed)
     return text
 
+MOSAIC_EMBED_HF_ID = "Toxotes/mosaic-embed"
+
+
+def _embedding_model_path(key: str) -> Optional[Path]:
+    """Local model directory for EMBEDDING_MODEL_KEY; None means the base intfloat/multilingual-e5-small.
+
+    e5small_base  base multilingual-e5-small (deployed testbed configuration)
+    mosaic_embed  MOSAIC-Embed, ai/models/embeddings/turkembed_v3 (on the Hub as Toxotes/mosaic-embed)
+    The earlier instruction-tuned model (turkembed_finetuned) is withdrawn: it retrieved worse than its base model.
+    """
+    base = PROJECT_ROOT / "ai" / "models" / "embeddings"
+    if key == "mosaic_embed":
+        return base / "turkembed_v3"
+    if key != "e5small_base":
+        logger.warning(f"EMBEDDING_MODEL_KEY={key} is not supported; using the base multilingual-e5-small")
+    return None
+
+
 class EmbeddingEngine:
     _instance: Optional["EmbeddingEngine"] = None
 
@@ -158,7 +176,7 @@ class EmbeddingEngine:
         import chromadb
 
         self.branch_id = branch_id
-        self.embedding_model_key = os.getenv("EMBEDDING_MODEL_KEY", "turkembed")
+        self.embedding_model_key = os.getenv("EMBEDDING_MODEL_KEY", "e5small_base")
         self.reranker_model = os.getenv("RERANKER_MODEL", "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1")
 
         # Normalize branch id
@@ -200,14 +218,11 @@ class EmbeddingEngine:
         logger.info(f"[EmbeddingEngine] Initializing — Device: {_device} — Branch: {self.branch_id}")
 
         # Loading Embedding Model
-        embed_path = PROJECT_ROOT / "ai" / "models" / "embeddings" / (
-            "turkembed_finetuned" if self.embedding_model_key == "turkembed"
-            else "e5small_finetuned"
-        )
+        embed_path = _embedding_model_path(self.embedding_model_key)
         logger.info(f"[EmbeddingEngine] Loading embedding: {embed_path}")
 
-        if self.embedding_model_key == "e5small_base":
-            # Q1 revizyonu: çapraz şube sorularında taban model ince ayarlı TurkEmbed'den daha iyi erişim sağladı
+        if embed_path is None:
+            # Q1 revizyonu: taban model, geri çekilen ilk ince ayarlı modelden daha iyi erişim sağladı
             logger.info("[EmbeddingEngine] Taban multilingual-e5-small kullanılıyor (EMBEDDING_MODEL_KEY=e5small_base)")
             self.embed_model = SentenceTransformer("intfloat/multilingual-e5-small", device=_device, trust_remote_code=True)
         elif embed_path.exists():
@@ -218,7 +233,7 @@ class EmbeddingEngine:
                 logger.error(f"[EmbeddingEngine] Load error: {e}, falling back to HF model.")
                 self.embed_model = SentenceTransformer("intfloat/multilingual-e5-small", device=_device, trust_remote_code=True)
         else:
-            fallback = "intfloat/multilingual-e5-small"
+            fallback = MOSAIC_EMBED_HF_ID if self.embedding_model_key == "mosaic_embed" else "intfloat/multilingual-e5-small"
             logger.warning(f"[EmbeddingEngine] Local path not found, using standard HF model: {fallback}")
             try:
                 self.embed_model = SentenceTransformer(fallback, device=_device, trust_remote_code=True)
@@ -469,7 +484,7 @@ def _chunk_text(text: str, max_len: int = 600, min_len: int = 60, overlap: int =
 
 def index_corpus(
     branch: str,
-    embedding_model_key: str = "turkembed",
+    embedding_model_key: str = "e5small_base",
     max_tokens: int = 400,
     overlap_tokens: int = 50,
     batch_size: int = 64,
@@ -482,13 +497,11 @@ def index_corpus(
         return 0
 
     from sentence_transformers import SentenceTransformer
-    embed_path = PROJECT_ROOT / "ai" / "models" / "embeddings" / (
-        "turkembed_finetuned" if embedding_model_key == "turkembed" else "e5small_finetuned"
-    )
-    if embed_path.exists():
+    embed_path = _embedding_model_path(embedding_model_key)
+    if embed_path is not None and embed_path.exists():
         embed_model = SentenceTransformer(str(embed_path), trust_remote_code=True)
     else:
-        fallback = "intfloat/multilingual-e5-small"
+        fallback = MOSAIC_EMBED_HF_ID if embedding_model_key == "mosaic_embed" else "intfloat/multilingual-e5-small"
         embed_model = SentenceTransformer(fallback, trust_remote_code=True)
 
     tokenizer = None
