@@ -239,7 +239,7 @@ cited as:
 
 ```bibtex
 @software{toy_mosaic_2026,
-  author = {Toy, Mehmet Taha and S{\"u}zen, Ahmet Ali},
+  author = {Toy, Mehmet Taha and Süzen, Ahmet Ali},
   title  = {{MOSAIC}: A Privacy-Preserving Federated Retrieval-Augmented Generation Architecture for Turkish Banking},
   year   = {2026},
   url    = {https://github.com/tahatoy/mosaic-federated-rag}
