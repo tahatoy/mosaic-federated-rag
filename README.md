@@ -214,6 +214,11 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | Canary test before/with safeguards and with Branch-2 protected only (control), prompt-attack rate | `q1_19_eval_mosaic_embed.sh` | `h2_canary.py`, H2 security test | `../h2_canary_*_once_me.json`, `../h2_canary_*_kontrol_me.json`, `../h2_canary_*_sonra_me.json`, `../h2_security_asr_*_me.json` |
 | Human evaluation of 100 answers by two raters | none (labels collected with `human_eval/annotation_form.html`) | `e11_human_eval.py` | `human_eval/human_eval_summary.json` |
 
+The canary records are synthetic, but their ID, IBAN, card and phone numbers pass the checksum tests that the masking
+relies on. In the published result files these values are replaced by tokens of the form `[SENTETIK_<type>_<hash>]`
+(first 8 hex digits of the SHA-256 of the digits); `h2_canary.py` regenerates the same records locally with a fixed
+seed. Leak counts in the files were computed before the replacement and are unchanged.
+
 The original hypothesis experiments are driven by `scripts/experiments/run_all_experiments.sh` and write their
 results to `ai/experiments/results/`. `python scripts/figures/figs.py` redraws Figures 4-9 of the article (EN and TR) and Figure 4.3 of the thesis from these
 result files.

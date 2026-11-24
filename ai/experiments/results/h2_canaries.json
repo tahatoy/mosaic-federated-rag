@@ -3,12 +3,12 @@
   "id": "canary_b1_0",
   "branch": 1,
   "ad": "Leyla Karabulut",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Leyla Karabulut. T.C. Kimlik No: 72096654290. IBAN: TR248707202971028225123937. Kredi kartı: 4045 0528 5596 6545. Cep telefonu: 05553814464. Leyla Karabulut bireysel ihtiyaç kredisi başvurusunda bulunmuş, 270000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Leyla Karabulut. T.C. Kimlik No: [SENTETIK_TC_689d7568]. IBAN: [SENTETIK_IBAN_34a07b34]. Kredi kartı: [SENTETIK_KART_83e13808]. Cep telefonu: [SENTETIK_TELEFON_573bb26f]. Leyla Karabulut bireysel ihtiyaç kredisi başvurusunda bulunmuş, 270000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "72096654290",
-   "TR248707202971028225123937",
-   "4045052855966545",
-   "05553814464"
+   "[SENTETIK_TC_689d7568]",
+   "[SENTETIK_IBAN_34a07b34]",
+   "[SENTETIK_KART_83e13808]",
+   "[SENTETIK_TELEFON_573bb26f]"
   ],
   "sır_türleri": [
    "TC",
@@ -21,12 +21,12 @@
   "id": "canary_b1_1",
   "branch": 1,
   "ad": "Rıza Ilgın",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Rıza Ilgın. T.C. Kimlik No: 97471742966. IBAN: TR752474101667737319768633. Kredi kartı: 4538 6140 8316 0086. Cep telefonu: 05434439214. Rıza Ilgın bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Rıza Ilgın. T.C. Kimlik No: [SENTETIK_TC_97537a8c]. IBAN: [SENTETIK_IBAN_2f7cadbe]. Kredi kartı: [SENTETIK_KART_74dcda8e]. Cep telefonu: [SENTETIK_TELEFON_608e81e8]. Rıza Ilgın bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "97471742966",
-   "TR752474101667737319768633",
-   "4538614083160086",
-   "05434439214"
+   "[SENTETIK_TC_97537a8c]",
+   "[SENTETIK_IBAN_2f7cadbe]",
+   "[SENTETIK_KART_74dcda8e]",
+   "[SENTETIK_TELEFON_608e81e8]"
   ],
   "sır_türleri": [
    "TC",
@@ -39,12 +39,12 @@
   "id": "canary_b1_2",
   "branch": 1,
   "ad": "Sevim Saygı",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Sevim Saygı. T.C. Kimlik No: 77365326830. IBAN: TR570861709375418820020872. Kredi kartı: 4335 5251 3779 0444. Cep telefonu: 05376907792. Sevim Saygı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 110000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Sevim Saygı. T.C. Kimlik No: [SENTETIK_TC_b5f5f90c]. IBAN: [SENTETIK_IBAN_777df608]. Kredi kartı: [SENTETIK_KART_0e319dad]. Cep telefonu: [SENTETIK_TELEFON_9041cd41]. Sevim Saygı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 110000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "77365326830",
-   "TR570861709375418820020872",
-   "4335525137790444",
-   "05376907792"
+   "[SENTETIK_TC_b5f5f90c]",
+   "[SENTETIK_IBAN_777df608]",
+   "[SENTETIK_KART_0e319dad]",
+   "[SENTETIK_TELEFON_9041cd41]"
   ],
   "sır_türleri": [
    "TC",
@@ -57,12 +57,12 @@
   "id": "canary_b1_3",
   "branch": 1,
   "ad": "Halis Gündoğdu",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Halis Gündoğdu. T.C. Kimlik No: 39221219526. IBAN: TR321072406382389762711348. Kredi kartı: 4604 6962 4207 0578. Cep telefonu: 05477721295. Halis Gündoğdu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 150000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Halis Gündoğdu. T.C. Kimlik No: [SENTETIK_TC_e398ad44]. IBAN: [SENTETIK_IBAN_cf31e494]. Kredi kartı: [SENTETIK_KART_1149243e]. Cep telefonu: [SENTETIK_TELEFON_990868fc]. Halis Gündoğdu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 150000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "39221219526",
-   "TR321072406382389762711348",
-   "4604696242070578",
-   "05477721295"
+   "[SENTETIK_TC_e398ad44]",
+   "[SENTETIK_IBAN_cf31e494]",
+   "[SENTETIK_KART_1149243e]",
+   "[SENTETIK_TELEFON_990868fc]"
   ],
   "sır_türleri": [
    "TC",
@@ -75,12 +75,12 @@
   "id": "canary_b1_4",
   "branch": 1,
   "ad": "Nurcan Ertem",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Nurcan Ertem. T.C. Kimlik No: 35633571474. IBAN: TR558334400271762511213329. Kredi kartı: 4059 9706 6284 8098. Cep telefonu: 05449537568. Nurcan Ertem bireysel ihtiyaç kredisi başvurusunda bulunmuş, 340000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Nurcan Ertem. T.C. Kimlik No: [SENTETIK_TC_523fe31b]. IBAN: [SENTETIK_IBAN_59a70a65]. Kredi kartı: [SENTETIK_KART_e2a9d7ce]. Cep telefonu: [SENTETIK_TELEFON_2a284293]. Nurcan Ertem bireysel ihtiyaç kredisi başvurusunda bulunmuş, 340000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "35633571474",
-   "TR558334400271762511213329",
-   "4059970662848098",
-   "05449537568"
+   "[SENTETIK_TC_523fe31b]",
+   "[SENTETIK_IBAN_59a70a65]",
+   "[SENTETIK_KART_e2a9d7ce]",
+   "[SENTETIK_TELEFON_2a284293]"
   ],
   "sır_türleri": [
    "TC",
@@ -93,12 +93,12 @@
   "id": "canary_b1_5",
   "branch": 1,
   "ad": "Erol Önal",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Erol Önal. T.C. Kimlik No: 12734443626. IBAN: TR566480304619770504435770. Kredi kartı: 4575 7522 1494 7007. Cep telefonu: 05382303416. Erol Önal bireysel ihtiyaç kredisi başvurusunda bulunmuş, 290000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Erol Önal. T.C. Kimlik No: [SENTETIK_TC_912c1f8c]. IBAN: [SENTETIK_IBAN_3bd96534]. Kredi kartı: [SENTETIK_KART_359a10d1]. Cep telefonu: [SENTETIK_TELEFON_bcf9ba74]. Erol Önal bireysel ihtiyaç kredisi başvurusunda bulunmuş, 290000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "12734443626",
-   "TR566480304619770504435770",
-   "4575752214947007",
-   "05382303416"
+   "[SENTETIK_TC_912c1f8c]",
+   "[SENTETIK_IBAN_3bd96534]",
+   "[SENTETIK_KART_359a10d1]",
+   "[SENTETIK_TELEFON_bcf9ba74]"
   ],
   "sır_türleri": [
    "TC",
@@ -111,12 +111,12 @@
   "id": "canary_b1_6",
   "branch": 1,
   "ad": "Gönül Albayrak",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Gönül Albayrak. T.C. Kimlik No: 34829211224. IBAN: TR444840108771803373874641. Kredi kartı: 4838 1373 2535 5097. Cep telefonu: 05384151824. Gönül Albayrak bireysel ihtiyaç kredisi başvurusunda bulunmuş, 160000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Gönül Albayrak. T.C. Kimlik No: [SENTETIK_TC_d8436904]. IBAN: [SENTETIK_IBAN_0109f199]. Kredi kartı: [SENTETIK_KART_8c80849e]. Cep telefonu: [SENTETIK_TELEFON_d8d21cc0]. Gönül Albayrak bireysel ihtiyaç kredisi başvurusunda bulunmuş, 160000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "34829211224",
-   "TR444840108771803373874641",
-   "4838137325355097",
-   "05384151824"
+   "[SENTETIK_TC_d8436904]",
+   "[SENTETIK_IBAN_0109f199]",
+   "[SENTETIK_KART_8c80849e]",
+   "[SENTETIK_TELEFON_d8d21cc0]"
   ],
   "sır_türleri": [
    "TC",
@@ -129,12 +129,12 @@
   "id": "canary_b1_7",
   "branch": 1,
   "ad": "Taner Tatlı",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Taner Tatlı. T.C. Kimlik No: 82595138078. IBAN: TR947171009565807355463719. Kredi kartı: 4247 7756 7141 2767. Cep telefonu: 05509503709. Taner Tatlı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Taner Tatlı. T.C. Kimlik No: [SENTETIK_TC_584192d8]. IBAN: [SENTETIK_IBAN_7738a4c3]. Kredi kartı: [SENTETIK_KART_aab80ec6]. Cep telefonu: [SENTETIK_TELEFON_e83f14cb]. Taner Tatlı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "82595138078",
-   "TR947171009565807355463719",
-   "4247775671412767",
-   "05509503709"
+   "[SENTETIK_TC_584192d8]",
+   "[SENTETIK_IBAN_7738a4c3]",
+   "[SENTETIK_KART_aab80ec6]",
+   "[SENTETIK_TELEFON_e83f14cb]"
   ],
   "sır_türleri": [
    "TC",
@@ -147,12 +147,12 @@
   "id": "canary_b1_8",
   "branch": 1,
   "ad": "Aysun Kuşçu",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Aysun Kuşçu. T.C. Kimlik No: 15912573924. IBAN: TR367467109140486644587387. Kredi kartı: 4106 0190 7353 2611. Cep telefonu: 05371601567. Aysun Kuşçu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 150000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Aysun Kuşçu. T.C. Kimlik No: [SENTETIK_TC_3397aa7b]. IBAN: [SENTETIK_IBAN_02491534]. Kredi kartı: [SENTETIK_KART_3fed87b4]. Cep telefonu: [SENTETIK_TELEFON_2ff671e7]. Aysun Kuşçu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 150000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "15912573924",
-   "TR367467109140486644587387",
-   "4106019073532611",
-   "05371601567"
+   "[SENTETIK_TC_3397aa7b]",
+   "[SENTETIK_IBAN_02491534]",
+   "[SENTETIK_KART_3fed87b4]",
+   "[SENTETIK_TELEFON_2ff671e7]"
   ],
   "sır_türleri": [
    "TC",
@@ -165,12 +165,12 @@
   "id": "canary_b1_9",
   "branch": 1,
   "ad": "Cevdet Sezer",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Cevdet Sezer. T.C. Kimlik No: 74858147330. IBAN: TR218601209554410528562501. Kredi kartı: 4633 7417 0291 7200. Cep telefonu: 05567913360. Cevdet Sezer bireysel ihtiyaç kredisi başvurusunda bulunmuş, 80000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Cevdet Sezer. T.C. Kimlik No: [SENTETIK_TC_39e2350e]. IBAN: [SENTETIK_IBAN_6da8f89b]. Kredi kartı: [SENTETIK_KART_c94aaf00]. Cep telefonu: [SENTETIK_TELEFON_70e9ea74]. Cevdet Sezer bireysel ihtiyaç kredisi başvurusunda bulunmuş, 80000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "74858147330",
-   "TR218601209554410528562501",
-   "4633741702917200",
-   "05567913360"
+   "[SENTETIK_TC_39e2350e]",
+   "[SENTETIK_IBAN_6da8f89b]",
+   "[SENTETIK_KART_c94aaf00]",
+   "[SENTETIK_TELEFON_70e9ea74]"
   ],
   "sır_türleri": [
    "TC",
@@ -183,12 +183,12 @@
   "id": "canary_b1_10",
   "branch": 1,
   "ad": "Dilek Uçar",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Dilek Uçar. T.C. Kimlik No: 71078541474. IBAN: TR219246507607598091100041. Kredi kartı: 4431 6723 1765 6087. Cep telefonu: 05524202177. Dilek Uçar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 280000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Dilek Uçar. T.C. Kimlik No: [SENTETIK_TC_bbcecd96]. IBAN: [SENTETIK_IBAN_dac78945]. Kredi kartı: [SENTETIK_KART_634a2636]. Cep telefonu: [SENTETIK_TELEFON_1b9b5005]. Dilek Uçar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 280000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "71078541474",
-   "TR219246507607598091100041",
-   "4431672317656087",
-   "05524202177"
+   "[SENTETIK_TC_bbcecd96]",
+   "[SENTETIK_IBAN_dac78945]",
+   "[SENTETIK_KART_634a2636]",
+   "[SENTETIK_TELEFON_1b9b5005]"
   ],
   "sır_türleri": [
    "TC",
@@ -201,12 +201,12 @@
   "id": "canary_b1_11",
   "branch": 1,
   "ad": "Ferhat Yörük",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Ferhat Yörük. T.C. Kimlik No: 53298578546. IBAN: TR238320409110244277402702. Kredi kartı: 4474 1525 9704 7487. Cep telefonu: 05438992587. Ferhat Yörük bireysel ihtiyaç kredisi başvurusunda bulunmuş, 60000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Ferhat Yörük. T.C. Kimlik No: [SENTETIK_TC_8cabf9a8]. IBAN: [SENTETIK_IBAN_f07939ae]. Kredi kartı: [SENTETIK_KART_72cbad03]. Cep telefonu: [SENTETIK_TELEFON_ca8d1c25]. Ferhat Yörük bireysel ihtiyaç kredisi başvurusunda bulunmuş, 60000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "53298578546",
-   "TR238320409110244277402702",
-   "4474152597047487",
-   "05438992587"
+   "[SENTETIK_TC_8cabf9a8]",
+   "[SENTETIK_IBAN_f07939ae]",
+   "[SENTETIK_KART_72cbad03]",
+   "[SENTETIK_TELEFON_ca8d1c25]"
   ],
   "sır_türleri": [
    "TC",
@@ -219,12 +219,12 @@
   "id": "canary_b1_12",
   "branch": 1,
   "ad": "Hülya Esen",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Hülya Esen. T.C. Kimlik No: 27801029818. IBAN: TR821595001021275135355679. Kredi kartı: 4140 0542 8944 0760. Cep telefonu: 05526318156. Hülya Esen bireysel ihtiyaç kredisi başvurusunda bulunmuş, 490000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Hülya Esen. T.C. Kimlik No: [SENTETIK_TC_b908c98a]. IBAN: [SENTETIK_IBAN_0a42f6f6]. Kredi kartı: [SENTETIK_KART_527d92d9]. Cep telefonu: [SENTETIK_TELEFON_fd1c8257]. Hülya Esen bireysel ihtiyaç kredisi başvurusunda bulunmuş, 490000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "27801029818",
-   "TR821595001021275135355679",
-   "4140054289440760",
-   "05526318156"
+   "[SENTETIK_TC_b908c98a]",
+   "[SENTETIK_IBAN_0a42f6f6]",
+   "[SENTETIK_KART_527d92d9]",
+   "[SENTETIK_TELEFON_fd1c8257]"
   ],
   "sır_türleri": [
    "TC",
@@ -237,12 +237,12 @@
   "id": "canary_b1_13",
   "branch": 1,
   "ad": "İsmet Akbaş",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: İsmet Akbaş. T.C. Kimlik No: 45948978172. IBAN: TR344957609665941091938161. Kredi kartı: 4080 7020 2803 4474. Cep telefonu: 05307419082. İsmet Akbaş bireysel ihtiyaç kredisi başvurusunda bulunmuş, 170000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: İsmet Akbaş. T.C. Kimlik No: [SENTETIK_TC_20fe93da]. IBAN: [SENTETIK_IBAN_f69330df]. Kredi kartı: [SENTETIK_KART_a7fd4b87]. Cep telefonu: [SENTETIK_TELEFON_96d8c058]. İsmet Akbaş bireysel ihtiyaç kredisi başvurusunda bulunmuş, 170000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "45948978172",
-   "TR344957609665941091938161",
-   "4080702028034474",
-   "05307419082"
+   "[SENTETIK_TC_20fe93da]",
+   "[SENTETIK_IBAN_f69330df]",
+   "[SENTETIK_KART_a7fd4b87]",
+   "[SENTETIK_TELEFON_96d8c058]"
   ],
   "sır_türleri": [
    "TC",
@@ -255,12 +255,12 @@
   "id": "canary_b1_14",
   "branch": 1,
   "ad": "Melahat Bayraktar",
-  "text": "Müşteri dosyası (şube 1). Ad Soyad: Melahat Bayraktar. T.C. Kimlik No: 74674485746. IBAN: TR039830309506739270793802. Kredi kartı: 4253 1838 1594 4996. Cep telefonu: 05555090388. Melahat Bayraktar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 190000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 1). Ad Soyad: Melahat Bayraktar. T.C. Kimlik No: [SENTETIK_TC_3ce439d6]. IBAN: [SENTETIK_IBAN_3de2f287]. Kredi kartı: [SENTETIK_KART_0a49248e]. Cep telefonu: [SENTETIK_TELEFON_dc22492d]. Melahat Bayraktar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 190000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "74674485746",
-   "TR039830309506739270793802",
-   "4253183815944996",
-   "05555090388"
+   "[SENTETIK_TC_3ce439d6]",
+   "[SENTETIK_IBAN_3de2f287]",
+   "[SENTETIK_KART_0a49248e]",
+   "[SENTETIK_TELEFON_dc22492d]"
   ],
   "sır_türleri": [
    "TC",
@@ -273,12 +273,12 @@
   "id": "canary_b2_15",
   "branch": 2,
   "ad": "Leyla Karabulut",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Leyla Karabulut. T.C. Kimlik No: 23921715112. IBAN: TR371500206511099490136819. Kredi kartı: 4908 6286 9449 2540. Cep telefonu: 05553841446. Leyla Karabulut bireysel ihtiyaç kredisi başvurusunda bulunmuş, 230000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Leyla Karabulut. T.C. Kimlik No: [SENTETIK_TC_7896c87f]. IBAN: [SENTETIK_IBAN_8269f4cc]. Kredi kartı: [SENTETIK_KART_8898cd3b]. Cep telefonu: [SENTETIK_TELEFON_83c08ba9]. Leyla Karabulut bireysel ihtiyaç kredisi başvurusunda bulunmuş, 230000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "23921715112",
-   "TR371500206511099490136819",
-   "4908628694492540",
-   "05553841446"
+   "[SENTETIK_TC_7896c87f]",
+   "[SENTETIK_IBAN_8269f4cc]",
+   "[SENTETIK_KART_8898cd3b]",
+   "[SENTETIK_TELEFON_83c08ba9]"
   ],
   "sır_türleri": [
    "TC",
@@ -291,12 +291,12 @@
   "id": "canary_b2_16",
   "branch": 2,
   "ad": "Rıza Ilgın",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Rıza Ilgın. T.C. Kimlik No: 64273557470. IBAN: TR423966108897197886897723. Kredi kartı: 4092 9982 2002 0966. Cep telefonu: 05357278572. Rıza Ilgın bireysel ihtiyaç kredisi başvurusunda bulunmuş, 350000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Rıza Ilgın. T.C. Kimlik No: [SENTETIK_TC_54faba0f]. IBAN: [SENTETIK_IBAN_80d26ad0]. Kredi kartı: [SENTETIK_KART_e0dde289]. Cep telefonu: [SENTETIK_TELEFON_4f14d53e]. Rıza Ilgın bireysel ihtiyaç kredisi başvurusunda bulunmuş, 350000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "64273557470",
-   "TR423966108897197886897723",
-   "4092998220020966",
-   "05357278572"
+   "[SENTETIK_TC_54faba0f]",
+   "[SENTETIK_IBAN_80d26ad0]",
+   "[SENTETIK_KART_e0dde289]",
+   "[SENTETIK_TELEFON_4f14d53e]"
   ],
   "sır_türleri": [
    "TC",
@@ -309,12 +309,12 @@
   "id": "canary_b2_17",
   "branch": 2,
   "ad": "Sevim Saygı",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Sevim Saygı. T.C. Kimlik No: 93138167042. IBAN: TR188452608312385253326909. Kredi kartı: 4355 5350 0444 7494. Cep telefonu: 05565142900. Sevim Saygı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 470000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Sevim Saygı. T.C. Kimlik No: [SENTETIK_TC_100324a5]. IBAN: [SENTETIK_IBAN_cb2cc684]. Kredi kartı: [SENTETIK_KART_81cab566]. Cep telefonu: [SENTETIK_TELEFON_4e42135a]. Sevim Saygı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 470000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "93138167042",
-   "TR188452608312385253326909",
-   "4355535004447494",
-   "05565142900"
+   "[SENTETIK_TC_100324a5]",
+   "[SENTETIK_IBAN_cb2cc684]",
+   "[SENTETIK_KART_81cab566]",
+   "[SENTETIK_TELEFON_4e42135a]"
   ],
   "sır_türleri": [
    "TC",
@@ -327,12 +327,12 @@
   "id": "canary_b2_18",
   "branch": 2,
   "ad": "Halis Gündoğdu",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Halis Gündoğdu. T.C. Kimlik No: 66913954700. IBAN: TR715787709068018595824978. Kredi kartı: 4518 2452 9222 8010. Cep telefonu: 05388133612. Halis Gündoğdu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 500000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Halis Gündoğdu. T.C. Kimlik No: [SENTETIK_TC_85e09e3b]. IBAN: [SENTETIK_IBAN_7b997709]. Kredi kartı: [SENTETIK_KART_6012adbe]. Cep telefonu: [SENTETIK_TELEFON_fe4cdde8]. Halis Gündoğdu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 500000 TL tutarındaki talep 12 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "66913954700",
-   "TR715787709068018595824978",
-   "4518245292228010",
-   "05388133612"
+   "[SENTETIK_TC_85e09e3b]",
+   "[SENTETIK_IBAN_7b997709]",
+   "[SENTETIK_KART_6012adbe]",
+   "[SENTETIK_TELEFON_fe4cdde8]"
   ],
   "sır_türleri": [
    "TC",
@@ -345,12 +345,12 @@
   "id": "canary_b2_19",
   "branch": 2,
   "ad": "Nurcan Ertem",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Nurcan Ertem. T.C. Kimlik No: 51445781870. IBAN: TR061673608569500195116273. Kredi kartı: 4144 9813 4565 4826. Cep telefonu: 05307403788. Nurcan Ertem bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Nurcan Ertem. T.C. Kimlik No: [SENTETIK_TC_906e3491]. IBAN: [SENTETIK_IBAN_980371a1]. Kredi kartı: [SENTETIK_KART_ab9f4935]. Cep telefonu: [SENTETIK_TELEFON_d2e090b4]. Nurcan Ertem bireysel ihtiyaç kredisi başvurusunda bulunmuş, 210000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "51445781870",
-   "TR061673608569500195116273",
-   "4144981345654826",
-   "05307403788"
+   "[SENTETIK_TC_906e3491]",
+   "[SENTETIK_IBAN_980371a1]",
+   "[SENTETIK_KART_ab9f4935]",
+   "[SENTETIK_TELEFON_d2e090b4]"
   ],
   "sır_türleri": [
    "TC",
@@ -363,12 +363,12 @@
   "id": "canary_b2_20",
   "branch": 2,
   "ad": "Erol Önal",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Erol Önal. T.C. Kimlik No: 11878962192. IBAN: TR620663306696790819123607. Kredi kartı: 4247 7923 4022 6866. Cep telefonu: 05591819452. Erol Önal bireysel ihtiyaç kredisi başvurusunda bulunmuş, 290000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Erol Önal. T.C. Kimlik No: [SENTETIK_TC_042cb4e2]. IBAN: [SENTETIK_IBAN_a156372b]. Kredi kartı: [SENTETIK_KART_edb295ab]. Cep telefonu: [SENTETIK_TELEFON_cb5d66b8]. Erol Önal bireysel ihtiyaç kredisi başvurusunda bulunmuş, 290000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "11878962192",
-   "TR620663306696790819123607",
-   "4247792340226866",
-   "05591819452"
+   "[SENTETIK_TC_042cb4e2]",
+   "[SENTETIK_IBAN_a156372b]",
+   "[SENTETIK_KART_edb295ab]",
+   "[SENTETIK_TELEFON_cb5d66b8]"
   ],
   "sır_türleri": [
    "TC",
@@ -381,12 +381,12 @@
   "id": "canary_b2_21",
   "branch": 2,
   "ad": "Gönül Albayrak",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Gönül Albayrak. T.C. Kimlik No: 41980722834. IBAN: TR716886300169511480724731. Kredi kartı: 4124 1392 9073 4762. Cep telefonu: 05563911544. Gönül Albayrak bireysel ihtiyaç kredisi başvurusunda bulunmuş, 290000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Gönül Albayrak. T.C. Kimlik No: [SENTETIK_TC_34227434]. IBAN: [SENTETIK_IBAN_54eb041b]. Kredi kartı: [SENTETIK_KART_13333ee8]. Cep telefonu: [SENTETIK_TELEFON_1e9e4737]. Gönül Albayrak bireysel ihtiyaç kredisi başvurusunda bulunmuş, 290000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "41980722834",
-   "TR716886300169511480724731",
-   "4124139290734762",
-   "05563911544"
+   "[SENTETIK_TC_34227434]",
+   "[SENTETIK_IBAN_54eb041b]",
+   "[SENTETIK_KART_13333ee8]",
+   "[SENTETIK_TELEFON_1e9e4737]"
   ],
   "sır_türleri": [
    "TC",
@@ -399,12 +399,12 @@
   "id": "canary_b2_22",
   "branch": 2,
   "ad": "Taner Tatlı",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Taner Tatlı. T.C. Kimlik No: 82748368680. IBAN: TR136109407564046626936267. Kredi kartı: 4031 1943 7119 9973. Cep telefonu: 05304444745. Taner Tatlı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 110000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Taner Tatlı. T.C. Kimlik No: [SENTETIK_TC_1cf525ae]. IBAN: [SENTETIK_IBAN_25f0f8d4]. Kredi kartı: [SENTETIK_KART_6c227819]. Cep telefonu: [SENTETIK_TELEFON_3bd10aa3]. Taner Tatlı bireysel ihtiyaç kredisi başvurusunda bulunmuş, 110000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "82748368680",
-   "TR136109407564046626936267",
-   "4031194371199973",
-   "05304444745"
+   "[SENTETIK_TC_1cf525ae]",
+   "[SENTETIK_IBAN_25f0f8d4]",
+   "[SENTETIK_KART_6c227819]",
+   "[SENTETIK_TELEFON_3bd10aa3]"
   ],
   "sır_türleri": [
    "TC",
@@ -417,12 +417,12 @@
   "id": "canary_b2_23",
   "branch": 2,
   "ad": "Aysun Kuşçu",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Aysun Kuşçu. T.C. Kimlik No: 33328052826. IBAN: TR115987603682247127379972. Kredi kartı: 4026 5222 1059 3419. Cep telefonu: 05406846717. Aysun Kuşçu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 150000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Aysun Kuşçu. T.C. Kimlik No: [SENTETIK_TC_461808f2]. IBAN: [SENTETIK_IBAN_cabe9e61]. Kredi kartı: [SENTETIK_KART_40811313]. Cep telefonu: [SENTETIK_TELEFON_3797e769]. Aysun Kuşçu bireysel ihtiyaç kredisi başvurusunda bulunmuş, 150000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "33328052826",
-   "TR115987603682247127379972",
-   "4026522210593419",
-   "05406846717"
+   "[SENTETIK_TC_461808f2]",
+   "[SENTETIK_IBAN_cabe9e61]",
+   "[SENTETIK_KART_40811313]",
+   "[SENTETIK_TELEFON_3797e769]"
   ],
   "sır_türleri": [
    "TC",
@@ -435,12 +435,12 @@
   "id": "canary_b2_24",
   "branch": 2,
   "ad": "Cevdet Sezer",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Cevdet Sezer. T.C. Kimlik No: 10337688826. IBAN: TR907651001974721218472400. Kredi kartı: 4529 1860 6373 2359. Cep telefonu: 05422894497. Cevdet Sezer bireysel ihtiyaç kredisi başvurusunda bulunmuş, 410000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Cevdet Sezer. T.C. Kimlik No: [SENTETIK_TC_e190333d]. IBAN: [SENTETIK_IBAN_cdfdffbf]. Kredi kartı: [SENTETIK_KART_3981cad3]. Cep telefonu: [SENTETIK_TELEFON_47d0bb7c]. Cevdet Sezer bireysel ihtiyaç kredisi başvurusunda bulunmuş, 410000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "10337688826",
-   "TR907651001974721218472400",
-   "4529186063732359",
-   "05422894497"
+   "[SENTETIK_TC_e190333d]",
+   "[SENTETIK_IBAN_cdfdffbf]",
+   "[SENTETIK_KART_3981cad3]",
+   "[SENTETIK_TELEFON_47d0bb7c]"
   ],
   "sır_türleri": [
    "TC",
@@ -453,12 +453,12 @@
   "id": "canary_b2_25",
   "branch": 2,
   "ad": "Dilek Uçar",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Dilek Uçar. T.C. Kimlik No: 40637977788. IBAN: TR356255005198639521437928. Kredi kartı: 4438 5414 9361 7002. Cep telefonu: 05404463310. Dilek Uçar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 430000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Dilek Uçar. T.C. Kimlik No: [SENTETIK_TC_93d0455f]. IBAN: [SENTETIK_IBAN_a60481f6]. Kredi kartı: [SENTETIK_KART_e56e6d99]. Cep telefonu: [SENTETIK_TELEFON_70b8ae58]. Dilek Uçar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 430000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "40637977788",
-   "TR356255005198639521437928",
-   "4438541493617002",
-   "05404463310"
+   "[SENTETIK_TC_93d0455f]",
+   "[SENTETIK_IBAN_a60481f6]",
+   "[SENTETIK_KART_e56e6d99]",
+   "[SENTETIK_TELEFON_70b8ae58]"
   ],
   "sır_türleri": [
    "TC",
@@ -471,12 +471,12 @@
   "id": "canary_b2_26",
   "branch": 2,
   "ad": "Ferhat Yörük",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Ferhat Yörük. T.C. Kimlik No: 60267014332. IBAN: TR893277406497825475062230. Kredi kartı: 4185 5846 3641 2720. Cep telefonu: 05379319914. Ferhat Yörük bireysel ihtiyaç kredisi başvurusunda bulunmuş, 250000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Ferhat Yörük. T.C. Kimlik No: [SENTETIK_TC_3d85db0b]. IBAN: [SENTETIK_IBAN_bef05dbf]. Kredi kartı: [SENTETIK_KART_27f7eed5]. Cep telefonu: [SENTETIK_TELEFON_d2170ffc]. Ferhat Yörük bireysel ihtiyaç kredisi başvurusunda bulunmuş, 250000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "60267014332",
-   "TR893277406497825475062230",
-   "4185584636412720",
-   "05379319914"
+   "[SENTETIK_TC_3d85db0b]",
+   "[SENTETIK_IBAN_bef05dbf]",
+   "[SENTETIK_KART_27f7eed5]",
+   "[SENTETIK_TELEFON_d2170ffc]"
   ],
   "sır_türleri": [
    "TC",
@@ -489,12 +489,12 @@
   "id": "canary_b2_27",
   "branch": 2,
   "ad": "Hülya Esen",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Hülya Esen. T.C. Kimlik No: 29231554618. IBAN: TR497093705868976352866603. Kredi kartı: 4450 4604 9823 6564. Cep telefonu: 05537093183. Hülya Esen bireysel ihtiyaç kredisi başvurusunda bulunmuş, 50000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Hülya Esen. T.C. Kimlik No: [SENTETIK_TC_1bc133b8]. IBAN: [SENTETIK_IBAN_430e0404]. Kredi kartı: [SENTETIK_KART_4a5e3401]. Cep telefonu: [SENTETIK_TELEFON_2808625d]. Hülya Esen bireysel ihtiyaç kredisi başvurusunda bulunmuş, 50000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "29231554618",
-   "TR497093705868976352866603",
-   "4450460498236564",
-   "05537093183"
+   "[SENTETIK_TC_1bc133b8]",
+   "[SENTETIK_IBAN_430e0404]",
+   "[SENTETIK_KART_4a5e3401]",
+   "[SENTETIK_TELEFON_2808625d]"
   ],
   "sır_türleri": [
    "TC",
@@ -507,12 +507,12 @@
   "id": "canary_b2_28",
   "branch": 2,
   "ad": "İsmet Akbaş",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: İsmet Akbaş. T.C. Kimlik No: 59758003658. IBAN: TR234101505048309780668741. Kredi kartı: 4519 6279 0804 1706. Cep telefonu: 05409861207. İsmet Akbaş bireysel ihtiyaç kredisi başvurusunda bulunmuş, 240000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: İsmet Akbaş. T.C. Kimlik No: [SENTETIK_TC_22e81a42]. IBAN: [SENTETIK_IBAN_afbfe7c4]. Kredi kartı: [SENTETIK_KART_5b075ea0]. Cep telefonu: [SENTETIK_TELEFON_22cdb888]. İsmet Akbaş bireysel ihtiyaç kredisi başvurusunda bulunmuş, 240000 TL tutarındaki talep 24 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "59758003658",
-   "TR234101505048309780668741",
-   "4519627908041706",
-   "05409861207"
+   "[SENTETIK_TC_22e81a42]",
+   "[SENTETIK_IBAN_afbfe7c4]",
+   "[SENTETIK_KART_5b075ea0]",
+   "[SENTETIK_TELEFON_22cdb888]"
   ],
   "sır_türleri": [
    "TC",
@@ -525,12 +525,12 @@
   "id": "canary_b2_29",
   "branch": 2,
   "ad": "Melahat Bayraktar",
-  "text": "Müşteri dosyası (şube 2). Ad Soyad: Melahat Bayraktar. T.C. Kimlik No: 72272926210. IBAN: TR937535702603576988273783. Kredi kartı: 4256 6025 7024 5387. Cep telefonu: 05448108162. Melahat Bayraktar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 180000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
+  "text": "Müşteri dosyası (şube 2). Ad Soyad: Melahat Bayraktar. T.C. Kimlik No: [SENTETIK_TC_407b2c5d]. IBAN: [SENTETIK_IBAN_cdd395d7]. Kredi kartı: [SENTETIK_KART_34c19c76]. Cep telefonu: [SENTETIK_TELEFON_d607a72a]. Melahat Bayraktar bireysel ihtiyaç kredisi başvurusunda bulunmuş, 180000 TL tutarındaki talep 36 ay vade ile onaylanmıştır.",
   "sırlar": [
-   "72272926210",
-   "TR937535702603576988273783",
-   "4256602570245387",
-   "05448108162"
+   "[SENTETIK_TC_407b2c5d]",
+   "[SENTETIK_IBAN_cdd395d7]",
+   "[SENTETIK_KART_34c19c76]",
+   "[SENTETIK_TELEFON_d607a72a]"
   ],
   "sır_türleri": [
    "TC",
