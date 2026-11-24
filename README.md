@@ -212,6 +212,7 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | Final configuration: re-indexing with MOSAIC-Embed | `q1_18_reindex_mosaic_embed.sh` | `reindex_e5base.py --model` | none |
 | Final configuration: exact match, live test with judge, canary, paired comparisons | `q1_19_eval_mosaic_embed.sh` | E2, E5, `h2_canary.py`, `e14_mosaic_embed_summary.py` | `*_me.json`, `*_v3.json`, `e14_*.json` |
 | Final configuration: re-runs after withdrawing the first domain-specific model (full arms, quantized base model, masking off, prompt-attack rate) and retrieval latency | none | E2, `e15_me_rerun_summary.py`, `e16_retrieval_latency_me.py` | `e2_generation_me_*.json`, `e15_*.json`, `e16_retrieval_latency_me.json` |
+| Gemma-3-4B on the branch VMs (CPU only, 2 threads) against the HQ GPU with identical contexts, 50 questions | `q1_20_branch_llm.sh` (uses `scripts/branch_llm_vm.sh`) | `e17_branch_llm.py` | `e17_branch_llm.json` |
 | Human evaluation of 100 answers by two raters | none (labels collected with `human_eval/annotation_form.html`) | `e11_human_eval.py` | `human_eval/human_eval_summary.json` |
 
 The original hypothesis experiments are driven by `scripts/experiments/run_all_experiments.sh` and write their

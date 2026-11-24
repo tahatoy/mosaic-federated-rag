@@ -1,0 +1,480 @@
+{
+ "setup": {
+  "model": "GEMMA3_FINANCE_V1.Q4_K_M.gguf",
+  "questions": "evenly spaced subset of the 500 cross-branch questions, half asked from each branch",
+  "n": 50,
+  "per_branch": {
+   "1": 25,
+   "2": 25
+  },
+  "k": 3,
+  "context": "E2 condition C (both branch RAG services + HQ shared collection, cross-encoder top 3)",
+  "hq": "Gemma-3-4B Q4_K_M on the HQ GPU (8099)",
+  "branch": "Gemma-3-4B Q4_K_M on the asking branch's VMware VM, CPU only, 2 threads, alongside the branch RAG service"
+ },
+ "em": {
+  "hq": [
+   0.92,
+   [
+    0.84,
+    0.98
+   ]
+  ],
+  "branch": [
+   0.92,
+   [
+    0.84,
+    0.98
+   ]
+  ],
+  "same_answer_correctness": 50,
+  "only_hq": 0,
+  "only_branch": 0,
+  "mcnemar_p": 1.0,
+  "diff_ci": [
+   0.0,
+   [
+    0.0,
+    0.0
+   ]
+  ]
+ },
+ "identical_answers": 49,
+ "latency_s": {
+  "hq": {
+   "mean": 0.249,
+   "median": 0.17,
+   "min": 0.118,
+   "max": 1.081,
+   "p95": 0.584,
+   "n": 50
+  },
+  "branch": {
+   "mean": 15.268,
+   "median": 11.512,
+   "min": 7.61,
+   "max": 40.767,
+   "p95": 36.279,
+   "n": 50
+  },
+  "branch_by_branch": {
+   "1": {
+    "mean": 16.167,
+    "median": 11.473,
+    "min": 7.61,
+    "max": 40.767,
+    "p95": 36.358,
+    "n": 25
+   },
+   "2": {
+    "mean": 14.37,
+    "median": 11.55,
+    "min": 9.249,
+    "max": 39.15,
+    "p95": 23.355,
+    "n": 25
+   }
+  }
+ },
+ "branch_llm_speed": {
+  "prompt_tokens": {
+   "mean": 573.72,
+   "median": 438.0,
+   "min": 287,
+   "max": 1444,
+   "p95": 1345.3,
+   "n": 50
+  },
+  "prompt_tok_s": {
+   "mean": 39.013,
+   "median": 39.158,
+   "min": 33.205,
+   "max": 43.527,
+   "p95": 42.626,
+   "n": 50
+  },
+  "gen_tokens": {
+   "mean": 4.5,
+   "median": 4.0,
+   "min": 3,
+   "max": 11,
+   "p95": 6.55,
+   "n": 50
+  },
+  "gen_tok_s": {
+   "mean": 16.275,
+   "median": 16.414,
+   "min": 11.147,
+   "max": 20.584,
+   "p95": 19.09,
+   "n": 50
+  }
+ },
+ "branch_phase_total_s": 404.2,
+ "records": [
+  {
+   "branch": 1,
+   "gold": "105",
+   "hq": "10,5",
+   "branch_answer": "10,5",
+   "branch_wall_s": 14.05
+  },
+  {
+   "branch": 1,
+   "gold": "100000000",
+   "hq": "500000",
+   "branch_answer": "524244",
+   "branch_wall_s": 9.39
+  },
+  {
+   "branch": 1,
+   "gold": "635",
+   "hq": "2,8",
+   "branch_answer": "2,8",
+   "branch_wall_s": 10.37
+  },
+  {
+   "branch": 1,
+   "gold": "120",
+   "hq": "120",
+   "branch_answer": "120",
+   "branch_wall_s": 11.47
+  },
+  {
+   "branch": 1,
+   "gold": "10",
+   "hq": "10",
+   "branch_answer": "10",
+   "branch_wall_s": 28.18
+  },
+  {
+   "branch": 1,
+   "gold": "400",
+   "hq": "400",
+   "branch_answer": "400",
+   "branch_wall_s": 7.85
+  },
+  {
+   "branch": 1,
+   "gold": "26",
+   "hq": "2,6",
+   "branch_answer": "2,6",
+   "branch_wall_s": 40.77
+  },
+  {
+   "branch": 1,
+   "gold": "100",
+   "hq": "100",
+   "branch_answer": "100",
+   "branch_wall_s": 10.55
+  },
+  {
+   "branch": 1,
+   "gold": "747",
+   "hq": "747",
+   "branch_answer": "747",
+   "branch_wall_s": 11.04
+  },
+  {
+   "branch": 1,
+   "gold": "209",
+   "hq": "20.9",
+   "branch_answer": "20.9",
+   "branch_wall_s": 28.29
+  },
+  {
+   "branch": 1,
+   "gold": "15",
+   "hq": "15",
+   "branch_answer": "15",
+   "branch_wall_s": 13.87
+  },
+  {
+   "branch": 1,
+   "gold": "55",
+   "hq": "62",
+   "branch_answer": "62",
+   "branch_wall_s": 9.47
+  },
+  {
+   "branch": 1,
+   "gold": "218",
+   "hq": "2,18",
+   "branch_answer": "2,18",
+   "branch_wall_s": 11.57
+  },
+  {
+   "branch": 1,
+   "gold": "5347",
+   "hq": "53,47",
+   "branch_answer": "53,47",
+   "branch_wall_s": 27.18
+  },
+  {
+   "branch": 1,
+   "gold": "843",
+   "hq": "843",
+   "branch_answer": "843",
+   "branch_wall_s": 36.42
+  },
+  {
+   "branch": 1,
+   "gold": "15",
+   "hq": "1,5",
+   "branch_answer": "1,5",
+   "branch_wall_s": 13.02
+  },
+  {
+   "branch": 1,
+   "gold": "398",
+   "hq": "3,98",
+   "branch_answer": "3,98",
+   "branch_wall_s": 7.82
+  },
+  {
+   "branch": 1,
+   "gold": "168",
+   "hq": "16,8",
+   "branch_answer": "16,8",
+   "branch_wall_s": 9.99
+  },
+  {
+   "branch": 1,
+   "gold": "10",
+   "hq": "10",
+   "branch_answer": "10",
+   "branch_wall_s": 12.31
+  },
+  {
+   "branch": 1,
+   "gold": "32",
+   "hq": "32",
+   "branch_answer": "32",
+   "branch_wall_s": 36.1
+  },
+  {
+   "branch": 1,
+   "gold": "177",
+   "hq": "177",
+   "branch_answer": "177",
+   "branch_wall_s": 17.68
+  },
+  {
+   "branch": 1,
+   "gold": "500",
+   "hq": "500",
+   "branch_answer": "500",
+   "branch_wall_s": 7.61
+  },
+  {
+   "branch": 1,
+   "gold": "120",
+   "hq": "120",
+   "branch_answer": "120",
+   "branch_wall_s": 10.24
+  },
+  {
+   "branch": 1,
+   "gold": "243",
+   "hq": "243",
+   "branch_answer": "243",
+   "branch_wall_s": 9.39
+  },
+  {
+   "branch": 1,
+   "gold": "114",
+   "hq": "11,4",
+   "branch_answer": "11,4",
+   "branch_wall_s": 9.56
+  },
+  {
+   "branch": 2,
+   "gold": "23",
+   "hq": "2.3",
+   "branch_answer": "2.3",
+   "branch_wall_s": 23.45
+  },
+  {
+   "branch": 2,
+   "gold": "4954907",
+   "hq": "49.549,07",
+   "branch_answer": "49.549,07",
+   "branch_wall_s": 39.15
+  },
+  {
+   "branch": 2,
+   "gold": "86",
+   "hq": "8,6",
+   "branch_answer": "8,6",
+   "branch_wall_s": 9.94
+  },
+  {
+   "branch": 2,
+   "gold": "58",
+   "hq": "5.8",
+   "branch_answer": "5.8",
+   "branch_wall_s": 10.76
+  },
+  {
+   "branch": 2,
+   "gold": "15",
+   "hq": "1,5",
+   "branch_answer": "1,5",
+   "branch_wall_s": 22.98
+  },
+  {
+   "branch": 2,
+   "gold": "5725",
+   "hq": "57.25",
+   "branch_answer": "57.25",
+   "branch_wall_s": 9.47
+  },
+  {
+   "branch": 2,
+   "gold": "110000",
+   "hq": "110000",
+   "branch_answer": "110000",
+   "branch_wall_s": 13.32
+  },
+  {
+   "branch": 2,
+   "gold": "335",
+   "hq": "3.35",
+   "branch_answer": "3.35",
+   "branch_wall_s": 9.89
+  },
+  {
+   "branch": 2,
+   "gold": "151",
+   "hq": "15,1",
+   "branch_answer": "15,1",
+   "branch_wall_s": 17.47
+  },
+  {
+   "branch": 2,
+   "gold": "889",
+   "hq": "8,89",
+   "branch_answer": "8,89",
+   "branch_wall_s": 10.57
+  },
+  {
+   "branch": 2,
+   "gold": "25",
+   "hq": "5,2",
+   "branch_answer": "5,2",
+   "branch_wall_s": 11.55
+  },
+  {
+   "branch": 2,
+   "gold": "81",
+   "hq": "8,1",
+   "branch_answer": "8,1",
+   "branch_wall_s": 9.77
+  },
+  {
+   "branch": 2,
+   "gold": "157",
+   "hq": "1,57",
+   "branch_answer": "1,57",
+   "branch_wall_s": 11.26
+  },
+  {
+   "branch": 2,
+   "gold": "12",
+   "hq": "1.2",
+   "branch_answer": "1.2",
+   "branch_wall_s": 11.93
+  },
+  {
+   "branch": 2,
+   "gold": "292",
+   "hq": "29,2",
+   "branch_answer": "29,2",
+   "branch_wall_s": 15.57
+  },
+  {
+   "branch": 2,
+   "gold": "100",
+   "hq": "100",
+   "branch_answer": "100",
+   "branch_wall_s": 20.06
+  },
+  {
+   "branch": 2,
+   "gold": "50",
+   "hq": "50",
+   "branch_answer": "50",
+   "branch_wall_s": 9.98
+  },
+  {
+   "branch": 2,
+   "gold": "25",
+   "hq": "2.5",
+   "branch_answer": "2.5",
+   "branch_wall_s": 11.79
+  },
+  {
+   "branch": 2,
+   "gold": "78",
+   "hq": "7.8",
+   "branch_answer": "7.8",
+   "branch_wall_s": 16.73
+  },
+  {
+   "branch": 2,
+   "gold": "43",
+   "hq": "4.3",
+   "branch_answer": "4.3",
+   "branch_wall_s": 11.16
+  },
+  {
+   "branch": 2,
+   "gold": "67",
+   "hq": "6,7",
+   "branch_answer": "6,7",
+   "branch_wall_s": 11.28
+  },
+  {
+   "branch": 2,
+   "gold": "12",
+   "hq": "1,2",
+   "branch_answer": "1,2",
+   "branch_wall_s": 18.09
+  },
+  {
+   "branch": 2,
+   "gold": "13",
+   "hq": "1.3",
+   "branch_answer": "1.3",
+   "branch_wall_s": 13.07
+  },
+  {
+   "branch": 2,
+   "gold": "16",
+   "hq": "1,6",
+   "branch_answer": "1,6",
+   "branch_wall_s": 10.74
+  },
+  {
+   "branch": 2,
+   "gold": "68",
+   "hq": "6,8",
+   "branch_answer": "6,8",
+   "branch_wall_s": 9.25
+  }
+ ],
+ "branch_memory": {
+  "1": {
+   "used_before_llm_mb": 4625,
+   "peak_used_mb": 6339,
+   "peak_llama_rss_mb": 4491,
+   "samples": 588
+  },
+  "2": {
+   "used_before_llm_mb": 2483,
+   "peak_used_mb": 4545,
+   "peak_llama_rss_mb": 4496,
+   "samples": 570
+  }
+ }
+}
