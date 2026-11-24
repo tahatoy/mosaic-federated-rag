@@ -96,18 +96,6 @@
      0.035
     ]
    ]
-  },
-  "live_me_vs_live_first": {
-   "only_first": 21,
-   "only_second": 6,
-   "mcnemar_p": 0.005924612283706665,
-   "diff_ci": [
-    0.075,
-    [
-     0.025,
-     0.13
-    ]
-   ]
   }
  },
  "arms": {

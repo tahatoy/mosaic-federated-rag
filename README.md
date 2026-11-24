@@ -77,7 +77,8 @@ Results of the final configuration reported in the article:
 | Live system, 200 paraphrased questions: exact match / judged correct / judged faithful | 84.5% / 81.0% / 79.0% |
 | Human evaluation of 100 answers (intermediate base-e5 run), two raters: inter-rater agreement on correctness | Cohen's kappa = 0.85 |
 | Agreement between the LLM judge and the human raters on correctness | Cohen's kappa = 0.83 and 0.82 |
-| Answers leaking synthetic customer secrets (canary test, 180 requests) | 110/180 before, 0/180 with source-side masking and mTLS |
+| Router on single-figure cross-branch questions routed as simple, first vs. retrained router (templated / paraphrased) | 0.3% / 0.2% vs. 100% / 84.8% |
+| Answers leaking synthetic customer secrets (canary test, 180 requests) | 139/180 without, 0/180 with source-side masking and mTLS |
 | Regulation-derived technical controls (KVKK, BDDK) | 21 of 21 passed |
 | TR-MMLU, 6,200 questions, ChatML prompt: Qwen3-8B vs. Gemma-3-4B | 53.82% vs. 37.79% |
 | GPU memory of the Q4_K_M models | 5.75 GB (Qwen3-8B), 3.45 GB (Gemma-3-4B) |
@@ -98,7 +99,7 @@ backend/
   certs/                    certificate templates only (keys are never committed)
   scripts/                  data, training, evaluation and maintenance tools
     hypothesis_tests/       original H1-H4 experiments (canary leakage, PII masking, DP analysis, token cost)
-    q1_revision/            extended evaluation used in the article (E0-E10)
+    q1_revision/            extended evaluation used in the article (E0-E19)
   tests/                    pytest suite
 ai/
   models/                   training code for the router and embeddings, quantization benchmark
@@ -144,14 +145,11 @@ Model weights are not stored in this repository. The published models are:
 | Gemma-3-4B finance, GGUF (Q4_K_M) | [Toxotes/GEMMA3_FINANCE_V1_GGUF](https://huggingface.co/Toxotes/GEMMA3_FINANCE_V1_GGUF) |
 | BERT query router | [Toxotes/fin-bert-tr-router](https://huggingface.co/Toxotes/fin-bert-tr-router) |
 | MOSAIC-Embed, retrieval embedding model (final configuration) | [Toxotes/mosaic-embed](https://huggingface.co/Toxotes/mosaic-embed) |
-| Initial fine-tuned embedding model (first configuration, superseded) | [Toxotes/mosaic-turkembed-finetuned](https://huggingface.co/Toxotes/mosaic-turkembed-finetuned) |
 
 Expected local paths are `ai/models/finetuned/*.gguf`, `ai/models/router/bert_router_best` and
 `ai/models/embeddings/turkembed_v3` for MOSAIC-Embed
 (`huggingface-cli download Toxotes/mosaic-embed --local-dir ai/models/embeddings/turkembed_v3`). The services select
-the embedding model with `EMBEDDING_MODEL_KEY` (`mosaic_embed` or `e5small_base`). The initial fine-tuned model was
-trained on instruction-response pairs and generalized worse than its base model to cross-branch questions; it is kept
-only to reproduce the first-configuration results. Model cards are in `docs/model_cards/`.
+the embedding model with `EMBEDDING_MODEL_KEY` (`mosaic_embed` or `e5small_base`). Model cards are in `docs/model_cards/`.
 
 ## Configuration
 
@@ -195,28 +193,30 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | Experiment | Driver | Script | Output |
 |------------|--------|--------|--------|
 | Paraphrased question sets | `q1_01c_paraphrase_v2.sh` | `e0_paraphrase_questions.py` | `e0_paraphrases.json` |
-| Retrieval benchmark (BM25, e5, BGE-M3, TurkEmbed4Retrieval, initial fine-tuned model, RRF, re-ranking) | `q1_02_retrieval.sh` | `e1_retrieval_baselines.py` | `e1_retrieval.json`, `e1_retrieval_me.json` |
-| Cross-branch generation (H1) and component ablation | `q1_07a_gen_main.sh`, `q1_07b_gen_quant.sh` | `e2_crossbranch_generation.py` | `e2_generation*.json` |
-| Federated embedding training and differential privacy | `q1_05_fl_embedding.sh` | `e3_fl_embedding_dp.py` | `e3_fl_embedding_qp.json` (query–passage pairs, reported in the paper); `--data ir` writes the earlier `e3_fl_embedding.json` |
+| Retrieval benchmark (BM25, e5, BGE-M3, TurkEmbed4Retrieval, MOSAIC-Embed, RRF, re-ranking) | `q1_02_retrieval.sh` | `e1_retrieval_baselines.py` | `e1_retrieval_me.json` |
+| Cross-branch generation (H1) and component ablation | `q1_07a_gen_main.sh`, `q1_07b_gen_quant.sh` | `e2_crossbranch_generation.py` | `e2_generation_me_full.json`, `e2_generation_me_nomask.json`, `e2_generation_me_quant.json` |
+| Federated embedding training and differential privacy | `q1_05_fl_embedding.sh` | `e3_fl_embedding_dp.py` | `e3_fl_embedding_qp.json` |
 | Router baselines and repeated FedAvg / FedProx | `q1_06_router.sh` | `e4_router_baselines_fl.py` | `e4_router.json` |
-| Live end-to-end test with an LLM judge | `q1_04_e2e_judge.sh` | `e5_e2e_judge.py` | `e5_e2e_judge*.json` |
-| Zemberek root reduction in retrieval (H4) | `q1_08_h4_zemberek.sh` | `e6_h4_zemberek_retrieval.py` | `e6_h4_zemberek.json`, `e6_h4_zemberek_me.json` |
-| Flower between the branch machines | `q1_10_flower.sh` | `e7_flower_server.py`, `e7_flower_client.py` | `e7_flower_*.json` (`e7_flower_qp_*.json`: query–passage pairs, reported in the paper) |
-| Diagnosis of the federated-central gap | `q1_09_gapdiag.sh` | `e8_fed_gap_diag.py` | `e8_fed_gap*.json` |
+| Live end-to-end test with an LLM judge | `q1_04_e2e_judge.sh` | `e5_e2e_judge.py` | `e5_e2e_judge_v3.json`, `e5_e2e_raw_v3.json` (final configuration); `e5_e2e_judge_v2*.json`, `e5_e2e_raw_v2.json` (intermediate configuration) |
+| Zemberek root reduction in retrieval (H4) | `q1_08_h4_zemberek.sh` | `e6_h4_zemberek_retrieval.py` | `e6_h4_zemberek_me.json` (`e6_h4_zemberek.json`: run that built the Zemberek cache, processing time) |
+| Flower between the branch machines | `q1_10_flower.sh` | `e7_flower_server.py`, `e7_flower_client.py` | `e7_flower_qp_*.json` |
+| Diagnosis of the federated-central gap | `q1_09_gapdiag.sh` | `e8_fed_gap_diag.py` | `e8_fed_gap_me.json` (final), `e8_fed_gap_v2.json` (intermediate) |
 | Router on out-of-template questions | `q1_11_router_ood.sh` | `e9_router_ood.py` | `e9_router_ood.json` |
 | Intermediate configuration: re-indexing with the base e5-small model | `q1_12_reindex.sh` | `reindex_e5base.py` | none |
 | Re-evaluation of the intermediate configuration (exact match, judge, canary) | `q1_13_eval_v2.sh`, `q1_14_eval_v2b.sh` | E2, E5, E8, `h2_canary.py` | `*_v2.json` |
 | TR-MMLU, two models and two prompt conditions | `q1_15_tr_mmlu.sh` | `e10_tr_mmlu.py`, `e10_summary.py` | `e10_tr_mmlu_*.json` |
-| MOSAIC-Embed: training queries, training, retrieval evaluation | `q1_16_mosaic_embed_train.sh` | `e12a_gen_train_queries.py`, `e12b_train_turkembed_v2.py`, `e12c_eval_turkembed_v2.py` | `e12*.json` |
-| MOSAIC-Embed: offline generation check with simulated federated retrieval | `q1_17_mosaic_embed_e13.sh` | `e13_embed_generation.py` | `e13_embed_generation.json` |
+| MOSAIC-Embed: training queries, training, retrieval evaluation | `q1_16_mosaic_embed_train.sh` | `e12a_gen_train_queries.py`, `e12b_train_turkembed_v2.py`, `e12c_eval_turkembed_v2.py` | `e12a_*.json`, `e12b_train_turkembed_v3.json`, `e12_eval_turkembed_v3.json` |
 | Final configuration: re-indexing with MOSAIC-Embed | `q1_18_reindex_mosaic_embed.sh` | `reindex_e5base.py --model` | none |
 | Final configuration: exact match, live test with judge, canary, paired comparisons | `q1_19_eval_mosaic_embed.sh` | E2, E5, `h2_canary.py`, `e14_mosaic_embed_summary.py` | `*_me.json`, `*_v3.json`, `e14_*.json` |
 | Final configuration: re-runs after withdrawing the first domain-specific model (full arms, quantized base model, masking off, prompt-attack rate) and retrieval latency | none | E2, `e15_me_rerun_summary.py`, `e16_retrieval_latency_me.py` | `e2_generation_me_*.json`, `e15_*.json`, `e16_retrieval_latency_me.json` |
 | Gemma-3-4B on the branch VMs (CPU only, 2 threads) against the HQ GPU with identical contexts, 50 questions | `q1_20_branch_llm.sh` (uses `scripts/branch_llm_vm.sh`) | `e17_branch_llm.py` | `e17_branch_llm.json` |
+| Router retrained with report-style questions, three seeds, and per-class recall on the template test set | `q1_21_router_v2.sh` | `e18_router_v2.py`, `e19_router_per_class.py` | `e18_router_v2.json`, `e19_router_per_class.json` |
+| Canary test before/with safeguards and with Branch-2 protected only (control), prompt-attack rate | `q1_19_eval_mosaic_embed.sh` | `h2_canary.py`, H2 security test | `../h2_canary_*_once_me.json`, `../h2_canary_*_kontrol_me.json`, `../h2_canary_*_sonra_me.json`, `../h2_security_asr_*_me.json` |
 | Human evaluation of 100 answers by two raters | none (labels collected with `human_eval/annotation_form.html`) | `e11_human_eval.py` | `human_eval/human_eval_summary.json` |
 
 The original hypothesis experiments are driven by `scripts/experiments/run_all_experiments.sh` and write their
-results to `ai/experiments/results/`. The scripts that drew the article figures are in `scripts/figures/`.
+results to `ai/experiments/results/`. `python scripts/figures/figs.py` redraws Figures 4-9 of the article (EN and TR) and Figure 4.3 of the thesis from these
+result files.
 
 ## Tests
 

@@ -1,13 +1,18 @@
-"""MOSAIC Q1 figures (EN + TR). Data: ai/experiments/results/q1/*.json (values cross-checked with the tables)."""
-import json, os
+"""MOSAIC article and thesis figures (EN + TR).
+
+Every value is read from ai/experiments/results/ (final configuration with MOSAIC-Embed).
+Run:  python scripts/figures/figs.py      -> fig04..fig09 in EN and TR, fig_bench in TR (thesis Figure 4.3)
+"""
+import json, os, statistics as st
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 
-R = os.environ.get("MOSAIC_RESULTS", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "ai", "experiments", "results", "q1", ""))
-OUT = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.abspath(__file__))
+RES = os.environ.get("MOSAIC_RESULTS", os.path.join(HERE, "..", "..", "ai", "experiments", "results"))
+OUT = os.environ.get("MOSAIC_FIG_OUT", HERE)
 BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
 GRAY, GRAY_D = "#a9a8a3", "#6b6a66"
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#e4e3df"
@@ -24,7 +29,9 @@ plt.rcParams.update({
 
 
 def J(name):
-    return json.load(open(R + name))
+    """Result file relative to ai/experiments/results/ (q1/ files carry the prefix)."""
+    with open(os.path.join(RES, name), encoding="utf-8") as f:
+        return json.load(f)
 
 
 def save(fig, name, lang):
@@ -41,106 +48,104 @@ def grid_y(ax):
     ax.yaxis.grid(True, color=GRID, lw=0.6); ax.set_axisbelow(True)
 
 
-def panel(ax, letter):
-    ax.text(-0.01, 1.02, f"({letter})", transform=ax.transAxes, ha="right", va="bottom", fontweight="bold", fontsize=8.5)
+def panel(ax, letter, x=-0.01):
+    ax.text(x, 1.02, f"({letter})", transform=ax.transAxes, ha="right", va="bottom", fontweight="bold", fontsize=8.5)
+
+
+def thousands(n, lang):
+    """1,019 in English; 1 019 (no-break space) in Turkish, where the point is the decimal separator."""
+    s = f"{n:,}"
+    return s if lang == "en" else s.replace(",", "\u00a0")
+
+
+def pct(v):
+    v = 100 * v
+    return "100" if round(v, 1) == 100 else f"{v:.1f}"
 
 
 T = {
     "en": dict(
-        acc="Accuracy (%)", tmpl="Template test set (n = 3,000)", ood="Out-of-template questions (expected class: simple)",
-        maj="Majority class", tfidf="TF-IDF + logistic regression", e5lr="e5-small + logistic regression",
-        cen="BERTurk, centralized (pooled)", fa="BERTurk, FedAvg", fp="BERTurk, FedProx", loc="BERTurk, local (either branch)",
-        dep="Deployed router, ONNX INT8", share="Share of questions (%)",
-        bt="BERT router, templated (n = 600)", bp="BERT router, paraphrased (n = 419)",
-        tt="TF-IDF, templated (n = 600)", tp="TF-IDF, paraphrased (n = 419)",
-        cx="complex", si="simple", ch="chitchat",
+        r_first="First router (live system)", r_new="Retrained router", r_acc="Correctly classified (%)",
+        r_a="Template test set:\nsame sources as training", r_b="Question sources\nnot used in training",
+        r_ch="Chitchat", r_si="Simple", r_cx="Complex",
+        r_rs="Simple:\nreport-style", r_ct="Simple:\ncross-branch\ntemplated", r_cp="Simple:\ncross-branch\nparaphrased",
+        r_rc="Complex:\nreport-style",
         mrr="MRR@10 (federated setting, 95% CI)", templ="Templated (n = 600)", para="Paraphrased (n = 419)",
+        bge="BGE-M3 (dense)",
         mem="GPU memory", speed="Generation speed", em_q="Cross-branch EM (same contexts)", gib="GiB", tps="Tokens/s",
         file="Model file", vram="GPU memory", em="EM (%)", nt="not\ntested",
         h1a="Templated questions (n = 500)", h1b="Paraphrased questions (n = 352)", h1c="Live end-to-end (n = 200, paraphrased)",
         emci="Exact match (%, 95% CI)",
-        A="No retrieval", B="Asking branch only", C1="MOSAIC, initial model", D1="Central index, initial model", C3="MOSAIC, MOSAIC-Embed", D3="Central index, MOSAIC-Embed",
-        C2="MOSAIC, re-indexed (base e5-small)", D2="Central index, base e5-small",
-        L0="Qwen3-8B without retrieval", L1="MOSAIC, initial model", L4="MOSAIC, MOSAIC-Embed", L2="MOSAIC, re-indexed (run 1)", L3="MOSAIC, re-indexed (run 2)",
+        A="No retrieval", B="Asking branch only", C="MOSAIC (federated), MOSAIC-Embed", D="Central index, MOSAIC-Embed",
+        L0="Qwen3-8B without retrieval", L1="MOSAIC, MOSAIC-Embed",
         g_base="Baselines", g_fed="MOSAIC (federated)", g_cen="Central index (upper bound)",
         eps="ε over three rounds (δ = 10⁻⁵, log scale)", util="MRR@10 (mean ± SD, 3 seeds)",
         cdp="Central DP (noise added once at HQ)", ldp="Local DP (noise added by each client)",
         nodp="No DP", base="Base e5-small (untrained)",
         zt="Templated questions (n = 600)", zp="Paraphrased questions (n = 419)",
         raw="Raw text", root="Root reduction", morph="Morpheme segmentation", zmrr="MRR@10 (95% CI)",
-        tek="Initial fine-tuned e5-small", rrf="BM25 + initial fine-tuned (RRF)", tekce="Initial fine-tuned + CE",
     ),
     "tr": dict(
-        acc="Doğruluk (%)", tmpl="Kalıp test kümesi (n = 3.000)", ood="Kalıp dışı sorular (beklenen sınıf: basit)",
-        maj="Çoğunluk sınıfı", tfidf="TF-IDF + lojistik regresyon", e5lr="e5-small + lojistik regresyon",
-        cen="BERTurk, merkezi (birleşik veri)", fa="BERTurk, FedAvg", fp="BERTurk, FedProx", loc="BERTurk, yerel (her iki şube)",
-        dep="Konuşlandırılan yönlendirici, ONNX INT8", share="Soruların payı (%)",
-        bt="BERT yönlendirici, kalıp (n = 600)", bp="BERT yönlendirici, yeniden ifade (n = 419)",
-        tt="TF-IDF, kalıp (n = 600)", tp="TF-IDF, yeniden ifade (n = 419)",
-        cx="karmaşık", si="basit", ch="gündelik",
+        r_first="İlk yönlendirici (canlı sistem)", r_new="Yeniden eğitilen yönlendirici", r_acc="Doğru sınıflandırılan (%)",
+        r_a="Kalıp test kümesi:\neğitimle aynı kaynak", r_b="Eğitimde kullanılmayan\nsoru kaynakları",
+        r_ch="Gündelik", r_si="Basit", r_cx="Karmaşık",
+        r_rs="Basit:\nrapor dili", r_ct="Basit:\nçapraz şube\nkalıp", r_cp="Basit:\nçapraz şube\nyeniden ifade",
+        r_rc="Karmaşık:\nrapor dili",
         mrr="MRR@10 (federe düzen, %95 GA)", templ="Kalıp sorular (n = 600)", para="Yeniden ifade (n = 419)",
+        bge="BGE-M3 (yoğun)",
         mem="Grafik bellek", speed="Üretim hızı", em_q="Çapraz şube EM (aynı bağlam)", gib="GiB", tps="Token/s",
         file="Model dosyası", vram="Grafik bellek", em="EM (%)", nt="sınanmadı",
         h1a="Kalıp sorular (n = 500)", h1b="Yeniden ifade edilmiş sorular (n = 352)", h1c="Canlı uçtan uca (n = 200, yeniden ifade)",
         emci="Tam eşleşme (%, %95 GA)",
-        A="Bilgi getirme yok", B="Yalnız soran şube", C1="MOSAIC, ilk model", D1="Merkezi dizin, ilk model", C3="MOSAIC, MOSAIC-Embed", D3="Merkezi dizin, MOSAIC-Embed",
-        C2="MOSAIC, yeniden indekslenmiş (taban e5-small)", D2="Merkezi dizin, taban e5-small",
-        L0="Bilgi getirmesiz Qwen3-8B", L1="MOSAIC, ilk model", L4="MOSAIC, MOSAIC-Embed", L2="MOSAIC, yeniden indekslenmiş (1. koşu)", L3="MOSAIC, yeniden indekslenmiş (2. koşu)",
+        A="Bilgi getirme yok", B="Yalnız soran şube", C="MOSAIC (federe), MOSAIC-Embed", D="Merkezi dizin, MOSAIC-Embed",
+        L0="Bilgi getirmesiz Qwen3-8B", L1="MOSAIC, MOSAIC-Embed",
         g_base="Temel koşullar", g_fed="MOSAIC (federe)", g_cen="Merkezi dizin (üst sınır)",
         eps="Üç turda ε (δ = 10⁻⁵, logaritmik ölçek)", util="MRR@10 (ortalama ± SS, 3 tohum)",
         cdp="Merkezi DP (gürültü HQ'da bir kez)", ldp="Yerel DP (gürültü her istemcide)",
         nodp="DP yok", base="Taban e5-small (eğitimsiz)",
         zt="Kalıp sorular (n = 600)", zp="Yeniden ifade edilmiş sorular (n = 419)",
         raw="Ham metin", root="Kök indirgeme", morph="Morfem bölütleme", zmrr="MRR@10 (%95 GA)",
-        tek="İlk ince ayarlı e5-small", rrf="BM25 + ilk ince ayarlı (RRF)", tekce="İlk ince ayarlı + CE",
     ),
 }
 
 
 # ---------------------------------------------------------------- Figure 4: router
 def fig_router(lang):
-    t = T[lang]; e4 = J("e4_router.json"); e9 = J("e9_router_ood.json")
-    s = e4["federated"]["summary"]; b = e4["baselines"]
-    rows = [(t["maj"], b["majority"]["acc"], GRAY), (t["tfidf"], b["tfidf_logreg"]["acc"], GRAY),
-            (t["e5lr"], b["e5small_logreg"]["acc"], GRAY), (t["cen"], s["central_pooled"]["acc"][0], ORANGE),
-            (t["fa"], s["FedAvg"]["acc"][0], BLUE), (t["fp"], s["FedProx"]["acc"][0], BLUE),
-            (t["loc"], s["local_b1"]["acc"][0], GRAY_D), (t["dep"], b["bert_router_deployed"]["acc"], AQUA)]
-    fig, (a1, a2) = plt.subplots(2, 1, figsize=(W, 4.3), gridspec_kw=dict(height_ratios=[8, 4.6], hspace=0.62))
-    y = range(len(rows))[::-1]
-    for yi, (lab, v, c) in zip(y, rows):
-        a1.barh(yi, 100 * v, height=0.62, color=c, edgecolor="white", lw=0.8)
-        a1.text(100 * v + 1.5, yi, f"{100 * v:.1f}", va="center", fontsize=7, color=INK)
-    a1.set_yticks(list(y)); a1.set_yticklabels([r[0] for r in rows]); a1.set_xlim(0, 112); a1.set_xticks([0, 25, 50, 75, 100])
-    a1.set_xlabel(t["acc"]); a1.set_title(t["tmpl"], loc="left"); grid_x(a1); panel(a1, "a")
-    sets = [(t["bt"], e9["sets"]["cloze_question"]["bert_with_rules"]), (t["bp"], e9["sets"]["paraphrased"]["bert_with_rules"]),
-            (t["tt"], e9["sets"]["cloze_question"]["tfidf_logreg"]), (t["tp"], e9["sets"]["paraphrased"]["tfidf_logreg"])]
-    y2 = range(len(sets))[::-1]
-    for yi, (lab, d) in zip(y2, sets):
-        left = 0
-        for k, c, h in (("simple", BLUE, ""), ("complex", ORANGE, "////"), ("chitchat", AQUA, "")):
-            v = 100 * d.get(k, 0)
-            if v <= 0: continue
-            a2.barh(yi, v, left=left, height=0.6, color=c, edgecolor="white", lw=1.0, hatch=h)
-            if v >= 8:
-                a2.text(left + v / 2, yi, f"{v:.1f}", ha="center", va="center", fontsize=7, color="white" if k != "chitchat" else INK,
-                        bbox=dict(boxstyle="round,pad=0.12", fc=c, ec="none") if h else None)
-            left += v
-    a2.set_yticks(list(y2)); a2.set_yticklabels([s_[0] for s_ in sets]); a2.set_xlim(0, 100)
-    a2.set_xlabel(t["share"]); a2.set_title(t["ood"], loc="left"); panel(a2, "b")
-    a2.legend(handles=[Patch(fc=BLUE, label=t["si"]), Patch(fc=ORANGE, hatch="////", ec="white", label=t["cx"]), Patch(fc=AQUA, label=t["ch"])],
-              ncol=3, loc="upper center", bbox_to_anchor=(0.4, -0.42), handlelength=1.4, columnspacing=1.2)
+    """(a) per-class recall on the template test set (E19); (b) accuracy on question sources not used in training (E18).
+    Classifier decisions without the rules of Section 2.6; retrained router = mean of three seeds."""
+    t = T[lang]; e18 = J("q1/e18_router_v2.json")["models"]; e19 = J("q1/e19_router_per_class.json")
+    v1, runs = e18["bert_v1_live"], e18["bert_v2_runs"]["raw"]
+    mean = lambda key: st.mean(r[key]["acc"] for r in runs)
+    n_cls = e19["n"] // 3
+    a_rows = [(f"{t['r_ch']}\n(n = {thousands(n_cls, lang)})", e19["bert_router_best"]["raw"]["recall"]["chitchat"], e19["bert_router_v2"]["raw"]["recall"]["chitchat"]),
+              (f"{t['r_si']}\n(n = {thousands(n_cls, lang)})", e19["bert_router_best"]["raw"]["recall"]["simple"], e19["bert_router_v2"]["raw"]["recall"]["simple"]),
+              (f"{t['r_cx']}\n(n = {thousands(n_cls, lang)})", e19["bert_router_best"]["raw"]["recall"]["complex"], e19["bert_router_v2"]["raw"]["recall"]["complex"])]
+    b_keys = [("report_simple_heldout", t["r_rs"]), ("crossbranch_cloze", t["r_ct"]),
+              ("crossbranch_paraphrased", t["r_cp"]), ("report_complex_heldout", t["r_rc"])]
+    b_rows = [(f"{lab}\n(n = {v1[k]['n']})", v1[k]["acc"], mean(k)) for k, lab in b_keys]
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(W, 3.0), gridspec_kw=dict(width_ratios=[3, 4], wspace=0.08), sharey=True)
+    for ax, rows in ((a1, a_rows), (a2, b_rows)):
+        for i, (lab, old, new) in enumerate(rows):
+            ax.bar(i - 0.19, 100 * old, 0.36, color=GRAY, edgecolor="white", lw=0.8, hatch="////")
+            ax.bar(i + 0.19, 100 * new, 0.36, color=BLUE, edgecolor="white", lw=0.8)
+            ax.text(i - 0.19, 100 * old + 2, pct(old), ha="center", va="bottom", fontsize=6.8)
+            ax.text(i + 0.19, 100 * new + 2, pct(new), ha="center", va="bottom", fontsize=6.8)
+        ax.set_xticks(range(len(rows))); ax.set_xticklabels([r[0] for r in rows], fontsize=6.9, color=INK2)
+        ax.tick_params(axis="x", length=0); grid_y(ax); ax.set_ylim(0, 112); ax.set_yticks([0, 25, 50, 75, 100])
+    a2.axvline(2.5, color=INK2, lw=0.9, ls="--"); a2.spines["left"].set_visible(False); a2.tick_params(axis="y", length=0)
+    a1.set_ylabel(t["r_acc"])
+    a1.set_title(t["r_a"], loc="left"); a2.set_title(t["r_b"], loc="left"); panel(a1, "a"); panel(a2, "b")
+    fig.legend(handles=[Patch(fc=GRAY, ec="white", hatch="////", label=t["r_first"]), Patch(fc=BLUE, label=t["r_new"])],
+               loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2, handlelength=1.6, columnspacing=1.6)
     save(fig, "fig04_router", lang)
 
 
 # ---------------------------------------------------------------- Figure 5: retrieval benchmark
 def fig_retrieval(lang):
-    t = T[lang]; e1 = dict(J("e1_retrieval.json")["methods"])
-    e12 = J("e12_eval_turkembed_v3.json")["methods"]
-    e1["mosaic-embed"], e1["mosaic-embed+ce"] = e12["turkembed-v3"], e12["turkembed-v3+ce"]
-    names = {"bm25": "BM25", "e5-small": "e5-small", "bge-m3": "BGE-M3 (dense)" if lang == "en" else "BGE-M3 (yoğun)",
-             "turkembed-ft": t["tek"], "turkembed4retrieval": "TurkEmbed4Retrieval",
-             "e5-small+ce": "e5-small + CE", "turkembed-ft+ce": t["tekce"],
-             "mosaic-embed": "MOSAIC-Embed", "mosaic-embed+ce": "MOSAIC-Embed + CE"}
+    t = T[lang]; e1 = J("q1/e1_retrieval_me.json")["methods"]
+    names = {"bm25": "BM25", "e5-small": "e5-small", "bge-m3": t["bge"], "turkembed4retrieval": "TurkEmbed4Retrieval",
+             "mosaic-embed": "MOSAIC-Embed", "hybrid-rrf": "BM25 + MOSAIC-Embed (RRF)",
+             "e5-small+ce": "e5-small + CE", "mosaic-embed+ce": "MOSAIC-Embed + CE", "hybrid-rrf+ce": "BM25 + MOSAIC-Embed (RRF) + CE"}
     keys = sorted(names, key=lambda k: e1[k]["natural"]["federated"]["mrr@10"][0])
     fig, ax = plt.subplots(figsize=(W, 2.9))
     for i, k in enumerate(keys):
@@ -163,7 +168,9 @@ def fig_retrieval(lang):
 
 # ---------------------------------------------------------------- Figure 6: quantization
 def fig_quant(lang):
-    t = T[lang]; Q = J("e2_generation_quant.json")["sonuclar"]["cloze"]
+    """File size and GPU memory: GGUF files and llama-server with context cache (Phase 6 of the thesis, 50 questions);
+    EM: untuned Gemma-3-4B on identical MOSAIC contexts, 500 cross-branch questions (E2, quantization arms)."""
+    t = T[lang]; Q = J("q1/e2_generation_me_quant.json")["sonuclar"]["cloze"]
     fm = ["Q4_0", "Q4_K_M", "Q2_K"]
     file_ = [2.20, 2.32, 1.61]; vram = [4.40, 4.52, 3.83]; tps = [53.4, 48.8, 53.6]
     fig, axs = plt.subplots(1, 3, figsize=(W, 2.3), gridspec_kw=dict(wspace=0.45))
@@ -193,21 +200,17 @@ def fig_quant(lang):
 # ---------------------------------------------------------------- Figure 7: cross-branch EM (H1)
 def fig_h1(lang):
     t = T[lang]
-    E = J("e2_generation.json")["sonuclar"]          # hardened configuration, initial model
-    M = J("e2_generation_me.json")["sonuclar"]       # final configuration, MOSAIC-Embed (live services)
-    V = J("e2_generation_v2.json")["sonuclar"]       # arm A (no retrieval) of the same 500/352 questions
-    live1 = J("e5_e2e_judge.json")["summary"]; live3 = J("e5_e2e_judge_v3.json")["summary"]
+    M = J("q1/e2_generation_me_full.json")["sonuclar"]     # final configuration, MOSAIC-Embed
+    live = J("q1/e5_e2e_judge_v3.json")["summary"]           # live system, final configuration
     panels = [
-        (t["h1a"], [(t["A"], V["cloze"]["A"]["em"], GRAY, ""), (t["B"], E["cloze"]["B"]["em"], GRAY, ""),
-                    (t["C1"], E["cloze"]["C"]["em"], BLUE, ""), (t["D1"], E["cloze"]["D"]["em"], ORANGE, "////"),
-                    (t["C3"], M["cloze"]["C"]["em"], BLUE, ""), (t["D3"], M["cloze"]["D_me"]["em"], ORANGE, "////")]),
-        (t["h1b"], [(t["A"], V["natural"]["A"]["em"], GRAY, ""), (t["C1"], E["natural"]["C"]["em"], BLUE, ""),
-                    (t["D1"], E["natural"]["D"]["em"], ORANGE, "////"), (t["C3"], M["natural"]["C"]["em"], BLUE, ""),
-                    (t["D3"], M["natural"]["D_me"]["em"], ORANGE, "////")]),
-        (t["h1c"], [(t["L0"], live3["norag_em"], GRAY, ""), (t["L1"], live1["em"], BLUE, ""), (t["L4"], live3["em"], BLUE, "")]),
+        (t["h1a"], [(t["A"], M["cloze"]["A"]["em"], GRAY, ""), (t["B"], M["cloze"]["B"]["em"], GRAY, ""),
+                    (t["C"], M["cloze"]["C"]["em"], BLUE, ""), (t["D"], M["cloze"]["D_me"]["em"], ORANGE, "////")]),
+        (t["h1b"], [(t["A"], M["natural"]["A"]["em"], GRAY, ""), (t["C"], M["natural"]["C"]["em"], BLUE, ""),
+                    (t["D"], M["natural"]["D_me"]["em"], ORANGE, "////")]),
+        (t["h1c"], [(t["L0"], live["norag_em"], GRAY, ""), (t["L1"], live["em"], BLUE, "")]),
     ]
     heights = [len(p[1]) for p in panels]
-    fig, axs = plt.subplots(3, 1, figsize=(W, 4.6), sharex=True, gridspec_kw=dict(height_ratios=heights, hspace=0.55))
+    fig, axs = plt.subplots(3, 1, figsize=(W, 3.3), sharex=True, gridspec_kw=dict(height_ratios=heights, hspace=0.55))
     for ax, (title, rows), letter in zip(axs, panels, "abc"):
         y = list(range(len(rows)))[::-1]
         for yi, (lab, (m, ci), c, h) in zip(y, rows):
@@ -219,18 +222,19 @@ def fig_h1(lang):
         ax.set_xlim(0, 100)
     axs[-1].set_xlabel(t["emci"])
     axs[0].legend(handles=[Patch(fc=GRAY, label=t["g_base"]), Patch(fc=BLUE, label=t["g_fed"]), Patch(fc=ORANGE, hatch="////", ec="white", label=t["g_cen"])],
-                  ncol=3, loc="lower right", bbox_to_anchor=(1.0, 1.12), handlelength=1.4)
+                  ncol=3, loc="lower right", bbox_to_anchor=(1.0, 1.2), handlelength=1.4)
     save(fig, "fig07_crossbranch", lang)
 
 
 # ---------------------------------------------------------------- Figure 8: privacy-utility
 def fig_dp(lang):
-    t = T[lang]; d = J("e3_fl_embedding_qp.json")  # query–passage pairs (Supplementary Table S3)
-    import statistics as st
+    """ε from Rényi accounting over the orders alpha = 1.1, 1.2, ..., 10.9 and 11, 12, ..., 256, δ = 1e-5."""
+    t = T[lang]; d = J("q1/e3_fl_embedding_qp.json")  # query–passage pairs
     g = {}
     for r in d["runs"]:
         g.setdefault(r["name"] + (f"|{r['z']}" if "z" in r else ""), []).append(r)
-    zs = sorted({r["z"] for r in d["runs"] if "z" in r})
+    zs = sorted({r["z"] for r in d["runs"] if "z" in r}, reverse=True)
+    eps = [g[f"dp_central_K10_lora|{z}"][0]["epsilon"] for z in zs]
     fig, axs = plt.subplots(1, 2, figsize=(W, 2.5), sharey=False, gridspec_kw=dict(wspace=0.28))
     for ax, q, title, letter in ((axs[0], "cloze_mrr@10", t["zt"], "a"), (axs[1], "natural_mrr@10", t["zp"], "b")):
         for mode, c, mk, lab in (("central", BLUE, "o", t["cdp"]), ("local", ORANGE, "s", t["ldp"])):
@@ -245,7 +249,7 @@ def fig_dp(lang):
         ax.text(2.1, lo_[0] - 0.02, lo_[1], fontsize=6.3, color=INK2, va="top")
         ax.text(2.1, hi_[0] + 0.015, hi_[1], fontsize=6.3, color=INK2, va="bottom")
         ax.set_xscale("log"); ax.set_xlim(2, 400); ax.set_ylim(-0.03, 1.0)
-        ax.set_xticks([2.9, 9.8, 44.4, 233.4]); ax.set_xticklabels(["2.9\n(z = 3)", "9.8\n(z = 1)", "44.4\n(z = 0.3)", "233.4\n(z = 0.1)"])
+        ax.set_xticks(eps); ax.set_xticklabels([f"{e:.1f}\n(z = {z:g})" for e, z in zip(eps, zs)])
         ax.minorticks_off(); ax.set_xlabel(t["eps"]); ax.set_title(title, loc="left"); grid_y(ax); panel(ax, letter)
     axs[0].set_ylabel(t["util"])
     h, l = axs[0].get_legend_handles_labels()
@@ -255,7 +259,7 @@ def fig_dp(lang):
 
 # ---------------------------------------------------------------- Figure 9: Zemberek
 def fig_zemberek(lang):
-    t = T[lang]; e6 = J("e6_h4_zemberek_me.json")["results"]
+    t = T[lang]; e6 = J("q1/e6_h4_zemberek_me.json")["results"]
     rets = [("bm25", "BM25"), ("e5-small", "e5-small"), ("mosaic-embed", "MOSAIC-Embed")]
     vari = [("ham", t["raw"], GRAY_D, "o"), ("kok", t["root"], BLUE, "s"), ("morfem", t["morph"], ORANGE, "D")]
     fig, axs = plt.subplots(1, 2, figsize=(W, 2.2), sharey=True, gridspec_kw=dict(wspace=0.12))
@@ -274,7 +278,40 @@ def fig_zemberek(lang):
     save(fig, "fig09_zemberek", lang)
 
 
+# ---------------------------------------------------------------- Thesis Figure 4.3: general-ability benchmarks (TR)
+def fig_bench(lang="tr"):
+    q_c, g_c = J("bench_chatml_qwen.json"), J("bench_chatml_gemma.json")
+    q_n, g_n = J("bench_native_qwen.json"), J("bench_native_gemma.json")
+    tm = J("q1/e10_tr_mmlu_summary.json")
+    conds = [("Qwen3-8B, ChatML", q_c, tm["qwen_chatml"]["acc"], "sentiment", BLUE, ""),
+             ("Gemma-3-4B, ChatML", g_c, tm["gemma_chatml"]["acc"], "sentiment", ORANGE, ""),
+             ("Qwen3-8B, kendi şablonu", q_n, tm["qwen_native"]["acc"], "sentiment_binary", BLUE, "////"),
+             ("Gemma-3-4B, kendi şablonu", g_n, tm["gemma_native"]["acc"], "sentiment_binary", ORANGE, "////")]
+    groups = ["MMLU-TR doğruluk\n(n = 500)", f"TR-MMLU doğruluk\n(n = {thousands(tm['qwen_chatml']['n'], 'tr')})",
+              "Duygu doğruluk\n(n = 500)", "Duygu Macro F1 × 100\n(n = 500)"]
+    fig, ax = plt.subplots(figsize=(W, 2.9))
+    wb = 0.2
+    for j, (lab, d, trm, sk, c, h) in enumerate(conds):
+        vals = [d["tr_mmlu"]["accuracy"], trm, d[sk]["accuracy"], d[sk]["macro_f1"]]
+        for i, v in enumerate(vals):
+            x = i + (j - 1.5) * wb
+            ax.bar(x, 100 * v, wb * 0.92, color=c, edgecolor="white", lw=0.8, hatch=h, label=lab if i == 0 else None)
+            ax.text(x, 100 * v + 1.2, f"{100 * v:.1f}", ha="center", va="bottom", fontsize=5.9, rotation=0)
+    ax.hlines(25, -0.45, 0.45, color=INK2, lw=0.9, ls=":"); ax.text(0.47, 25, "%25", va="center", fontsize=6.3, color=INK2)
+    ax.hlines(20, 0.55, 1.45, color=INK2, lw=0.9, ls=":"); ax.text(1.47, 20, "%20", va="center", fontsize=6.3, color=INK2)
+    base = q_n["sentiment_binary"]["majority_baseline_acc"]
+    ax.hlines(100 * base, 1.55, 2.45, color=INK2, lw=0.9, ls="--"); ax.text(2.47, 100 * base, f"%{100 * base:.1f}", va="center", fontsize=6.3, color=INK2)
+    ax.set_xticks(range(4)); ax.set_xticklabels(groups, fontsize=7); ax.tick_params(axis="x", length=0)
+    ax.set_ylim(0, 100); ax.set_ylabel("Yüzde (%)"); grid_y(ax)
+    h_, l_ = ax.get_legend_handles_labels()
+    h_ += [Line2D([], [], color=INK2, ls=":", lw=0.9), Line2D([], [], color=INK2, ls="--", lw=0.9)]
+    l_ += ["Rastgele tahmin düzeyi", "Duygu çoğunluk sınıfı tabanı"]
+    ax.legend(h_, l_, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=3, fontsize=6.8, handlelength=1.5, columnspacing=1.2)
+    save(fig, "fig_bench", lang)
+
+
 if __name__ == "__main__":
     for lang in ("en", "tr"):
         fig_router(lang); fig_retrieval(lang); fig_quant(lang); fig_h1(lang); fig_dp(lang); fig_zemberek(lang)
+    fig_bench("tr")
     print("ok")

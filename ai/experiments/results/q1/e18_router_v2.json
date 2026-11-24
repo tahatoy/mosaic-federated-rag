@@ -1,0 +1,680 @@
+{
+ "data": {
+  "docs": 5000,
+  "generated_valid": 3387,
+  "simple_kept": 581,
+  "simple_judged_B": 4419,
+  "complex_kept": 3376,
+  "complex_judged_A": 11,
+  "cloze": 247,
+  "original_train": 24000,
+  "added_simple_train": 670,
+  "added_complex_train": 670,
+  "v2_train": 25340,
+  "v2_train_classes": {
+   "0": 8000,
+   "1": 8670,
+   "2": 8670
+  },
+  "split": "by chunk (doc id mod 5 == 0 held out); held-out chunks never seen in training; the 600 evaluation questions' source chunks were excluded in E12a",
+  "label_check": "Qwen3-8B A/B judgement; generated questions kept only when it agrees with the intended class",
+  "examples": {
+   "simple": [
+    "TCMB Para Politikası Kurulu ne tarihte faiz kararı aldı?",
+    "Hangi tarihte sona eren hesap dönemi belirtilmiştir?",
+    "KAP Bildirimi için yapılan açıklama tarihi ve saati nedir?",
+    "Yönetim Kurulu Karar Tarihi ne zaman?",
+    "Geri Alım İşlemini Gerçekleştiren Kurum Adı?"
+   ],
+   "complex": [
+    "Admiral Insurance'nin kilitlenme dönemindeki taleplerdeki azalma nedeniyle müşterilerine otomatik olarak 25 geri ödeme yapma kararı, şirketin müşteri davranışlarını nasıl etkileyebilir?",
+    "TCMB Para Politikası Kurulu, 2009-03-19 tarihinde döviz kuru hareketlerinden kaynaklanan göreceli fiyat değişikliklerine tepki vermeyeceğini belirterek faiz kararı aldığında, faiz oranındaki değişiklik ile ilgili hangi iki değerin karşılaştırılması yapılmıştır?",
+    "Bağımsız yöneticilerin sayısı zaman içinde değişebilir ve şirketin stratejik hedeflerine göre seçilirken, RTX'nin yönetim kurulunda bağımsız yöneticilerin sayısı ne kadar olabilir?",
+    "Teknoloji endüstrisindeki işten çıkarma eğilimi, şirketlerin finansman stratejileri ve ekonomik iklim arasındaki ilişkiyi nasıl etkiler?",
+    "Anheuser-Busch InBev SA/NV'nin potansiyel çıkar çatışmalarını yönetme politikasında vurgulanan temel ilkelerin etkisi nasıl değerlendirilir?"
+   ]
+  }
+ },
+ "eval_sets": {
+  "template_test": 3000,
+  "report_simple_heldout": 114,
+  "report_complex_heldout": 655,
+  "report_cloze_heldout": 44,
+  "crossbranch_cloze": 600,
+  "crossbranch_paraphrased": 419
+ },
+ "models": {
+  "tfidf_v1_data": {
+   "template_test": {
+    "n": 3000,
+    "acc": 1.0,
+    "share": {
+     "chitchat": 0.3333,
+     "simple": 0.3333,
+     "complex": 0.3333
+    },
+    "macro_f1": 1.0
+   },
+   "report_simple_heldout": {
+    "n": 114,
+    "acc": 0.5,
+    "share": {
+     "chitchat": 0.3246,
+     "simple": 0.5,
+     "complex": 0.1754
+    }
+   },
+   "report_complex_heldout": {
+    "n": 655,
+    "acc": 0.7099,
+    "share": {
+     "chitchat": 0.0076,
+     "simple": 0.2824,
+     "complex": 0.7099
+    }
+   },
+   "report_cloze_heldout": {
+    "n": 44,
+    "acc": 0.1591,
+    "share": {
+     "chitchat": 0.0227,
+     "simple": 0.1591,
+     "complex": 0.8182
+    }
+   },
+   "crossbranch_cloze": {
+    "n": 600,
+    "acc": 0.18,
+    "share": {
+     "chitchat": 0.01,
+     "simple": 0.18,
+     "complex": 0.81
+    }
+   },
+   "crossbranch_paraphrased": {
+    "n": 419,
+    "acc": 0.3962,
+    "share": {
+     "chitchat": 0.031,
+     "simple": 0.3962,
+     "complex": 0.5728
+    }
+   }
+  },
+  "tfidf_v2_data": {
+   "template_test": {
+    "n": 3000,
+    "acc": 1.0,
+    "share": {
+     "chitchat": 0.3333,
+     "simple": 0.3333,
+     "complex": 0.3333
+    },
+    "macro_f1": 1.0
+   },
+   "report_simple_heldout": {
+    "n": 114,
+    "acc": 0.9561,
+    "share": {
+     "simple": 0.9561,
+     "complex": 0.0439
+    }
+   },
+   "report_complex_heldout": {
+    "n": 655,
+    "acc": 0.971,
+    "share": {
+     "simple": 0.029,
+     "complex": 0.971
+    }
+   },
+   "report_cloze_heldout": {
+    "n": 44,
+    "acc": 0.9318,
+    "share": {
+     "simple": 0.9318,
+     "complex": 0.0682
+    }
+   },
+   "crossbranch_cloze": {
+    "n": 600,
+    "acc": 0.9417,
+    "share": {
+     "simple": 0.9417,
+     "complex": 0.0583
+    }
+   },
+   "crossbranch_paraphrased": {
+    "n": 419,
+    "acc": 0.8019,
+    "share": {
+     "simple": 0.8019,
+     "complex": 0.1981
+    }
+   }
+  },
+  "bert_v1_live": {
+   "template_test": {
+    "n": 3000,
+    "acc": 0.943,
+    "share": {
+     "chitchat": 0.3333,
+     "simple": 0.319,
+     "complex": 0.3477
+    },
+    "macro_f1": 0.943
+   },
+   "report_simple_heldout": {
+    "n": 114,
+    "acc": 0.0614,
+    "share": {
+     "chitchat": 0.0175,
+     "simple": 0.0614,
+     "complex": 0.9211
+    }
+   },
+   "report_complex_heldout": {
+    "n": 655,
+    "acc": 0.9985,
+    "share": {
+     "simple": 0.0015,
+     "complex": 0.9985
+    }
+   },
+   "report_cloze_heldout": {
+    "n": 44,
+    "acc": 0.0,
+    "share": {
+     "complex": 1.0
+    }
+   },
+   "crossbranch_cloze": {
+    "n": 600,
+    "acc": 0.0033,
+    "share": {
+     "simple": 0.0033,
+     "complex": 0.9967
+    }
+   },
+   "crossbranch_paraphrased": {
+    "n": 419,
+    "acc": 0.0024,
+    "share": {
+     "simple": 0.0024,
+     "complex": 0.9976
+    }
+   }
+  },
+  "bert_v1_live_with_rules": {
+   "template_test": {
+    "n": 3000,
+    "acc": 0.9387,
+    "share": {
+     "chitchat": 0.3333,
+     "simple": 0.314,
+     "complex": 0.3527
+    },
+    "macro_f1": 0.9386
+   },
+   "report_simple_heldout": {
+    "n": 114,
+    "acc": 0.0614,
+    "share": {
+     "chitchat": 0.0175,
+     "simple": 0.0614,
+     "complex": 0.9211
+    }
+   },
+   "report_complex_heldout": {
+    "n": 655,
+    "acc": 0.9985,
+    "share": {
+     "simple": 0.0015,
+     "complex": 0.9985
+    }
+   },
+   "report_cloze_heldout": {
+    "n": 44,
+    "acc": 0.0,
+    "share": {
+     "complex": 1.0
+    }
+   },
+   "crossbranch_cloze": {
+    "n": 600,
+    "acc": 0.0033,
+    "share": {
+     "simple": 0.0033,
+     "complex": 0.9967
+    }
+   },
+   "crossbranch_paraphrased": {
+    "n": 419,
+    "acc": 0.0024,
+    "share": {
+     "simple": 0.0024,
+     "complex": 0.9976
+    }
+   }
+  },
+  "bert_v2_runs": {
+   "raw": [
+    {
+     "template_test": {
+      "n": 3000,
+      "acc": 1.0,
+      "share": {
+       "chitchat": 0.3333,
+       "simple": 0.3333,
+       "complex": 0.3333
+      },
+      "macro_f1": 1.0
+     },
+     "report_simple_heldout": {
+      "n": 114,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "report_complex_heldout": {
+      "n": 655,
+      "acc": 0.9832,
+      "share": {
+       "simple": 0.0168,
+       "complex": 0.9832
+      }
+     },
+     "report_cloze_heldout": {
+      "n": 44,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_cloze": {
+      "n": 600,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_paraphrased": {
+      "n": 419,
+      "acc": 0.821,
+      "share": {
+       "simple": 0.821,
+       "complex": 0.179
+      }
+     }
+    },
+    {
+     "template_test": {
+      "n": 3000,
+      "acc": 1.0,
+      "share": {
+       "chitchat": 0.3333,
+       "simple": 0.3333,
+       "complex": 0.3333
+      },
+      "macro_f1": 1.0
+     },
+     "report_simple_heldout": {
+      "n": 114,
+      "acc": 0.9825,
+      "share": {
+       "simple": 0.9825,
+       "complex": 0.0175
+      }
+     },
+     "report_complex_heldout": {
+      "n": 655,
+      "acc": 0.9786,
+      "share": {
+       "simple": 0.0214,
+       "complex": 0.9786
+      }
+     },
+     "report_cloze_heldout": {
+      "n": 44,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_cloze": {
+      "n": 600,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_paraphrased": {
+      "n": 419,
+      "acc": 0.8616,
+      "share": {
+       "simple": 0.8616,
+       "complex": 0.1384
+      }
+     }
+    },
+    {
+     "template_test": {
+      "n": 3000,
+      "acc": 1.0,
+      "share": {
+       "chitchat": 0.3333,
+       "simple": 0.3333,
+       "complex": 0.3333
+      },
+      "macro_f1": 1.0
+     },
+     "report_simple_heldout": {
+      "n": 114,
+      "acc": 0.9825,
+      "share": {
+       "simple": 0.9825,
+       "complex": 0.0175
+      }
+     },
+     "report_complex_heldout": {
+      "n": 655,
+      "acc": 0.9893,
+      "share": {
+       "simple": 0.0107,
+       "complex": 0.9893
+      }
+     },
+     "report_cloze_heldout": {
+      "n": 44,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_cloze": {
+      "n": 600,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_paraphrased": {
+      "n": 419,
+      "acc": 0.8616,
+      "share": {
+       "simple": 0.8616,
+       "complex": 0.1384
+      }
+     }
+    }
+   ],
+   "with_rules": [
+    {
+     "template_test": {
+      "n": 3000,
+      "acc": 0.9953,
+      "share": {
+       "chitchat": 0.3333,
+       "simple": 0.3287,
+       "complex": 0.338
+      },
+      "macro_f1": 0.9953
+     },
+     "report_simple_heldout": {
+      "n": 114,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "report_complex_heldout": {
+      "n": 655,
+      "acc": 0.9847,
+      "share": {
+       "simple": 0.0153,
+       "complex": 0.9847
+      }
+     },
+     "report_cloze_heldout": {
+      "n": 44,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_cloze": {
+      "n": 600,
+      "acc": 0.9867,
+      "share": {
+       "simple": 0.9867,
+       "complex": 0.0133
+      }
+     },
+     "crossbranch_paraphrased": {
+      "n": 419,
+      "acc": 0.8138,
+      "share": {
+       "simple": 0.8138,
+       "complex": 0.1862
+      }
+     }
+    },
+    {
+     "template_test": {
+      "n": 3000,
+      "acc": 0.9953,
+      "share": {
+       "chitchat": 0.3333,
+       "simple": 0.3287,
+       "complex": 0.338
+      },
+      "macro_f1": 0.9953
+     },
+     "report_simple_heldout": {
+      "n": 114,
+      "acc": 0.9825,
+      "share": {
+       "simple": 0.9825,
+       "complex": 0.0175
+      }
+     },
+     "report_complex_heldout": {
+      "n": 655,
+      "acc": 0.9786,
+      "share": {
+       "simple": 0.0214,
+       "complex": 0.9786
+      }
+     },
+     "report_cloze_heldout": {
+      "n": 44,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_cloze": {
+      "n": 600,
+      "acc": 0.9867,
+      "share": {
+       "simple": 0.9867,
+       "complex": 0.0133
+      }
+     },
+     "crossbranch_paraphrased": {
+      "n": 419,
+      "acc": 0.8616,
+      "share": {
+       "simple": 0.8616,
+       "complex": 0.1384
+      }
+     }
+    },
+    {
+     "template_test": {
+      "n": 3000,
+      "acc": 0.9953,
+      "share": {
+       "chitchat": 0.3333,
+       "simple": 0.3287,
+       "complex": 0.338
+      },
+      "macro_f1": 0.9953
+     },
+     "report_simple_heldout": {
+      "n": 114,
+      "acc": 0.9825,
+      "share": {
+       "simple": 0.9825,
+       "complex": 0.0175
+      }
+     },
+     "report_complex_heldout": {
+      "n": 655,
+      "acc": 0.9893,
+      "share": {
+       "simple": 0.0107,
+       "complex": 0.9893
+      }
+     },
+     "report_cloze_heldout": {
+      "n": 44,
+      "acc": 1.0,
+      "share": {
+       "simple": 1.0
+      }
+     },
+     "crossbranch_cloze": {
+      "n": 600,
+      "acc": 0.9867,
+      "share": {
+       "simple": 0.9867,
+       "complex": 0.0133
+      }
+     },
+     "crossbranch_paraphrased": {
+      "n": 419,
+      "acc": 0.8616,
+      "share": {
+       "simple": 0.8616,
+       "complex": 0.1384
+      }
+     }
+    }
+   ]
+  },
+  "bert_v2_raw": {
+   "template_test": {
+    "acc_mean": 1.0,
+    "acc_sd": 0.0,
+    "share_mean": {
+     "chitchat": 0.3333,
+     "simple": 0.3333,
+     "complex": 0.3333
+    }
+   },
+   "report_simple_heldout": {
+    "acc_mean": 0.9883,
+    "acc_sd": 0.0082,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 0.9883,
+     "complex": 0.0117
+    }
+   },
+   "report_complex_heldout": {
+    "acc_mean": 0.9837,
+    "acc_sd": 0.0044,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 0.0163,
+     "complex": 0.9837
+    }
+   },
+   "report_cloze_heldout": {
+    "acc_mean": 1.0,
+    "acc_sd": 0.0,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 1.0,
+     "complex": 0
+    }
+   },
+   "crossbranch_cloze": {
+    "acc_mean": 1.0,
+    "acc_sd": 0.0,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 1.0,
+     "complex": 0
+    }
+   },
+   "crossbranch_paraphrased": {
+    "acc_mean": 0.8481,
+    "acc_sd": 0.0191,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 0.8481,
+     "complex": 0.1519
+    }
+   }
+  },
+  "bert_v2_with_rules": {
+   "template_test": {
+    "acc_mean": 0.9953,
+    "acc_sd": 0.0,
+    "share_mean": {
+     "chitchat": 0.3333,
+     "simple": 0.3287,
+     "complex": 0.338
+    }
+   },
+   "report_simple_heldout": {
+    "acc_mean": 0.9883,
+    "acc_sd": 0.0082,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 0.9883,
+     "complex": 0.0117
+    }
+   },
+   "report_complex_heldout": {
+    "acc_mean": 0.9842,
+    "acc_sd": 0.0044,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 0.0158,
+     "complex": 0.9842
+    }
+   },
+   "report_cloze_heldout": {
+    "acc_mean": 1.0,
+    "acc_sd": 0.0,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 1.0,
+     "complex": 0
+    }
+   },
+   "crossbranch_cloze": {
+    "acc_mean": 0.9867,
+    "acc_sd": 0.0,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 0.9867,
+     "complex": 0.0133
+    }
+   },
+   "crossbranch_paraphrased": {
+    "acc_mean": 0.8457,
+    "acc_sd": 0.0225,
+    "share_mean": {
+     "chitchat": 0,
+     "simple": 0.8457,
+     "complex": 0.1543
+    }
+   }
+  }
+ }
+}

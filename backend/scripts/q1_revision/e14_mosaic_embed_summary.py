@@ -1,7 +1,7 @@
 """E14: paired comparisons for the final configuration with MOSAIC-Embed.
 
 Compares the live MOSAIC-Embed run (e2_generation_me.json, e5_e2e_raw_v3.json) with the base e5-small run
-(e2_generation_v2.json, e5_e2e_raw_v2.json) and the first configuration (e5_e2e_raw.json) on the same questions.
+(e2_generation_v2.json, e5_e2e_raw_v2.json) on the same questions.
 Output: ai/experiments/results/q1/e14_mosaic_embed_live_summary.json
 """
 import json
@@ -35,14 +35,12 @@ def main():
         out["tests"][f"{s}_C_me_vs_D_me"] = paired(cme, dme)
     l3 = json.loads((OUT_DIR / "e5_e2e_raw_v3.json").read_text(encoding="utf-8"))
     l2 = {r["reference"]: r for r in json.loads((OUT_DIR / "e5_e2e_raw_v2.json").read_text(encoding="utf-8"))}
-    l1 = {r["reference"]: r for r in json.loads((OUT_DIR / "e5_e2e_raw.json").read_text(encoding="utf-8"))}
     a = [r["em"] for r in l3]; z = [r["norag_em"] for r in l3]
     out["live"] = {"n": len(a), "em": mean_ci(a), "norag_em": mean_ci(z),
                    "mean_latency_ms": sum(r["elapsed_ms"] for r in l3) / len(l3),
                    "routes": {k: sum(r["route"] == k for r in l3) for k in {r["route"] for r in l3}}}
     out["tests"]["live_vs_norag"] = paired(a, z)
     out["tests"]["live_me_vs_live_e5_run2"] = paired(a, [l2[r["reference"]]["em"] for r in l3])
-    out["tests"]["live_me_vs_live_first"] = paired(a, [l1[r["reference"]]["em"] for r in l3])
     root = OUT_DIR.parent
     out["canary"] = {"wire": json.loads((root / "h2_canary_wire_sonra_me.json").read_text(encoding="utf-8")).get("hatta_açık_sır"),
                      "e2e": json.loads((root / "h2_canary_e2e_sonra_me.json").read_text(encoding="utf-8")).get("cevapta_sır_olan")}
