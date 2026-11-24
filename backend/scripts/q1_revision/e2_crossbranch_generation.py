@@ -20,6 +20,7 @@ Kollar
   D_noce   D, yeniden sıralama yok (ilk 3 yoğun aday)
   D_e5     D, ince ayarsız multilingual-e5-small gömmesi
   D_me     D, MOSAIC-Embed gömmesi (ai/models/embeddings/turkembed_v3)
+  D_me_noce D_me, yeniden sıralama yok (ilk 3 yoğun aday)
   C_base_q4km / C_base_q2k : C bağlamı, ince ayarsız Gemma-3-4B'nin Q4_K_M ve Q2_K sürümleri (kuantizasyon etkisi)
 Çıktı: ai/experiments/results/q1/e2_generation.json
 """
@@ -91,7 +92,7 @@ def main():
     want = set(a.arms.split(",")) | set(a.natural_arms.split(","))
     for nm, path, need in (("turkembed", str(ROOT / "ai/models/embeddings/turkembed_finetuned"), bool(want & {"D", "D_noce"})),
                            ("e5", "intfloat/multilingual-e5-small", "D_e5" in want),
-                           ("mosaic", str(ROOT / "ai/models/embeddings/turkembed_v3"), "D_me" in want)):
+                           ("mosaic", str(ROOT / "ai/models/embeddings/turkembed_v3"), bool(want & {"D_me", "D_me_noce"}))):
         if not need:
             continue
         m = SentenceTransformer(path, device=dev); m.max_seq_length = 512
@@ -146,8 +147,11 @@ def main():
                     ctx["D_noce"] = [c["text"] for c in cen[:a.k]]
                 if "D_e5" in arms:
                     ctx["D_e5"] = rr(sq, central("e5", sq), a.k)
+                cme = central("mosaic", sq) if ("D_me" in arms or "D_me_noce" in arms) else []
                 if "D_me" in arms:
-                    ctx["D_me"] = rr(sq, central("mosaic", sq), a.k)
+                    ctx["D_me"] = rr(sq, cme, a.k)
+                if "D_me_noce" in arms:
+                    ctx["D_me_noce"] = [c["text"] for c in cme[:a.k]]
                 for nm in extra:
                     if nm in arms:
                         ctx[nm] = ctx["C"]
@@ -167,7 +171,7 @@ def main():
                     print(sname, i, {k: round(np.mean([r["em"] for r in v]), 3) for k, v in rec.items()}, flush=True)
             out["sonuclar"][sname] = {arm: {m: mean_ci([r[m] for r in v]) for m in ("em", "ctx_hit", "grounded", "unsupported")} for arm, v in rec.items()}
             t = {}
-            for x, y in [("C", "A"), ("C", "B"), ("C", "D"), ("C", "D_e5"), ("C", "D_me"), ("D_me", "D_e5"), ("D", "D_noce"), ("D", "D_e5"), ("C", "C_base_q4km"), ("C_base_q4km", "C_base_q2k")]:
+            for x, y in [("C", "A"), ("C", "B"), ("C", "D"), ("C", "D_e5"), ("C", "D_me"), ("D_me", "D_e5"), ("D_me", "D_me_noce"), ("C", "D_me_noce"), ("D", "D_noce"), ("D", "D_e5"), ("C", "C_base_q4km"), ("C_base_q4km", "C_base_q2k")]:
                 if x in rec and y in rec:
                     ex, ey = [r["em"] for r in rec[x]], [r["em"] for r in rec[y]]
                     b = sum(p and not r for p, r in zip(ex, ey)); c = sum(r and not p for p, r in zip(ex, ey))

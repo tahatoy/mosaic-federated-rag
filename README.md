@@ -195,13 +195,13 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | Experiment | Driver | Script | Output |
 |------------|--------|--------|--------|
 | Paraphrased question sets | `q1_01c_paraphrase_v2.sh` | `e0_paraphrase_questions.py` | `e0_paraphrases.json` |
-| Retrieval benchmark (BM25, e5, BGE-M3, TurkEmbed4Retrieval, initial fine-tuned model, RRF, re-ranking) | `q1_02_retrieval.sh` | `e1_retrieval_baselines.py` | `e1_retrieval.json` |
+| Retrieval benchmark (BM25, e5, BGE-M3, TurkEmbed4Retrieval, initial fine-tuned model, RRF, re-ranking) | `q1_02_retrieval.sh` | `e1_retrieval_baselines.py` | `e1_retrieval.json`, `e1_retrieval_me.json` |
 | Cross-branch generation (H1) and component ablation | `q1_07a_gen_main.sh`, `q1_07b_gen_quant.sh` | `e2_crossbranch_generation.py` | `e2_generation*.json` |
-| Federated embedding training and differential privacy | `q1_05_fl_embedding.sh` | `e3_fl_embedding_dp.py` | `e3_fl_embedding.json` |
+| Federated embedding training and differential privacy | `q1_05_fl_embedding.sh` | `e3_fl_embedding_dp.py` | `e3_fl_embedding_qp.json` (query–passage pairs, reported in the paper); `--data ir` writes the earlier `e3_fl_embedding.json` |
 | Router baselines and repeated FedAvg / FedProx | `q1_06_router.sh` | `e4_router_baselines_fl.py` | `e4_router.json` |
 | Live end-to-end test with an LLM judge | `q1_04_e2e_judge.sh` | `e5_e2e_judge.py` | `e5_e2e_judge*.json` |
-| Zemberek root reduction in retrieval (H4) | `q1_08_h4_zemberek.sh` | `e6_h4_zemberek_retrieval.py` | `e6_h4_zemberek.json` |
-| Flower between the branch machines | `q1_10_flower.sh` | `e7_flower_server.py`, `e7_flower_client.py` | `e7_flower_*.json` |
+| Zemberek root reduction in retrieval (H4) | `q1_08_h4_zemberek.sh` | `e6_h4_zemberek_retrieval.py` | `e6_h4_zemberek.json`, `e6_h4_zemberek_me.json` |
+| Flower between the branch machines | `q1_10_flower.sh` | `e7_flower_server.py`, `e7_flower_client.py` | `e7_flower_*.json` (`e7_flower_qp_*.json`: query–passage pairs, reported in the paper) |
 | Diagnosis of the federated-central gap | `q1_09_gapdiag.sh` | `e8_fed_gap_diag.py` | `e8_fed_gap*.json` |
 | Router on out-of-template questions | `q1_11_router_ood.sh` | `e9_router_ood.py` | `e9_router_ood.json` |
 | Intermediate configuration: re-indexing with the base e5-small model | `q1_12_reindex.sh` | `reindex_e5base.py` | none |
@@ -211,6 +211,7 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | MOSAIC-Embed: offline generation check with simulated federated retrieval | `q1_17_mosaic_embed_e13.sh` | `e13_embed_generation.py` | `e13_embed_generation.json` |
 | Final configuration: re-indexing with MOSAIC-Embed | `q1_18_reindex_mosaic_embed.sh` | `reindex_e5base.py --model` | none |
 | Final configuration: exact match, live test with judge, canary, paired comparisons | `q1_19_eval_mosaic_embed.sh` | E2, E5, `h2_canary.py`, `e14_mosaic_embed_summary.py` | `*_me.json`, `*_v3.json`, `e14_*.json` |
+| Final configuration: re-runs after withdrawing the first domain-specific model (full arms, quantized base model, masking off, prompt-attack rate) and retrieval latency | none | E2, `e15_me_rerun_summary.py`, `e16_retrieval_latency_me.py` | `e2_generation_me_*.json`, `e15_*.json`, `e16_retrieval_latency_me.json` |
 | Human evaluation of 100 answers by two raters | none (labels collected with `human_eval/annotation_form.html`) | `e11_human_eval.py` | `human_eval/human_eval_summary.json` |
 
 The original hypothesis experiments are driven by `scripts/experiments/run_all_experiments.sh` and write their

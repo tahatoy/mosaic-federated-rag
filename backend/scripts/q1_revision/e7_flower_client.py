@@ -13,6 +13,7 @@ import random
 import time
 
 import flwr as fl
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -67,6 +68,16 @@ def pairs_from_chroma(path, exclude_file, n, seed=0):
     return out[:n], len(docs)
 
 
+def pairs_from_jsonl(path, n, seed=0):
+    """Genel merkezin hazırladığı şube dosyası: her satır {"q": sorgu, "p": kaynak parça} (MOSAIC-Embed eğitim verisi)."""
+    out = []
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            r = json.loads(line); out.append((r["q"], r["p"][:600]))
+    random.Random(seed).shuffle(out)
+    return out[:n], len(out)
+
+
 def embed(m, texts):
     f = m.tokenize(texts)
     return F.normalize(m(f)["sentence_embedding"], dim=-1)
@@ -116,7 +127,7 @@ class Client(fl.client.NumPyClient):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--server", required=True); ap.add_argument("--branch", type=int, required=True)
-    ap.add_argument("--chroma", required=True); ap.add_argument("--exclude", default=""); ap.add_argument("--n", type=int, default=600)
+    ap.add_argument("--chroma", default=""); ap.add_argument("--pairs", default=""); ap.add_argument("--exclude", default=""); ap.add_argument("--n", type=int, default=600)
     ap.add_argument("--model", required=True)
     ap.add_argument("--ca", default=""); ap.add_argument("--threads", type=int, default=2)
     a = ap.parse_args()
@@ -124,7 +135,7 @@ def main():
     from sentence_transformers import SentenceTransformer
     m = SentenceTransformer(a.model, device="cpu"); m.max_seq_length = 128
     params = add_lora(m, seed=0)
-    pairs, ndocs = pairs_from_chroma(a.chroma, a.exclude, a.n)
+    pairs, ndocs = pairs_from_jsonl(a.pairs, a.n) if a.pairs else pairs_from_chroma(a.chroma, a.exclude, a.n)
     print(json.dumps({"branch": a.branch, "local_chunks": ndocs, "pairs": len(pairs), "lora_params": int(sum(p.numel() for p in params)),
                       "tls": bool(a.ca)}), flush=True)
     kw = {"root_certificates": open(a.ca, "rb").read()} if a.ca else {"insecure": True}

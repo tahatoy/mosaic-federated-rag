@@ -7,18 +7,18 @@ Altın parça: kaynak cümleyi içeren, sahip şubeye özgü parça(lar). Arama 
 Yöntemler
   bm25                 : BM25Okapi (Türkçe küçük harf, sözcük sınırı tokenizasyonu)
   e5-small (taban)     : intfloat/multilingual-e5-small
-  turkembed-ft (MOSAIC): e5-small'ın finans alanına ince ayarlı sürümü
+  mosaic-embed (MOSAIC): e5-small'ın sorgu–kaynak parça çiftleriyle ince ayarlı sürümü (turkembed_v3)
   e5-base / e5-large   : intfloat/multilingual-e5-{base,large}
   bge-m3               : BAAI/bge-m3 (yoğun vektör)
   turkembed4retrieval  : newmindai/TurkEmbed4Retrieval (Türkçe erişim modeli)
-  hybrid-rrf           : bm25 + turkembed-ft, karşılıklı sıra füzyonu (k=60)
+  hybrid-rrf           : bm25 + mosaic-embed, karşılıklı sıra füzyonu (k=60)
   *+ce                 : ilk 20 aday cross-encoder/mmarco-mMiniLMv2 ile yeniden sıralanır
 
 Senaryolar
   central   : tüm parçalar tek dizinde (üst sınır; MOSAIC'in kaçındığı yapı)
   federated : her şube (ve HQ ortak koleksiyonu) kendi dizininde ilk 10'u döndürür; adaylar HQ'da birleştirilir
               (yoğun yöntemlerde puanla, BM25'te şube içi IDF ile; +ce'de birleşik adaylar yeniden sıralanır)
-Çıktı: ai/experiments/results/q1/e1_retrieval.json
+Çıktı: ai/experiments/results/q1/e1_retrieval_me.json
 """
 import argparse
 import json
@@ -31,7 +31,7 @@ from q1_common import OUT_DIR, ROOT, mean_ci, paired_diff_ci, questions, rank_me
 
 DENSE = {
     "e5-small": ("intfloat/multilingual-e5-small", "query: ", "passage: "),
-    "turkembed-ft": (str(ROOT / "ai/models/embeddings/turkembed_finetuned"), "query: ", "passage: "),
+    "mosaic-embed": (str(ROOT / "ai/models/embeddings/turkembed_v3"), "query: ", "passage: "),
     "e5-base": ("intfloat/multilingual-e5-base", "query: ", "passage: "),
     "e5-large": ("intfloat/multilingual-e5-large", "query: ", "passage: "),
     "bge-m3": ("BAAI/bge-m3", "", ""),
@@ -107,6 +107,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=600)
     ap.add_argument("--models", default=",".join(DENSE))
+    ap.add_argument("--out", default="e1_retrieval_me.json")
     a = ap.parse_args()
     from sentence_transformers import CrossEncoder, SentenceTransformer
     qs, docs, owner = questions(a.n)
@@ -149,12 +150,12 @@ def main():
         t1 = time.time()
         ranks[s]["bm25"] = bm25_rank(docs, shards, qt)
         res["latency_ms"].setdefault("bm25", round((time.time() - t1) * 1000 / len(qt) / 2, 2))
-        if "turkembed-ft" in ranks[s]:
-            c, f = ranks[s]["turkembed-ft"]; bc, bf = ranks[s]["bm25"]
+        if "mosaic-embed" in ranks[s]:
+            c, f = ranks[s]["mosaic-embed"]; bc, bf = ranks[s]["bm25"]
             ranks[s]["hybrid-rrf"] = ([rrf(x, y) for x, y in zip(bc, c)], [rrf(x, y) for x, y in zip(bf, f)])
     ce = CrossEncoder("cross-encoder/mmarco-mMiniLMv2-L12-H384-v1", device=dev)
     for s, (sq, qt) in sets.items():
-        for base in ("turkembed-ft", "e5-small", "hybrid-rrf", "bm25"):
+        for base in ("mosaic-embed", "e5-small", "hybrid-rrf", "bm25"):
             if base in ranks[s]:
                 c, f = ranks[s][base]
                 ranks[s][base + "+ce"] = (ce_rerank(ce, docs, qt, c), ce_rerank(ce, docs, qt, f))
@@ -166,7 +167,7 @@ def main():
                 "central": mc, "federated": mf, "fed_minus_central_mrr10": paired_diff_ci(xf, xc),
                 "identical_top10_rate": round(float(np.mean([list(x[:10]) == list(y[:10]) for x, y in zip(c, f)])), 4)}
             print(s, name, "MRR@10 merkezi", mc["mrr@10"], "federe", mf["mrr@10"], flush=True)
-    save("e1_retrieval.json", res)
+    save(a.out, res)
 
 
 if __name__ == "__main__":

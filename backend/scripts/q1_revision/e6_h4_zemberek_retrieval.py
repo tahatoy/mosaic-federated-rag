@@ -82,7 +82,7 @@ def main():
             per[(s, "bm25", vname)] = [rank_metrics(r, q["gold_idx"]) for r, q in zip(ranks, sq)]
         print("bm25", vname, "tamam", flush=True)
     dev = "cuda" if torch.cuda.is_available() else "cpu"
-    for mname, path in (("e5-small", "intfloat/multilingual-e5-small"), ("turkembed-ft", str(ROOT / "ai/models/embeddings/turkembed_finetuned"))):
+    for mname, path in (("e5-small", "intfloat/multilingual-e5-small"), ("mosaic-embed", str(ROOT / "ai/models/embeddings/turkembed_v3"))):
         m = SentenceTransformer(path, device=dev); m.max_seq_length = 512
         for vname in ("ham", "kok"):
             vd, vq = variants[vname]
@@ -101,7 +101,7 @@ def main():
     for s in out["results"]:
         for meth, v in out["results"][s].items():
             print(s, meth, {k: v[k]["mrr@10"][0] for k in v}, flush=True)
-    save("e6_h4_zemberek.json", out)
+    save("e6_h4_zemberek_me.json", out)
 
 
 if __name__ == "__main__":

@@ -225,7 +225,7 @@ def fig_h1(lang):
 
 # ---------------------------------------------------------------- Figure 8: privacy-utility
 def fig_dp(lang):
-    t = T[lang]; d = J("e3_fl_embedding.json")
+    t = T[lang]; d = J("e3_fl_embedding_qp.json")  # query–passage pairs (Supplementary Table S3)
     import statistics as st
     g = {}
     for r in d["runs"]:
@@ -255,8 +255,8 @@ def fig_dp(lang):
 
 # ---------------------------------------------------------------- Figure 9: Zemberek
 def fig_zemberek(lang):
-    t = T[lang]; e6 = J("e6_h4_zemberek.json")["results"]
-    rets = [("bm25", "BM25"), ("e5-small", "e5-small"), ("turkembed-ft", t["tek"])]
+    t = T[lang]; e6 = J("e6_h4_zemberek_me.json")["results"]
+    rets = [("bm25", "BM25"), ("e5-small", "e5-small"), ("mosaic-embed", "MOSAIC-Embed")]
     vari = [("ham", t["raw"], GRAY_D, "o"), ("kok", t["root"], BLUE, "s"), ("morfem", t["morph"], ORANGE, "D")]
     fig, axs = plt.subplots(1, 2, figsize=(W, 2.2), sharey=True, gridspec_kw=dict(wspace=0.12))
     for ax, q, title, letter in ((axs[0], "cloze", t["zt"], "a"), (axs[1], "natural", t["zp"], "b")):

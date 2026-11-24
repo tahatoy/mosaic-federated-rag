@@ -10,23 +10,24 @@ arasında ~3 puanlık EM farkı ölçüldü. Bu betik LLM kullanmadan, aynı 500
 Çıktı: ai/experiments/results/q1/e8_fed_gap.json
 """
 import os
+import re
 
 import numpy as np
 import torch
 
-from q1_common import ROOT, mean_ci, questions, save
+from q1_common import ROOT, mean_ci, norm_num, questions, save
 from e2_crossbranch_generation import mtls_client, remote
 
 
 def main():
     import argparse
-    ap = argparse.ArgumentParser(); ap.add_argument("--model", default="turkembed", choices=["turkembed", "e5"]); ap.add_argument("--out", default="e8_fed_gap.json")
+    ap = argparse.ArgumentParser(); ap.add_argument("--model", default="turkembed", choices=["turkembed", "e5", "me"]); ap.add_argument("--out", default="e8_fed_gap.json")
     a = ap.parse_args()
     from sentence_transformers import CrossEncoder, SentenceTransformer
     qs, docs, owner = questions(500)
     dev = "cuda" if torch.cuda.is_available() else "cpu"
     ce = CrossEncoder("cross-encoder/mmarco-mMiniLMv2-L12-H384-v1", device=dev)
-    m = SentenceTransformer(str(ROOT / "ai/models/embeddings/turkembed_finetuned") if a.model == "turkembed" else "intfloat/multilingual-e5-small", device=dev); m.max_seq_length = 512
+    m = SentenceTransformer({"turkembed": str(ROOT / "ai/models/embeddings/turkembed_finetuned"), "e5": "intfloat/multilingual-e5-small", "me": str(ROOT / "ai/models/embeddings/turkembed_v3")}[a.model], device=dev); m.max_seq_length = 512
     E = m.encode(["passage: " + d for d in docs], batch_size=128, normalize_embeddings=True, convert_to_tensor=True, show_progress_bar=False)
     shards = {"b1": [i for i, o in enumerate(owner) if o in (0, 1)], "b2": [i for i, o in enumerate(owner) if o in (0, 2)], "hq": [i for i, o in enumerate(owner) if o == 0]}
     b_url = {1: os.environ["BRANCH1_RAG_URL"], 2: os.environ["BRANCH2_RAG_URL"]}

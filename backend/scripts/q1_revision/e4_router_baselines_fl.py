@@ -17,6 +17,7 @@ import statistics
 import time
 
 import httpx
+import numpy as np
 import torch
 
 from q1_common import ROOT, save

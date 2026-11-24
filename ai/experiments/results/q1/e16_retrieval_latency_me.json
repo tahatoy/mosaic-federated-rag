@@ -1,0 +1,36 @@
+{
+ "n": 200,
+ "candidates_per_query": "10 + 10 + 10",
+ "search_parallel_ms": {
+  "mean": 59.7,
+  "median": 57.9,
+  "p95": 70.3
+ },
+ "rerank_ms": {
+  "mean": 81.1,
+  "median": 64.2,
+  "p95": 126.8
+ },
+ "total_ms": {
+  "mean": 140.8,
+  "median": 124.6,
+  "p95": 192.0
+ },
+ "per_service_ms": {
+  "b1": {
+   "mean": 43.7,
+   "median": 42.5,
+   "p95": 55.6
+  },
+  "b2": {
+   "mean": 44.7,
+   "median": 42.8,
+   "p95": 59.9
+  },
+  "hq": {
+   "mean": 58.6,
+   "median": 56.8,
+   "p95": 69.1
+  }
+ }
+}

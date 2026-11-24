@@ -6,7 +6,8 @@ simülasyonda koşulmuş, (ii) DP yalnızca tek bir ayarda (ε=1/tur, istemcide 
 incelenmişti. Bu deney aynı algoritmaları (FedAvg, FedProx μ=0.01, istemci güncellemesinde global L2 kırpma +
 Gauss gürültüsü) gerçek eğitimle koşar ve sonucu çapraz şube erişim görevinde ölçer.
 
-Veri: her şubenin kendi korpusundaki (talimat, yanıt) çiftleri; test sorularının (E1, n=600) altın parçaları
+Veri (--data qp, varsayılan): her şubenin kendi parçaları için üretilmiş (sorgu, kaynak parça) çiftleri (ai/data/e12/train_queries.jsonl;
+MOSAIC-Embed ile aynı eğitim verisi, ortak parçalar sıra numarasının teklik/çiftliğine göre şubelere bölünür). --data ir: eski (talimat, yanıt) çiftleri; test sorularının (E1, n=600) altın parçaları
 eğitimden çıkarılır. İstemciler: K=2 (iki şube) ve K=10 (her şube 5 alt istemciye bölünür; non-IID korunur).
 Değerlendirme: multilingual-e5-small tabanından başlayan modelin tüm şube parçaları üzerinde MRR@10 / Hit@10.
 
@@ -14,9 +15,10 @@ Gizlilik muhasebesi: tam katılımlı Gauss mekanizması için Rényi DP, tur ba
 ε(δ) = min_α [R·α/(2z²) + ln(1/δ)/(α−1)], δ = 1e-5 (istemci düzeyi, ekleme/çıkarma komşuluğu).
   merkezi DP (güvenli birleştirme varsayımı): ortalamaya bir kez N(0, (zC/K)²) eklenir
   yerel DP (tezdeki tasarım): her istemci kendi güncellemesine N(0, (zC)²) ekler -> ortalamada zC/√K
-Çıktı: ai/experiments/results/q1/e3_fl_embedding.json
+Çıktı: ai/experiments/results/q1/e3_fl_embedding_qp.json (--data qp)
 """
 import argparse
+import copy
 import json
 import math
 import random
@@ -26,7 +28,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from q1_common import OUT_DIR, load_branch, questions, rank_metrics, save
+from q1_common import OUT_DIR, ROOT, load_branch, mean_ci, questions, rank_metrics, save
 
 BASE = "intfloat/multilingual-e5-small"
 DEV = "cuda" if torch.cuda.is_available() else "cpu"
@@ -53,6 +55,22 @@ def build_pairs(test_texts, per_branch, seed):
                 seen.add(q); pairs.append((q, p[:600]))
         rnd.shuffle(pairs)
         out[b] = pairs[:per_branch]
+    return out
+
+
+def build_pairs_qp(docs, owner, per_branch, seed):
+    """MOSAIC-Embed eğitim verisi: (üretilmiş sorgu, kaynak parça); test altın parçaları üretimde zaten dışlanmıştır."""
+    rnd = random.Random(seed)
+    out = {1: [], 2: []}
+    with open(ROOT / "ai/data/e12/train_queries.jsonl", encoding="utf-8") as f:
+        for line in f:
+            r = json.loads(line); d = int(r["doc"]); o = owner[d]
+            b = o if o in (1, 2) else (1 if d % 2 == 0 else 2)
+            q = (r.get("query") or "").strip()
+            if len(q) > 10:
+                out[b].append((q, docs[d][:600]))
+    for b in out:
+        rnd.shuffle(out[b]); out[b] = out[b][:per_branch]
     return out
 
 
@@ -175,9 +193,11 @@ def main():
     ap.add_argument("--per-branch", type=int, default=2500)
     ap.add_argument("--zs", default="0.1,0.3,1.0,3.0")
     ap.add_argument("--quick", action="store_true")
+    ap.add_argument("--data", default="qp", choices=["qp", "ir"])
     a = ap.parse_args()
     seeds = [int(s) for s in a.seeds.split(",")]
     qs, docs, owner = questions(600)
+    OUTF = "e3_fl_embedding_qp.json" if a.data == "qp" else "e3_fl_embedding.json"
     para = {}
     pp = OUT_DIR / "e0_paraphrases.json"
     if pp.exists():
@@ -187,19 +207,19 @@ def main():
     if nq:
         sets["natural"] = (nq, [para[q["reference"]] for q in nq])
     test_texts = {docs[i] for q in qs for i in q["gold_idx"]}
-    pairs = build_pairs(test_texts, a.per_branch, seed=0)
+    pairs = build_pairs_qp(docs, owner, a.per_branch, seed=0) if a.data == "qp" else build_pairs(test_texts, a.per_branch, seed=0)
     print("çift:", {b: len(p) for b, p in pairs.items()}, "test:", {k: len(v[0]) for k, v in sets.items()}, flush=True)
     R, E = a.rounds, 1
     LR_FULL, LR_LORA = 2e-5, 2e-4
     out = {"config": {"rounds": R, "local_epochs": E, "per_branch": a.per_branch, "seeds": seeds, "lr_full": LR_FULL, "lr_lora": LR_LORA,
-                      "fedprox_mu": 0.01, "delta": 1e-5, "lora": "r=8, alpha=16, query/value"}, "runs": []}
+                      "fedprox_mu": 0.01, "delta": 1e-5, "lora": "r=8, alpha=16, query/value", "data": a.data}, "runs": []}
 
     def record(name, seed, m, t0, **kw):
         ev = evaluate(m, docs, sets)
         row = {"name": name, "seed": seed, "sec": round(time.time() - t0, 1), **kw, **{f"{s}_{k}": v for s, d in ev.items() for k, v in d.items()}}
         out["runs"].append(row)
         print(json.dumps(row, ensure_ascii=False), flush=True)
-        save("e3_fl_embedding.json", out)
+        save(OUTF, out)
         del m; torch.cuda.empty_cache()
 
     t0 = time.time(); record("base_e5_small", 0, load_model(False), t0)
@@ -229,7 +249,7 @@ def main():
             break
     # tezdeki ayar: ε=1/tur (klasik Gauss, z=4.8448), C=1, istemcide gürültü, R tur -> RDP ile toplam ε
     out["thesis_setting"] = {"z": 4.8448, "C": 1.0, "rdp_epsilon_R": round(rdp_epsilon(4.8448, R), 3), "basic_composition_epsilon_R": float(R)}
-    save("e3_fl_embedding.json", out)
+    save(OUTF, out)
 
 
 if __name__ == "__main__":
