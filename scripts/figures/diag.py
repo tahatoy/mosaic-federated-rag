@@ -5,7 +5,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 
-OUT = os.path.dirname(os.path.abspath(__file__))
+OUT = os.environ.get("MOSAIC_FIG_OUT", os.path.dirname(os.path.abspath(__file__)))
 plt.rcParams.update({"font.family": "Liberation Serif", "savefig.dpi": 330})
 LW = 2.0
 G1, G2 = "#f0f0f0", "#dcdcdc"
@@ -50,34 +50,34 @@ L = {
     "en": dict(
         hq="Headquarters (HQ): RTX 5060 Ti 16 GB, Ryzen 5 7500F, 32 GB RAM", ui=("Web UI", ["React (8005)"]),
         orch=("Orchestrator", ["FastAPI, SSE (8004)", "PII masking"]), router=("BERT Router", ["ONNX INT8 (8000)"]),
-        shared=("Shared RAG (8003)", ["ChromaDB, 429 shared chunks"]), rr=("Reranker", ["cross-encoder", "(mMARCO)"]),
+        shared=("Shared RAG (8003)", ["ChromaDB, 429 chunks"]), rr=("Reranker", ["cross-encoder", "(mMARCO)"]),
         qwen=("Qwen3-8B Q4_K_M", ["llama-server (8098)"]), gemma=("Gemma-3-4B Q4_K_M", ["llama-server (8099)"]),
         fl=("Flower Server", ["gRPC/TLS (9080)", "FedAvg / FedProx", "μ = 0.01"]),
         path="Query path: UI → orchestrator → router → federated retrieval → re-ranking → LLM",
-        rest="REST/mTLS: masked query and anonymized text chunks",
+        rest="REST/mutual TLS: query and anonymized text chunks",
         b1="Branch-1 VM (Retail): 2 vCPU, 10 GB RAM", b2="Branch-2 VM (Corporate): 2 vCPU, 10 GB RAM",
         db1=("Local ChromaDB", ["7,854 chunks"]), db2=("Local ChromaDB", ["14,767 chunks"]),
         api1=("Branch-1 RAG API (8001)", ["MOSAIC-Embed,", "local PII filter"]), api2=("Branch-2 RAG API (8002)", ["MOSAIC-Embed,", "local PII filter"]),
-        flc=("Flower Client", ["local LoRA training"]), bui=("Isolated Branch UI", ["React (8005)"]),
-        grpc="gRPC/TLS: adapter updates and global model weights",
+        flc=("Flower Client", ["local FL training"]), bui=("Isolated Branch UI", ["React (8005)"]),
+        grpc="gRPC/TLS: model/adapter updates and global weights",
         # fig 2
         hq2="Headquarters (HQ)", tb="Target Branch (Branch-1 VM)",
         s1=("1. User Query", ['e.g., "What is the mortgage', 'early repayment penalty?"']),
         s2=("2. Routing", ["BERT label: complex", "query sent to all branches"]),
-        s3=("3. Cross-Branch Call", ["async HTTPX, mutual TLS", "branch APIs (8001, 8002)"]),
+        s3=("3. Cross-Branch Request", ["async HTTPX, mutual TLS", "branch APIs (8001, 8002)"]),
         s4=("4. Local Search", ["MOSAIC-Embed + ChromaDB", "top 8 candidates per service"]),
         s5=("5. Late Masking", ["TCKN, name, IBAN masked", "only anonymous text returned"]),
-        s6=("6. Re-ranking", ["cross-encoder over all branches", "up to 6 chunks (score ≥ 0.20)"]),
+        s6=("6. Re-ranking", ["candidates from all branches", "up to 6 chunks (score ≥ 0.20)"]),
         s7=("7. Prompt & Inference", ["context + masked query", "Qwen3-8B (llama-server)"]),
-        s8=("8. Streamed Answer (SSE)", ["local unmasking", "cited response"]),
-        req="request (mTLS)", anon="anonymous chunks", raw="Raw PDFs and personal data\nnever leave the branch VM.",
+        s8=("8. Streamed Answer (SSE)", ["masks restored locally", "answer with cited sources"]),
+        req="request (mutual TLS)", anon="anonymized chunks", raw="Raw PDFs and personal data\nnever leave the branch VM.",
         # fig 3
         uq="User Query", bc=("BERT Classifier", ["dbmdz/bert-base-turkish-cased, ONNX INT8 (25.6 ms)"]), lc="label + confidence",
-        rl=("Rule-Based Safety Layer", ["Rule 1: if any of 18 complex analysis keywords appears (e.g., dcf, duration, swap, stress test) → complex",
+        rl=("Rule-Based Safeguard Layer", ["Rule 1: if any of 18 complex analysis keywords appears (e.g., dcf, duration, swap, stress test) → complex",
                                          "Rule 2: if prediction confidence < 0.55, promote one tier (chitchat → simple, simple → complex)"]),
-        cc=("chitchat", ["Gemma-3-4B", "no retrieval"]), sm=("simple", ["Branch RAG (MOSAIC-Embed)", "+ Gemma-3-4B"]),
+        cc=("chitchat", ["Gemma-3-4B", "no retrieval"]), sm=("simple", ["Federated RAG + re-ranking", "+ Gemma-3-4B"]),
         cx=("complex", ["Federated RAG + re-ranking", "+ Qwen3-8B"]),
-        foot="To reduce error cost, uncertain queries are escalated to a stronger model.",
+        foot="To reduce error cost, uncertain cases are routed to the stronger model.",
     ),
     "tr": dict(
         hq="Genel merkez (HQ): RTX 5060 Ti 16 GB, Ryzen 5 7500F, 32 GB RAM", ui=("Arayüz", ["React (8005)"]),

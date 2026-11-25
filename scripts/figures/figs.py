@@ -66,7 +66,7 @@ def pct(v):
 T = {
     "en": dict(
         r_first="First router (live system)", r_new="Retrained router", r_acc="Correctly classified (%)",
-        r_a="Template test set:\nsame sources as training", r_b="Question sources\nnot used in training",
+        r_a="Templated test set:\nsame sources as training", r_b="Question sources\nnot used in training",
         r_ch="Chitchat", r_si="Simple", r_cx="Complex",
         r_rs="Simple:\nreport-style", r_ct="Simple:\ncross-branch\ntemplated", r_cp="Simple:\ncross-branch\nparaphrased",
         r_rc="Complex:\nreport-style",
