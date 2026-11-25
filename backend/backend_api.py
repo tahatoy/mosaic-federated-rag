@@ -217,6 +217,7 @@ class OrchestratorQueryResponse(BaseModel):
     model_name: str
     elapsed_ms: float
     sources: list[DocumentChunk]
+    escalated: bool = False
 
 # ──────────────────────────────────────────────────────────────────────────────
 # 1. ROUTER ENDPOINTS
@@ -515,6 +516,18 @@ else:
     BRANCH_MODEL_NAME = "Gemma-3-4B"
     HQ_MODEL_NAME = "Qwen3-8B"
     RAG_FINAL_K = int(os.getenv("RAG_FINAL_K", "6"))  # bağlama en fazla 6 parça girer (build_user_prompt)
+    # Kademeli yönlendirme (Q1 revizyonu, E20): basit sınıftaki sorular hafif modele (Gemma-3-4B) gider; hafif model getirilen
+    # bağlam varken "belgelerde bilgi yok" diyerek yanıttan kaçınırsa soru aynı bağlamla büyük modele (Qwen3-8B) yükseltilir.
+    SIMPLE_FINAL_K = int(os.getenv("SIMPLE_FINAL_K", str(RAG_FINAL_K)))
+    ESCALATE_ON_ABSTAIN = os.getenv("ESCALATE_ON_ABSTAIN", "false").lower() == "true"
+    import re as _re
+    ABSTAIN_RE = _re.compile(r"(bu hususa dair|yer almamaktadır|bulunmamaktadır|bilgi bulunamadı|bilgi yer almıyor)", _re.I)
+    # İsteğe bağlı ikinci tetik: hafif modelin yanıtındaki bir sayı, modele verilen bağlamda hiç geçmiyorsa (desteklenmeyen sayı) yükselt.
+    ESCALATE_UNSUPPORTED = os.getenv("ESCALATE_UNSUPPORTED", "false").lower() == "true"
+    _NUM_RE = _re.compile(r"\d+(?:[.,]\d+)*")
+
+    def _nums(t: str) -> set:
+        return {_re.sub(r"[.,]", "", x) for x in _NUM_RE.findall(t or "")}
 
     async def call_router(query: str) -> dict:
         client = get_http_client()
@@ -784,9 +797,18 @@ else:
 
         system = build_system_prompt(route)
         masked_query = _filter_pii(original_query, mappings)
-        user_prompt = build_user_prompt(masked_query, sources, route, history=request.history, mappings=mappings)
+        prompt_sources = sources[:SIMPLE_FINAL_K] if label == 1 else sources
+        user_prompt = build_user_prompt(masked_query, prompt_sources, route, history=request.history, mappings=mappings)
 
         answer = await call_llm(llm_url, model_name, system, user_prompt, route)
+        escalated = False
+        _abstain = bool(ABSTAIN_RE.search(answer or ""))
+        _unsupported = ESCALATE_UNSUPPORTED and bool(_nums(answer) - _nums(" ".join(str(c.get("text", "")) for c in prompt_sources)))
+        if ESCALATE_ON_ABSTAIN and label == 1 and sources and (_abstain or _unsupported):
+            full_prompt = build_user_prompt(masked_query, sources, route, history=request.history, mappings=mappings)
+            answer = await call_llm(HQ_LLM_URL, HQ_MODEL_NAME, system, full_prompt, route)
+            model_name, escalated = HQ_MODEL_NAME, True
+            logger.info("[Kademeli] Hafif model yanıttan kaçındı; soru Qwen3-8B'ye yükseltildi")
 
         # De-mask mappings in answers and source contexts
         for placeholder, original in mappings.items():
@@ -819,7 +841,8 @@ else:
             confidence=confidence,
             model_name=model_name,
             elapsed_ms=round(elapsed_ms, 2),
-            sources=formatted_sources
+            sources=formatted_sources,
+            escalated=escalated
         )
 
     @app.post("/query/stream")

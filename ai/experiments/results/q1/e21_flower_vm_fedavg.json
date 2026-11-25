@@ -1,0 +1,100 @@
+{
+ "strategy": "fedavg",
+ "rounds": 3,
+ "tls": true,
+ "where": "vm",
+ "trainable_params": 21639552,
+ "eval": [
+  {
+   "round": 0,
+   "t": 0.3,
+   "cloze_mrr@10": 0.8796,
+   "cloze_hit@10": 0.9467,
+   "natural_mrr@10": 0.792,
+   "natural_hit@10": 0.9451
+  },
+  {
+   "round": 1,
+   "t": 5914.1,
+   "cloze_mrr@10": 0.8876,
+   "cloze_hit@10": 0.96,
+   "natural_mrr@10": 0.7948,
+   "natural_hit@10": 0.9356
+  },
+  {
+   "round": 2,
+   "t": 11488.0,
+   "cloze_mrr@10": 0.9131,
+   "cloze_hit@10": 0.9717,
+   "natural_mrr@10": 0.8095,
+   "natural_hit@10": 0.9403
+  }
+ ],
+ "fed_dev": [
+  {
+   "round": 1,
+   "dev_mrr10": 0.8277,
+   "per_client": {
+    "1": 0.8727,
+    "2": 0.7996
+   }
+  },
+  {
+   "round": 2,
+   "dev_mrr10": 0.8478,
+   "per_client": {
+    "2": 0.8178,
+    "1": 0.8959
+   }
+  }
+ ],
+ "fit": [
+  [
+   {
+    "n": 2531,
+    "loss": 0.9739,
+    "steps": 40.0,
+    "round": 1.0,
+    "fit_s": 3761.5,
+    "bytes": 86558208.0,
+    "branch": 1.0
+   },
+   {
+    "n": 4098,
+    "loss": 0.8157,
+    "branch": 2.0,
+    "round": 1.0,
+    "fit_s": 5883.3,
+    "bytes": 86558208.0,
+    "steps": 65.0
+   }
+  ],
+  [
+   {
+    "n": 4098,
+    "loss": 0.3932,
+    "branch": 2.0,
+    "round": 2.0,
+    "fit_s": 5328.2,
+    "bytes": 86558208.0,
+    "steps": 65.0
+   },
+   {
+    "n": 2531,
+    "loss": 0.3269,
+    "steps": 40.0,
+    "round": 2.0,
+    "fit_s": 3104.4,
+    "bytes": 86558208.0,
+    "branch": 1.0
+   }
+  ]
+ ],
+ "t_round_end": [
+  5913.6,
+  11488.0
+ ],
+ "bytes_per_update": 86558208,
+ "selected_round": 2,
+ "selected_dev_mrr10": 0.8478
+}

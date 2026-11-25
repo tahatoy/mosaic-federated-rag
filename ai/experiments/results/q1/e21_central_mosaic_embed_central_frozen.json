@@ -1,0 +1,51 @@
+{
+ "freeze_word_embeddings": 1,
+ "epochs": 6,
+ "lr": 2e-05,
+ "batch": 64,
+ "history": [
+  {
+   "epoch": 1,
+   "dev_mrr10": 0.769,
+   "sec": 60.8,
+   "steps": 104,
+   "loss": 0.6428
+  },
+  {
+   "epoch": 2,
+   "dev_mrr10": 0.7785,
+   "sec": 58.7,
+   "steps": 104,
+   "loss": 0.2864
+  },
+  {
+   "epoch": 3,
+   "dev_mrr10": 0.7815,
+   "sec": 58.8,
+   "steps": 104,
+   "loss": 0.2404
+  },
+  {
+   "epoch": 4,
+   "dev_mrr10": 0.7848,
+   "sec": 58.7,
+   "steps": 104,
+   "loss": 0.2073
+  },
+  {
+   "epoch": 5,
+   "dev_mrr10": 0.7893,
+   "sec": 58.8,
+   "steps": 104,
+   "loss": 0.1843
+  },
+  {
+   "epoch": 6,
+   "dev_mrr10": 0.7857,
+   "sec": 58.6,
+   "steps": 104,
+   "loss": 0.1591
+  }
+ ],
+ "selected_epoch": 5
+}

@@ -1,0 +1,268 @@
+{
+ "n_paired": 200,
+ "base": "_v4b_router2",
+ "tag": "_v5_fl",
+ "metrics": {
+  "em": {
+   "router_v1": [
+    0.74,
+    [
+     0.68,
+     0.8
+    ]
+   ],
+   "router_v2": [
+    0.76,
+    [
+     0.7,
+     0.815
+    ]
+   ]
+  },
+  "judge_correct": {
+   "router_v1": [
+    0.78,
+    [
+     0.72,
+     0.835
+    ]
+   ],
+   "router_v2": [
+    0.765,
+    [
+     0.705,
+     0.82
+    ]
+   ]
+  },
+  "judge_faithful": {
+   "router_v1": [
+    0.78,
+    [
+     0.72,
+     0.835
+    ]
+   ],
+   "router_v2": [
+    0.77,
+    [
+     0.71,
+     0.825
+    ]
+   ]
+  }
+ },
+ "tests": {
+  "em": {
+   "only_v2": 7,
+   "only_v1": 3,
+   "mcnemar_p": 0.34375,
+   "diff_ci": [
+    0.02,
+    [
+     -0.01,
+     0.05
+    ]
+   ]
+  },
+  "judge_correct": {
+   "only_v2": 8,
+   "only_v1": 11,
+   "mcnemar_p": 0.6476058959960938,
+   "diff_ci": [
+    -0.015,
+    [
+     -0.055,
+     0.025
+    ]
+   ]
+  },
+  "judge_faithful": {
+   "only_v2": 11,
+   "only_v1": 13,
+   "mcnemar_p": 0.8388197422027588,
+   "diff_ci": [
+    -0.01,
+    [
+     -0.06,
+     0.035
+    ]
+   ]
+  }
+ },
+ "latency_ms": {
+  "router_v1": {
+   "mean": 3583.6,
+   "median": 1645.0,
+   "p95": 11436.9
+  },
+  "router_v2": {
+   "mean": 3754.0,
+   "median": 1665.1,
+   "p95": 11134.3
+  },
+  "mean_diff_ci": [
+   170.408,
+   [
+    1.0755,
+    354.8881
+   ]
+  ],
+  "median_diff_ci": [
+   20.1,
+   [
+    -264.6,
+    595.7
+   ]
+  ],
+  "speedup_median": 0.99
+ },
+ "routes": {
+  "router_v1": {
+   "complex": 47,
+   "simple": 153
+  },
+  "router_v2": {
+   "complex": 47,
+   "simple": 153
+  }
+ },
+ "per_route": {
+  "router_v1": {
+   "complex": {
+    "n": 47,
+    "em": [
+     0.8298,
+     [
+      0.7234,
+      0.9362
+     ]
+    ],
+    "judge_correct": [
+     0.766,
+     [
+      0.6383,
+      0.8723
+     ]
+    ],
+    "latency_ms": {
+     "mean": 9388.9,
+     "median": 8964.6,
+     "p95": 13815.2
+    }
+   },
+   "simple": {
+    "n": 153,
+    "em": [
+     0.7124,
+     [
+      0.6405,
+      0.7843
+     ]
+    ],
+    "judge_correct": [
+     0.7843,
+     [
+      0.719,
+      0.8497
+     ]
+    ],
+    "latency_ms": {
+     "mean": 1800.3,
+     "median": 1115.0,
+     "p95": 5215.0
+    }
+   }
+  },
+  "router_v2": {
+   "complex": {
+    "n": 47,
+    "em": [
+     0.8298,
+     [
+      0.7234,
+      0.9362
+     ]
+    ],
+    "judge_correct": [
+     0.7447,
+     [
+      0.617,
+      0.8511
+     ]
+    ],
+    "latency_ms": {
+     "mean": 9932.0,
+     "median": 9309.5,
+     "p95": 15085.8
+    }
+   },
+   "simple": {
+    "n": 153,
+    "em": [
+     0.7386,
+     [
+      0.6667,
+      0.8105
+     ]
+    ],
+    "judge_correct": [
+     0.7712,
+     [
+      0.7059,
+      0.8431
+     ]
+    ],
+    "latency_ms": {
+     "mean": 1856.2,
+     "median": 1131.8,
+     "p95": 5217.4
+    }
+   }
+  }
+ },
+ "router_accuracy_simple": {
+  "router_v1": 0.765,
+  "router_v2": 0.765
+ },
+ "rerouted_subset": {
+  "n": 153,
+  "em_gemma_v2": [
+   0.7386,
+   [
+    0.6667,
+    0.8105
+   ]
+  ],
+  "em_qwen_v1": [
+   0.7124,
+   [
+    0.6405,
+    0.7843
+   ]
+  ],
+  "mcnemar_p": 0.34375,
+  "diff_ci": [
+   0.0261,
+   [
+    -0.0131,
+    0.0654
+   ]
+  ],
+  "latency_v2": {
+   "mean": 1856.2,
+   "median": 1131.8,
+   "p95": 5217.4
+  },
+  "latency_v1": {
+   "mean": 1800.3,
+   "median": 1115.0,
+   "p95": 5215.0
+  }
+ },
+ "judge_validity_v2": {
+  "kappa_judge_vs_em_mosaic": 0.7653,
+  "kappa_judge_vs_em_norag": 0.1901,
+  "agreement_mosaic": 0.915
+ }
+}

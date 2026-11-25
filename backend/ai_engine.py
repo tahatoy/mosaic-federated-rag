@@ -159,7 +159,13 @@ def _embedding_model_path(key: str) -> Optional[Path]:
     e5small_base  base multilingual-e5-small (deployed testbed configuration)
     mosaic_embed  MOSAIC-Embed, ai/models/embeddings/turkembed_v3 (on the Hub as Toxotes/mosaic-embed)
     The earlier instruction-tuned model (turkembed_finetuned) is withdrawn: it retrieved worse than its base model.
+    EMBEDDING_MODEL_PATH, if set, overrides the key (e.g. ai/models/embeddings/mosaic_embed_flower_vm, the
+    MOSAIC-Embed trained over Flower between the branch machines and used in the final configuration).
     """
+    override = os.getenv("EMBEDDING_MODEL_PATH", "").strip()
+    if override:
+        op = Path(override)
+        return op if op.is_absolute() else PROJECT_ROOT / op
     base = PROJECT_ROOT / "ai" / "models" / "embeddings"
     if key == "mosaic_embed":
         return base / "turkembed_v3"

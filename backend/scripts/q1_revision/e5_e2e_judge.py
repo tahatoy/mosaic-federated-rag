@@ -60,23 +60,34 @@ def main():
     ap.add_argument("--qwen", default="http://127.0.0.1:8098/v1/chat/completions")
     ap.add_argument("--judge", default="http://127.0.0.1:8096/v1/chat/completions")
     ap.add_argument("--tag", default="")
+    ap.add_argument("--no-norag", action="store_true", help="bilgi getirmeyen karşılaştırmayı atla (geliştirme taramaları)")
+    ap.add_argument("--offset", type=int, default=0, help="geliştirme kümesi için ilk --offset soruyu atla (ör. 200: test dışındaki 219 soru)")
+    ap.add_argument("--reuse-norag", default="", help="bilgi getirmeyen Qwen yanıtlarını bu etiketli ham dosyadan al (ör. _v3); aynı sorular, aynı model")
     a = ap.parse_args()
     raw = OUT_DIR / f"e5_e2e_raw{a.tag}.json"
     if a.phase == "collect":
         qs, _, _ = questions(600)
         para = {r["reference"]: r["natural"] for r in json.loads((OUT_DIR / "e0_paraphrases.json").read_text(encoding="utf-8"))["kayitlar"] if r["natural"]}
-        items = [q for q in qs if q["reference"] in para][:a.n]
+        items = [q for q in qs if q["reference"] in para][a.offset:a.offset + a.n]
         rec = []
+        prev = {}
+        if a.reuse_norag:
+            prev = {r["q"]: r for r in json.loads((OUT_DIR / f"e5_e2e_raw{a.reuse_norag}.json").read_text(encoding="utf-8"))}
         with httpx.Client(timeout=600) as cl:
             for i, q in enumerate(items, 1):
                 nq = para[q["reference"]]
                 d = cl.post(a.orch, json={"query": nq, "branch_id": q["asked_branch"]}).json()
                 ans = d.get("answer", "")
-                r0 = cl.post(a.qwen, json={"messages": [{"role": "system", "content": "Sen Türkçe bir bankacılık asistanısın."},
-                                                         {"role": "user", "content": nq + " /no_think"}], "max_tokens": 400, "temperature": 0.0}).json()
-                ans0 = r0["choices"][0]["message"]["content"].split("</think>")[-1].strip()
+                if a.no_norag:
+                    ans0 = ""
+                elif nq in prev:
+                    ans0 = prev[nq]["norag_answer"]
+                else:
+                    r0 = cl.post(a.qwen, json={"messages": [{"role": "system", "content": "Sen Türkçe bir bankacılık asistanısın."},
+                                                             {"role": "user", "content": nq + " /no_think"}], "max_tokens": 400, "temperature": 0.0}).json()
+                    ans0 = r0["choices"][0]["message"]["content"].split("</think>")[-1].strip()
                 rec.append({"q": nq, "reference": q["reference"], "gold": q["gold"], "asked": q["asked_branch"], "owner": q["owner_branch"],
-                            "route": d.get("route"), "elapsed_ms": d.get("elapsed_ms"),
+                            "route": d.get("route"), "elapsed_ms": d.get("elapsed_ms"), "escalated": d.get("escalated", False), "model_name": d.get("model_name"),
                             "src_branches": [s.get("branch") for s in d.get("sources", [])], "sources": [s.get("text", "") for s in d.get("sources", [])],
                             "em": int(q["gold_norm"] in norm_num(ans)), "norag_em": int(q["gold_norm"] in norm_num(ans0)),
                             "answer": ans, "norag_answer": ans0})

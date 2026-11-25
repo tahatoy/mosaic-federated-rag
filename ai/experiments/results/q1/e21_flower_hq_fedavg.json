@@ -1,0 +1,250 @@
+{
+ "strategy": "fedavg",
+ "rounds": 6,
+ "tls": true,
+ "where": "hq",
+ "trainable_params": 21639552,
+ "eval": [
+  {
+   "round": 0,
+   "t": 0.3,
+   "cloze_mrr@10": 0.8796,
+   "cloze_hit@10": 0.9467,
+   "natural_mrr@10": 0.792,
+   "natural_hit@10": 0.9451
+  },
+  {
+   "round": 1,
+   "t": 205.2,
+   "cloze_mrr@10": 0.8856,
+   "cloze_hit@10": 0.9617,
+   "natural_mrr@10": 0.7961,
+   "natural_hit@10": 0.9356
+  },
+  {
+   "round": 2,
+   "t": 401.9,
+   "cloze_mrr@10": 0.9099,
+   "cloze_hit@10": 0.97,
+   "natural_mrr@10": 0.8085,
+   "natural_hit@10": 0.9356
+  },
+  {
+   "round": 3,
+   "t": 614.9,
+   "cloze_mrr@10": 0.9248,
+   "cloze_hit@10": 0.9733,
+   "natural_mrr@10": 0.8062,
+   "natural_hit@10": 0.9427
+  },
+  {
+   "round": 4,
+   "t": 828.7,
+   "cloze_mrr@10": 0.9295,
+   "cloze_hit@10": 0.9767,
+   "natural_mrr@10": 0.8063,
+   "natural_hit@10": 0.9403
+  },
+  {
+   "round": 5,
+   "t": 1037.2,
+   "cloze_mrr@10": 0.9325,
+   "cloze_hit@10": 0.9783,
+   "natural_mrr@10": 0.8099,
+   "natural_hit@10": 0.9379
+  },
+  {
+   "round": 6,
+   "t": 1238.1,
+   "cloze_mrr@10": 0.9331,
+   "cloze_hit@10": 0.9783,
+   "natural_mrr@10": 0.8039,
+   "natural_hit@10": 0.9427
+  }
+ ],
+ "fed_dev": [
+  {
+   "round": 1,
+   "dev_mrr10": 0.7691,
+   "per_client": {
+    "2": 0.7389,
+    "1": 0.8175
+   }
+  },
+  {
+   "round": 2,
+   "dev_mrr10": 0.7897,
+   "per_client": {
+    "2": 0.7585,
+    "1": 0.8397
+   }
+  },
+  {
+   "round": 3,
+   "dev_mrr10": 0.7954,
+   "per_client": {
+    "1": 0.8465,
+    "2": 0.7635
+   }
+  },
+  {
+   "round": 4,
+   "dev_mrr10": 0.7962,
+   "per_client": {
+    "2": 0.7635,
+    "1": 0.8487
+   }
+  },
+  {
+   "round": 5,
+   "dev_mrr10": 0.8019,
+   "per_client": {
+    "1": 0.8539,
+    "2": 0.7694
+   }
+  },
+  {
+   "round": 6,
+   "dev_mrr10": 0.8025,
+   "per_client": {
+    "2": 0.7682,
+    "1": 0.8575
+   }
+  }
+ ],
+ "fit": [
+  [
+   {
+    "n": 2531,
+    "bytes": 86558208.0,
+    "round": 1.0,
+    "fit_s": 123.3,
+    "loss": 0.9714,
+    "steps": 40.0,
+    "branch": 1.0
+   },
+   {
+    "n": 4098,
+    "bytes": 86558208.0,
+    "round": 1.0,
+    "fit_s": 132.5,
+    "loss": 0.8135,
+    "steps": 65.0,
+    "branch": 2.0
+   }
+  ],
+  [
+   {
+    "n": 4098,
+    "bytes": 86558208.0,
+    "round": 2.0,
+    "fit_s": 99.0,
+    "loss": 0.3848,
+    "steps": 65.0,
+    "branch": 2.0
+   },
+   {
+    "n": 2531,
+    "bytes": 86558208.0,
+    "round": 2.0,
+    "fit_s": 86.4,
+    "loss": 0.3368,
+    "steps": 40.0,
+    "branch": 1.0
+   }
+  ],
+  [
+   {
+    "n": 2531,
+    "bytes": 86558208.0,
+    "round": 3.0,
+    "fit_s": 100.8,
+    "loss": 0.2814,
+    "steps": 40.0,
+    "branch": 1.0
+   },
+   {
+    "n": 4098,
+    "bytes": 86558208.0,
+    "round": 3.0,
+    "fit_s": 111.7,
+    "loss": 0.3309,
+    "steps": 65.0,
+    "branch": 2.0
+   }
+  ],
+  [
+   {
+    "n": 2531,
+    "bytes": 86558208.0,
+    "round": 4.0,
+    "fit_s": 101.0,
+    "loss": 0.2489,
+    "steps": 40.0,
+    "branch": 1.0
+   },
+   {
+    "n": 4098,
+    "bytes": 86558208.0,
+    "round": 4.0,
+    "fit_s": 112.9,
+    "loss": 0.3023,
+    "steps": 65.0,
+    "branch": 2.0
+   }
+  ],
+  [
+   {
+    "n": 4098,
+    "bytes": 86558208.0,
+    "round": 5.0,
+    "fit_s": 109.8,
+    "loss": 0.2734,
+    "steps": 65.0,
+    "branch": 2.0
+   },
+   {
+    "n": 2531,
+    "bytes": 86558208.0,
+    "round": 5.0,
+    "fit_s": 98.3,
+    "loss": 0.2363,
+    "steps": 40.0,
+    "branch": 1.0
+   }
+  ],
+  [
+   {
+    "n": 2531,
+    "bytes": 86558208.0,
+    "round": 6.0,
+    "fit_s": 97.0,
+    "loss": 0.2166,
+    "steps": 40.0,
+    "branch": 1.0
+   },
+   {
+    "n": 4098,
+    "bytes": 86558208.0,
+    "round": 6.0,
+    "fit_s": 107.1,
+    "loss": 0.2521,
+    "steps": 65.0,
+    "branch": 2.0
+   }
+  ]
+ ],
+ "t_round_end": [
+  203.2,
+  397.9,
+  612.6,
+  827.6,
+  1036.1,
+  1237.0
+ ],
+ "bytes_per_update": 86558208,
+ "selected_round": 6,
+ "selected_dev_mrr10": 0.8025,
+ "total_s": 1330.8,
+ "out_model": "ai/models/embeddings/mosaic_embed_flower"
+}

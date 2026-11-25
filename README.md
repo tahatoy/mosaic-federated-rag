@@ -63,7 +63,8 @@ Main components:
   (Turkish ID, IBAN, card and phone numbers with checksum validation, and person names). Services communicate over
   mutual TLS. Access is controlled with role-based API keys stored as SHA-256 hashes, events are written to an
   HMAC-SHA256 audit chain, and data-subject erasure is supported.
-- **Federated learning.** Flower with FedAvg and FedProx trains LoRA adapters. An optional Gaussian mechanism adds
+- **Federated learning.** Flower with FedAvg and FedProx trains LoRA adapters and the full MOSAIC-Embed model; the
+  embedding model of the final configuration was trained over Flower between the two branch machines. An optional Gaussian mechanism adds
   differential privacy, with Rényi-DP accounting.
 
 ## Main results
@@ -74,7 +75,11 @@ Results of the final configuration reported in the article:
 |-------------|--------|
 | Exact match on 500 cross-branch questions, no retrieval vs. federated retrieval | 3.0% vs. 89.2% (centralized index: 89.6%, p = 0.69) |
 | Same questions, MOSAIC-Embed vs. the base e5-small model in the live federated system | 89.2% vs. 86.2% (p = 0.0015) |
-| Live system, 200 paraphrased questions: exact match / judged correct / judged faithful | 84.5% / 81.0% / 79.0% |
+| Live system, 200 paraphrased questions, first configuration (all questions to Qwen3-8B): exact match / judged correct / judged faithful / median response time | 84.5% / 81.0% / 79.0% / 9.3 s |
+| Same questions, final configuration (retrained router, escalation of abstaining Gemma-3-4B answers to Qwen3-8B, Flower-trained MOSAIC-Embed) | 76.0% / 76.5% / 77.0% / 1.7 s (judged correctness vs. first configuration: p = 0.11) |
+| MOSAIC-Embed trained over Flower between the branch VMs (2 rounds) vs. centrally trained, MRR@10 with re-ranking, templated / paraphrased | 0.869 / 0.854 vs. 0.872 / 0.853; cross-branch exact match 89.4% vs. 89.2% (p = 1.00) |
+| Simulated scaling to 100 branches, re-ranking capped at 32 candidates: MRR@10 templated / paraphrased, median retrieval time | 0.872 / 0.853, 578 ms (2 branches: 0.869 / 0.847, 103 ms) |
+| Client-level central DP in simulation, 50 clients, z = 3 (ε = 2.94 over three rounds), templated MRR@10 | 0.875 (without noise: 0.875) |
 | Human evaluation of 100 answers (intermediate base-e5 run), two raters: inter-rater agreement on correctness | Cohen's kappa = 0.85 |
 | Agreement between the LLM judge and the human raters on correctness | Cohen's kappa = 0.83 and 0.82 |
 | Router on single-figure cross-branch questions routed as simple, first vs. retrained router (templated / paraphrased) | 0.3% / 0.2% vs. 100% / 84.8% |
@@ -99,7 +104,7 @@ backend/
   certs/                    certificate templates only (keys are never committed)
   scripts/                  data, training, evaluation and maintenance tools
     hypothesis_tests/       original H1-H4 experiments (canary leakage, PII masking, DP analysis, token cost)
-    q1_revision/            extended evaluation used in the article (E0-E19)
+    q1_revision/            extended evaluation used in the article (E0-E24)
   tests/                    pytest suite
 ai/
   models/                   training code for the router and embeddings, quantization benchmark
@@ -212,7 +217,16 @@ Each driver in `scripts/experiments/q1/` starts the services it needs, runs one 
 | Gemma-3-4B on the branch VMs (CPU only, 2 threads) against the HQ GPU with identical contexts, 50 questions | `q1_20_branch_llm.sh` (uses `scripts/branch_llm_vm.sh`) | `e17_branch_llm.py` | `e17_branch_llm.json` |
 | Router retrained with report-style questions, three seeds, and per-class recall on the template test set | `q1_21_router_v2.sh` | `e18_router_v2.py`, `e19_router_per_class.py` | `e18_router_v2.json`, `e19_router_per_class.json` |
 | Canary test before/with safeguards and with Branch-2 protected only (control), prompt-attack rate | `q1_19_eval_mosaic_embed.sh` | `h2_canary.py`, H2 security test | `../h2_canary_*_once_me.json`, `../h2_canary_*_kontrol_me.json`, `../h2_canary_*_sonra_me.json`, `../h2_security_asr_*_me.json` |
+| Live test with the retrained router; escalation of abstaining answers selected on 219 held-out development questions; paired comparisons | `q2_02_e20_router.sh`, `q2_02b_e20_kademeli.sh`, `q2_02c_e20_dogrulama.sh` | E5 (`--offset`, `--reuse-norag`), `e20_router_v2_live.py` | `e5_e2e_*_v4_router2.json`, `e5_e2e_*_v4b_router2.json`, `e5_e2e_raw_dev_*.json`, `e20_dev_selection.txt`, `e20_router_v2_live.json`, `e20_v4b_vs_v3.json` |
+| MOSAIC-Embed over Flower with TLS: both clients on the HQ GPU, run between the branch VMs, central control with frozen word embeddings, evaluation | `q2_04_e21_hq.sh`, `q2_05b_e21_vm.sh`, `q2_06b_e21_eval.sh` | `e21_flower_mosaic_embed.py` | `e21_*.json` |
+| Deployment of the Flower-trained model, cross-branch and live re-runs | `q2_07b_deploy_fl.sh`, `q2_08a_vm_model.sh`, `q2_08c_eval_fl.sh` | `reindex_e5base.py --model`, E2, E5, `e20_router_v2_live.py`, `e24_fl_vs_me.py` | `q2_deployed_embedding.json`, `e2_generation_fl.json`, `e24_fl_vs_me.json`, `e5_e2e_*_v5_fl.json`, `e20_v5_fl_*.json` |
+| Scaling to 2-100 branches: retrieval quality and re-ranking cost, fan-out latency, federated training with client-level central DP | `q2_10_e22_gecikme.sh` (latency phase); `python e22_scalability.py --phases retrieval,fl` | `e22_scalability.py` | `e22_scalability.json` |
 | Human evaluation of 100 answers by two raters | none (labels collected with `human_eval/annotation_form.html`) | `e11_human_eval.py` | `human_eval/human_eval_summary.json` |
+
+The `q2_*` drivers share the helpers in `backend/scripts/q1_revision/q2_lib.sh` (starting and stopping the model
+servers, SSH to the branch VMs) and were run one after another from the repository root. In the run between the
+branch VMs each round took about 100 minutes on two virtual CPUs, so training was stopped after two rounds; the
+per-branch training files were prepared at headquarters from each branch's corpus.
 
 The canary records are synthetic, but their ID, IBAN, card and phone numbers pass the checksum tests that the masking
 relies on. In the published result files these values are replaced by tokens of the form `[SENTETIK_<type>_<hash>]`

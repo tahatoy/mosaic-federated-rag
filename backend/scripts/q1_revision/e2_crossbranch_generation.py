@@ -21,6 +21,8 @@ Kollar
   D_e5     D, ince ayarsız multilingual-e5-small gömmesi
   D_me     D, MOSAIC-Embed gömmesi (ai/models/embeddings/turkembed_v3)
   D_me_noce D_me, yeniden sıralama yok (ilk 3 yoğun aday)
+  D_fl     D, Flower ile federe eğitilmiş MOSAIC-Embed (E21; --fl-model) + aynı yeniden sıralama
+  D_fl_noce D_fl, yeniden sıralama yok
   C_base_q4km / C_base_q2k : C bağlamı, ince ayarsız Gemma-3-4B'nin Q4_K_M ve Q2_K sürümleri (kuantizasyon etkisi)
 Çıktı: ai/experiments/results/q1/e2_generation.json
 """
@@ -79,6 +81,8 @@ def main():
     ap.add_argument("--natural", type=int, default=1, help="doğal dil kümesini de koş")
     ap.add_argument("--natural-arms", default="A,C,D")
     ap.add_argument("--out", default="e2_generation.json")
+    ap.add_argument("--fl-model", default=str(ROOT / "ai/models/embeddings/mosaic_embed_flower"))
+    ap.add_argument("--no-fed", action="store_true", help="B/C kolları koşulmuyorsa şube VM'lerine istek atma")
     a = ap.parse_args()
     from sentence_transformers import CrossEncoder, SentenceTransformer
     qs, docs, owner = questions(a.n)
@@ -92,7 +96,8 @@ def main():
     want = set(a.arms.split(",")) | set(a.natural_arms.split(","))
     for nm, path, need in (("turkembed", str(ROOT / "ai/models/embeddings/turkembed_finetuned"), bool(want & {"D", "D_noce"})),
                            ("e5", "intfloat/multilingual-e5-small", "D_e5" in want),
-                           ("mosaic", str(ROOT / "ai/models/embeddings/turkembed_v3"), bool(want & {"D_me", "D_me_noce"}))):
+                           ("mosaic", str(ROOT / "ai/models/embeddings/turkembed_v3"), bool(want & {"D_me", "D_me_noce"})),
+                           ("flower", a.fl_model, bool(want & {"D_fl", "D_fl_noce"}))):
         if not need:
             continue
         m = SentenceTransformer(path, device=dev); m.max_seq_length = 512
@@ -126,7 +131,8 @@ def main():
     sets = {"cloze": [(q, q["question"], q["search_query"]) for q in qs],
             "natural": [(q, para[q["reference"]] + " Sadece değeri yaz.", para[q["reference"]]) for q in qs if q["reference"] in para]}
     out = {"n": {k: len(v) for k, v in sets.items()}, "llm": "Gemma-3-4B Q4_K_M (8099)", "k": a.k, "sonuclar": {}, "testler": {}, "kayitlar": {}}
-    with mtls_client() as mt:
+    import contextlib
+    with (contextlib.nullcontext(None) if a.no_fed else mtls_client()) as mt:
         for sname, items in sets.items():
             arms = [x for x in a.arms.split(",") if x] + list(extra)
             if sname == "natural":
@@ -138,8 +144,14 @@ def main():
                 ctx = {"A": None}
                 if "B" in arms:
                     ctx["B"] = rr(sq, remote(mt, b_url[q["asked_branch"]], sq), a.k)
-                fed = remote(mt, b_url[1], sq) + remote(mt, b_url[2], sq) + remote(plain, hq_url, sq)
-                ctx["C"] = rr(sq, fed, a.k)
+                if not a.no_fed:
+                    fed = remote(mt, b_url[1], sq) + remote(mt, b_url[2], sq) + remote(plain, hq_url, sq)
+                    ctx["C"] = rr(sq, fed, a.k)
+                cfl = central("flower", sq) if ("D_fl" in arms or "D_fl_noce" in arms) else []
+                if "D_fl" in arms:
+                    ctx["D_fl"] = rr(sq, cfl, a.k)
+                if "D_fl_noce" in arms:
+                    ctx["D_fl_noce"] = [c["text"] for c in cfl[:a.k]]
                 cen = central("turkembed", sq) if ("D" in arms or "D_noce" in arms) else []
                 if "D" in arms:
                     ctx["D"] = rr(sq, cen, a.k)
@@ -171,7 +183,8 @@ def main():
                     print(sname, i, {k: round(np.mean([r["em"] for r in v]), 3) for k, v in rec.items()}, flush=True)
             out["sonuclar"][sname] = {arm: {m: mean_ci([r[m] for r in v]) for m in ("em", "ctx_hit", "grounded", "unsupported")} for arm, v in rec.items()}
             t = {}
-            for x, y in [("C", "A"), ("C", "B"), ("C", "D"), ("C", "D_e5"), ("C", "D_me"), ("D_me", "D_e5"), ("D_me", "D_me_noce"), ("C", "D_me_noce"), ("D", "D_noce"), ("D", "D_e5"), ("C", "C_base_q4km"), ("C_base_q4km", "C_base_q2k")]:
+            for x, y in [("C", "A"), ("C", "B"), ("C", "D"), ("C", "D_e5"), ("C", "D_me"), ("D_me", "D_e5"), ("D_me", "D_me_noce"), ("C", "D_me_noce"), ("D", "D_noce"), ("D", "D_e5"), ("C", "C_base_q4km"), ("C_base_q4km", "C_base_q2k"),
+                         ("D_fl", "D_me"), ("D_fl", "D_e5"), ("C", "D_fl"), ("D_fl", "D_fl_noce")]:
                 if x in rec and y in rec:
                     ex, ey = [r["em"] for r in rec[x]], [r["em"] for r in rec[y]]
                     b = sum(p and not r for p, r in zip(ex, ey)); c = sum(r and not p for p, r in zip(ex, ey))
